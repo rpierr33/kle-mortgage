@@ -86,9 +86,7 @@ export function HeroSection() {
             transition={{ duration: 0.6, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
             className="text-base sm:text-lg text-white/75 leading-relaxed mb-10 max-w-lg font-[family-name:var(--font-sans)]"
           >
-            KLE Mortgage Financing simplifies the path to homeownership. We
-            offer conventional, FHA, VA, USDA, and jumbo loans — tailored to
-            your unique situation.
+            Your path to homeownership starts here.
           </motion.p>
 
           {/* CTAs */}

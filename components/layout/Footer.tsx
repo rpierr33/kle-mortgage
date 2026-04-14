@@ -8,14 +8,10 @@ export function Footer() {
   return (
     <footer className="bg-[#0D0608] text-white relative overflow-hidden">
       {/* Background depth */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#1C1014] via-[#0D0608] to-[#0A0406] pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0F0A0B] to-[#0A0406] pointer-events-none" />
 
       {/* Gold top accent */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#C9A345]/40 to-transparent" />
-
-      {/* Subtle warm blurs */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-[#C9A345]/[0.025] rounded-full -translate-y-1/2 translate-x-1/4 blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-72 h-72 bg-[#6B1C23]/[0.08] rounded-full translate-y-1/2 -translate-x-1/4 blur-3xl pointer-events-none" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#C9A345]/30 to-transparent" />
 
       {/* Main Footer */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

@@ -66,22 +66,6 @@ interface Props {
   programs: LoanProgram[];
 }
 
-const containerVariants = {
-  hidden: {},
-  visible: {
-    transition: { staggerChildren: 0.07 },
-  },
-};
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 28 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] as const },
-  },
-};
-
 export function LoanProgramsSection({ programs }: Props) {
   const displayPrograms = programs.length > 0
     ? programs.map((p) => ({ ...p, icon: iconMap[p.type] || Home }))
@@ -99,100 +83,98 @@ export function LoanProgramsSection({ programs }: Props) {
       />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          className="mb-16"
-        >
-          <div className="flex items-center gap-3 mb-4">
-            <div className="w-8 h-0.5 bg-gradient-to-r from-[#C9A345] to-[#E8C97A] rounded-full" />
-            <span className="text-[#C9A345] text-xs font-semibold uppercase tracking-[0.15em]">
-              Loan Programs
-            </span>
-          </div>
-          <h2 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1A1A1A] leading-tight mb-4">
-            Find the Right Loan
-            <br />
-            <span className="text-[#6B1C23] italic">for You</span>
-          </h2>
-          <p className="text-base text-[#6B6056] max-w-xl leading-relaxed">
-            We offer a full suite of mortgage products to match your financial
-            situation, goals, and timeline.
-          </p>
-        </motion.div>
-
-        {/* Programs Grid */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-80px" }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"
-        >
-          {displayPrograms.map((program) => {
-            const Icon = program.icon;
-            return (
-              <motion.div key={program.id} variants={cardVariants}>
-                <Link
-                  href={`/loan-programs/${program.slug}`}
-                  className="group block bg-white rounded-2xl p-6 border border-[#E8E0D8] hover:border-[#C9A345]/40 hover:shadow-[0_8px_40px_rgba(107,28,35,0.1)] transition-all duration-300 h-full relative overflow-hidden"
-                >
-                  {/* Hover gradient fill */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#6B1C23]/0 to-[#6B1C23]/0 group-hover:from-[#6B1C23]/[0.02] group-hover:to-[#C9A345]/[0.04] transition-all duration-500 rounded-2xl" />
-
-                  <div className="relative z-10">
-                    {/* Icon */}
-                    <div className="w-12 h-12 bg-[#F8F6F3] group-hover:bg-[#6B1C23] rounded-xl flex items-center justify-center mb-5 transition-all duration-300 group-hover:scale-110 shadow-sm group-hover:shadow-[0_4px_16px_rgba(107,28,35,0.3)]">
-                      <Icon className="w-5 h-5 text-[#6B1C23] group-hover:text-white transition-colors duration-300" />
-                    </div>
-
-                    <h3 className="font-semibold text-[#1A1A1A] mb-1 text-base group-hover:text-[#6B1C23] transition-colors font-[family-name:var(--font-playfair)]">
-                      {program.name}
-                    </h3>
-                    <p className="text-xs text-[#C9A345] font-semibold mb-3 tracking-wide">
-                      {program.tagline}
-                    </p>
-                    <p className="text-sm text-[#6B6056] leading-relaxed mb-5 line-clamp-2">
-                      {program.description}
-                    </p>
-
-                    {/* Footer row */}
-                    <div className="flex items-center justify-between pt-4 border-t border-[#E8E0D8]">
-                      {program.minDownPayment ? (
-                        <span className="text-xs bg-[#F8F6F3] group-hover:bg-[#6B1C23]/8 text-[#6B1C23] px-2.5 py-1 rounded-full font-medium transition-colors">
-                          {program.minDownPayment} down
-                        </span>
-                      ) : (
-                        <span className="text-xs text-[#6B6056]">Talk to us</span>
-                      )}
-                      <ArrowUpRight className="w-4 h-4 text-[#E8E0D8] group-hover:text-[#C9A345] transition-all duration-300 group-hover:scale-110" />
-                    </div>
-                  </div>
-                </Link>
-              </motion.div>
-            );
-          })}
-        </motion.div>
-
-        {/* View All */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.4, duration: 0.5 }}
-          className="text-center mt-12"
-        >
-          <Link
-            href="/loan-programs"
-            className="group inline-flex items-center gap-2 text-[#6B1C23] font-semibold text-sm hover:gap-3 transition-all duration-200"
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-16 lg:gap-24 items-start">
+          {/* Left: Header — sticky context */}
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            className="lg:sticky lg:top-32"
           >
-            View All Programs
-            <ArrowUpRight className="w-4 h-4 transition-transform group-hover:scale-110" />
-          </Link>
-        </motion.div>
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-8 h-0.5 bg-gradient-to-r from-[#C9A345] to-[#E8C97A] rounded-full" />
+              <span className="text-[#C9A345] text-xs font-semibold uppercase tracking-[0.15em]">
+                Loan Programs
+              </span>
+            </div>
+            <h2 className="font-[family-name:var(--font-cormorant)] text-5xl sm:text-6xl font-medium text-[#1A1A1A] leading-[1.05] mb-5">
+              Find the Right Loan
+              <br />
+              <span className="text-[#6B1C23] italic">for You</span>
+            </h2>
+            <p className="text-sm text-[#6B6056] leading-relaxed mb-8 max-w-xs">
+              A full suite of mortgage products to match your situation, goals, and timeline.
+            </p>
+
+            <Link
+              href="/loan-programs"
+              className="group inline-flex items-center gap-2 text-[#6B1C23] font-semibold text-sm hover:gap-3 transition-all duration-200"
+            >
+              View All Programs
+              <ArrowUpRight className="w-4 h-4 transition-transform group-hover:scale-110" />
+            </Link>
+          </motion.div>
+
+          {/* Right: Editorial list */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.5 }}
+          >
+            {displayPrograms.map((program, idx) => {
+              const Icon = program.icon;
+              return (
+                <motion.div
+                  key={program.id}
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.45, delay: idx * 0.05, ease: [0.22, 1, 0.36, 1] }}
+                >
+                  <Link
+                    href={`/loan-programs/${program.slug}`}
+                    className="group flex items-center justify-between gap-6 py-7 cursor-pointer"
+                    aria-label={`Learn about ${program.name}`}
+                  >
+                    <div className="flex items-start gap-5 flex-1 min-w-0">
+                      {/* Icon — minimal */}
+                      <div className="w-10 h-10 rounded-xl bg-white border border-[#E8E0D8] group-hover:border-[#6B1C23]/25 group-hover:bg-[#6B1C23]/5 flex items-center justify-center flex-shrink-0 transition-all duration-300 mt-0.5">
+                        <Icon className="w-4.5 h-4.5 text-[#6B1C23]" style={{ width: "1.1rem", height: "1.1rem" }} />
+                      </div>
+
+                      {/* Content */}
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-baseline gap-3 flex-wrap">
+                          <h3 className="font-[family-name:var(--font-cormorant)] text-2xl font-medium text-[#1A1A1A] group-hover:text-[#6B1C23] transition-colors leading-tight">
+                            {program.name}
+                          </h3>
+                          {program.minDownPayment && (
+                            <span className="text-xs text-[#C9A345] font-semibold tracking-wide flex-shrink-0">
+                              {program.minDownPayment} down
+                            </span>
+                          )}
+                        </div>
+                        <p className="text-sm text-[#6B6056] mt-1 leading-relaxed">
+                          {program.tagline}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Arrow */}
+                    <ArrowUpRight className="w-4 h-4 text-[#E8E0D8] group-hover:text-[#C9A345] transition-all duration-300 group-hover:scale-110 flex-shrink-0" />
+                  </Link>
+
+                  {/* Gold divider between items — not after last */}
+                  {idx < displayPrograms.length - 1 && (
+                    <div className="h-px bg-gradient-to-r from-[#E8E0D8] via-[#C9A345]/20 to-[#E8E0D8]" />
+                  )}
+                </motion.div>
+              );
+            })}
+          </motion.div>
+        </div>
       </div>
     </section>
   );

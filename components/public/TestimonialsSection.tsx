@@ -1,7 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Star } from "lucide-react";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 import type { testimonials } from "@/lib/db/schema";
 import Link from "next/link";
 
@@ -73,17 +74,45 @@ interface Props {
 
 export function TestimonialsSection({ testimonials: data }: Props) {
   const displayData = data.length > 0 ? data : fallbackTestimonials;
+  const [current, setCurrent] = useState(0);
+  const [direction, setDirection] = useState(1);
+
+  const go = (next: number) => {
+    setDirection(next > current ? 1 : -1);
+    setCurrent(next);
+  };
+
+  const prev = () => go(current === 0 ? displayData.length - 1 : current - 1);
+  const next = () => go(current === displayData.length - 1 ? 0 : current + 1);
+
+  const item = displayData[current];
+
+  const variants = {
+    enter: (dir: number) => ({
+      opacity: 0,
+      x: dir > 0 ? 32 : -32,
+    }),
+    center: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.45, ease: [0.22, 1, 0.36, 1] as const },
+    },
+    exit: (dir: number) => ({
+      opacity: 0,
+      x: dir > 0 ? -32 : 32,
+      transition: { duration: 0.3, ease: [0.22, 1, 0.36, 1] as const },
+    }),
+  };
 
   return (
     <section className="py-28 bg-[#0F0A0B] relative overflow-hidden">
       {/* Warm background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#1C1014] via-[#0F0A0B] to-[#0D0608]" />
 
-      {/* Decorative gold blur top-right */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-[#C9A345]/5 rounded-full blur-3xl -translate-y-1/3 translate-x-1/3 pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-72 h-72 bg-[#6B1C23]/10 rounded-full blur-3xl translate-y-1/3 -translate-x-1/3 pointer-events-none" />
+      {/* Single subtle gold orb — top right only */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-[#C9A345]/4 rounded-full blur-3xl -translate-y-1/3 translate-x-1/3 pointer-events-none" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -99,69 +128,100 @@ export function TestimonialsSection({ testimonials: data }: Props) {
             </span>
             <div className="w-8 h-0.5 bg-gradient-to-l from-transparent to-[#C9A345] rounded-full" />
           </div>
-          <h2 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl font-bold text-white mb-4">
+          <h2 className="font-[family-name:var(--font-cormorant)] text-5xl sm:text-6xl font-medium text-white leading-[1.05]">
             Real Families.{" "}
             <span className="text-[#C9A345] italic">Real Results.</span>
           </h2>
-          <p className="text-[#A89588] text-base max-w-md mx-auto leading-relaxed">
-            Don&apos;t take our word for it — here&apos;s what our clients say about
-            working with KLE Mortgage.
-          </p>
         </motion.div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {displayData.map((item, idx) => (
+        {/* Single large quote */}
+        <div className="relative min-h-[320px] sm:min-h-[260px] flex flex-col items-center justify-center">
+          {/* Large decorative open-quote */}
+          <div
+            className="absolute -top-6 left-0 sm:left-8 font-[family-name:var(--font-cormorant)] text-[10rem] leading-none text-[#C9A345]/10 select-none pointer-events-none"
+            aria-hidden="true"
+          >
+            &ldquo;
+          </div>
+
+          <AnimatePresence mode="wait" custom={direction}>
             <motion.div
               key={item.id}
-              initial={{ opacity: 0, y: 28 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: idx * 0.07, ease: [0.22, 1, 0.36, 1] }}
-              className="group relative bg-white/[0.04] hover:bg-white/[0.07] border border-white/8 hover:border-[#C9A345]/25 rounded-2xl p-7 transition-all duration-300"
+              custom={direction}
+              variants={variants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              className="w-full text-center px-4 sm:px-12"
             >
-              {/* Large decorative quote */}
-              <div
-                className="absolute top-5 right-6 font-[family-name:var(--font-cormorant)] text-[6rem] leading-none text-[#C9A345]/8 select-none pointer-events-none"
-                aria-hidden="true"
-              >
-                &ldquo;
-              </div>
-
               {/* Stars */}
-              <div className="flex gap-0.5 mb-5">
+              <div className="flex justify-center gap-1 mb-8">
                 {Array.from({ length: item.rating }).map((_, i) => (
-                  <Star key={i} className="w-3.5 h-3.5 fill-[#C9A345] text-[#C9A345]" />
+                  <Star key={i} className="w-4 h-4 fill-[#C9A345] text-[#C9A345]" />
                 ))}
               </div>
 
-              {/* Text */}
-              <p className="text-white/80 text-sm leading-relaxed mb-6 font-[family-name:var(--font-sans)] italic">
+              {/* Quote */}
+              <blockquote className="font-[family-name:var(--font-cormorant)] text-2xl sm:text-3xl lg:text-4xl font-medium italic text-white leading-[1.3] mb-10">
                 &ldquo;{item.reviewText}&rdquo;
-              </p>
+              </blockquote>
 
-              {/* Author footer */}
-              <div className="flex items-center justify-between pt-5 border-t border-white/8">
+              {/* Author */}
+              <div className="flex flex-col items-center gap-2">
                 <div className="flex items-center gap-3">
-                  {/* Initials avatar */}
                   <div className="w-9 h-9 rounded-full bg-[#6B1C23] flex items-center justify-center flex-shrink-0">
-                    <span className="text-white text-xs font-bold font-[family-name:var(--font-playfair)]">
+                    <span className="text-white text-xs font-bold font-[family-name:var(--font-cormorant)]">
                       {getInitials(item.reviewerName)}
                     </span>
                   </div>
-                  <div>
+                  <div className="text-left">
                     <p className="font-semibold text-sm text-white">{item.reviewerName}</p>
                     {item.location && (
                       <p className="text-xs text-[#A89588]">{item.location}</p>
                     )}
                   </div>
                 </div>
-                <span className="text-xs bg-[#6B1C23]/25 border border-[#6B1C23]/30 text-[#E8A0A8] px-2.5 py-1 rounded-full font-medium">
+                <span className="text-xs bg-[#6B1C23]/25 border border-[#6B1C23]/30 text-[#E8A0A8] px-3 py-1 rounded-full font-medium mt-1">
                   {loanTypeLabels[item.loanType] || item.loanType}
                 </span>
               </div>
             </motion.div>
-          ))}
+          </AnimatePresence>
+        </div>
+
+        {/* Navigation row */}
+        <div className="flex items-center justify-center gap-6 mt-12">
+          <button
+            onClick={prev}
+            aria-label="Previous testimonial"
+            className="w-11 h-11 rounded-full border border-white/15 hover:border-[#C9A345]/50 text-white/40 hover:text-[#C9A345] flex items-center justify-center transition-all duration-200 hover:bg-[#C9A345]/5"
+          >
+            <ChevronLeft className="w-5 h-5" />
+          </button>
+
+          {/* Dot indicators */}
+          <div className="flex gap-2.5">
+            {displayData.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => go(idx)}
+                aria-label={`Go to testimonial ${idx + 1}`}
+                className={`rounded-full transition-all duration-300 ${
+                  idx === current
+                    ? "w-6 h-1.5 bg-[#C9A345]"
+                    : "w-1.5 h-1.5 bg-white/20 hover:bg-white/40"
+                }`}
+              />
+            ))}
+          </div>
+
+          <button
+            onClick={next}
+            aria-label="Next testimonial"
+            className="w-11 h-11 rounded-full border border-white/15 hover:border-[#C9A345]/50 text-white/40 hover:text-[#C9A345] flex items-center justify-center transition-all duration-200 hover:bg-[#C9A345]/5"
+          >
+            <ChevronRight className="w-5 h-5" />
+          </button>
         </div>
 
         {/* CTA */}
@@ -170,7 +230,7 @@ export function TestimonialsSection({ testimonials: data }: Props) {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.4, duration: 0.5 }}
-          className="text-center mt-12"
+          className="text-center mt-10"
         >
           <Link
             href="/testimonials"
