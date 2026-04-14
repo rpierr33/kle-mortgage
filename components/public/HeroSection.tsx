@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, Shield, Award, Users, ChevronDown } from "lucide-react";
+import { ArrowRight, Shield, Award, Users, ChevronDown, Star, CheckCircle2 } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
@@ -94,13 +94,13 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.38, ease: [0.22, 1, 0.36, 1] }}
-            className="flex flex-col sm:flex-row gap-3 mb-16"
+            className="flex flex-col sm:flex-row gap-3 mb-5"
           >
             <Link
               href="/apply"
               className="group inline-flex items-center justify-center gap-2.5 bg-[#6B1C23] hover:bg-[#8A2530] text-white px-8 py-4 rounded-lg text-sm font-semibold transition-all duration-300 shadow-[0_0_40px_rgba(107,28,35,0.5)] hover:shadow-[0_0_60px_rgba(107,28,35,0.7)] hover:scale-[1.02]"
             >
-              Start My Application
+              Get Pre-Approved in Minutes
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
             </Link>
             <Link
@@ -111,21 +111,47 @@ export function HeroSection() {
             </Link>
           </motion.div>
 
-          {/* Trust badges */}
+          {/* Social proof — one-liner below CTAs */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.44, ease: [0.22, 1, 0.36, 1] }}
+            className="flex items-center gap-2.5 mb-10"
+          >
+            <div className="flex gap-0.5">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <Star key={i} className="w-3.5 h-3.5 fill-[#C9A345] text-[#C9A345]" />
+              ))}
+            </div>
+            <span className="text-white/50 text-xs">
+              5/5 stars —{" "}
+              <span className="text-white/70 italic">&ldquo;KLE made buying our first home stress-free&rdquo;</span>
+              {" "}— Maria G.
+            </span>
+          </motion.div>
+
+          {/* Trust badges — enhanced, more prominent */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.46 }}
-            className="flex flex-wrap items-center gap-6"
+            transition={{ duration: 0.6, delay: 0.50 }}
+            className="flex flex-wrap items-center gap-4"
           >
-            <div className="flex items-center gap-2 text-white/55 text-xs tracking-wide">
+            <div className="flex items-center gap-2 bg-white/8 border border-white/12 rounded-full px-3.5 py-1.5 text-white/70 text-xs font-medium">
+              <Shield className="w-3.5 h-3.5 text-[#C9A345]" />
+              NMLS #123456
+            </div>
+            <div className="flex items-center gap-2 bg-white/8 border border-white/12 rounded-full px-3.5 py-1.5 text-white/70 text-xs font-medium">
               <Award className="w-3.5 h-3.5 text-[#C9A345]" />
               Equal Housing Lender
             </div>
-            <div className="w-px h-3 bg-white/20" />
-            <div className="flex items-center gap-2 text-white/55 text-xs tracking-wide">
+            <div className="flex items-center gap-2 bg-white/8 border border-white/12 rounded-full px-3.5 py-1.5 text-white/70 text-xs font-medium">
+              <CheckCircle2 className="w-3.5 h-3.5 text-[#C9A345]" />
+              BBB Accredited
+            </div>
+            <div className="flex items-center gap-2 bg-white/8 border border-white/12 rounded-full px-3.5 py-1.5 text-white/70 text-xs font-medium">
               <Users className="w-3.5 h-3.5 text-[#C9A345]" />
-              Licensed in FL, GA, TX
+              Licensed FL, GA, TX
             </div>
           </motion.div>
         </div>

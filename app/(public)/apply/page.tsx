@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ApplicationForm } from "@/components/public/ApplicationForm";
-import { Shield, Clock, CheckCircle2 } from "lucide-react";
+import { Shield, Clock, CheckCircle2, Star, Users } from "lucide-react";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -73,12 +73,67 @@ export default function ApplyPage() {
         </div>
       </section>
 
-      {/* Form section */}
+      {/* Social proof band — above the form on all viewports */}
+      <section className="bg-[#F8F6F3] pt-10 pb-0">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-0"
+          >
+            {/* Join banner */}
+            <div className="bg-[#6B1C23] rounded-2xl p-5 text-center flex flex-col items-center gap-2">
+              <Users className="w-5 h-5 text-[#C9A345]" />
+              <div
+                className="font-[family-name:var(--font-cormorant)] font-semibold text-[#C9A345] leading-none"
+                style={{ fontSize: "1.5rem" }}
+              >
+                500+ Families
+              </div>
+              <p className="text-white/65 text-xs leading-snug">
+                got pre-approved with KLE
+              </p>
+            </div>
+
+            {/* Stars + testimonial */}
+            <div className="bg-white border border-[#E8E0D8] rounded-2xl p-5">
+              <div className="flex gap-0.5 mb-2">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <Star key={i} className="w-3.5 h-3.5 fill-[#C9A345] text-[#C9A345]" />
+                ))}
+              </div>
+              <p className="text-[#3D3530] text-xs italic leading-relaxed mb-2">
+                &ldquo;Pre-approval in under 24 hours. Closed in 28 days.&rdquo;
+              </p>
+              <div className="text-[#6B1C23] text-xs font-semibold">Maria &amp; Carlos G.</div>
+              <div className="text-[#6B6056] text-[10px]">First-Time Homebuyers · Miami</div>
+            </div>
+
+            {/* Trust bullets */}
+            <div className="bg-white border border-[#E8E0D8] rounded-2xl p-5 space-y-2.5">
+              {[
+                { icon: Shield, text: "No credit pull to start" },
+                { icon: Clock, text: "Pre-approval in 24 hours" },
+                { icon: CheckCircle2, text: "No obligation, ever" },
+              ].map(({ icon: Icon, text }) => (
+                <div key={text} className="flex items-center gap-2.5">
+                  <Icon className="w-3.5 h-3.5 text-[#C9A345] flex-shrink-0" />
+                  <span className="text-[#3D3530] text-xs">{text}</span>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Multi-step application form */}
       <motion.div
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-40px" }}
-        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
       >
         <ApplicationForm />
       </motion.div>

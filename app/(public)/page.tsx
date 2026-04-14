@@ -5,6 +5,8 @@ import { CalculatorWidget } from "@/components/public/CalculatorWidget";
 import { TestimonialsSection } from "@/components/public/TestimonialsSection";
 import { TeamSection } from "@/components/public/TeamSection";
 import { CTASection } from "@/components/public/CTASection";
+import { RateQuoteBanner } from "@/components/home/RateQuoteBanner";
+import { AffordabilityCalculator } from "@/components/home/AffordabilityCalculator";
 import { db } from "@/lib/db";
 import { testimonials, loanOfficers, loanPrograms } from "@/lib/db/schema";
 import { eq, asc } from "drizzle-orm";
@@ -35,8 +37,12 @@ export default async function HomePage() {
   return (
     <>
       <HeroSection />
+      {/* Rate urgency banner immediately below hero */}
+      <RateQuoteBanner />
       <LoanProgramsSection programs={programsData} />
       <WhyKLESection />
+      {/* Affordability calculator — more compelling than payment calc */}
+      <AffordabilityCalculator />
       <CalculatorWidget />
       <TestimonialsSection testimonials={testimonialsData} />
       <TeamSection officers={officersData} />
