@@ -54,9 +54,9 @@ export function Navbar() {
               <Image
                 src="/kle-logo-full.png"
                 alt="KLE Mortgage Financing"
-                width={48}
-                height={48}
-                className="object-contain transition-transform duration-300 group-hover:scale-105"
+                width={160}
+                height={64}
+                className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
               />
             </div>
             <div className="hidden sm:block">
