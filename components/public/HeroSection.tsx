@@ -67,24 +67,16 @@ export function HeroSection() {
             className="w-12 h-0.5 bg-gradient-to-r from-[#C9A345] to-[#E8C97A] mb-6 rounded-full"
           />
 
-          {/* Headline — Cormorant for editorial luxury */}
+          {/* Headline — refined, not oversized */}
           <motion.h1
-            initial={{ opacity: 0, y: 32 }}
+            initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-            className="font-[family-name:var(--font-cormorant)] font-semibold italic text-white leading-[0.95] mb-3"
-            style={{ fontSize: "clamp(3.5rem, 8vw, 7.5rem)" }}
+            className="font-[family-name:var(--font-cormorant)] font-medium text-white leading-[1.1] mb-8"
+            style={{ fontSize: "clamp(2.5rem, 5vw, 4.5rem)" }}
           >
-            Mortgages Made Easy,
-          </motion.h1>
-          <motion.h1
-            initial={{ opacity: 0, y: 32 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.22, ease: [0.22, 1, 0.36, 1] }}
-            className="font-[family-name:var(--font-cormorant)] font-semibold italic leading-[0.95] mb-8"
-            style={{ fontSize: "clamp(3.5rem, 8vw, 7.5rem)", color: "#C9A345" }}
-          >
-            Dreams Made Real.
+            Mortgages Made Easy,{" "}
+            <span className="text-[#C9A345]">Dreams Made Real.</span>
           </motion.h1>
 
           {/* Subheading */}
@@ -157,7 +149,7 @@ export function HeroSection() {
             >
               <p
                 className="font-[family-name:var(--font-cormorant)] font-semibold text-[#C9A345] leading-none mb-1"
-                style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}
+                style={{ fontSize: "clamp(1.5rem, 3vw, 2.25rem)" }}
               >
                 {stat.value}
               </p>

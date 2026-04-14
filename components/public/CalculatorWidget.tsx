@@ -182,7 +182,7 @@ export function CalculatorWidget() {
               <div className="relative z-10">
                 <p className="text-white/60 text-xs tracking-wider uppercase mb-2">Estimated Monthly Payment</p>
                 <p className="font-[family-name:var(--font-cormorant)] font-semibold text-white leading-none mb-1"
-                  style={{ fontSize: "clamp(3rem, 7vw, 4.5rem)" }}>
+                  style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}>
                   {formatCurrency(isNaN(monthlyPayment) ? 0 : monthlyPayment)}
                   <span className="text-xl font-normal text-white/50 ml-1">/mo</span>
                 </p>
