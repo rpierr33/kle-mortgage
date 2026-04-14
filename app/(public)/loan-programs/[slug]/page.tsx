@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { CheckCircle2, ArrowRight, Phone } from "lucide-react";
 import { CTASection } from "@/components/public/CTASection";
+import LoanProgramDetailClient from "./LoanProgramDetailClient";
 
 const programData: Record<string, {
   name: string; tagline: string; description: string; longDescription: string;
@@ -188,161 +189,17 @@ export default async function LoanProgramDetailPage({ params }: Props) {
   const program = programData[slug];
   if (!program) notFound();
 
+  const otherPrograms = Object.entries(programData)
+    .filter(([s]) => s !== slug)
+    .slice(0, 5);
+
   return (
     <>
-      {/* Hero */}
-      <section className="pt-28 pb-16 bg-[#6B1C23]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="text-sm text-white/60 mb-6">
-            <Link href="/loan-programs" className="hover:text-white transition-colors">
-              Loan Programs
-            </Link>
-            <span className="mx-2">/</span>
-            <span className="text-white">{program.name}</span>
-          </nav>
-          <div className="max-w-2xl">
-            <span className="inline-block text-[#C9A345] text-sm font-semibold uppercase tracking-widest mb-3">
-              Loan Program
-            </span>
-            <h1 className="text-5xl font-bold text-white mb-4 font-[family-name:var(--font-playfair)]">
-              {program.name}
-            </h1>
-            <p className="text-xl text-white/80">{program.tagline}</p>
-          </div>
-        </div>
-      </section>
-
-      {/* Content */}
-      <section className="py-20 bg-[#F8F6F3]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
-            {/* Main */}
-            <div className="lg:col-span-2 space-y-8">
-              <div className="bg-white rounded-xl border border-[#E8E0D8] p-8">
-                <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4 font-[family-name:var(--font-playfair)]">
-                  What is a {program.name}?
-                </h2>
-                <p className="text-[#6B6056] leading-relaxed">{program.longDescription}</p>
-              </div>
-
-              <div className="bg-white rounded-xl border border-[#E8E0D8] p-8">
-                <h2 className="text-2xl font-bold text-[#1A1A1A] mb-5 font-[family-name:var(--font-playfair)]">
-                  Key Features
-                </h2>
-                <ul className="space-y-3">
-                  {program.features.map((f) => (
-                    <li key={f} className="flex items-center gap-3 text-[#1A1A1A]">
-                      <CheckCircle2 className="w-5 h-5 text-[#6B1C23] flex-shrink-0" />
-                      {f}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="bg-white rounded-xl border border-[#E8E0D8] p-8">
-                <h2 className="text-2xl font-bold text-[#1A1A1A] mb-5 font-[family-name:var(--font-playfair)]">
-                  Requirements
-                </h2>
-                <ul className="space-y-3">
-                  {program.requirements.map((r) => (
-                    <li key={r} className="flex items-center gap-3 text-[#6B6056] text-sm">
-                      <div className="w-1.5 h-1.5 rounded-full bg-[#6B1C23] flex-shrink-0" />
-                      {r}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-
-            {/* Sidebar */}
-            <div className="space-y-5">
-              {/* Quick Stats */}
-              <div className="bg-[#6B1C23] text-white rounded-xl p-6">
-                <h3 className="font-bold mb-4 font-[family-name:var(--font-playfair)]">At a Glance</h3>
-                <div className="space-y-3">
-                  {program.minDown && (
-                    <div className="flex justify-between text-sm">
-                      <span className="text-white/70">Min. Down Payment</span>
-                      <span className="font-bold text-[#C9A345]">{program.minDown}</span>
-                    </div>
-                  )}
-                  <div className="flex justify-between text-sm">
-                    <span className="text-white/70">Min. Credit Score</span>
-                    <span className="font-bold text-[#C9A345]">{program.minCredit ?? "Contact us"}</span>
-                  </div>
-                  {program.maxLoan && (
-                    <div className="flex justify-between text-sm">
-                      <span className="text-white/70">Loan Limit</span>
-                      <span className="font-bold text-[#C9A345]">{program.maxLoan}</span>
-                    </div>
-                  )}
-                </div>
-              </div>
-
-              {/* Best For */}
-              <div className="bg-white rounded-xl border border-[#E8E0D8] p-6">
-                <h3 className="font-bold text-[#1A1A1A] mb-4 font-[family-name:var(--font-playfair)]">
-                  Best For
-                </h3>
-                <ul className="space-y-2">
-                  {program.bestFor.map((b) => (
-                    <li key={b} className="flex items-center gap-2 text-sm text-[#6B6056]">
-                      <CheckCircle2 className="w-4 h-4 text-[#6B1C23] flex-shrink-0" />
-                      {b}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* CTA Card */}
-              <div className="bg-[#F8F6F3] border border-[#E8E0D8] rounded-xl p-6">
-                <h3 className="font-bold text-[#1A1A1A] mb-2 font-[family-name:var(--font-playfair)]">
-                  Ready to Apply?
-                </h3>
-                <p className="text-sm text-[#6B6056] mb-4">
-                  Get pre-approved in as little as 24 hours. No obligation.
-                </p>
-                <Link
-                  href="/apply"
-                  className="flex items-center justify-center gap-2 bg-[#6B1C23] hover:bg-[#4A1218] text-white px-5 py-3 rounded-md text-sm font-semibold transition-colors w-full"
-                >
-                  Start Application <ArrowRight className="w-4 h-4" />
-                </Link>
-                <a
-                  href="tel:+13057052030"
-                  className="flex items-center justify-center gap-2 mt-3 text-sm text-[#6B1C23] hover:underline"
-                >
-                  <Phone className="w-4 h-4" />
-                  Call +1 (305) 705-2030
-                </a>
-              </div>
-
-              {/* Other Programs */}
-              <div className="bg-white rounded-xl border border-[#E8E0D8] p-6">
-                <h3 className="font-bold text-[#1A1A1A] mb-3 font-[family-name:var(--font-playfair)]">
-                  Other Programs
-                </h3>
-                <ul className="space-y-1.5">
-                  {Object.entries(programData)
-                    .filter(([s]) => s !== slug)
-                    .slice(0, 5)
-                    .map(([s, p]) => (
-                      <li key={s}>
-                        <Link
-                          href={`/loan-programs/${s}`}
-                          className="text-sm text-[#6B6056] hover:text-[#6B1C23] transition-colors"
-                        >
-                          → {p.name}
-                        </Link>
-                      </li>
-                    ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <LoanProgramDetailClient
+        slug={slug}
+        program={program}
+        otherPrograms={otherPrograms}
+      />
       <CTASection />
     </>
   );

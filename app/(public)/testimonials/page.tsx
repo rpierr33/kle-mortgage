@@ -4,6 +4,7 @@ import { CTASection } from "@/components/public/CTASection";
 import { db } from "@/lib/db";
 import { testimonials } from "@/lib/db/schema";
 import { asc } from "drizzle-orm";
+import TestimonialsClient from "./TestimonialsClient";
 
 type Testimonial = typeof testimonials.$inferSelect;
 
@@ -41,55 +42,9 @@ export default async function TestimonialsPage() {
     if (dbTestimonials.length > 0) allTestimonials = dbTestimonials;
   } catch { /* fallback */ }
 
-  const avgRating = allTestimonials.reduce((sum, t) => sum + t.rating, 0) / allTestimonials.length;
-
   return (
     <>
-      {/* Hero */}
-      <section className="pt-28 pb-12 bg-[#6B1C23]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl font-bold text-white mb-4 font-[family-name:var(--font-playfair)]">
-            Client Testimonials
-          </h1>
-          <p className="text-xl text-white/80 mb-6">Real stories from families we've helped achieve homeownership.</p>
-          <div className="flex items-center justify-center gap-2">
-            {[1,2,3,4,5].map((s) => (
-              <Star key={s} className="w-6 h-6 fill-[#C9A345] text-[#C9A345]" />
-            ))}
-            <span className="text-white font-bold ml-1">{avgRating.toFixed(1)}/5</span>
-            <span className="text-white/60">({allTestimonials.length} reviews)</span>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-[#F8F6F3]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {allTestimonials.map((item) => (
-              <div key={item.id} className="bg-white rounded-xl border border-[#E8E0D8] p-6 hover:shadow-md transition-shadow">
-                <div className="flex gap-0.5 mb-4">
-                  {Array.from({ length: item.rating }).map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-[#C9A345] text-[#C9A345]" />
-                  ))}
-                </div>
-                <p className="text-[#1A1A1A] text-sm leading-relaxed mb-5 italic">
-                  &ldquo;{item.reviewText}&rdquo;
-                </p>
-                <div className="flex items-center justify-between pt-3 border-t border-[#E8E0D8]">
-                  <div>
-                    <p className="font-semibold text-sm text-[#1A1A1A]">{item.reviewerName}</p>
-                    {item.location && <p className="text-xs text-[#6B6056]">{item.location}</p>}
-                  </div>
-                  <span className="text-xs bg-[#F8F6F3] border border-[#E8E0D8] text-[#6B1C23] px-2.5 py-1 rounded-full font-medium">
-                    {loanTypeLabels[item.loanType] || item.loanType}
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
+      <TestimonialsClient testimonials={allTestimonials} loanTypeLabels={loanTypeLabels} />
       <CTASection />
     </>
   );

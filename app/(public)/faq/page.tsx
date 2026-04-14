@@ -1,10 +1,9 @@
-import type { Metadata } from "next";
-import { CTASection } from "@/components/public/CTASection";
+"use client";
 
-export const metadata: Metadata = {
-  title: "FAQ — Frequently Asked Questions",
-  description: "Get answers to common mortgage questions. Learn about loan types, the application process, closing costs, and more from KLE Mortgage.",
-};
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ChevronDown, Phone, MessageSquare } from "lucide-react";
+import { CTASection } from "@/components/public/CTASection";
 
 const faqs = [
   {
@@ -45,64 +44,174 @@ const faqs = [
   },
 ];
 
+const sectionReveal = {
+  hidden: { opacity: 0, y: 24 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] } },
+};
+
+function FAQAccordion({ items }: { items: { q: string; a: string }[] }) {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  return (
+    <div className="divide-y divide-[#E8E0D8]">
+      {items.map((item, i) => {
+        const isOpen = openIndex === i;
+        return (
+          <motion.div
+            key={item.q}
+            initial={{ opacity: 0, x: -8 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ duration: 0.4, delay: i * 0.05 }}
+          >
+            <button
+              type="button"
+              onClick={() => setOpenIndex(isOpen ? null : i)}
+              aria-expanded={isOpen}
+              className="w-full flex items-start justify-between gap-4 py-5 px-0 text-left group transition-colors duration-200"
+            >
+              <span
+                className="font-semibold text-sm leading-snug transition-colors duration-200"
+                style={{ color: isOpen ? "#6B1C23" : "#1A1A1A" }}
+              >
+                {item.q}
+              </span>
+              <ChevronDown
+                className="w-5 h-5 flex-shrink-0 mt-0.5 transition-all duration-300"
+                style={{
+                  color: isOpen ? "#C9A345" : "#6B6056",
+                  transform: isOpen ? "rotate(180deg)" : "rotate(0deg)",
+                }}
+                aria-hidden="true"
+              />
+            </button>
+            <AnimatePresence initial={false}>
+              {isOpen && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                  style={{ overflow: "hidden" }}
+                >
+                  <p className="pb-5 pr-8 text-sm leading-relaxed text-[#6B6056]">
+                    {item.a}
+                  </p>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </motion.div>
+        );
+      })}
+    </div>
+  );
+}
+
 export default function FAQPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-28 pb-12 bg-[#6B1C23]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-2xl">
-            <h1 className="text-5xl font-bold text-white mb-4 font-[family-name:var(--font-playfair)]">
-              Frequently Asked Questions
+      <section className="pt-28 pb-20 bg-[#6B1C23] relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-white/[0.04] rounded-full -translate-y-1/2 translate-x-1/2 pointer-events-none" />
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#C9A345]/30 to-transparent" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            className="max-w-2xl"
+          >
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-8 h-0.5 bg-gradient-to-r from-[#C9A345] to-[#E8C97A] rounded-full" />
+              <span className="text-[#C9A345] text-xs font-semibold uppercase tracking-[0.15em]">
+                Knowledge Base
+              </span>
+            </div>
+            <h1
+              className="font-[family-name:var(--font-cormorant)] font-semibold text-white leading-[1.1] mb-6"
+              style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)" }}
+            >
+              Frequently Asked{" "}
+              <span className="text-[#C9A345] italic">Questions</span>
             </h1>
-            <p className="text-xl text-white/80">
-              Everything you need to know about the mortgage process, loan types, and working with KLE.
+            <p className="text-lg text-white/75 leading-relaxed">
+              Everything you need to know about the mortgage process, loan
+              types, and working with KLE.
             </p>
-          </div>
+          </motion.div>
         </div>
       </section>
 
-      <section className="py-20 bg-[#F8F6F3]">
+      {/* FAQ content */}
+      <section className="py-28 bg-[#F8F6F3]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          {faqs.map((section) => (
-            <div key={section.category} className="mb-12">
-              <h2 className="text-2xl font-bold text-[#1A1A1A] mb-6 font-[family-name:var(--font-playfair)]">
-                {section.category}
-              </h2>
-              <div className="space-y-4">
-                {section.items.map((item) => (
-                  <details key={item.q} className="group bg-white rounded-xl border border-[#E8E0D8] overflow-hidden">
-                    <summary className="flex items-center justify-between gap-4 p-5 cursor-pointer list-none hover:bg-[#F8F6F3] transition-colors">
-                      <span className="font-semibold text-[#1A1A1A]">{item.q}</span>
-                      <span className="w-6 h-6 rounded-full bg-[#F0EBE3] flex items-center justify-center text-[#6B1C23] font-bold text-lg flex-shrink-0 group-open:rotate-45 transition-transform">
-                        +
-                      </span>
-                    </summary>
-                    <div className="px-5 pb-5 text-sm text-[#6B6056] leading-relaxed border-t border-[#E8E0D8] pt-4">
-                      {item.a}
-                    </div>
-                  </details>
-                ))}
-              </div>
-            </div>
-          ))}
+          <div className="space-y-16">
+            {faqs.map((section, idx) => (
+              <motion.div
+                key={section.category}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-60px" }}
+                variants={sectionReveal}
+              >
+                <div className="flex items-center gap-3 mb-8">
+                  <div className="w-5 h-0.5 bg-[#C9A345] rounded-full" />
+                  <h2
+                    className="font-[family-name:var(--font-cormorant)] font-bold text-[#1A1A1A]"
+                    style={{ fontSize: "clamp(1.5rem, 2.5vw, 2rem)" }}
+                  >
+                    {section.category}
+                  </h2>
+                </div>
+                <div className="bg-white rounded-2xl border border-[#E8E0D8] px-7 shadow-sm">
+                  <FAQAccordion items={section.items} />
+                </div>
+              </motion.div>
+            ))}
+          </div>
 
-          <div className="bg-[#6B1C23] rounded-xl p-8 text-white text-center">
-            <h3 className="text-2xl font-bold mb-3 font-[family-name:var(--font-playfair)]">
+          {/* Still have questions */}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-60px" }}
+            variants={sectionReveal}
+            className="mt-16 bg-gradient-to-br from-[#4A1218] via-[#6B1C23] to-[#8A2530] rounded-3xl p-10 text-white text-center relative overflow-hidden"
+          >
+            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#C9A345]/40 to-transparent" />
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <div className="w-8 h-0.5 bg-gradient-to-r from-transparent to-[#C9A345]/70 rounded-full" />
+              <span className="text-[#C9A345] text-xs font-semibold uppercase tracking-[0.15em]">
+                We&apos;re Here
+              </span>
+              <div className="w-8 h-0.5 bg-gradient-to-l from-transparent to-[#C9A345]/70 rounded-full" />
+            </div>
+            <h3
+              className="font-[family-name:var(--font-cormorant)] font-semibold text-white mb-3"
+              style={{ fontSize: "clamp(1.75rem, 3vw, 2.5rem)" }}
+            >
               Still have questions?
             </h3>
-            <p className="text-white/80 mb-5">
-              Our loan officers are happy to answer any question, no matter how small.
+            <p className="text-white/75 mb-7 max-w-md mx-auto">
+              Our loan officers are happy to answer any question — no matter how small.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <a href="/contact" className="bg-white text-[#6B1C23] hover:bg-[#F8F6F3] px-6 py-3 rounded-md text-sm font-semibold transition-colors">
+              <a
+                href="/contact"
+                className="inline-flex items-center justify-center gap-2 bg-white text-[#6B1C23] hover:bg-[#F8F6F3] px-7 py-3.5 rounded-lg text-sm font-bold transition-colors"
+              >
+                <MessageSquare className="w-4 h-4" />
                 Send a Message
               </a>
-              <a href="tel:+13057052030" className="border border-white/40 text-white hover:bg-white/10 px-6 py-3 rounded-md text-sm font-semibold transition-colors">
+              <a
+                href="tel:+13057052030"
+                className="inline-flex items-center justify-center gap-2 border border-white/30 hover:border-white/60 hover:bg-white/10 text-white px-7 py-3.5 rounded-lg text-sm font-semibold transition-all"
+              >
+                <Phone className="w-4 h-4" />
                 Call +1 (305) 705-2030
               </a>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
