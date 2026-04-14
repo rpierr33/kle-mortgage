@@ -73,35 +73,53 @@ export function TeamSection({ officers }: Props) {
   const displayOfficers = officers.length > 0 ? officers : fallbackOfficers;
 
   return (
-    <section className="py-24 bg-[#F8F6F3]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-14">
-          <span className="inline-block text-[#6B1C23] text-sm font-semibold uppercase tracking-widest mb-3">
-            Our Team
-          </span>
-          <h2 className="text-4xl sm:text-5xl font-bold text-[#1A1A1A] mb-4 font-[family-name:var(--font-playfair)]">
-            Meet Your Loan Officers
+    <section className="py-28 bg-[#F8F6F3] relative overflow-hidden">
+      {/* Warm tint */}
+      <div className="absolute inset-0 bg-gradient-to-b from-white/0 via-[#FDF9F6]/40 to-white/0 pointer-events-none" />
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          className="text-center mb-16"
+        >
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <div className="w-8 h-0.5 bg-gradient-to-r from-transparent to-[#C9A345] rounded-full" />
+            <span className="text-[#C9A345] text-xs font-semibold uppercase tracking-[0.15em]">Our Team</span>
+            <div className="w-8 h-0.5 bg-gradient-to-l from-transparent to-[#C9A345] rounded-full" />
+          </div>
+          <h2 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl font-bold text-[#1A1A1A] mb-4">
+            Meet Your{" "}
+            <span className="text-[#6B1C23] italic">Loan Officers</span>
           </h2>
-          <p className="text-lg text-[#6B6056] max-w-xl mx-auto">
+          <p className="text-[#6B6056] text-base max-w-md mx-auto leading-relaxed">
             Experienced, licensed professionals dedicated to finding the right
             loan for your unique situation.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {displayOfficers.map((officer, idx) => {
             const specialties = Array.isArray(officer.specialties) ? officer.specialties as string[] : [];
             return (
               <motion.div
                 key={officer.id}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 28 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: idx * 0.1 }}
-                className="bg-white rounded-xl border border-[#E8E0D8] overflow-hidden hover:shadow-lg transition-shadow"
+                transition={{ duration: 0.5, delay: idx * 0.1, ease: [0.22, 1, 0.36, 1] }}
+                className="group bg-white rounded-2xl border border-[#E8E0D8] hover:border-[#C9A345]/30 overflow-hidden hover:shadow-[0_12px_48px_rgba(0,0,0,0.1)] transition-all duration-300"
               >
-                {/* Avatar */}
-                <div className="bg-[#6B1C23] h-32 flex items-center justify-center relative">
+                {/* Avatar header */}
+                <div className="relative h-36 bg-gradient-to-br from-[#6B1C23] via-[#7A1E26] to-[#4A1218] flex items-center justify-center overflow-hidden">
+                  {/* Subtle pattern */}
+                  <div className="absolute inset-0 opacity-10"
+                    style={{
+                      backgroundImage: "radial-gradient(circle at 70% 30%, #C9A345 0%, transparent 60%)",
+                    }}
+                  />
                   {officer.photoUrl ? (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img
@@ -110,22 +128,24 @@ export function TeamSection({ officers }: Props) {
                       className="w-full h-full object-cover"
                     />
                   ) : (
-                    <div className="w-20 h-20 rounded-full bg-white/10 border-2 border-white/30 flex items-center justify-center">
-                      <span className="text-white text-2xl font-bold font-[family-name:var(--font-playfair)]">
+                    <div className="relative w-20 h-20 rounded-full bg-white/10 border-2 border-white/20 flex items-center justify-center">
+                      <span className="text-white text-2xl font-bold font-[family-name:var(--font-cormorant)]">
                         {getInitials(officer.name)}
                       </span>
                     </div>
                   )}
                   {officer.isFounder && (
-                    <div className="absolute top-3 right-3 bg-[#C9A345] text-white text-xs font-semibold px-2 py-0.5 rounded-full flex items-center gap-1">
+                    <div className="absolute top-3 right-3 bg-gradient-to-r from-[#C9A345] to-[#E8C97A] text-[#1A1A1A] text-xs font-bold px-2.5 py-1 rounded-full flex items-center gap-1 shadow-sm">
                       <Award className="w-3 h-3" /> Founder
                     </div>
                   )}
                 </div>
 
                 <div className="p-5">
-                  <h3 className="font-bold text-[#1A1A1A] mb-0.5">{officer.name}</h3>
-                  <p className="text-xs text-[#C9A345] font-semibold mb-1">{officer.title}</p>
+                  <h3 className="font-bold text-[#1A1A1A] mb-0.5 font-[family-name:var(--font-playfair)] group-hover:text-[#6B1C23] transition-colors">
+                    {officer.name}
+                  </h3>
+                  <p className="text-xs text-[#C9A345] font-semibold mb-1 tracking-wide">{officer.title}</p>
                   <p className="text-xs text-[#6B6056] mb-3">NMLS #{officer.nmlsNumber}</p>
 
                   <p className="text-xs text-[#6B6056] leading-relaxed mb-4 line-clamp-2">
@@ -136,7 +156,7 @@ export function TeamSection({ officers }: Props) {
                   {specialties.length > 0 && (
                     <div className="flex flex-wrap gap-1 mb-4">
                       {specialties.slice(0, 2).map((s) => (
-                        <span key={s} className="text-xs bg-[#F8F6F3] text-[#6B6056] px-2 py-0.5 rounded-full">
+                        <span key={s} className="text-xs bg-[#F8F6F3] text-[#6B6056] px-2 py-0.5 rounded-full border border-[#E8E0D8]">
                           {s}
                         </span>
                       ))}
@@ -166,14 +186,20 @@ export function TeamSection({ officers }: Props) {
           })}
         </div>
 
-        <div className="text-center mt-10">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.5, duration: 0.5 }}
+          className="text-center mt-12"
+        >
           <Link
             href="/about#team"
-            className="inline-flex items-center gap-2 text-[#6B1C23] font-semibold hover:underline"
+            className="inline-flex items-center gap-2 text-[#6B1C23] font-semibold text-sm hover:gap-3 transition-all duration-200"
           >
             Meet the Full Team →
           </Link>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

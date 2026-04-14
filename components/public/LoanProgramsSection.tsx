@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Home, Shield, Flag, Leaf, DollarSign, RefreshCw, Star, ArrowRight } from "lucide-react";
+import { Home, Shield, Flag, Leaf, DollarSign, RefreshCw, Star, ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 import type { loanPrograms } from "@/lib/db/schema";
 
@@ -66,84 +66,133 @@ interface Props {
   programs: LoanProgram[];
 }
 
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.07 },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 28 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] as const },
+  },
+};
+
 export function LoanProgramsSection({ programs }: Props) {
   const displayPrograms = programs.length > 0
     ? programs.map((p) => ({ ...p, icon: iconMap[p.type] || Home }))
     : fallbackPrograms;
 
   return (
-    <section className="py-24 bg-[#F8F6F3]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-28 bg-[#F8F6F3] relative overflow-hidden">
+      {/* Subtle background grid pattern */}
+      <div
+        className="absolute inset-0 opacity-[0.025]"
+        style={{
+          backgroundImage: "linear-gradient(#1A1A1A 1px, transparent 1px), linear-gradient(90deg, #1A1A1A 1px, transparent 1px)",
+          backgroundSize: "64px 64px",
+        }}
+      />
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-14">
-          <span className="inline-block text-[#6B1C23] text-sm font-semibold uppercase tracking-widest mb-3">
-            Loan Programs
-          </span>
-          <h2 className="text-4xl sm:text-5xl font-bold text-[#1A1A1A] mb-4 font-[family-name:var(--font-playfair)]">
-            Find the Right Loan for You
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          className="mb-16"
+        >
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-8 h-0.5 bg-gradient-to-r from-[#C9A345] to-[#E8C97A] rounded-full" />
+            <span className="text-[#C9A345] text-xs font-semibold uppercase tracking-[0.15em]">
+              Loan Programs
+            </span>
+          </div>
+          <h2 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1A1A1A] leading-tight mb-4">
+            Find the Right Loan
+            <br />
+            <span className="text-[#6B1C23] italic">for You</span>
           </h2>
-          <p className="text-lg text-[#6B6056] max-w-2xl mx-auto">
+          <p className="text-base text-[#6B6056] max-w-xl leading-relaxed">
             We offer a full suite of mortgage products to match your financial
             situation, goals, and timeline.
           </p>
-        </div>
+        </motion.div>
 
         {/* Programs Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-          {displayPrograms.map((program, idx) => {
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-80px" }}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"
+        >
+          {displayPrograms.map((program) => {
             const Icon = program.icon;
             return (
-              <motion.div
-                key={program.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: idx * 0.07 }}
-              >
+              <motion.div key={program.id} variants={cardVariants}>
                 <Link
                   href={`/loan-programs/${program.slug}`}
-                  className="group block bg-white rounded-xl p-6 border border-[#E8E0D8] hover:border-[#6B1C23] hover:shadow-lg transition-all duration-300 h-full"
+                  className="group block bg-white rounded-2xl p-6 border border-[#E8E0D8] hover:border-[#C9A345]/40 hover:shadow-[0_8px_40px_rgba(107,28,35,0.1)] transition-all duration-300 h-full relative overflow-hidden"
                 >
-                  {/* Icon */}
-                  <div className="w-11 h-11 bg-[#F8F6F3] group-hover:bg-[#6B1C23] rounded-lg flex items-center justify-center mb-4 transition-colors">
-                    <Icon className="w-5 h-5 text-[#6B1C23] group-hover:text-white transition-colors" />
-                  </div>
+                  {/* Hover gradient fill */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#6B1C23]/0 to-[#6B1C23]/0 group-hover:from-[#6B1C23]/[0.02] group-hover:to-[#C9A345]/[0.04] transition-all duration-500 rounded-2xl" />
 
-                  <h3 className="font-bold text-[#1A1A1A] mb-1 group-hover:text-[#6B1C23] transition-colors">
-                    {program.name}
-                  </h3>
-                  <p className="text-xs text-[#C9A345] font-semibold mb-2">
-                    {program.tagline}
-                  </p>
-                  <p className="text-sm text-[#6B6056] leading-relaxed mb-4 line-clamp-2">
-                    {program.description}
-                  </p>
-
-                  {/* Down payment badge */}
-                  {program.minDownPayment && (
-                    <div className="flex items-center justify-between">
-                      <span className="text-xs bg-[#F0EBE3] text-[#6B1C23] px-2.5 py-1 rounded-full font-medium">
-                        Down: {program.minDownPayment}
-                      </span>
-                      <ArrowRight className="w-4 h-4 text-gray-300 group-hover:text-[#6B1C23] transition-colors" />
+                  <div className="relative z-10">
+                    {/* Icon */}
+                    <div className="w-12 h-12 bg-[#F8F6F3] group-hover:bg-[#6B1C23] rounded-xl flex items-center justify-center mb-5 transition-all duration-300 group-hover:scale-110 shadow-sm group-hover:shadow-[0_4px_16px_rgba(107,28,35,0.3)]">
+                      <Icon className="w-5 h-5 text-[#6B1C23] group-hover:text-white transition-colors duration-300" />
                     </div>
-                  )}
+
+                    <h3 className="font-semibold text-[#1A1A1A] mb-1 text-base group-hover:text-[#6B1C23] transition-colors font-[family-name:var(--font-playfair)]">
+                      {program.name}
+                    </h3>
+                    <p className="text-xs text-[#C9A345] font-semibold mb-3 tracking-wide">
+                      {program.tagline}
+                    </p>
+                    <p className="text-sm text-[#6B6056] leading-relaxed mb-5 line-clamp-2">
+                      {program.description}
+                    </p>
+
+                    {/* Footer row */}
+                    <div className="flex items-center justify-between pt-4 border-t border-[#E8E0D8]">
+                      {program.minDownPayment ? (
+                        <span className="text-xs bg-[#F8F6F3] group-hover:bg-[#6B1C23]/8 text-[#6B1C23] px-2.5 py-1 rounded-full font-medium transition-colors">
+                          {program.minDownPayment} down
+                        </span>
+                      ) : (
+                        <span className="text-xs text-[#6B6056]">Talk to us</span>
+                      )}
+                      <ArrowUpRight className="w-4 h-4 text-[#E8E0D8] group-hover:text-[#C9A345] transition-all duration-300 group-hover:scale-110" />
+                    </div>
+                  </div>
                 </Link>
               </motion.div>
             );
           })}
-        </div>
+        </motion.div>
 
-        {/* View All CTA */}
-        <div className="text-center mt-10">
+        {/* View All */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.4, duration: 0.5 }}
+          className="text-center mt-12"
+        >
           <Link
             href="/loan-programs"
-            className="inline-flex items-center gap-2 text-[#6B1C23] font-semibold hover:underline"
+            className="group inline-flex items-center gap-2 text-[#6B1C23] font-semibold text-sm hover:gap-3 transition-all duration-200"
           >
             View All Programs
-            <ArrowRight className="w-4 h-4" />
+            <ArrowUpRight className="w-4 h-4 transition-transform group-hover:scale-110" />
           </Link>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

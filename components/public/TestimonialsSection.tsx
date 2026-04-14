@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Star, Quote } from "lucide-react";
+import { Star } from "lucide-react";
 import type { testimonials } from "@/lib/db/schema";
 import Link from "next/link";
 
@@ -63,6 +63,10 @@ const loanTypeLabels: Record<string, string> = {
   other: "Home Loan",
 };
 
+function getInitials(name: string) {
+  return name.split(" ").map((n) => n[0]).join("").slice(0, 2).toUpperCase();
+}
+
 interface Props {
   testimonials: Testimonial[];
 }
@@ -71,57 +75,88 @@ export function TestimonialsSection({ testimonials: data }: Props) {
   const displayData = data.length > 0 ? data : fallbackTestimonials;
 
   return (
-    <section className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-28 bg-[#0F0A0B] relative overflow-hidden">
+      {/* Warm background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#1C1014] via-[#0F0A0B] to-[#0D0608]" />
+
+      {/* Decorative gold blur top-right */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-[#C9A345]/5 rounded-full blur-3xl -translate-y-1/3 translate-x-1/3 pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-72 h-72 bg-[#6B1C23]/10 rounded-full blur-3xl translate-y-1/3 -translate-x-1/3 pointer-events-none" />
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-14">
-          <span className="inline-block text-[#6B1C23] text-sm font-semibold uppercase tracking-widest mb-3">
-            Client Stories
-          </span>
-          <h2 className="text-4xl sm:text-5xl font-bold text-[#1A1A1A] mb-4 font-[family-name:var(--font-playfair)]">
-            Real Families. Real Results.
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          className="text-center mb-16"
+        >
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <div className="w-8 h-0.5 bg-gradient-to-r from-transparent to-[#C9A345] rounded-full" />
+            <span className="text-[#C9A345] text-xs font-semibold uppercase tracking-[0.15em]">
+              Client Stories
+            </span>
+            <div className="w-8 h-0.5 bg-gradient-to-l from-transparent to-[#C9A345] rounded-full" />
+          </div>
+          <h2 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl font-bold text-white mb-4">
+            Real Families.{" "}
+            <span className="text-[#C9A345] italic">Real Results.</span>
           </h2>
-          <p className="text-lg text-[#6B6056] max-w-xl mx-auto">
-            Don't take our word for it — here's what our clients say about
+          <p className="text-[#A89588] text-base max-w-md mx-auto leading-relaxed">
+            Don&apos;t take our word for it — here&apos;s what our clients say about
             working with KLE Mortgage.
           </p>
-        </div>
+        </motion.div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {displayData.map((item, idx) => (
             <motion.div
               key={item.id}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 28 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: idx * 0.07 }}
-              className="bg-[#F8F6F3] rounded-xl p-6 border border-[#E8E0D8] relative"
+              transition={{ duration: 0.5, delay: idx * 0.07, ease: [0.22, 1, 0.36, 1] }}
+              className="group relative bg-white/[0.04] hover:bg-white/[0.07] border border-white/8 hover:border-[#C9A345]/25 rounded-2xl p-7 transition-all duration-300"
             >
-              {/* Quote icon */}
-              <Quote className="w-8 h-8 text-[#6B1C23]/10 absolute top-5 right-5" />
+              {/* Large decorative quote */}
+              <div
+                className="absolute top-5 right-6 font-[family-name:var(--font-cormorant)] text-[6rem] leading-none text-[#C9A345]/8 select-none pointer-events-none"
+                aria-hidden="true"
+              >
+                &ldquo;
+              </div>
 
               {/* Stars */}
-              <div className="flex gap-0.5 mb-4">
+              <div className="flex gap-0.5 mb-5">
                 {Array.from({ length: item.rating }).map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-[#C9A345] text-[#C9A345]" />
+                  <Star key={i} className="w-3.5 h-3.5 fill-[#C9A345] text-[#C9A345]" />
                 ))}
               </div>
 
               {/* Text */}
-              <p className="text-[#1A1A1A] text-sm leading-relaxed mb-5 italic">
+              <p className="text-white/80 text-sm leading-relaxed mb-6 font-[family-name:var(--font-sans)] italic">
                 &ldquo;{item.reviewText}&rdquo;
               </p>
 
-              {/* Author */}
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="font-semibold text-sm text-[#1A1A1A]">{item.reviewerName}</p>
-                  {item.location && (
-                    <p className="text-xs text-[#6B6056]">{item.location}</p>
-                  )}
+              {/* Author footer */}
+              <div className="flex items-center justify-between pt-5 border-t border-white/8">
+                <div className="flex items-center gap-3">
+                  {/* Initials avatar */}
+                  <div className="w-9 h-9 rounded-full bg-[#6B1C23] flex items-center justify-center flex-shrink-0">
+                    <span className="text-white text-xs font-bold font-[family-name:var(--font-playfair)]">
+                      {getInitials(item.reviewerName)}
+                    </span>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-sm text-white">{item.reviewerName}</p>
+                    {item.location && (
+                      <p className="text-xs text-[#A89588]">{item.location}</p>
+                    )}
+                  </div>
                 </div>
-                <span className="text-xs bg-[#6B1C23]/10 text-[#6B1C23] px-2.5 py-1 rounded-full font-medium">
+                <span className="text-xs bg-[#6B1C23]/25 border border-[#6B1C23]/30 text-[#E8A0A8] px-2.5 py-1 rounded-full font-medium">
                   {loanTypeLabels[item.loanType] || item.loanType}
                 </span>
               </div>
@@ -130,14 +165,20 @@ export function TestimonialsSection({ testimonials: data }: Props) {
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-10">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.4, duration: 0.5 }}
+          className="text-center mt-12"
+        >
           <Link
             href="/testimonials"
-            className="inline-flex items-center gap-2 text-[#6B1C23] font-semibold hover:underline"
+            className="inline-flex items-center gap-2 text-[#C9A345] font-semibold text-sm hover:text-[#E8C97A] transition-colors"
           >
             Read More Stories →
           </Link>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

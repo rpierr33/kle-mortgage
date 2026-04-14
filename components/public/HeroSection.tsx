@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, Shield, Award, Users } from "lucide-react";
-import { motion } from "framer-motion";
+import { ArrowRight, Shield, Award, Users, ChevronDown } from "lucide-react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 const stats = [
   { value: "500+", label: "Families Served" },
@@ -12,49 +13,86 @@ const stats = [
 ];
 
 export function HeroSection() {
+  const ref = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
+  const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "18%"]);
+  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "8%"]);
+
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/hero-banner.jpg')" }}
+    <section
+      ref={ref}
+      className="relative min-h-screen flex items-center overflow-hidden"
+    >
+      {/* Parallax background */}
+      <motion.div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-110"
+        style={{
+          backgroundImage: "url('/hero-banner.jpg')",
+          y: bgY,
+        }}
       />
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#1A1A1A]/90 via-[#1A1A1A]/70 to-[#6B1C23]/50" />
 
-      {/* Decorative maroon gradient */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#F8F6F3] to-transparent" />
+      {/* Layered overlays for depth */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0D0608]/95 via-[#1A1A1A]/75 to-[#6B1C23]/35" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#0D0608]/60 via-transparent to-transparent" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28 pt-36">
+      {/* Gold texture vignette — left column accent */}
+      <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-transparent via-[#C9A345]/60 to-transparent" />
+
+      {/* Bottom fade to page */}
+      <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-[#F8F6F3] to-transparent" />
+
+      <motion.div
+        style={{ y: textY }}
+        className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28 pt-40"
+      >
         <div className="max-w-3xl">
-          {/* Badge */}
+          {/* NMLS badge */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white text-sm px-4 py-2 rounded-full mb-6"
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            className="inline-flex items-center gap-2.5 bg-white/8 backdrop-blur-md border border-white/15 text-white/90 text-xs font-medium px-4 py-2 rounded-full mb-8 tracking-wide"
           >
-            <Shield className="w-4 h-4 text-[#C9A345]" />
+            <Shield className="w-3.5 h-3.5 text-[#C9A345]" />
             Licensed Mortgage Broker — NMLS #123456
           </motion.div>
 
-          {/* Heading */}
+          {/* Gold accent line */}
+          <motion.div
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+            style={{ originX: 0 }}
+            className="w-12 h-0.5 bg-gradient-to-r from-[#C9A345] to-[#E8C97A] mb-6 rounded-full"
+          />
+
+          {/* Headline — Cormorant for editorial luxury */}
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 32 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6 font-[family-name:var(--font-playfair)]"
+            transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+            className="font-[family-name:var(--font-cormorant)] font-semibold italic text-white leading-[0.95] mb-3"
+            style={{ fontSize: "clamp(3.5rem, 8vw, 7.5rem)" }}
           >
-            Your Dream Home
-            <span className="block text-[#C9A345]">Starts Here.</span>
+            Mortgages Made Easy,
+          </motion.h1>
+          <motion.h1
+            initial={{ opacity: 0, y: 32 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.22, ease: [0.22, 1, 0.36, 1] }}
+            className="font-[family-name:var(--font-cormorant)] font-semibold italic leading-[0.95] mb-8"
+            style={{ fontSize: "clamp(3.5rem, 8vw, 7.5rem)", color: "#C9A345" }}
+          >
+            Dreams Made Real.
           </motion.h1>
 
           {/* Subheading */}
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-lg text-white/80 leading-relaxed mb-8 max-w-xl"
+            transition={{ duration: 0.6, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            className="text-base sm:text-lg text-white/75 leading-relaxed mb-10 max-w-lg font-[family-name:var(--font-sans)]"
           >
             KLE Mortgage Financing simplifies the path to homeownership. We
             offer conventional, FHA, VA, USDA, and jumbo loans — tailored to
@@ -63,21 +101,21 @@ export function HeroSection() {
 
           {/* CTAs */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="flex flex-col sm:flex-row gap-4 mb-14"
+            transition={{ duration: 0.6, delay: 0.38, ease: [0.22, 1, 0.36, 1] }}
+            className="flex flex-col sm:flex-row gap-3 mb-16"
           >
             <Link
               href="/apply"
-              className="inline-flex items-center justify-center gap-2 bg-[#6B1C23] hover:bg-[#4A1218] text-white px-8 py-4 rounded-md text-base font-semibold transition-colors shadow-lg"
+              className="group inline-flex items-center justify-center gap-2.5 bg-[#6B1C23] hover:bg-[#8A2530] text-white px-8 py-4 rounded-lg text-sm font-semibold transition-all duration-300 shadow-[0_0_40px_rgba(107,28,35,0.5)] hover:shadow-[0_0_60px_rgba(107,28,35,0.7)] hover:scale-[1.02]"
             >
               Start My Application
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
             </Link>
             <Link
               href="/calculator"
-              className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white px-8 py-4 rounded-md text-base font-semibold transition-colors backdrop-blur-sm"
+              className="inline-flex items-center justify-center gap-2 bg-white/8 hover:bg-white/15 border border-white/20 hover:border-white/35 text-white px-8 py-4 rounded-lg text-sm font-semibold transition-all duration-300 backdrop-blur-sm"
             >
               Calculate Payment
             </Link>
@@ -85,39 +123,64 @@ export function HeroSection() {
 
           {/* Trust badges */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.46 }}
             className="flex flex-wrap items-center gap-6"
           >
-            <div className="flex items-center gap-2 text-white/70 text-sm">
-              <Award className="w-4 h-4 text-[#C9A345]" />
+            <div className="flex items-center gap-2 text-white/55 text-xs tracking-wide">
+              <Award className="w-3.5 h-3.5 text-[#C9A345]" />
               Equal Housing Lender
             </div>
-            <div className="flex items-center gap-2 text-white/70 text-sm">
-              <Users className="w-4 h-4 text-[#C9A345]" />
+            <div className="w-px h-3 bg-white/20" />
+            <div className="flex items-center gap-2 text-white/55 text-xs tracking-wide">
+              <Users className="w-3.5 h-3.5 text-[#C9A345]" />
               Licensed in FL, GA, TX
             </div>
           </motion.div>
         </div>
 
-        {/* Stats Bar */}
+        {/* Stats bar */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-2xl"
+          transition={{ duration: 0.8, delay: 0.55, ease: [0.22, 1, 0.36, 1] }}
+          className="mt-20 inline-grid grid-cols-2 sm:grid-cols-4 gap-8 sm:gap-14"
         >
-          {stats.map((stat) => (
-            <div key={stat.label} className="text-center sm:text-left">
-              <p className="text-3xl font-bold text-[#C9A345] font-[family-name:var(--font-playfair)]">
+          {stats.map((stat, idx) => (
+            <motion.div
+              key={stat.label}
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 + idx * 0.08 }}
+              className="text-left"
+            >
+              <p
+                className="font-[family-name:var(--font-cormorant)] font-semibold text-[#C9A345] leading-none mb-1"
+                style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}
+              >
                 {stat.value}
               </p>
-              <p className="text-sm text-white/60 mt-0.5">{stat.label}</p>
-            </div>
+              <p className="text-xs text-white/50 tracking-wider uppercase">{stat.label}</p>
+            </motion.div>
           ))}
         </motion.div>
-      </div>
+      </motion.div>
+
+      {/* Scroll hint */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.2, duration: 0.6 }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-1"
+      >
+        <motion.div
+          animate={{ y: [0, 6, 0] }}
+          transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+        >
+          <ChevronDown className="w-5 h-5 text-white/30" />
+        </motion.div>
+      </motion.div>
     </section>
   );
 }

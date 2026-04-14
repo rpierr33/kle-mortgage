@@ -6,8 +6,9 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-inter);
+  --font-sans: var(--font-sans);
   --font-heading: var(--font-playfair);
+  --font-display: var(--font-cormorant);
 
   /* KLE Brand Colors */
   --color-maroon: var(--maroon);
@@ -101,10 +102,36 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
+  letter-spacing: -0.01em;
 }
 
 h1, h2, h3 {
   font-family: var(--font-heading), Georgia, serif;
+  letter-spacing: -0.02em;
+}
+
+/* Utility: Cormorant display font for editorial moments */
+.font-display {
+  font-family: var(--font-cormorant), Georgia, serif;
+}
+
+/* Gold accent line used throughout */
+.gold-accent-line {
+  display: inline-block;
+  width: 3rem;
+  height: 2px;
+  background: linear-gradient(90deg, #C9A345, #E8C97A);
+  border-radius: 2px;
+}
+
+/* Smooth image loading */
+img {
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Section transition gradient helper */
+.section-fade-top {
+  background: linear-gradient(to bottom, transparent 0%, var(--background) 100%);
 }
 
 /* Smooth scrolling */
