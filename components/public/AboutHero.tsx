@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Shield, Award, Users } from "lucide-react";
 
 export function AboutHero() {
@@ -6,6 +7,7 @@ export function AboutHero() {
       <div className="absolute top-0 right-0 w-96 h-96 bg-white/[0.04] rounded-full -translate-y-1/2 translate-x-1/2 pointer-events-none" />
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#C9A345]/30 to-transparent" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div className="max-w-3xl">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-8 h-0.5 bg-gradient-to-r from-[#C9A345] to-[#E8C97A] rounded-full" />
@@ -43,6 +45,20 @@ export function AboutHero() {
               </div>
             ))}
           </div>
+        </div>
+        {/* Team photo — right column */}
+        <div className="hidden lg:flex items-center justify-center">
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl" style={{ width: 480, height: 320 }}>
+            <Image
+              src="/team-photo.jpg"
+              alt="KLE Mortgage Financing team"
+              fill
+              className="object-cover"
+              sizes="480px"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#6B1C23]/40 to-transparent" />
+          </div>
+        </div>
         </div>
       </div>
     </section>

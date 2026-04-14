@@ -20,7 +20,7 @@ export function Footer() {
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-3 mb-5 group">
               <Image
-                src="/kle-logo.png"
+                src="/kle-logo-full.png"
                 alt="KLE Mortgage Financing"
                 width={52}
                 height={52}

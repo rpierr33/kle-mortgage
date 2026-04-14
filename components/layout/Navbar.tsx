@@ -52,7 +52,7 @@ export function Navbar() {
           <Link href="/" className="flex items-center gap-3 flex-shrink-0 group">
             <div className="relative">
               <Image
-                src="/kle-logo.png"
+                src="/kle-logo-full.png"
                 alt="KLE Mortgage Financing"
                 width={48}
                 height={48}
