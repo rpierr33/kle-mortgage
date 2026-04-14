@@ -44,11 +44,28 @@ export const metadata: Metadata = {
     "refinance",
     "KLE Mortgage",
   ],
+  metadataBase: new URL("https://kle-mortgage-site.vercel.app"),
   openGraph: {
     title: "KLE Mortgage Financing, LLC",
-    description: "Home Loans Made Simple. Expert mortgage guidance for every homebuyer.",
+    description: "Mortgages Made Easy, Dreams Made Real. Expert mortgage guidance for every homebuyer in South Florida.",
     type: "website",
     locale: "en_US",
+    url: "https://kle-mortgage-site.vercel.app",
+    siteName: "KLE Mortgage Financing",
+    images: [
+      {
+        url: "/hero-luxury.jpg",
+        width: 1200,
+        height: 630,
+        alt: "KLE Mortgage Financing — Luxury Home",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "KLE Mortgage Financing, LLC",
+    description: "Mortgages Made Easy, Dreams Made Real.",
+    images: ["/hero-luxury.jpg"],
   },
   robots: { index: true, follow: true },
 };
