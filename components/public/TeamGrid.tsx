@@ -72,7 +72,7 @@ export function TeamGrid({ officers }: Props) {
     <section className="py-20 bg-[#F8F6F3]" id="team">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-14">
-          <h2 className="text-4xl font-bold text-[#1A1A1A] mb-4 font-[family-name:var(--font-playfair)]">
+          <h2 className="text-4xl font-bold text-[#1A1A1A] mb-4 font-[family-name:var(--font-cormorant)]">
             Our Loan Officers
           </h2>
           <p className="text-[#6B6056] max-w-xl mx-auto">
@@ -102,7 +102,7 @@ export function TeamGrid({ officers }: Props) {
                       className="w-full h-full object-cover rounded-xl"
                     />
                   ) : (
-                    <span className="text-white text-xl font-bold font-[family-name:var(--font-playfair)]">
+                    <span className="text-white text-xl font-bold font-[family-name:var(--font-cormorant)]">
                       {getInitials(officer.name)}
                     </span>
                   )}

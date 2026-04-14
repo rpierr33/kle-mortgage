@@ -50,7 +50,7 @@ export default async function ResourceDetailPage({ params }: Props) {
             <span className="mx-2">/</span>
             <span className="text-white line-clamp-1">{post.title}</span>
           </nav>
-          <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4 font-[family-name:var(--font-playfair)]">
+          <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4 font-[family-name:var(--font-cormorant)]">
             {post.title}
           </h1>
           <p className="text-white/80 text-lg mb-6">{post.excerpt}</p>

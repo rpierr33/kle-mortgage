@@ -48,7 +48,7 @@ export function MissionSection() {
               <div className="w-8 h-0.5 bg-gradient-to-r from-[#C9A345] to-[#E8C97A] rounded-full" />
               <span className="text-[#C9A345] text-xs font-semibold uppercase tracking-[0.15em]">Our Mission</span>
             </div>
-            <h2 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl font-bold text-[#1A1A1A] leading-tight mb-6">
+            <h2 className="font-[family-name:var(--font-cormorant)] text-4xl sm:text-5xl font-semibold text-[#1A1A1A] leading-tight mb-6">
               Making Homeownership
               <br />
               <span className="text-[#6B1C23] italic">Accessible to All</span>
@@ -77,7 +77,7 @@ export function MissionSection() {
           >
             <div className="flex items-center gap-2 mb-6">
               <div className="w-5 h-0.5 bg-[#C9A345] rounded-full" />
-              <h3 className="font-[family-name:var(--font-playfair)] text-xl font-bold text-[#1A1A1A]">
+              <h3 className="font-[family-name:var(--font-cormorant)] text-xl font-bold text-[#1A1A1A]">
                 By the Numbers
               </h3>
             </div>
@@ -116,7 +116,7 @@ export function MissionSection() {
               <span className="text-[#C9A345] text-xs font-semibold uppercase tracking-[0.15em]">What Drives Us</span>
               <div className="w-8 h-0.5 bg-gradient-to-l from-transparent to-[#C9A345] rounded-full" />
             </div>
-            <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl font-bold text-[#1A1A1A]">
+            <h2 className="font-[family-name:var(--font-cormorant)] text-3xl sm:text-4xl font-bold text-[#1A1A1A]">
               Our Core Values
             </h2>
           </motion.div>
@@ -134,7 +134,7 @@ export function MissionSection() {
                 <div className="w-14 h-14 bg-gradient-to-br from-[#6B1C23] to-[#4A1218] rounded-2xl flex items-center justify-center mx-auto mb-5 shadow-[0_4px_16px_rgba(107,28,35,0.25)] group-hover:scale-105 transition-transform duration-300">
                   <Icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="font-[family-name:var(--font-playfair)] font-bold text-[#1A1A1A] text-lg mb-3">
+                <h3 className="font-[family-name:var(--font-cormorant)] font-bold text-[#1A1A1A] text-lg mb-3">
                   {title}
                 </h3>
                 <p className="text-sm text-[#6B6056] leading-relaxed">{description}</p>
@@ -154,7 +154,7 @@ export function MissionSection() {
           <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#C9A345]/30 to-transparent" />
           <div className="absolute top-0 right-0 w-64 h-64 bg-[#C9A345]/[0.04] rounded-full -translate-y-1/2 translate-x-1/4 blur-2xl" />
 
-          <h3 className="font-[family-name:var(--font-playfair)] text-xl font-bold mb-5 relative z-10">
+          <h3 className="font-[family-name:var(--font-cormorant)] text-xl font-bold mb-5 relative z-10">
             Licensing & Compliance
           </h3>
           <div className="relative z-10 grid grid-cols-1 sm:grid-cols-3 gap-6">

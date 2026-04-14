@@ -48,7 +48,7 @@ export function MortgageCalculator() {
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-10">
           {/* Inputs - 3 cols */}
           <div className="lg:col-span-3 bg-white rounded-2xl border border-[#E8E0D8] p-8">
-            <h2 className="text-2xl font-bold text-[#1A1A1A] mb-8 font-[family-name:var(--font-playfair)]">
+            <h2 className="text-2xl font-bold text-[#1A1A1A] mb-8 font-[family-name:var(--font-cormorant)]">
               Loan Details
             </h2>
 
@@ -196,7 +196,7 @@ export function MortgageCalculator() {
             {/* Payment Card */}
             <div className="bg-[#6B1C23] text-white rounded-2xl p-8">
               <p className="text-white/70 text-sm mb-2">Total Monthly Payment</p>
-              <p className="text-5xl font-bold font-[family-name:var(--font-playfair)]">
+              <p className="text-5xl font-bold font-[family-name:var(--font-cormorant)]">
                 {formatCurrency(safeTotal)}
                 <span className="text-lg font-normal text-white/70">/mo</span>
               </p>
@@ -204,7 +204,7 @@ export function MortgageCalculator() {
 
             {/* Breakdown */}
             <div className="bg-white rounded-xl border border-[#E8E0D8] p-6">
-              <h3 className="font-bold text-[#1A1A1A] mb-4 font-[family-name:var(--font-playfair)]">
+              <h3 className="font-bold text-[#1A1A1A] mb-4 font-[family-name:var(--font-cormorant)]">
                 Payment Breakdown
               </h3>
               <div className="space-y-3">
@@ -233,7 +233,7 @@ export function MortgageCalculator() {
 
             {/* Loan Summary */}
             <div className="bg-[#F8F6F3] rounded-xl border border-[#E8E0D8] p-6">
-              <h3 className="font-bold text-[#1A1A1A] mb-4 font-[family-name:var(--font-playfair)]">
+              <h3 className="font-bold text-[#1A1A1A] mb-4 font-[family-name:var(--font-cormorant)]">
                 Loan Summary
               </h3>
               <div className="space-y-2">

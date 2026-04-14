@@ -90,7 +90,7 @@ export function TeamSection({ officers }: Props) {
             <span className="text-[#C9A345] text-xs font-semibold uppercase tracking-[0.15em]">Our Team</span>
             <div className="w-8 h-0.5 bg-gradient-to-l from-transparent to-[#C9A345] rounded-full" />
           </div>
-          <h2 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl font-bold text-[#1A1A1A] mb-4">
+          <h2 className="font-[family-name:var(--font-cormorant)] text-4xl sm:text-5xl font-bold text-[#1A1A1A] mb-4">
             Meet Your{" "}
             <span className="text-[#6B1C23] italic">Loan Officers</span>
           </h2>
@@ -142,7 +142,7 @@ export function TeamSection({ officers }: Props) {
                 </div>
 
                 <div className="p-5">
-                  <h3 className="font-bold text-[#1A1A1A] mb-0.5 font-[family-name:var(--font-playfair)] group-hover:text-[#6B1C23] transition-colors">
+                  <h3 className="font-bold text-[#1A1A1A] mb-0.5 font-[family-name:var(--font-cormorant)] group-hover:text-[#6B1C23] transition-colors">
                     {officer.name}
                   </h3>
                   <p className="text-xs text-[#C9A345] font-semibold mb-1 tracking-wide">{officer.title}</p>

@@ -99,7 +99,7 @@ export function WhyKLESection() {
                 </div>
                 <div>
                   <p className="text-xs text-[#6B6056]">Call us today</p>
-                  <p className="text-sm font-bold text-[#1A1A1A] font-[family-name:var(--font-playfair)]">
+                  <p className="text-sm font-bold text-[#1A1A1A] font-[family-name:var(--font-cormorant)]">
                     +1 (305) 705-2030
                   </p>
                 </div>
@@ -116,7 +116,7 @@ export function WhyKLESection() {
               <div className="w-8 h-0.5 bg-gradient-to-r from-[#C9A345] to-[#E8C97A] rounded-full" />
               <span className="text-[#C9A345] text-xs font-semibold uppercase tracking-[0.15em]">Why KLE</span>
             </div>
-            <h2 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl lg:text-[3.25rem] font-bold text-[#1A1A1A] leading-tight mb-5">
+            <h2 className="font-[family-name:var(--font-cormorant)] text-4xl sm:text-5xl lg:text-[3.25rem] font-bold text-[#1A1A1A] leading-tight mb-5">
               The KLE
               <br />
               <span className="text-[#6B1C23] italic">Difference</span>
@@ -142,7 +142,7 @@ export function WhyKLESection() {
                       <Icon className="w-5 h-5 text-[#6B1C23]" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-[#1A1A1A] mb-1.5 font-[family-name:var(--font-playfair)]">
+                      <h4 className="font-semibold text-[#1A1A1A] mb-1.5 font-[family-name:var(--font-cormorant)]">
                         {benefit.title}
                       </h4>
                       <p className="text-sm text-[#6B6056] leading-relaxed">{benefit.description}</p>

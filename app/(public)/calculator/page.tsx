@@ -16,7 +16,7 @@ export default function CalculatorPage() {
           <span className="inline-block text-[#C9A345] text-sm font-semibold uppercase tracking-widest mb-3">
             Free Tool
           </span>
-          <h1 className="text-5xl font-bold text-white mb-4 font-[family-name:var(--font-playfair)]">
+          <h1 className="text-5xl font-bold text-white mb-4 font-[family-name:var(--font-cormorant)]">
             Mortgage Calculator
           </h1>
           <p className="text-xl text-white/80 max-w-xl mx-auto">

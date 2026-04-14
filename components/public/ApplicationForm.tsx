@@ -128,7 +128,7 @@ export function ApplicationForm() {
             <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
               <CheckCircle2 className="w-8 h-8 text-green-600" />
             </div>
-            <h2 className="text-3xl font-bold text-[#1A1A1A] mb-3 font-[family-name:var(--font-playfair)]">
+            <h2 className="text-3xl font-bold text-[#1A1A1A] mb-3 font-[family-name:var(--font-cormorant)]">
               Application Submitted!
             </h2>
             <p className="text-[#6B6056] mb-6">
@@ -184,7 +184,7 @@ export function ApplicationForm() {
           {/* Step 1: Personal Info */}
           {currentStep === 0 && (
             <form onSubmit={step1Form.handleSubmit(handleStep1)}>
-              <h2 className="text-2xl font-bold text-[#1A1A1A] mb-6 font-[family-name:var(--font-playfair)]">
+              <h2 className="text-2xl font-bold text-[#1A1A1A] mb-6 font-[family-name:var(--font-cormorant)]">
                 Personal Information
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -224,7 +224,7 @@ export function ApplicationForm() {
           {/* Step 2: Property & Loan */}
           {currentStep === 1 && (
             <form onSubmit={step2Form.handleSubmit(handleStep2)}>
-              <h2 className="text-2xl font-bold text-[#1A1A1A] mb-6 font-[family-name:var(--font-playfair)]">
+              <h2 className="text-2xl font-bold text-[#1A1A1A] mb-6 font-[family-name:var(--font-cormorant)]">
                 Property & Loan Details
               </h2>
               <div className="space-y-5">
@@ -318,7 +318,7 @@ export function ApplicationForm() {
           {/* Step 3: Employment */}
           {currentStep === 2 && (
             <form onSubmit={step3Form.handleSubmit(handleStep3)}>
-              <h2 className="text-2xl font-bold text-[#1A1A1A] mb-6 font-[family-name:var(--font-playfair)]">
+              <h2 className="text-2xl font-bold text-[#1A1A1A] mb-6 font-[family-name:var(--font-cormorant)]">
                 Employment & Income
               </h2>
               <div className="space-y-5">
@@ -389,7 +389,7 @@ export function ApplicationForm() {
           {/* Step 4: Review & Submit */}
           {currentStep === 3 && (
             <form onSubmit={consentForm.handleSubmit(handleFinalSubmit)}>
-              <h2 className="text-2xl font-bold text-[#1A1A1A] mb-6 font-[family-name:var(--font-playfair)]">
+              <h2 className="text-2xl font-bold text-[#1A1A1A] mb-6 font-[family-name:var(--font-cormorant)]">
                 Review & Submit
               </h2>
 

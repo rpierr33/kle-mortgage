@@ -3,16 +3,23 @@ import { Shield, Award, Users } from "lucide-react";
 export function AboutHero() {
   return (
     <section className="pt-28 pb-20 bg-[#6B1C23] relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-white/[0.04] rounded-full -translate-y-1/2 translate-x-1/2 pointer-events-none" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#C9A345]/30 to-transparent" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-3xl">
-          <span className="inline-block text-[#C9A345] text-sm font-semibold uppercase tracking-widest mb-4">
-            Our Story
-          </span>
-          <h1 className="text-5xl sm:text-6xl font-bold text-white mb-6 font-[family-name:var(--font-playfair)]">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-8 h-0.5 bg-gradient-to-r from-[#C9A345] to-[#E8C97A] rounded-full" />
+            <span className="text-[#C9A345] text-xs font-semibold uppercase tracking-[0.15em]">
+              Our Story
+            </span>
+          </div>
+          <h1
+            className="font-[family-name:var(--font-cormorant)] font-semibold text-white leading-[1.1] mb-6"
+            style={{ fontSize: "clamp(2.5rem, 5vw, 4.5rem)" }}
+          >
             Built on Trust.
             <br />
-            Driven by Purpose.
+            <span className="text-[#C9A345] italic">Driven by Purpose.</span>
           </h1>
           <p className="text-xl text-white/80 leading-relaxed mb-10">
             KLE Mortgage Financing was founded with one belief: every family

@@ -50,7 +50,7 @@ export function ContactForm() {
         <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
           <CheckCircle2 className="w-7 h-7 text-green-600" />
         </div>
-        <h3 className="text-2xl font-bold text-[#1A1A1A] mb-2 font-[family-name:var(--font-playfair)]">
+        <h3 className="text-2xl font-bold text-[#1A1A1A] mb-2 font-[family-name:var(--font-cormorant)]">
           Message Sent!
         </h3>
         <p className="text-[#6B6056]">
@@ -62,7 +62,7 @@ export function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="bg-white rounded-xl border border-[#E8E0D8] p-8">
-      <h2 className="text-2xl font-bold text-[#1A1A1A] mb-6 font-[family-name:var(--font-playfair)]">
+      <h2 className="text-2xl font-bold text-[#1A1A1A] mb-6 font-[family-name:var(--font-cormorant)]">
         Send Us a Message
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
