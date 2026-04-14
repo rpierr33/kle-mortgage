@@ -1,0 +1,125 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-playfair);
+
+  /* KLE Brand Colors */
+  --color-maroon: var(--maroon);
+  --color-maroon-dark: var(--maroon-dark);
+  --color-maroon-light: var(--maroon-light);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-charcoal: var(--charcoal);
+  --color-off-white: var(--off-white);
+  --color-brand-border: var(--brand-border);
+
+  /* shadcn mappings */
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+}
+
+:root {
+  /* KLE Brand Palette */
+  --maroon: #6B1C23;
+  --maroon-dark: #4A1218;
+  --maroon-light: #8A2530;
+  --gold: #C9A345;
+  --gold-light: #E8C97A;
+  --charcoal: #1A1A1A;
+  --off-white: #F8F6F3;
+  --brand-border: #E8E0D8;
+
+  /* Light mode UI */
+  --background: #F8F6F3;
+  --foreground: #1A1A1A;
+  --card: #FFFFFF;
+  --card-foreground: #1A1A1A;
+  --popover: #FFFFFF;
+  --popover-foreground: #1A1A1A;
+  --primary: #6B1C23;
+  --primary-foreground: #FFFFFF;
+  --secondary: #F0EBE3;
+  --secondary-foreground: #1A1A1A;
+  --muted: #F0EBE3;
+  --muted-foreground: #6B6056;
+  --accent: #C9A345;
+  --accent-foreground: #1A1A1A;
+  --destructive: #DC2626;
+  --border: #E8E0D8;
+  --input: #E8E0D8;
+  --ring: #6B1C23;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: #0F0A0B;
+  --foreground: #F5F0EB;
+  --card: #1C1214;
+  --card-foreground: #F5F0EB;
+  --popover: #1C1214;
+  --popover-foreground: #F5F0EB;
+  --primary: #8A2530;
+  --primary-foreground: #FFFFFF;
+  --secondary: #2A1A1C;
+  --secondary-foreground: #F5F0EB;
+  --muted: #2A1A1C;
+  --muted-foreground: #A89588;
+  --accent: #C9A345;
+  --accent-foreground: #1A1A1A;
+  --destructive: #EF4444;
+  --border: #3A2428;
+  --input: #3A2428;
+  --ring: #8A2530;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading), Georgia, serif;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: 2px solid var(--maroon);
+  outline-offset: 2px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--muted); }
+::-webkit-scrollbar-thumb { background: var(--maroon-light); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--maroon); }
