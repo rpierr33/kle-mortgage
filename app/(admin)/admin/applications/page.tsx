@@ -3,7 +3,7 @@ import { db } from "@/lib/db";
 import { loanApplications, loanOfficers } from "@/lib/db/schema";
 import { desc, eq } from "drizzle-orm";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, AlertTriangle } from "lucide-react";
 
 export const dynamic = "force-dynamic";
 
@@ -22,9 +22,11 @@ const loanTypeLabels: Record<string, string> = {
 
 export default async function ApplicationsPage() {
   let apps: typeof loanApplications.$inferSelect[] = [];
+  let dbConnected = false;
 
   try {
     apps = await db.select().from(loanApplications).orderBy(desc(loanApplications.createdAt)).limit(200);
+    dbConnected = true;
   } catch { /* DB not connected */ }
 
   const byStatus = STATUS_COLUMNS.reduce((acc, col) => {
@@ -41,6 +43,15 @@ export default async function ApplicationsPage() {
             <p className="text-sm text-[#6B6056] mt-1">Loan application pipeline — {apps.length} total</p>
           </div>
         </div>
+
+        {!dbConnected && (
+          <div className="mb-6 flex items-start gap-3 bg-amber-50 border border-amber-200 rounded-xl p-4">
+            <AlertTriangle className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
+            <p className="text-amber-800 text-sm">
+              <strong>Database not connected.</strong> Connect your Neon database via <code className="bg-amber-100 px-1 rounded">DATABASE_URL</code> in <code className="bg-amber-100 px-1 rounded">.env.local</code> to see real data.
+            </p>
+          </div>
+        )}
 
         {/* Kanban */}
         {apps.length === 0 ? (

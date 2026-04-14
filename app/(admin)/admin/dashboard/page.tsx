@@ -3,11 +3,12 @@ import { db } from "@/lib/db";
 import { loanApplications, leads, loanOfficers } from "@/lib/db/schema";
 import { eq, count } from "drizzle-orm";
 import Link from "next/link";
-import { ClipboardList, Users, CheckCircle, Clock, TrendingUp, ArrowRight } from "lucide-react";
+import { ClipboardList, Users, CheckCircle, Clock, TrendingUp, ArrowRight, AlertTriangle } from "lucide-react";
 
 export default async function AdminDashboardPage() {
   let stats = { total: 0, new: 0, inReview: 0, approved: 0, funded: 0, closed: 0, leads: 0, officers: 0 };
   let recentApps: typeof loanApplications.$inferSelect[] = [];
+  let dbConnected = false;
 
   try {
     const [totalApps, newApps, inReviewApps, approvedApps, fundedApps, closedApps, totalLeads, totalOfficers] = await Promise.all([
@@ -33,7 +34,10 @@ export default async function AdminDashboardPage() {
     };
 
     recentApps = await db.select().from(loanApplications).orderBy(loanApplications.createdAt).limit(5);
-  } catch { /* DB not connected */ }
+    dbConnected = true;
+  } catch {
+    // DB not connected — show warning banner
+  }
 
   const statCards = [
     { label: "Total Applications", value: stats.total, icon: ClipboardList, color: "bg-[#6B1C23]", href: "/admin/applications" },
@@ -65,6 +69,19 @@ export default async function AdminDashboardPage() {
           <h1 className="text-2xl font-bold text-[#1A1A1A] font-[family-name:var(--font-playfair)]">Dashboard</h1>
           <p className="text-[#6B6056] text-sm mt-1">KLE Mortgage Financing — CRM Overview</p>
         </div>
+
+        {/* DB connection warning */}
+        {!dbConnected && (
+          <div className="mb-6 flex items-start gap-3 bg-amber-50 border border-amber-200 rounded-xl p-4">
+            <AlertTriangle className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
+            <div>
+              <p className="font-semibold text-amber-800 text-sm">Database not connected</p>
+              <p className="text-amber-700 text-xs mt-0.5">
+                Connect your Neon database by setting <code className="bg-amber-100 px-1 rounded">DATABASE_URL</code> in <code className="bg-amber-100 px-1 rounded">.env.local</code> to see real applications, leads, and pipeline data.
+              </p>
+            </div>
+          </div>
+        )}
 
         {/* Stats Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">

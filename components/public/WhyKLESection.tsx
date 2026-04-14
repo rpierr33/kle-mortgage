@@ -82,7 +82,7 @@ export function WhyKLESection() {
                 </div>
                 <div>
                   <p className="text-xs text-[#6B6056]">Call us today</p>
-                  <p className="text-sm font-bold text-[#1A1A1A]">(404) 555-1234</p>
+                  <p className="text-sm font-bold text-[#1A1A1A]">+1 (305) 705-2030</p>
                 </div>
               </div>
               <p className="text-xs text-[#6B6056] mt-2">Mon–Sat 8AM–7PM ET</p>

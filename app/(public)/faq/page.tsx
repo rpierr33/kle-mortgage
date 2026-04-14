@@ -98,8 +98,8 @@ export default function FAQPage() {
               <a href="/contact" className="bg-white text-[#6B1C23] hover:bg-[#F8F6F3] px-6 py-3 rounded-md text-sm font-semibold transition-colors">
                 Send a Message
               </a>
-              <a href="tel:+14045551234" className="border border-white/40 text-white hover:bg-white/10 px-6 py-3 rounded-md text-sm font-semibold transition-colors">
-                Call (404) 555-1234
+              <a href="tel:+13057052030" className="border border-white/40 text-white hover:bg-white/10 px-6 py-3 rounded-md text-sm font-semibold transition-colors">
+                Call +1 (305) 705-2030
               </a>
             </div>
           </div>

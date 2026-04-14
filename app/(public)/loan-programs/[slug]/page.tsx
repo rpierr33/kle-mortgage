@@ -7,7 +7,7 @@ import { CTASection } from "@/components/public/CTASection";
 const programData: Record<string, {
   name: string; tagline: string; description: string; longDescription: string;
   features: string[]; requirements: string[]; bestFor: string[];
-  minDown: string | null; minCredit: number; maxLoan?: string;
+  minDown: string | null; minCredit: number | null; maxLoan?: string;
 }> = {
   conventional: {
     name: "Conventional Loans",
@@ -78,6 +78,96 @@ const programData: Record<string, {
     requirements: ["Generally: no homeownership in past 3 years", "Income limits may apply for assistance", "Homebuyer education may be required", "Primary residence only", "Varies by specific program"],
     bestFor: ["Never purchased a home before", "Haven't owned in 3+ years", "Limited down payment savings", "Want structured guidance"],
     minDown: "3%", minCredit: 580,
+  },
+  "non-qm": {
+    name: "Non-QM Loans",
+    tagline: "Flexible underwriting for complex income",
+    description: "Non-Qualified Mortgage loans open the door for borrowers with unique income situations — self-employed, investors, or alternative documentation.",
+    longDescription: "Non-QM (Non-Qualified Mortgage) loans are designed for borrowers who don't fit the standard underwriting box. Self-employed individuals, real estate investors, foreign nationals, or those with recent credit events often qualify through alternative documentation such as bank statements, asset depletion, or debt-service coverage ratios (DSCR). KLE Mortgage has deep expertise in structuring Non-QM deals that traditional lenders turn away.",
+    features: ["Bank statement income qualifying (12/24 months)", "No tax returns required for self-employed", "Asset depletion programs", "DSCR investor loans", "Foreign national programs", "Recent credit events considered"],
+    requirements: ["Alternative income documentation", "Minimum 10–20% down payment", "Credit scores from 580+", "Property appraisal required", "Reserves may be required"],
+    bestFor: ["Self-employed business owners", "Real estate investors", "Foreign nationals", "Recent credit event (BK/foreclosure)", "High-net-worth with non-traditional income"],
+    minDown: "10%", minCredit: 620,
+  },
+  "interest-rate-buydown": {
+    name: "Interest Rate Buydown",
+    tagline: "Pay less upfront to save more long-term",
+    description: "A rate buydown reduces your mortgage interest rate by paying discount points at closing, resulting in lower monthly payments throughout the loan.",
+    longDescription: "An interest rate buydown is a financing technique where discount points are paid at closing to permanently (or temporarily) lower the mortgage rate. In higher-rate environments, buydowns can make homeownership significantly more affordable. Sellers can also contribute to buydowns as a closing incentive. The 2-1 buydown, for example, reduces the rate by 2% in year one and 1% in year two before settling at the note rate in year three.",
+    features: ["Permanent or temporary buydown options", "2-1 and 3-2-1 temporary buydown programs", "Seller-funded buydowns available", "Lower payments during initial ownership years", "Predictable rate after buydown period"],
+    requirements: ["Standard qualification requirements", "Buydown amount paid at closing", "Seller concession within program limits", "All standard loan eligibility criteria apply", "Applicable to most loan types"],
+    bestFor: ["Buyers wanting lower initial payments", "Sellers seeking to attract buyers", "Buyers in a higher-rate environment", "Those expecting income growth over time"],
+    minDown: "3%", minCredit: 620,
+  },
+  "203k": {
+    name: "FHA 203(k) Rehab Loan",
+    tagline: "Buy and renovate with one loan",
+    description: "The FHA 203(k) loan finances both the purchase price and renovation costs of a home into a single mortgage — making fixer-uppers accessible.",
+    longDescription: "The FHA 203(k) loan allows homebuyers to purchase a home that needs repairs or improvements while financing both the purchase and renovation costs in a single mortgage. There are two versions: the Standard 203(k) for major renovations exceeding $35,000, and the Limited 203(k) for smaller projects up to $35,000. This program is ideal for buyers who want to purchase a below-market fixer-upper and build instant equity through improvements.",
+    features: ["Finance purchase + renovation in one loan", "Standard 203(k) for major projects ($35k+)", "Limited 203(k) for smaller projects (≤$35k)", "FHA-approved contractor required", "Funds held in escrow, disbursed at milestones", "Can include appliances and landscaping"],
+    requirements: ["Minimum $5,000 in eligible renovations", "Owner-occupied primary residence only", "FHA-approved consultant required for Standard", "Licensed, bonded contractor required", "Work must be completed within 6 months"],
+    bestFor: ["Buyers targeting fixer-uppers", "Buyers seeking below-market properties", "Those wanting to customize a home", "Buyers with limited cash for separate renovation loans"],
+    minDown: "3.5%", minCredit: 580,
+  },
+  "heloc": {
+    name: "HELOC",
+    tagline: "Flexible revolving access to your home equity",
+    description: "A Home Equity Line of Credit gives you flexible, ongoing access to your home's equity with a variable-rate revolving credit facility.",
+    longDescription: "A HELOC (Home Equity Line of Credit) functions like a credit card secured by your home's equity. You're approved for a maximum credit limit and can draw funds as needed during the draw period (typically 5–10 years), paying only interest on what you use. After the draw period ends, you enter the repayment phase and begin paying principal and interest. HELOCs are ideal for ongoing expenses such as home renovations, tuition, or as a financial safety net.",
+    features: ["Draw funds anytime during draw period", "Interest-only payments during draw phase", "Variable rate tied to prime index", "Revolving — repay and reuse", "Access via checks, card, or transfer", "Possible tax deduction on interest (consult CPA)"],
+    requirements: ["Minimum 15–20% equity in your home", "Credit score 640+", "Stable income verification", "Debt-to-income ratio ≤43%", "Primary or second home only"],
+    bestFor: ["Homeowners needing flexible, ongoing access to equity", "Ongoing renovation projects", "Emergency financial reserves", "Education expenses", "Debt consolidation"],
+    minDown: null, minCredit: 640,
+  },
+  "interest-only": {
+    name: "Interest-Only Loans",
+    tagline: "Lower initial payments with full flexibility",
+    description: "Interest-only mortgages let you pay only the interest portion for a set period, freeing up cash flow in the early years of the loan.",
+    longDescription: "An interest-only mortgage allows the borrower to pay only interest charges for an initial period — typically 5, 7, or 10 years — after which the loan converts to a fully amortizing payment schedule. This keeps monthly payments lower during the IO period, which can be advantageous for high-income buyers with variable income, investors, or buyers who anticipate selling or refinancing before the IO period ends.",
+    features: ["Pay interest only for 5, 7, or 10 years", "Significantly lower initial payments", "Available on jumbo loan amounts", "ARM and fixed-rate options", "Popular with real estate investors", "Strong cash flow preservation during IO period"],
+    requirements: ["Higher credit scores typically required (680+)", "Larger down payment (10–20%)", "Strong income and asset reserves", "Available on primary, second home, investment", "Must qualify at fully amortized rate"],
+    bestFor: ["High-income earners with variable income", "Real estate investors maximizing cash flow", "Short-term property ownership plans", "Buyers in high-cost markets managing cash flow"],
+    minDown: "10%", minCredit: 680,
+  },
+  "fixed-rate": {
+    name: "Fixed-Rate Mortgage",
+    tagline: "Locked-in stability for the life of your loan",
+    description: "A fixed-rate mortgage keeps your interest rate constant for the entire loan term — protecting you from rate increases and making budgeting simple.",
+    longDescription: "A fixed-rate mortgage is the most straightforward and predictable home loan option available. Your interest rate and monthly principal-and-interest payment are locked in at closing and never change, regardless of market fluctuations. This provides long-term stability and makes financial planning easy. Fixed-rate mortgages are available in 10, 15, 20, 25, and 30-year terms, with shorter terms offering lower rates but higher monthly payments.",
+    features: ["Rate locked for the entire loan term", "Predictable monthly payment — never changes", "Available in 15, 20, and 30-year terms", "No rate risk from market fluctuations", "Easy to budget and plan around", "Great for long-term homeowners"],
+    requirements: ["Standard credit and income requirements", "Property appraisal required", "Proof of income and assets", "Debt-to-income ≤45%", "Down payment per loan type"],
+    bestFor: ["Long-term homeowners", "Those who value payment predictability", "Buyers in low-rate environments", "Buyers planning to stay 7+ years"],
+    minDown: "3%", minCredit: 620,
+  },
+  "arm": {
+    name: "Adjustable-Rate Mortgage (ARM)",
+    tagline: "Lower initial rate with future adjustment potential",
+    description: "ARMs offer a lower fixed rate for an initial period, then adjust based on a market index — ideal for buyers who won't keep the loan long-term.",
+    longDescription: "An adjustable-rate mortgage offers a fixed interest rate for an initial period (typically 5, 7, or 10 years), after which the rate adjusts periodically based on a market index plus a margin. The most common ARM structures are 5/1, 7/1, and 10/1 — meaning the rate is fixed for the first 5, 7, or 10 years, then adjusts annually. ARMs include rate caps to protect against extreme rate increases. They can result in significant savings for buyers who plan to sell or refinance before the adjustment period begins.",
+    features: ["Initial fixed period: 5, 7, or 10 years", "Lower rate than comparable fixed mortgage", "Periodic caps limit annual rate change", "Lifetime cap protects against extreme increases", "Can save thousands during fixed period", "Eligible for most property types"],
+    requirements: ["Credit score 620+", "Standard income and employment verification", "Property appraisal required", "Must qualify at note rate (some programs at fully indexed rate)", "Debt-to-income ≤45%"],
+    bestFor: ["Buyers planning to sell within 5–10 years", "Those expecting to refinance before adjustment", "Buyers maximizing purchasing power", "Short-term or transitional housing needs"],
+    minDown: "5%", minCredit: 620,
+  },
+  "construction": {
+    name: "Construction Loans",
+    tagline: "Finance your custom-built dream home",
+    description: "Construction loans fund the building of a new home from the ground up, disbursing funds in stages as work is completed before converting to a permanent mortgage.",
+    longDescription: "A construction loan is a short-term loan that funds the building of a new home. Unlike a traditional mortgage, funds are disbursed in draws (stages) as construction milestones are completed. Once construction is complete, the loan either converts to a permanent mortgage (construction-to-permanent) or is paid off with a new permanent mortgage (construction-only). KLE Mortgage specializes in construction-to-permanent financing, which means a single closing, reducing costs and complexity.",
+    features: ["Construction-to-permanent in one closing", "Interest-only payments during build phase", "Funds disbursed in draws at milestones", "Licensed, insured builder required", "Available for primary and vacation homes", "Lock in permanent rate at closing"],
+    requirements: ["Licensed and insured general contractor", "Detailed construction plans and budget", "Minimum 20% down payment", "Higher credit scores required (680+)", "Adequate cash reserves", "Land must be owned or purchased simultaneously"],
+    bestFor: ["Custom home builders", "Buyers who can't find existing inventory", "Those building a vacation or second home", "Buyers wanting control over home design and materials"],
+    minDown: "20%", minCredit: 680,
+  },
+  "reverse-mortgage": {
+    name: "Reverse Mortgage",
+    tagline: "Convert your home equity into tax-free income",
+    description: "A reverse mortgage (HECM) lets homeowners 62+ access their home's equity as tax-free funds while remaining in their home — no monthly mortgage payments required.",
+    longDescription: "A reverse mortgage, formally known as a Home Equity Conversion Mortgage (HECM), is an FHA-insured loan product available to homeowners aged 62 or older. It allows you to convert a portion of your home's equity into tax-free proceeds (as a lump sum, monthly payments, or line of credit) without having to make monthly mortgage payments. The loan balance grows over time and is repaid when the last borrower permanently leaves the home. Reverse mortgages are subject to FHA guidelines and require HUD-approved counseling.",
+    features: ["No monthly mortgage payments required", "Proceeds are tax-free (consult CPA)", "Stay in your home as long as you wish", "Available as lump sum, monthly income, or credit line", "FHA-insured HECM program", "Non-recourse loan — never owe more than home value"],
+    requirements: ["Homeowner must be 62 or older", "Primary residence only", "Sufficient home equity", "HUD-approved counseling required", "Home must meet FHA property standards", "Must maintain taxes, insurance, and home upkeep"],
+    bestFor: ["Homeowners 62+ with significant equity", "Retirees seeking supplemental income", "Those wanting to eliminate monthly mortgage payments", "Homeowners facing medical or living expenses"],
+    minDown: null, minCredit: null,
   },
 };
 
@@ -178,7 +268,7 @@ export default async function LoanProgramDetailPage({ params }: Props) {
                   )}
                   <div className="flex justify-between text-sm">
                     <span className="text-white/70">Min. Credit Score</span>
-                    <span className="font-bold text-[#C9A345]">{program.minCredit}</span>
+                    <span className="font-bold text-[#C9A345]">{program.minCredit ?? "Contact us"}</span>
                   </div>
                   {program.maxLoan && (
                     <div className="flex justify-between text-sm">
@@ -219,11 +309,11 @@ export default async function LoanProgramDetailPage({ params }: Props) {
                   Start Application <ArrowRight className="w-4 h-4" />
                 </Link>
                 <a
-                  href="tel:+14045551234"
+                  href="tel:+13057052030"
                   className="flex items-center justify-center gap-2 mt-3 text-sm text-[#6B1C23] hover:underline"
                 >
                   <Phone className="w-4 h-4" />
-                  Call (404) 555-1234
+                  Call +1 (305) 705-2030
                 </a>
               </div>
 

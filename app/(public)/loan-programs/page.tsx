@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Home, Shield, Flag, Leaf, DollarSign, RefreshCw, Star, ArrowRight, CheckCircle2 } from "lucide-react";
+import { Home, Shield, Flag, Leaf, DollarSign, RefreshCw, Star, ArrowRight, CheckCircle2, TrendingDown, Wrench, Key, Percent, Building2, RotateCcw, Sparkles } from "lucide-react";
 import { CTASection } from "@/components/public/CTASection";
 
 export const metadata: Metadata = {
@@ -100,6 +100,123 @@ const programs = [
     iconBg: "bg-pink-100",
     iconColor: "text-pink-700",
   },
+  {
+    slug: "non-qm",
+    name: "Non-QM Loans",
+    icon: Sparkles,
+    tagline: "Flexible underwriting for complex income",
+    description: "Non-Qualified Mortgage loans are designed for borrowers who don't fit traditional qualification criteria — self-employed, investors, or those with unique income documentation.",
+    features: ["Bank statement qualifying", "No tax return needed for self-employed", "Asset depletion programs", "Investor cash flow loans (DSCR)", "Higher loan limits available"],
+    minDown: "10%",
+    minCredit: 620,
+    color: "bg-violet-50 border-violet-100",
+    iconBg: "bg-violet-100",
+    iconColor: "text-violet-700",
+  },
+  {
+    slug: "interest-rate-buydown",
+    name: "Interest Rate Buydown",
+    icon: TrendingDown,
+    tagline: "Lower your rate upfront to save long-term",
+    description: "A rate buydown lets you pay discount points at closing to secure a permanently lower interest rate, reducing your monthly payment and total interest paid over the life of the loan.",
+    features: ["Permanent or temporary buydown options", "2-1 and 3-2-1 buydown programs", "Seller-paid buydowns available", "Significant monthly savings", "Ideal in higher rate environments"],
+    minDown: "3%",
+    minCredit: 620,
+    color: "bg-teal-50 border-teal-100",
+    iconBg: "bg-teal-100",
+    iconColor: "text-teal-700",
+  },
+  {
+    slug: "203k",
+    name: "FHA 203(k) Rehab Loan",
+    icon: Wrench,
+    tagline: "Buy and renovate with one loan",
+    description: "The FHA 203(k) loan lets you purchase a home and finance the cost of repairs or renovations into a single mortgage — perfect for fixer-uppers and distressed properties.",
+    features: ["Finance purchase + renovation costs together", "Standard and Limited 203(k) options", "HUD-approved contractors required", "Minimum $5,000 in renovations", "Owner-occupied properties only"],
+    minDown: "3.5%",
+    minCredit: 580,
+    color: "bg-orange-50 border-orange-100",
+    iconBg: "bg-orange-100",
+    iconColor: "text-orange-700",
+  },
+  {
+    slug: "heloc",
+    name: "HELOC",
+    icon: Key,
+    tagline: "Flexible access to your home equity",
+    description: "A Home Equity Line of Credit (HELOC) gives you a revolving credit line secured by your home's equity — use funds for renovations, education, debt consolidation, or any major expense.",
+    features: ["Draw period then repayment phase", "Interest-only payments during draw", "Variable rate tied to prime", "Revolving credit — reuse as you repay", "Tax-deductible interest (consult CPA)"],
+    minDown: null,
+    minCredit: 640,
+    color: "bg-cyan-50 border-cyan-100",
+    iconBg: "bg-cyan-100",
+    iconColor: "text-cyan-700",
+  },
+  {
+    slug: "interest-only",
+    name: "Interest-Only Loans",
+    icon: Percent,
+    tagline: "Lower payments during the initial period",
+    description: "Interest-only mortgages allow you to pay only the interest for a set period, keeping your payments lower during the early years of the loan — ideal for certain investment strategies.",
+    features: ["Lower initial monthly payments", "5, 7, or 10-year interest-only periods", "Popular with high-income investors", "Available on jumbo loan amounts", "Transition to P&I after IO period"],
+    minDown: "10%",
+    minCredit: 680,
+    color: "bg-indigo-50 border-indigo-100",
+    iconBg: "bg-indigo-100",
+    iconColor: "text-indigo-700",
+  },
+  {
+    slug: "fixed-rate",
+    name: "Fixed-Rate Mortgage",
+    icon: Shield,
+    tagline: "Stability and predictability for the long term",
+    description: "A fixed-rate mortgage locks in your interest rate for the life of the loan, giving you consistent monthly payments and protection from market rate increases.",
+    features: ["Rate never changes over loan life", "15, 20, and 30-year options", "Ideal for long-term homeowners", "Protection against rate increases", "Simple to budget and plan around"],
+    minDown: "3%",
+    minCredit: 620,
+    color: "bg-slate-50 border-slate-100",
+    iconBg: "bg-slate-100",
+    iconColor: "text-slate-700",
+  },
+  {
+    slug: "arm",
+    name: "Adjustable-Rate Mortgage (ARM)",
+    icon: RefreshCw,
+    tagline: "Lower initial rate with periodic adjustments",
+    description: "ARMs offer a lower fixed rate for an initial period, then adjust periodically based on a market index. A smart choice if you plan to sell or refinance before the adjustment period.",
+    features: ["5/1, 7/1, and 10/1 ARM options", "Lower initial rate than fixed", "Rate caps protect from extreme swings", "Good for shorter-term ownership plans", "Can save thousands in first years"],
+    minDown: "5%",
+    minCredit: 620,
+    color: "bg-sky-50 border-sky-100",
+    iconBg: "bg-sky-100",
+    iconColor: "text-sky-700",
+  },
+  {
+    slug: "construction",
+    name: "Construction Loans",
+    icon: Building2,
+    tagline: "Finance your custom-built home",
+    description: "Construction loans provide funding to build a new home from the ground up. Funds are dispersed in stages as construction milestones are completed, then convert to a permanent mortgage.",
+    features: ["Construction-to-permanent in one closing", "Interest-only during build phase", "Draws released at project milestones", "Licensed builder required", "Available for primary and vacation homes"],
+    minDown: "20%",
+    minCredit: 680,
+    color: "bg-yellow-50 border-yellow-100",
+    iconBg: "bg-yellow-100",
+    iconColor: "text-yellow-700",
+  },
+  {
+    slug: "reverse-mortgage",
+    name: "Reverse Mortgage",
+    icon: RotateCcw,
+    tagline: "Convert equity into tax-free income",
+    description: "A reverse mortgage (HECM) allows homeowners 62+ to convert home equity into tax-free funds while staying in their home — no monthly mortgage payments required.",
+    features: ["No monthly mortgage payments", "Available to homeowners 62+", "FHA-insured HECM program", "Stay in your home as long as you wish", "Proceeds are tax-free (consult CPA)"],
+    minDown: null,
+    minCredit: null,
+    color: "bg-rose-50 border-rose-100",
+    iconBg: "bg-rose-100",
+    iconColor: "text-rose-700",
+  },
 ];
 
 export default function LoanProgramsPage() {
@@ -169,7 +286,11 @@ export default function LoanProgramsPage() {
 
                   <div className="flex items-center justify-between pt-4 border-t border-gray-100">
                     <p className="text-xs text-[#6B6056]">
-                      Min credit: <span className="font-semibold text-[#1A1A1A]">{program.minCredit}</span>
+                      {program.minCredit ? (
+                        <>Min credit: <span className="font-semibold text-[#1A1A1A]">{program.minCredit}</span></>
+                      ) : (
+                        <span className="text-[#C9A345] font-medium">Call for eligibility</span>
+                      )}
                     </p>
                     <Link
                       href={`/loan-programs/${program.slug}`}

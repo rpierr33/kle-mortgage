@@ -96,7 +96,7 @@ export function HeroSection() {
             </div>
             <div className="flex items-center gap-2 text-white/70 text-sm">
               <Users className="w-4 h-4 text-[#C9A345]" />
-              Licensed in GA, FL, TX
+              Licensed in FL, GA, TX
             </div>
           </motion.div>
         </div>

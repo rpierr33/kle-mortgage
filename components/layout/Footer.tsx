@@ -111,29 +111,29 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="tel:+14045551234"
+                  href="tel:+13057052030"
                   className="flex items-center gap-2.5 text-sm text-gray-400 hover:text-[#C9A345] transition-colors"
                 >
                   <Phone className="w-4 h-4 text-[#C9A345] flex-shrink-0" />
-                  (404) 555-1234
+                  +1 (305) 705-2030
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:info@klemortgage.com"
+                  href="mailto:Info@klemortgage.com"
                   className="flex items-center gap-2.5 text-sm text-gray-400 hover:text-[#C9A345] transition-colors"
                 >
                   <Mail className="w-4 h-4 text-[#C9A345] flex-shrink-0" />
-                  info@klemortgage.com
+                  Info@klemortgage.com
                 </a>
               </li>
               <li>
                 <div className="flex items-start gap-2.5 text-sm text-gray-400">
                   <MapPin className="w-4 h-4 text-[#C9A345] flex-shrink-0 mt-0.5" />
                   <span>
-                    Atlanta, GA
+                    909 N Miami Beach Blvd, Suite 301A
                     <br />
-                    Licensed in GA, FL, TX
+                    North Miami Beach, FL 33162
                   </span>
                 </div>
               </li>

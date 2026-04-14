@@ -15,15 +15,17 @@ export const metadata: Metadata = {
 export const revalidate = 300;
 
 export default async function AboutPage() {
+  // Pass empty array — TeamGrid has built-in fallback fixture data and renders beautifully
   let officers: typeof loanOfficers.$inferSelect[] = [];
   try {
-    officers = await db
+    const dbOfficers = await db
       .select()
       .from(loanOfficers)
       .where(eq(loanOfficers.isActive, true))
       .orderBy(asc(loanOfficers.displayOrder));
-  } catch {
-    // DB not configured
+    if (dbOfficers.length > 0) officers = dbOfficers;
+  } catch (error) {
+    console.error("About page DB query failed, using fallback:", error instanceof Error ? error.message : "Unknown error");
   }
 
   return (

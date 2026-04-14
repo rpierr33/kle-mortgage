@@ -106,14 +106,14 @@ export function Navbar() {
           {/* CTA + Phone */}
           <div className="hidden lg:flex items-center gap-3">
             <a
-              href="tel:+14045551234"
+              href="tel:+13057052030"
               className={cn(
                 "flex items-center gap-1.5 text-sm font-medium transition-colors",
                 scrolled ? "text-[#6B1C23]" : "text-white/90 hover:text-white"
               )}
             >
               <Phone className="w-3.5 h-3.5" />
-              (404) 555-1234
+              +1 (305) 705-2030
             </a>
             <Link
               href="/apply"
@@ -170,11 +170,11 @@ export function Navbar() {
             ))}
             <div className="pt-3 pb-1 border-t border-[#E8E0D8] flex flex-col gap-2">
               <a
-                href="tel:+14045551234"
+                href="tel:+13057052030"
                 className="flex items-center gap-2 px-3 py-2.5 text-sm font-medium text-[#6B1C23]"
               >
                 <Phone className="w-4 h-4" />
-                (404) 555-1234
+                +1 (305) 705-2030
               </a>
               <Link
                 href="/apply"

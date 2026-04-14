@@ -10,7 +10,7 @@ type LoanOfficer = typeof loanOfficers.$inferSelect;
 const fallbackOfficers = [
   {
     id: 1, name: "Kimberly Lewis-Edwards", title: "Senior Loan Officer / Founder",
-    nmlsNumber: "123456", phone: "(404) 555-1234", email: "kle@klemortgage.com",
+    nmlsNumber: "123456", phone: "+1 (305) 705-2030", email: "Info@klemortgage.com",
     slug: "kimberly-lewis-edwards", isFounder: true, isActive: true, displayOrder: 0,
     bio: "With 15+ years in mortgage lending, Kimberly founded KLE Mortgage with a single mission: make homeownership accessible to every family.",
     photoUrl: null,

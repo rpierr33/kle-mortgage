@@ -38,8 +38,8 @@ export default function ContactPage() {
                     <Phone className="w-5 h-5 text-[#6B1C23] mt-0.5" />
                     <div>
                       <p className="text-xs text-[#6B6056] mb-0.5">Phone</p>
-                      <a href="tel:+14045551234" className="font-semibold text-[#1A1A1A] hover:text-[#6B1C23]">
-                        (404) 555-1234
+                      <a href="tel:+13057052030" className="font-semibold text-[#1A1A1A] hover:text-[#6B1C23]">
+                        +1 (305) 705-2030
                       </a>
                     </div>
                   </div>
@@ -47,8 +47,8 @@ export default function ContactPage() {
                     <Mail className="w-5 h-5 text-[#6B1C23] mt-0.5" />
                     <div>
                       <p className="text-xs text-[#6B6056] mb-0.5">Email</p>
-                      <a href="mailto:info@klemortgage.com" className="font-semibold text-[#1A1A1A] hover:text-[#6B1C23]">
-                        info@klemortgage.com
+                      <a href="mailto:Info@klemortgage.com" className="font-semibold text-[#1A1A1A] hover:text-[#6B1C23]">
+                        Info@klemortgage.com
                       </a>
                     </div>
                   </div>
@@ -56,8 +56,8 @@ export default function ContactPage() {
                     <MapPin className="w-5 h-5 text-[#6B1C23] mt-0.5" />
                     <div>
                       <p className="text-xs text-[#6B6056] mb-0.5">Location</p>
-                      <p className="font-semibold text-[#1A1A1A]">Atlanta, GA</p>
-                      <p className="text-sm text-[#6B6056]">Licensed in GA, FL, TX</p>
+                      <p className="font-semibold text-[#1A1A1A]">909 N Miami Beach Blvd, Suite 301A</p>
+                      <p className="text-sm text-[#6B6056]">North Miami Beach, FL 33162</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
