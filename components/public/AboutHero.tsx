@@ -46,17 +46,31 @@ export function AboutHero() {
             ))}
           </div>
         </div>
-        {/* Team photo — right column */}
-        <div className="hidden lg:flex items-center justify-center">
-          <div className="relative rounded-2xl overflow-hidden shadow-2xl" style={{ width: 480, height: 320 }}>
-            <Image
-              src="/team-photo.jpg"
-              alt="KLE Mortgage Financing team"
-              fill
-              className="object-cover"
-              sizes="480px"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#6B1C23]/40 to-transparent" />
+        {/* Real team photos — right column */}
+        <div className="hidden lg:block">
+          <div className="grid grid-cols-3 gap-3">
+            {[
+              { src: "/team-leopold.jpg", name: "Leopold Evariste", title: "CEO" },
+              { src: "/team-joanne.jpg", name: "Joanne Evariste", title: "Office Manager" },
+              { src: "/team-jean-samuel.jpg", name: "Jean Samuel", title: "Loan Originator" },
+              { src: "/team-olivier.jpg", name: "Olivier Desire", title: "Loan Originator" },
+              { src: "/team-daniel.jpg", name: "Daniel Calixte", title: "Loan Originator" },
+              { src: "/team-carly.jpg", name: "Carly Cadet", title: "Realtor" },
+            ].map((member) => (
+              <div key={member.name} className="text-center">
+                <div className="relative aspect-[3/4] rounded-xl overflow-hidden mb-2 shadow-lg">
+                  <Image
+                    src={member.src}
+                    alt={member.name}
+                    fill
+                    className="object-cover"
+                    sizes="150px"
+                  />
+                </div>
+                <p className="text-white text-xs font-semibold leading-tight">{member.name}</p>
+                <p className="text-white/50 text-[10px]">{member.title}</p>
+              </div>
+            ))}
           </div>
         </div>
         </div>
