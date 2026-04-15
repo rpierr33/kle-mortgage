@@ -1,170 +1,77 @@
-import { Phone, Mail, Award } from "lucide-react";
+import Image from "next/image";
 import type { loanOfficers } from "@/lib/db/schema";
 
 type LoanOfficer = typeof loanOfficers.$inferSelect;
 
-const fallbackOfficers: LoanOfficer[] = [
-  {
-    id: 1, name: "Kimberly Lewis-Edwards", title: "Senior Loan Officer / Founder",
-    nmlsNumber: "123456", phone: "+1 (305) 705-2030", email: "Info@klemortgage.com",
-    slug: "kimberly-lewis-edwards", isFounder: true, isActive: true, displayOrder: 0,
-    bio: "With 15+ years in mortgage lending, Kimberly founded KLE Mortgage with a single mission: make homeownership accessible to every family. She has personally helped over 300 families achieve their dreams.",
-    photoUrl: "/team-member-1.jpg",
-    specialties: ["FHA", "VA", "First-Time Buyers"] as unknown as string[],
-    languages: ["English", "Spanish"] as unknown as string[],
-    yearsExperience: 15,
-    licenseState: ["GA", "FL", "TX"] as unknown as string[],
-    linkedinUrl: null, facebookUrl: null,
-    createdAt: new Date(), updatedAt: new Date(),
-  },
-  {
-    id: 2, name: "Marcus Thompson", title: "Loan Officer",
-    nmlsNumber: "234567", phone: "(404) 555-2345", email: "mthompson@klemortgage.com",
-    slug: "marcus-thompson", isFounder: false, isActive: true, displayOrder: 1,
-    bio: "Marcus specializes in VA loans and has helped over 200 veterans and active-duty service members achieve homeownership. His attention to detail and speed are unmatched.",
-    photoUrl: "/team-member-2.jpg",
-    specialties: ["VA Loans", "Conventional", "Refinance"] as unknown as string[],
-    languages: ["English"] as unknown as string[],
-    yearsExperience: 8,
-    licenseState: ["GA", "TX"] as unknown as string[],
-    linkedinUrl: null, facebookUrl: null,
-    createdAt: new Date(), updatedAt: new Date(),
-  },
-  {
-    id: 3, name: "Angela Roberts", title: "Loan Officer",
-    nmlsNumber: "345678", phone: "(404) 555-3456", email: "aroberts@klemortgage.com",
-    slug: "angela-roberts", isFounder: false, isActive: true, displayOrder: 2,
-    bio: "Angela's passion is guiding first-time homebuyers through the process with patience, education, and unwavering support. She believes no question is too small.",
-    photoUrl: "/team-member-3.jpg",
-    specialties: ["FHA", "USDA", "First-Time Buyers"] as unknown as string[],
-    languages: ["English"] as unknown as string[],
-    yearsExperience: 6,
-    licenseState: ["GA", "FL"] as unknown as string[],
-    linkedinUrl: null, facebookUrl: null,
-    createdAt: new Date(), updatedAt: new Date(),
-  },
-  {
-    id: 4, name: "David Chen", title: "Loan Officer",
-    nmlsNumber: "456789", phone: "(404) 555-4567", email: "dchen@klemortgage.com",
-    slug: "david-chen", isFounder: false, isActive: true, displayOrder: 3,
-    bio: "David brings expertise in jumbo loans and investment properties, helping high-net-worth clients maximize their real estate portfolios.",
-    photoUrl: null,
-    specialties: ["Jumbo Loans", "Conventional", "Investment Properties"] as unknown as string[],
-    languages: ["English", "Mandarin"] as unknown as string[],
-    yearsExperience: 10,
-    licenseState: ["GA", "FL", "TX"] as unknown as string[],
-    linkedinUrl: null, facebookUrl: null,
-    createdAt: new Date(), updatedAt: new Date(),
-  },
+const realTeam = [
+  { name: "Leopold Evariste", title: "CEO & Founder", photo: "/team-leopold.jpg", specialties: ["Leadership", "Investment Properties", "Commercial"], yearsExperience: 32 },
+  { name: "Joanne Evariste", title: "Office Manager", photo: "/team-joanne.jpg", specialties: ["Operations", "Client Relations"], yearsExperience: 15 },
+  { name: "Jean Samuel Luxama", title: "Realtor & Loan Originator", photo: "/team-jean-samuel.jpg", specialties: ["FHA Loans", "First-Time Buyers", "Hometown Heroes"], yearsExperience: 8 },
+  { name: "Olivier Desire", title: "Loan Originator", photo: "/team-olivier.jpg", specialties: ["DSCR Loans", "USDA Loans", "Investment Properties"], yearsExperience: 10 },
+  { name: "Daniel Calixte", title: "Loan Originator", photo: "/team-daniel.jpg", specialties: ["VA Loans", "FHA Loans", "Refinancing"], yearsExperience: 7 },
+  { name: "Carly Cadet", title: "Realtor Associate", photo: "/team-carly.jpg", specialties: ["Residential Homes", "Condominiums", "Rentals"], yearsExperience: 5 },
 ];
-
-const getInitials = (name: string) =>
-  name.split(" ").map((n) => n[0]).join("").slice(0, 2).toUpperCase();
 
 interface Props {
   officers: LoanOfficer[];
 }
 
-export function TeamGrid({ officers }: Props) {
-  const displayOfficers = officers.length > 0 ? officers : fallbackOfficers;
-
+export function TeamGrid({ officers: _officers }: Props) {
   return (
-    <section className="py-20 bg-[#F8F6F3]" id="team">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-14">
-          <h2 className="text-4xl font-bold text-[#1A1A1A] mb-4 font-[family-name:var(--font-cormorant)]">
-            Our Loan Officers
+    <section className="py-28" style={{ backgroundColor: "#FFFBF5" }} id="team">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <span
+            className="inline-block text-xs font-semibold uppercase tracking-widest mb-4"
+            style={{ color: "#C9A345" }}
+          >
+            Our Team
+          </span>
+          <h2
+            className="text-3xl sm:text-4xl font-medium mb-3"
+            style={{ color: "#1A1A1A", fontFamily: "var(--font-cormorant), Georgia, serif" }}
+          >
+            The People Behind Your Loan
           </h2>
-          <p className="text-[#6B6056] max-w-xl mx-auto">
-            Each officer is licensed, experienced, and dedicated to finding the
-            best solution for your unique situation.
+          <p className="text-sm max-w-md mx-auto" style={{ color: "#6B6056" }}>
+            Licensed, experienced, and dedicated to finding the best solution for you.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {displayOfficers.map((officer) => {
-            const specialties = Array.isArray(officer.specialties) ? officer.specialties as string[] : [];
-            const languages = Array.isArray(officer.languages) ? officer.languages as string[] : [];
-            const licenseStates = Array.isArray(officer.licenseState) ? officer.licenseState as string[] : [];
-
-            return (
-              <div
-                key={officer.id}
-                className="bg-white rounded-xl border border-[#E8E0D8] p-6 flex gap-6"
-              >
-                {/* Avatar */}
-                <div className="w-20 h-20 rounded-xl bg-[#6B1C23] flex items-center justify-center flex-shrink-0">
-                  {officer.photoUrl ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                      src={officer.photoUrl}
-                      alt={officer.name}
-                      className="w-full h-full object-cover rounded-xl"
-                    />
-                  ) : (
-                    <span className="text-white text-xl font-bold font-[family-name:var(--font-cormorant)]">
-                      {getInitials(officer.name)}
-                    </span>
-                  )}
-                </div>
-
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-start justify-between gap-2 mb-1">
-                    <div>
-                      <h3 className="font-bold text-[#1A1A1A]">{officer.name}</h3>
-                      <p className="text-xs text-[#C9A345] font-semibold">{officer.title}</p>
-                    </div>
-                    {officer.isFounder && (
-                      <span className="flex items-center gap-1 text-xs bg-[#6B1C23] text-white px-2 py-0.5 rounded-full flex-shrink-0">
-                        <Award className="w-3 h-3" /> Founder
-                      </span>
-                    )}
-                  </div>
-
-                  <p className="text-xs text-[#6B6056] mb-2">NMLS #{officer.nmlsNumber} | {officer.yearsExperience} yrs experience</p>
-                  <p className="text-sm text-[#6B6056] leading-relaxed mb-3">{officer.bio}</p>
-
-                  {/* Details */}
-                  <div className="flex flex-wrap gap-3 mb-3">
-                    {specialties.slice(0, 3).map((s) => (
-                      <span key={s} className="text-xs bg-[#F8F6F3] border border-[#E8E0D8] text-[#6B6056] px-2 py-0.5 rounded-full">
-                        {s}
-                      </span>
-                    ))}
-                  </div>
-
-                  {languages.length > 0 && (
-                    <p className="text-xs text-[#6B6056] mb-2">
-                      Languages: {languages.join(", ")}
-                    </p>
-                  )}
-
-                  {licenseStates.length > 0 && (
-                    <p className="text-xs text-[#6B6056] mb-3">
-                      Licensed in: {licenseStates.join(", ")}
-                    </p>
-                  )}
-
-                  <div className="flex gap-4">
-                    <a
-                      href={`tel:${officer.phone}`}
-                      className="flex items-center gap-1.5 text-xs text-[#6B1C23] hover:underline"
-                    >
-                      <Phone className="w-3 h-3" />
-                      {officer.phone}
-                    </a>
-                    <a
-                      href={`mailto:${officer.email}`}
-                      className="flex items-center gap-1.5 text-xs text-[#6B1C23] hover:underline truncate"
-                    >
-                      <Mail className="w-3 h-3" />
-                      {officer.email}
-                    </a>
-                  </div>
-                </div>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+          {realTeam.map((member) => (
+            <div key={member.name} className="text-center group">
+              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden mb-4 shadow-sm group-hover:shadow-md transition-shadow duration-300">
+                <Image
+                  src={member.photo}
+                  alt={member.name}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 50vw, 33vw"
+                />
               </div>
-            );
-          })}
+              <h3
+                className="text-base font-semibold mb-0.5"
+                style={{ color: "#1A1A1A", fontFamily: "var(--font-cormorant), Georgia, serif" }}
+              >
+                {member.name}
+              </h3>
+              <p className="text-xs mb-2" style={{ color: "#C9A345" }}>
+                {member.title} · {member.yearsExperience} yrs
+              </p>
+              <div className="flex flex-wrap justify-center gap-1.5">
+                {member.specialties.map((s) => (
+                  <span
+                    key={s}
+                    className="text-[10px] px-2 py-0.5 rounded-full"
+                    style={{ backgroundColor: "#F5F0EB", color: "#6B6056", border: "1px solid #E8E0D8" }}
+                  >
+                    {s}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

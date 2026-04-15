@@ -54,7 +54,7 @@ export function MissionSection() {
               <span className="text-[#6B1C23] italic">Accessible to All</span>
             </h2>
             <p className="text-[#6B6056] leading-relaxed mb-5 text-base">
-              KLE Mortgage Financing was founded by Kimberly Lewis-Edwards with
+              KLE Mortgage Financing was founded by Leopold Evariste with
               a vision to bridge the homeownership gap in underserved
               communities. We saw families who had the income to afford a home
               but lacked the guidance to navigate the mortgage process.
