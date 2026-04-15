@@ -102,7 +102,7 @@ export function AboutHero() {
                   {/* Trust quote */}
                   <blockquote className="text-center px-4">
                     <p
-                      className="text-white/70 text-sm italic leading-relaxed"
+                      className="text-white/80 text-lg sm:text-xl italic leading-relaxed"
                       style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}
                     >
                       &ldquo;{team[current].quote}&rdquo;
