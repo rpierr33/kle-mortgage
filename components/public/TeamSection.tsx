@@ -139,7 +139,7 @@ export function TeamSection({ officers: _officers }: Props) {
                 className="group bg-white rounded-2xl border border-[#E8E0D8] hover:border-[#C9A345]/30 overflow-hidden hover:shadow-[0_12px_48px_rgba(0,0,0,0.1)] transition-all duration-300"
               >
                 {/* Avatar header */}
-                <div className="relative h-36 bg-gradient-to-br from-[#6B1C23] via-[#7A1E26] to-[#4A1218] flex items-center justify-center overflow-hidden">
+                <div className="relative aspect-[4/5] bg-gradient-to-br from-[#6B1C23] via-[#7A1E26] to-[#4A1218] flex items-center justify-center overflow-hidden">
                   {/* Subtle pattern */}
                   <div className="absolute inset-0 opacity-10"
                     style={{
@@ -151,7 +151,7 @@ export function TeamSection({ officers: _officers }: Props) {
                     <img
                       src={officer.photoUrl}
                       alt={officer.name}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover object-top"
                     />
                   ) : (
                     <div className="relative w-20 h-20 rounded-full bg-white/10 border-2 border-white/20 flex items-center justify-center">
