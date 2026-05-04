@@ -55,7 +55,7 @@ export function HeroSection() {
             className="inline-flex items-center gap-2.5 bg-white/8 backdrop-blur-md border border-white/15 text-white/90 text-xs font-medium px-4 py-2 rounded-full mb-8 tracking-wide"
           >
             <Shield className="w-3.5 h-3.5 text-[#C9A345]" />
-            Licensed Mortgage Broker — NMLS #123456
+            Licensed Mortgage Broker — NMLS #2380070
           </motion.div>
 
           {/* Gold accent line */}
@@ -139,7 +139,7 @@ export function HeroSection() {
           >
             <div className="flex items-center gap-2 bg-white/8 border border-white/12 rounded-full px-3.5 py-1.5 text-white/70 text-xs font-medium">
               <Shield className="w-3.5 h-3.5 text-[#C9A345]" />
-              NMLS #123456
+              NMLS #2380070
             </div>
             <div className="flex items-center gap-2 bg-white/8 border border-white/12 rounded-full px-3.5 py-1.5 text-white/70 text-xs font-medium">
               <Award className="w-3.5 h-3.5 text-[#C9A345]" />

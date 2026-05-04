@@ -127,7 +127,7 @@ async function seed() {
     { key: 'company_name', value: 'KLE Mortgage Financing, LLC', type: 'string', description: 'Legal company name' },
     { key: 'company_phone', value: '(404) 555-1234', type: 'string', description: 'Main contact phone' },
     { key: 'company_email', value: 'info@klemortgage.com', type: 'string', description: 'Main contact email' },
-    { key: 'company_nmls', value: '123456', type: 'string', description: 'NMLS company number' },
+    { key: 'company_nmls', value: '2380070', type: 'string', description: 'NMLS company number' },
     { key: 'company_address', value: 'Atlanta, GA', type: 'string', description: 'Office location' },
     { key: 'company_license_states', value: 'GA, FL, TX', type: 'string', description: 'Licensed states' },
   ]);

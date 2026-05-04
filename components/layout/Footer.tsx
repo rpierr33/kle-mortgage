@@ -176,7 +176,7 @@ export function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-[#6B6056]">
             <div className="text-center md:text-left">
               <p>
-                &copy; {currentYear} KLE Mortgage Financing, LLC. All rights reserved. NMLS #123456
+                &copy; {currentYear} KLE Mortgage Financing, LLC. All rights reserved. NMLS #2380070
               </p>
               <p className="mt-1 text-[#504040]">
                 Equal Housing Lender. Licensed in GA, FL, TX. This is not a commitment to lend.

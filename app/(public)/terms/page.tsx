@@ -33,7 +33,7 @@ export default function TermsPage() {
 
           <div>
             <h2 className="text-xl font-bold text-[#1A1A1A] mb-2 font-[family-name:var(--font-cormorant)]">Licensing</h2>
-            <p>KLE Mortgage Financing, LLC NMLS #123456. Licensed to conduct mortgage business in Georgia, Florida, and Texas. NMLS Consumer Access: <a href="https://www.nmlsconsumeraccess.org" className="text-[#6B1C23] underline" target="_blank" rel="noopener noreferrer">nmlsconsumeraccess.org</a></p>
+            <p>KLE Mortgage Financing, LLC NMLS #2380070. Licensed to conduct mortgage business in Georgia, Florida, and Texas. NMLS Consumer Access: <a href="https://www.nmlsconsumeraccess.org" className="text-[#6B1C23] underline" target="_blank" rel="noopener noreferrer">nmlsconsumeraccess.org</a></p>
           </div>
 
           <div>

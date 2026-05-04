@@ -51,7 +51,7 @@ export function AboutHero() {
             </p>
             <div className="flex flex-wrap gap-6">
               {[
-                { icon: Shield, label: "Licensed & Regulated", sub: "NMLS #123456" },
+                { icon: Shield, label: "Licensed & Regulated", sub: "NMLS #2380070" },
                 { icon: Award, label: "15+ Years Experience", sub: "Expert team" },
                 { icon: Users, label: "500+ Families Served", sub: "And counting" },
               ].map(({ icon: Icon, label, sub }) => (

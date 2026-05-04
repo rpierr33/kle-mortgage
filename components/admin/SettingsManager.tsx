@@ -12,7 +12,7 @@ const DEFAULT_SETTINGS = [
   { key: "company_phone", label: "Phone Number", defaultValue: "(404) 555-1234" },
   { key: "company_email", label: "Contact Email", defaultValue: "info@klemortgage.com" },
   { key: "company_address", label: "Address", defaultValue: "Atlanta, GA" },
-  { key: "company_nmls", label: "NMLS Number", defaultValue: "123456" },
+  { key: "company_nmls", label: "NMLS Number", defaultValue: "2380070" },
   { key: "company_license_states", label: "Licensed States", defaultValue: "GA, FL, TX" },
   { key: "hero_headline", label: "Hero Headline", defaultValue: "Your Dream Home Starts Here." },
   { key: "hero_subheadline", label: "Hero Subheadline", defaultValue: "KLE Mortgage Financing simplifies the path to homeownership." },

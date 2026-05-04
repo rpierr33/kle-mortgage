@@ -160,7 +160,7 @@ export function MissionSection() {
           <div className="relative z-10 grid grid-cols-1 sm:grid-cols-3 gap-6">
             <div>
               <p className="text-[#C9A345] font-semibold text-xs mb-1.5 uppercase tracking-wider">NMLS Company</p>
-              <p className="text-white/70 text-sm">KLE Mortgage Financing, LLC — NMLS #123456</p>
+              <p className="text-white/70 text-sm">KLE Mortgage Financing, LLC — NMLS #2380070</p>
             </div>
             <div>
               <p className="text-[#C9A345] font-semibold text-xs mb-1.5 uppercase tracking-wider">Licensed In</p>
