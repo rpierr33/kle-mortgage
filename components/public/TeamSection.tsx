@@ -7,56 +7,82 @@ import type { loanOfficers } from "@/lib/db/schema";
 
 type LoanOfficer = typeof loanOfficers.$inferSelect;
 
-const fallbackOfficers = [
+const realTeam = [
   {
-    id: 1, name: "Kimberly Lewis-Edwards", title: "Senior Loan Officer / Founder",
-    nmlsNumber: "123456", phone: "+1 (305) 705-2030", email: "Info@klemortgage.com",
-    slug: "kimberly-lewis-edwards", isFounder: true, isActive: true, displayOrder: 0,
-    bio: "With 15+ years in mortgage lending, Kimberly founded KLE Mortgage with a single mission: make homeownership accessible to every family.",
-    photoUrl: "/team-member-1.jpg",
-    specialties: ["FHA", "VA", "First-Time Buyers"] as unknown as string[],
-    languages: ["English", "Spanish"] as unknown as string[],
+    id: 1, name: "Leopold Evariste", title: "CEO & Founder",
+    nmlsNumber: "", phone: "(305) 705-2030", email: "leopold@klemortgage.com",
+    slug: "leopold-evariste", isFounder: true, isActive: true, displayOrder: 0,
+    bio: "Founded Leo Realty Capital Investments in 1992. Brings 32+ years of South Florida market expertise to mortgage lending and investment financing.",
+    photoUrl: "/team-leopold.jpg",
+    specialties: ["Investment Properties", "Commercial", "Luxury"] as unknown as string[],
+    languages: ["English", "Haitian Creole"] as unknown as string[],
+    yearsExperience: 32,
+    licenseState: ["FL"] as unknown as string[],
+    linkedinUrl: null, facebookUrl: null,
+    createdAt: new Date(), updatedAt: new Date(),
+  },
+  {
+    id: 2, name: "Joanne Evariste", title: "Office Manager",
+    nmlsNumber: "", phone: "(305) 705-2030", email: "joanne@klemortgage.com",
+    slug: "joanne-evariste", isFounder: false, isActive: true, displayOrder: 1,
+    bio: "The backbone of operations, ensuring every mortgage transaction runs smoothly from application to clear-to-close.",
+    photoUrl: "/team-joanne.jpg",
+    specialties: ["Operations", "Client Relations", "Transaction Coordination"] as unknown as string[],
+    languages: ["English"] as unknown as string[],
     yearsExperience: 15,
-    licenseState: ["GA", "FL", "TX"] as unknown as string[],
+    licenseState: ["FL"] as unknown as string[],
     linkedinUrl: null, facebookUrl: null,
     createdAt: new Date(), updatedAt: new Date(),
   },
   {
-    id: 2, name: "Marcus Thompson", title: "Loan Officer",
-    nmlsNumber: "234567", phone: "(404) 555-2345", email: "mthompson@klemortgage.com",
-    slug: "marcus-thompson", isFounder: false, isActive: true, displayOrder: 1,
-    bio: "Marcus specializes in VA loans and has helped over 200 veterans and active-duty service members achieve homeownership.",
-    photoUrl: "/team-member-2.jpg",
-    specialties: ["VA Loans", "Conventional", "Refinance"] as unknown as string[],
-    languages: ["English"] as unknown as string[],
+    id: 3, name: "Jean Samuel Luxama", title: "Realtor & Loan Originator",
+    nmlsNumber: "", phone: "(305) 705-2030", email: "jsluxama@klemortgage.com",
+    slug: "jean-samuel-luxama", isFounder: false, isActive: true, displayOrder: 2,
+    bio: "Dual-licensed Realtor and Loan Originator providing seamless service from property search to closing.",
+    photoUrl: "/team-jean-samuel.jpg",
+    specialties: ["FHA Loans", "First-Time Buyers", "Hometown Heroes"] as unknown as string[],
+    languages: ["English", "Haitian Creole"] as unknown as string[],
     yearsExperience: 8,
-    licenseState: ["GA", "TX"] as unknown as string[],
+    licenseState: ["FL"] as unknown as string[],
     linkedinUrl: null, facebookUrl: null,
     createdAt: new Date(), updatedAt: new Date(),
   },
   {
-    id: 3, name: "Angela Roberts", title: "Loan Officer",
-    nmlsNumber: "345678", phone: "(404) 555-3456", email: "aroberts@klemortgage.com",
-    slug: "angela-roberts", isFounder: false, isActive: true, displayOrder: 2,
-    bio: "Angela's passion is guiding first-time homebuyers through the process with patience, education, and unwavering support.",
-    photoUrl: "/team-member-3.jpg",
-    specialties: ["FHA", "USDA", "First-Time Buyers"] as unknown as string[],
-    languages: ["English"] as unknown as string[],
-    yearsExperience: 6,
-    licenseState: ["GA", "FL"] as unknown as string[],
-    linkedinUrl: null, facebookUrl: null,
-    createdAt: new Date(), updatedAt: new Date(),
-  },
-  {
-    id: 4, name: "David Chen", title: "Loan Officer",
-    nmlsNumber: "456789", phone: "(404) 555-4567", email: "dchen@klemortgage.com",
-    slug: "david-chen", isFounder: false, isActive: true, displayOrder: 3,
-    bio: "David brings expertise in jumbo loans and investment properties, helping high-net-worth clients maximize their real estate portfolios.",
-    photoUrl: null,
-    specialties: ["Jumbo Loans", "Conventional", "Investment Properties"] as unknown as string[],
-    languages: ["English", "Mandarin"] as unknown as string[],
+    id: 4, name: "Olivier Desire", title: "Loan Originator",
+    nmlsNumber: "", phone: "(305) 705-2030", email: "olivier@klemortgage.com",
+    slug: "olivier-desire", isFounder: false, isActive: true, displayOrder: 3,
+    bio: "Specializes in investment property financing and complex mortgage scenarios including DSCR and USDA programs.",
+    photoUrl: "/team-olivier.jpg",
+    specialties: ["DSCR Loans", "USDA Loans", "Investment Properties"] as unknown as string[],
+    languages: ["English", "Haitian Creole"] as unknown as string[],
     yearsExperience: 10,
-    licenseState: ["GA", "FL", "TX"] as unknown as string[],
+    licenseState: ["FL"] as unknown as string[],
+    linkedinUrl: null, facebookUrl: null,
+    createdAt: new Date(), updatedAt: new Date(),
+  },
+  {
+    id: 5, name: "Daniel Calixte", title: "Loan Originator",
+    nmlsNumber: "", phone: "(305) 705-2030", email: "daniel@klemortgage.com",
+    slug: "daniel-calixte", isFounder: false, isActive: true, displayOrder: 4,
+    bio: "Deep expertise in VA and FHA loan programs, dedicated to making mortgages stress-free for every client.",
+    photoUrl: "/team-daniel.jpg",
+    specialties: ["VA Loans", "FHA Loans", "Refinancing"] as unknown as string[],
+    languages: ["English", "Haitian Creole"] as unknown as string[],
+    yearsExperience: 7,
+    licenseState: ["FL"] as unknown as string[],
+    linkedinUrl: null, facebookUrl: null,
+    createdAt: new Date(), updatedAt: new Date(),
+  },
+  {
+    id: 6, name: "Carly Cadet", title: "Realtor Associate",
+    nmlsNumber: "", phone: "(305) 705-2030", email: "carly@klemortgage.com",
+    slug: "carly-cadet", isFounder: false, isActive: true, displayOrder: 5,
+    bio: "Energy and market knowledge for every client relationship, specializing in residential homes and condos.",
+    photoUrl: "/team-carly.jpg",
+    specialties: ["Residential Homes", "Condominiums", "Rentals"] as unknown as string[],
+    languages: ["English"] as unknown as string[],
+    yearsExperience: 5,
+    licenseState: ["FL"] as unknown as string[],
     linkedinUrl: null, facebookUrl: null,
     createdAt: new Date(), updatedAt: new Date(),
   },
@@ -69,8 +95,8 @@ interface Props {
   officers: LoanOfficer[];
 }
 
-export function TeamSection({ officers }: Props) {
-  const displayOfficers = officers.length > 0 ? officers : fallbackOfficers;
+export function TeamSection({ officers: _officers }: Props) {
+  const displayOfficers = realTeam;
 
   return (
     <section className="py-28 bg-[#F8F6F3] relative overflow-hidden">
@@ -146,7 +172,9 @@ export function TeamSection({ officers }: Props) {
                     {officer.name}
                   </h3>
                   <p className="text-xs text-[#C9A345] font-semibold mb-1 tracking-wide">{officer.title}</p>
-                  <p className="text-xs text-[#6B6056] mb-3">NMLS #{officer.nmlsNumber}</p>
+                  {officer.nmlsNumber && (
+                    <p className="text-xs text-[#6B6056] mb-3">NMLS #{officer.nmlsNumber}</p>
+                  )}
 
                   <p className="text-xs text-[#6B6056] leading-relaxed mb-4 line-clamp-2">
                     {officer.bio}
