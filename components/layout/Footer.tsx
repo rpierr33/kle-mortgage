@@ -179,7 +179,7 @@ export function Footer() {
                 &copy; {currentYear} KLE Mortgage Financing, LLC. All rights reserved. NMLS #2380070
               </p>
               <p className="mt-1 text-[#504040]">
-                Equal Housing Lender. Licensed in GA, FL, TX. This is not a commitment to lend.
+                Equal Housing Lender. Licensed in Florida. This is not a commitment to lend.
               </p>
             </div>
             <div className="flex items-center gap-5">

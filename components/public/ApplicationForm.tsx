@@ -271,7 +271,7 @@ export function ApplicationForm() {
                   </div>
                   <div>
                     <label className="text-sm font-medium text-[#1A1A1A] block mb-1.5">State</label>
-                    <input {...step2Form.register("propertyState")} className="w-full border border-[#E8E0D8] rounded-md px-3 py-2.5 text-sm focus:outline-none focus:border-[#6B1C23]" placeholder="GA" />
+                    <input {...step2Form.register("propertyState")} className="w-full border border-[#E8E0D8] rounded-md px-3 py-2.5 text-sm focus:outline-none focus:border-[#6B1C23]" placeholder="FL" />
                   </div>
                   <div>
                     <label className="text-sm font-medium text-[#1A1A1A] block mb-1.5">ZIP</label>

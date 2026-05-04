@@ -60,7 +60,7 @@ export function MissionSection() {
               but lacked the guidance to navigate the mortgage process.
             </p>
             <p className="text-[#6B6056] leading-relaxed text-base">
-              Today, we serve clients across Georgia, Florida, and Texas,
+              Today, we serve clients across Florida,
               offering the same white-glove service regardless of loan amount.
               Whether you&apos;re buying a $150,000 starter home or a $1.5M estate,
               you deserve expert guidance.
@@ -164,7 +164,7 @@ export function MissionSection() {
             </div>
             <div>
               <p className="text-[#C9A345] font-semibold text-xs mb-1.5 uppercase tracking-wider">Licensed In</p>
-              <p className="text-white/70 text-sm">Georgia (GA), Florida (FL), Texas (TX)</p>
+              <p className="text-white/70 text-sm">Florida (FL)</p>
             </div>
             <div>
               <p className="text-[#C9A345] font-semibold text-xs mb-1.5 uppercase tracking-wider">Equal Housing</p>

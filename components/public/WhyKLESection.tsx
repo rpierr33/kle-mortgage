@@ -29,7 +29,7 @@ const benefits = [
 
 const checkpoints = [
   "No hidden fees or surprises at closing",
-  "Licensed in GA, FL, and TX",
+  "Licensed in Florida",
   "Equal Housing Lender — we serve everyone",
   "Available weekends for your convenience",
 ];

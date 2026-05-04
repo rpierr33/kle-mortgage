@@ -151,7 +151,7 @@ export function HeroSection() {
             </div>
             <div className="flex items-center gap-2 bg-white/8 border border-white/12 rounded-full px-3.5 py-1.5 text-white/70 text-xs font-medium">
               <Users className="w-3.5 h-3.5 text-[#C9A345]" />
-              Licensed FL, GA, TX
+              Licensed in Florida
             </div>
           </motion.div>
         </div>

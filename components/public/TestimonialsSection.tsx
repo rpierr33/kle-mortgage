@@ -10,42 +10,42 @@ type Testimonial = typeof testimonials.$inferSelect;
 
 const fallbackTestimonials = [
   {
-    id: 1, reviewerName: "Marcus & Tanya Williams", rating: 5, location: "Atlanta, GA",
+    id: 1, reviewerName: "Marcus & Tanya Williams", rating: 5, location: "Miami, FL",
     loanType: "fha" as const, verified: true, isFeatured: true, displayOrder: 0,
     reviewerAvatarUrl: null,
     reviewText: "KLE made our first home purchase stress-free. Our loan officer explained everything clearly and we closed in 28 days. Highly recommend!",
     createdAt: new Date(), updatedAt: new Date(),
   },
   {
-    id: 2, reviewerName: "Robert Johnson", rating: 5, location: "Marietta, GA",
+    id: 2, reviewerName: "Robert Johnson", rating: 5, location: "Hollywood, FL",
     loanType: "va" as const, verified: true, isFeatured: true, displayOrder: 1,
     reviewerAvatarUrl: null,
     reviewText: "As a veteran, I was grateful for the VA loan expertise at KLE. They knew exactly what I was entitled to and got me into my home with zero down.",
     createdAt: new Date(), updatedAt: new Date(),
   },
   {
-    id: 3, reviewerName: "Priya Patel", rating: 5, location: "Decatur, GA",
+    id: 3, reviewerName: "Priya Patel", rating: 5, location: "Coral Gables, FL",
     loanType: "conventional" as const, verified: true, isFeatured: true, displayOrder: 2,
     reviewerAvatarUrl: null,
     reviewText: "I refinanced my home through KLE and saved $420/month. The process was seamless and my loan officer was always available to answer my questions.",
     createdAt: new Date(), updatedAt: new Date(),
   },
   {
-    id: 4, reviewerName: "David & Sarah Chen", rating: 5, location: "Alpharetta, GA",
+    id: 4, reviewerName: "David & Sarah Chen", rating: 5, location: "Aventura, FL",
     loanType: "conventional" as const, verified: true, isFeatured: true, displayOrder: 3,
     reviewerAvatarUrl: null,
     reviewText: "We tried two other lenders before KLE — nobody could get our deal done. KLE found a program that worked perfectly for our situation.",
     createdAt: new Date(), updatedAt: new Date(),
   },
   {
-    id: 5, reviewerName: "Tamika Brooks", rating: 5, location: "Stone Mountain, GA",
+    id: 5, reviewerName: "Tamika Brooks", rating: 5, location: "Hialeah, FL",
     loanType: "fha" as const, verified: true, isFeatured: true, displayOrder: 4,
     reviewerAvatarUrl: null,
     reviewText: "As a single mom, I never thought homeownership was possible. KLE helped me qualify for a first-time buyer program and the whole team celebrated with me at closing!",
     createdAt: new Date(), updatedAt: new Date(),
   },
   {
-    id: 6, reviewerName: "Kevin & Angela Moore", rating: 5, location: "Duluth, GA",
+    id: 6, reviewerName: "Kevin & Angela Moore", rating: 5, location: "Doral, FL",
     loanType: "usda" as const, verified: true, isFeatured: true, displayOrder: 5,
     reviewerAvatarUrl: null,
     reviewText: "We used USDA and got into our dream home in a great school district for 0% down. KLE walked us through every step. Cannot say enough good things.",

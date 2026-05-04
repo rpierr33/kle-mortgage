@@ -20,7 +20,7 @@ async function seed() {
       specialties: ['FHA', 'VA', 'First-Time Buyers'] as unknown as string[],
       languages: ['English', 'Spanish'] as unknown as string[],
       yearsExperience: 15,
-      licenseState: ['GA', 'FL', 'TX'] as unknown as string[],
+      licenseState: ['FL'] as unknown as string[],
       isFounder: true,
       isActive: true,
       displayOrder: 0,
@@ -36,7 +36,7 @@ async function seed() {
       specialties: ['VA Loans', 'Conventional', 'Refinance'] as unknown as string[],
       languages: ['English'] as unknown as string[],
       yearsExperience: 8,
-      licenseState: ['GA', 'TX'] as unknown as string[],
+      licenseState: ['FL'] as unknown as string[],
       isFounder: false,
       isActive: true,
       displayOrder: 1,
@@ -52,7 +52,7 @@ async function seed() {
       specialties: ['FHA', 'USDA', 'First-Time Buyers'] as unknown as string[],
       languages: ['English'] as unknown as string[],
       yearsExperience: 6,
-      licenseState: ['GA', 'FL'] as unknown as string[],
+      licenseState: ['FL'] as unknown as string[],
       isFounder: false,
       isActive: true,
       displayOrder: 2,
@@ -68,7 +68,7 @@ async function seed() {
       specialties: ['Jumbo Loans', 'Conventional', 'Investment Properties'] as unknown as string[],
       languages: ['English', 'Mandarin'] as unknown as string[],
       yearsExperience: 10,
-      licenseState: ['GA', 'FL', 'TX'] as unknown as string[],
+      licenseState: ['FL'] as unknown as string[],
       isFounder: false,
       isActive: true,
       displayOrder: 3,
@@ -79,12 +79,12 @@ async function seed() {
 
   // Testimonials
   await db.insert(testimonials).values([
-    { reviewerName: 'Marcus & Tanya Williams', rating: 5, location: 'Atlanta, GA', loanType: 'fha', reviewText: 'KLE made our first home purchase stress-free. Our loan officer explained everything clearly and we closed in 28 days. Highly recommend!', isFeatured: true, displayOrder: 0, verified: true },
-    { reviewerName: 'Robert Johnson', rating: 5, location: 'Marietta, GA', loanType: 'va', reviewText: 'As a veteran, I was grateful for the VA loan expertise at KLE. They knew exactly what I was entitled to and got me into my home with zero down.', isFeatured: true, displayOrder: 1, verified: true },
-    { reviewerName: 'Priya Patel', rating: 5, location: 'Decatur, GA', loanType: 'conventional', reviewText: 'I refinanced my home through KLE and saved $420/month. The process was seamless and my loan officer was always available to answer my questions.', isFeatured: false, displayOrder: 2, verified: true },
-    { reviewerName: 'David & Sarah Chen', rating: 5, location: 'Alpharetta, GA', loanType: 'conventional', reviewText: 'We tried two other lenders before KLE — nobody could get our deal done. KLE found a program that worked perfectly for our situation.', isFeatured: true, displayOrder: 3, verified: true },
-    { reviewerName: 'Tamika Brooks', rating: 5, location: 'Stone Mountain, GA', loanType: 'fha', reviewText: 'As a single mom, I never thought homeownership was possible. KLE helped me qualify for a first-time buyer program and the whole team celebrated with me at closing!', isFeatured: true, displayOrder: 4, verified: true },
-    { reviewerName: 'Kevin & Angela Moore', rating: 5, location: 'Duluth, GA', loanType: 'usda', reviewText: 'We used USDA and got into our dream home in a great school district for 0% down. KLE walked us through every step. Cannot say enough good things.', isFeatured: false, displayOrder: 5, verified: true },
+    { reviewerName: 'Marcus & Tanya Williams', rating: 5, location: 'Miami, FL', loanType: 'fha', reviewText: 'KLE made our first home purchase stress-free. Our loan officer explained everything clearly and we closed in 28 days. Highly recommend!', isFeatured: true, displayOrder: 0, verified: true },
+    { reviewerName: 'Robert Johnson', rating: 5, location: 'Hollywood, FL', loanType: 'va', reviewText: 'As a veteran, I was grateful for the VA loan expertise at KLE. They knew exactly what I was entitled to and got me into my home with zero down.', isFeatured: true, displayOrder: 1, verified: true },
+    { reviewerName: 'Priya Patel', rating: 5, location: 'Coral Gables, FL', loanType: 'conventional', reviewText: 'I refinanced my home through KLE and saved $420/month. The process was seamless and my loan officer was always available to answer my questions.', isFeatured: false, displayOrder: 2, verified: true },
+    { reviewerName: 'David & Sarah Chen', rating: 5, location: 'Aventura, FL', loanType: 'conventional', reviewText: 'We tried two other lenders before KLE — nobody could get our deal done. KLE found a program that worked perfectly for our situation.', isFeatured: true, displayOrder: 3, verified: true },
+    { reviewerName: 'Tamika Brooks', rating: 5, location: 'Hialeah, FL', loanType: 'fha', reviewText: 'As a single mom, I never thought homeownership was possible. KLE helped me qualify for a first-time buyer program and the whole team celebrated with me at closing!', isFeatured: true, displayOrder: 4, verified: true },
+    { reviewerName: 'Kevin & Angela Moore', rating: 5, location: 'Doral, FL', loanType: 'usda', reviewText: 'We used USDA and got into our dream home in a great school district for 0% down. KLE walked us through every step. Cannot say enough good things.', isFeatured: false, displayOrder: 5, verified: true },
   ]);
 
   console.log('Seeded testimonials');
@@ -119,7 +119,7 @@ async function seed() {
 
   // Sample Application
   await db.insert(loanApplications).values([
-    { firstName: 'Jane', lastName: 'Demo', email: 'jane.demo@example.com', phone: '(404) 555-8888', loanType: 'fha', isRefinance: false, purchasePrice: '285000', downPayment: '9975', propertyCity: 'Atlanta', propertyState: 'GA', propertyZip: '30301', propertyType: 'single_family', propertyUsage: 'primary_residence', employmentStatus: 'employed', employerName: 'Acme Corp', jobTitle: 'Marketing Manager', grossMonthlyIncome: '6500', estimatedCreditScore: 'good', status: 'new', emailConsent: true, smsConsent: false, assignedOfficerId: officers[0]?.id ?? null },
+    { firstName: 'Jane', lastName: 'Demo', email: 'jane.demo@example.com', phone: '(404) 555-8888', loanType: 'fha', isRefinance: false, purchasePrice: '285000', downPayment: '9975', propertyCity: 'Miami', propertyState: 'FL', propertyZip: '33101', propertyType: 'single_family', propertyUsage: 'primary_residence', employmentStatus: 'employed', employerName: 'Acme Corp', jobTitle: 'Marketing Manager', grossMonthlyIncome: '6500', estimatedCreditScore: 'good', status: 'new', emailConsent: true, smsConsent: false, assignedOfficerId: officers[0]?.id ?? null },
   ]);
 
   // Site Settings
@@ -128,8 +128,8 @@ async function seed() {
     { key: 'company_phone', value: '(404) 555-1234', type: 'string', description: 'Main contact phone' },
     { key: 'company_email', value: 'info@klemortgage.com', type: 'string', description: 'Main contact email' },
     { key: 'company_nmls', value: '2380070', type: 'string', description: 'NMLS company number' },
-    { key: 'company_address', value: 'Atlanta, GA', type: 'string', description: 'Office location' },
-    { key: 'company_license_states', value: 'GA, FL, TX', type: 'string', description: 'Licensed states' },
+    { key: 'company_address', value: 'Miami, FL', type: 'string', description: 'Office location' },
+    { key: 'company_license_states', value: 'FL', type: 'string', description: 'Licensed states' },
   ]);
 
   console.log('Seeded site settings, leads, and applications');

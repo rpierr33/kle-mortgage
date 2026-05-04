@@ -250,7 +250,7 @@ export function TeamManager({ officers: initialOfficers }: Props) {
               {[
                 { key: "specialties", label: "Specialties (comma-separated)" },
                 { key: "languages", label: "Languages (comma-separated)" },
-                { key: "licenseState", label: "Licensed States (comma-separated, e.g. GA, FL)" },
+                { key: "licenseState", label: "Licensed States (comma-separated, e.g. FL)" },
               ].map(({ key, label }) => (
                 <div key={key}>
                   <label className="text-xs font-medium text-[#1A1A1A] block mb-1">{label}</label>
