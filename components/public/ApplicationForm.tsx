@@ -6,14 +6,14 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { CheckCircle2, ArrowRight, ArrowLeft, Loader2 } from "lucide-react";
 import { toast } from "sonner";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { captureUtm, HONEYPOT_STYLE } from "@/lib/utm";
 
 const step1Schema = z.object({
-  firstName: z.string().min(2, "First name required"),
-  lastName: z.string().min(2, "Last name required"),
-  email: z.string().email("Valid email required"),
-  phone: z.string().min(10, "Phone number required"),
+  firstName: z.string().min(2),
+  lastName: z.string().min(2),
+  email: z.string().email(),
+  phone: z.string().min(10),
   dateOfBirth: z.string().optional(),
 });
 
@@ -35,7 +35,7 @@ const step3Schema = z.object({
   employerName: z.string().optional(),
   jobTitle: z.string().optional(),
   yearsEmployed: z.string().optional(),
-  grossMonthlyIncome: z.string().min(1, "Income is required"),
+  grossMonthlyIncome: z.string().min(1),
   otherIncome: z.string().optional(),
   estimatedCreditScore: z.string().optional(),
 });
@@ -43,7 +43,7 @@ const step3Schema = z.object({
 const consentSchema = z.object({
   smsConsent: z.boolean(),
   emailConsent: z.boolean(),
-  agreeToTerms: z.literal(true).refine((v) => v === true, { message: "You must agree to terms" }),
+  agreeToTerms: z.literal(true),
 });
 
 type Step1Data = z.infer<typeof step1Schema>;
@@ -51,34 +51,35 @@ type Step2Data = z.infer<typeof step2Schema>;
 type Step3Data = z.infer<typeof step3Schema>;
 type ConsentData = z.infer<typeof consentSchema>;
 
-const STEPS = ["Personal Info", "Property & Loan", "Employment & Income", "Submit"];
-
-const loanTypeOptions = [
-  { value: "conventional", label: "Conventional" },
-  { value: "fha", label: "FHA" },
-  { value: "va", label: "VA" },
-  { value: "usda", label: "USDA" },
-  { value: "jumbo", label: "Jumbo" },
-  { value: "refinance", label: "Refinancing" },
-  { value: "first_time_buyer", label: "First-Time Buyer" },
-  { value: "other", label: "Not Sure" },
-];
-
-const creditScoreOptions = [
-  { value: "excellent", label: "Excellent (740+)" },
-  { value: "good", label: "Good (680–739)" },
-  { value: "fair", label: "Fair (620–679)" },
-  { value: "poor", label: "Below 620" },
-  { value: "unknown", label: "I don't know" },
-];
-
 export function ApplicationForm() {
+  const t = useTranslations("Forms");
+  const locale = useLocale() as "en" | "fr" | "ht";
   const [currentStep, setCurrentStep] = useState(0);
   const [formData, setFormData] = useState<Partial<Step1Data & Step2Data & Step3Data & ConsentData>>({});
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [honeypot, setHoneypot] = useState("");
-  const locale = useLocale() as "en" | "fr" | "ht";
+
+  const STEPS = [t("appStepNamePersonal"), t("appStepNameProperty"), t("appStepNameEmployment"), t("appStepNameSubmit")];
+
+  const loanTypeOptions = [
+    { value: "conventional", label: t("appLoanConventional") },
+    { value: "fha", label: t("appLoanFha") },
+    { value: "va", label: t("appLoanVa") },
+    { value: "usda", label: t("appLoanUsda") },
+    { value: "jumbo", label: t("appLoanJumbo") },
+    { value: "refinance", label: t("appLoanRefinance") },
+    { value: "first_time_buyer", label: t("appLoanFirstTime") },
+    { value: "other", label: t("appLoanOther") },
+  ];
+
+  const creditScoreOptions = [
+    { value: "excellent", label: t("appCreditExcellent") },
+    { value: "good", label: t("appCreditGood") },
+    { value: "fair", label: t("appCreditFair") },
+    { value: "poor", label: t("appCreditPoor") },
+    { value: "unknown", label: t("appCreditUnknown") },
+  ];
 
   const step1Form = useForm<Step1Data>({ resolver: zodResolver(step1Schema), defaultValues: formData });
   const step2Form = useForm<Step2Data>({ resolver: zodResolver(step2Schema), defaultValues: { loanType: "conventional", isRefinance: false, ...formData } });
@@ -114,12 +115,12 @@ export function ApplicationForm() {
 
       if (!res.ok) {
         const err = await res.json().catch(() => ({}));
-        throw new Error(err.error || "Submission failed");
+        throw new Error(err.error || t("errorGeneric"));
       }
 
       setSubmitted(true);
     } catch (err) {
-      toast.error(err instanceof Error ? err.message : "Something went wrong. Please try again.");
+      toast.error(err instanceof Error ? err.message : t("errorGeneric"));
     } finally {
       setSubmitting(false);
     }
@@ -134,20 +135,19 @@ export function ApplicationForm() {
               <CheckCircle2 className="w-8 h-8 text-green-600" />
             </div>
             <h2 className="text-3xl font-bold text-[#1A1A1A] mb-3 font-[family-name:var(--font-cormorant)]">
-              Application Submitted!
+              {t("appSuccessTitle")}
             </h2>
             <p className="text-[#6B6056] mb-6">
-              Thank you, {formData.firstName}! We've received your application
-              and a loan officer will contact you within 24 hours.
+              {t("appSuccessBodyTemplate", { firstName: formData.firstName ?? "" })}
             </p>
             <p className="text-sm text-[#6B6056] mb-8">
-              Check your email at <strong>{formData.email}</strong> for a confirmation.
+              {t("appSuccessEmailHint", { email: formData.email ?? "" })}
             </p>
             <a
               href="/"
               className="inline-flex items-center justify-center gap-2 bg-[#6B1C23] hover:bg-[#4A1218] text-white px-6 py-3 rounded-md text-sm font-semibold transition-colors"
             >
-              Back to Home
+              {t("appSuccessBackHome")}
             </a>
           </div>
         </div>
@@ -186,7 +186,7 @@ export function ApplicationForm() {
         </div>
 
         <div className="bg-white rounded-2xl border border-[#E8E0D8] p-8">
-          {/* Honeypot — bots fill this, humans don't see it */}
+          {/* Honeypot */}
           <input
             type="text"
             value={honeypot}
@@ -197,41 +197,42 @@ export function ApplicationForm() {
             name="website"
             style={HONEYPOT_STYLE}
           />
+
           {/* Step 1: Personal Info */}
           {currentStep === 0 && (
             <form onSubmit={step1Form.handleSubmit(handleStep1)}>
               <h2 className="text-2xl font-bold text-[#1A1A1A] mb-6 font-[family-name:var(--font-cormorant)]">
-                Personal Information
+                {t("appStep1Title")}
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
-                  <label className="text-sm font-medium text-[#1A1A1A] block mb-1.5">First Name *</label>
+                  <label className="text-sm font-medium text-[#1A1A1A] block mb-1.5">{t("labelFirstName")} *</label>
                   <input {...step1Form.register("firstName")} className="w-full border border-[#E8E0D8] rounded-md px-3 py-2.5 text-sm focus:outline-none focus:border-[#6B1C23]" placeholder="John" />
-                  {step1Form.formState.errors.firstName && <p className="text-red-500 text-xs mt-1">{step1Form.formState.errors.firstName.message}</p>}
+                  {step1Form.formState.errors.firstName && <p className="text-red-500 text-xs mt-1">{t("errorRequired")}</p>}
                 </div>
                 <div>
-                  <label className="text-sm font-medium text-[#1A1A1A] block mb-1.5">Last Name *</label>
+                  <label className="text-sm font-medium text-[#1A1A1A] block mb-1.5">{t("labelLastName")} *</label>
                   <input {...step1Form.register("lastName")} className="w-full border border-[#E8E0D8] rounded-md px-3 py-2.5 text-sm focus:outline-none focus:border-[#6B1C23]" placeholder="Smith" />
-                  {step1Form.formState.errors.lastName && <p className="text-red-500 text-xs mt-1">{step1Form.formState.errors.lastName.message}</p>}
+                  {step1Form.formState.errors.lastName && <p className="text-red-500 text-xs mt-1">{t("errorRequired")}</p>}
                 </div>
                 <div>
-                  <label className="text-sm font-medium text-[#1A1A1A] block mb-1.5">Email Address *</label>
+                  <label className="text-sm font-medium text-[#1A1A1A] block mb-1.5">{t("labelEmail")} *</label>
                   <input {...step1Form.register("email")} type="email" className="w-full border border-[#E8E0D8] rounded-md px-3 py-2.5 text-sm focus:outline-none focus:border-[#6B1C23]" placeholder="john@example.com" />
-                  {step1Form.formState.errors.email && <p className="text-red-500 text-xs mt-1">{step1Form.formState.errors.email.message}</p>}
+                  {step1Form.formState.errors.email && <p className="text-red-500 text-xs mt-1">{t("errorEmail")}</p>}
                 </div>
                 <div>
-                  <label className="text-sm font-medium text-[#1A1A1A] block mb-1.5">Phone Number *</label>
-                  <input {...step1Form.register("phone")} type="tel" className="w-full border border-[#E8E0D8] rounded-md px-3 py-2.5 text-sm focus:outline-none focus:border-[#6B1C23]" placeholder="(404) 555-1234" />
-                  {step1Form.formState.errors.phone && <p className="text-red-500 text-xs mt-1">{step1Form.formState.errors.phone.message}</p>}
+                  <label className="text-sm font-medium text-[#1A1A1A] block mb-1.5">{t("labelPhone")} *</label>
+                  <input {...step1Form.register("phone")} type="tel" className="w-full border border-[#E8E0D8] rounded-md px-3 py-2.5 text-sm focus:outline-none focus:border-[#6B1C23]" placeholder="(305) 555-1234" />
+                  {step1Form.formState.errors.phone && <p className="text-red-500 text-xs mt-1">{t("errorRequired")}</p>}
                 </div>
                 <div className="sm:col-span-2">
-                  <label className="text-sm font-medium text-[#1A1A1A] block mb-1.5">Date of Birth</label>
+                  <label className="text-sm font-medium text-[#1A1A1A] block mb-1.5">{t("appLabelDob")}</label>
                   <input {...step1Form.register("dateOfBirth")} type="date" className="w-full border border-[#E8E0D8] rounded-md px-3 py-2.5 text-sm focus:outline-none focus:border-[#6B1C23]" />
                 </div>
               </div>
               <div className="mt-8 flex justify-end">
                 <button type="submit" className="flex items-center gap-2 bg-[#6B1C23] hover:bg-[#4A1218] text-white px-7 py-3 rounded-md text-sm font-semibold transition-colors">
-                  Next <ArrowRight className="w-4 h-4" />
+                  {t("appCtaNext")} <ArrowRight className="w-4 h-4" />
                 </button>
               </div>
             </form>
@@ -241,11 +242,11 @@ export function ApplicationForm() {
           {currentStep === 1 && (
             <form onSubmit={step2Form.handleSubmit(handleStep2)}>
               <h2 className="text-2xl font-bold text-[#1A1A1A] mb-6 font-[family-name:var(--font-cormorant)]">
-                Property & Loan Details
+                {t("appStep2Title")}
               </h2>
               <div className="space-y-5">
                 <div>
-                  <label className="text-sm font-medium text-[#1A1A1A] block mb-2">Loan Type *</label>
+                  <label className="text-sm font-medium text-[#1A1A1A] block mb-2">{t("appLabelLoanType")} *</label>
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                     {loanTypeOptions.map((opt) => (
                       <label key={opt.value} className="cursor-pointer">
@@ -261,60 +262,60 @@ export function ApplicationForm() {
                 <div className="flex items-center gap-3">
                   <input {...step2Form.register("isRefinance")} type="checkbox" id="refinance" className="accent-[#6B1C23] w-4 h-4" />
                   <label htmlFor="refinance" className="text-sm text-[#1A1A1A]">
-                    This is a refinance (I already own this property)
+                    {t("appLabelIsRefinance")}
                   </label>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="text-sm font-medium text-[#1A1A1A] block mb-1.5">Purchase Price / Home Value</label>
+                    <label className="text-sm font-medium text-[#1A1A1A] block mb-1.5">{t("appLabelPurchasePrice")}</label>
                     <input {...step2Form.register("purchasePrice")} type="number" className="w-full border border-[#E8E0D8] rounded-md px-3 py-2.5 text-sm focus:outline-none focus:border-[#6B1C23]" placeholder="350000" />
                   </div>
                   <div>
-                    <label className="text-sm font-medium text-[#1A1A1A] block mb-1.5">Down Payment ($)</label>
+                    <label className="text-sm font-medium text-[#1A1A1A] block mb-1.5">{t("appLabelDownPayment")}</label>
                     <input {...step2Form.register("downPayment")} type="number" className="w-full border border-[#E8E0D8] rounded-md px-3 py-2.5 text-sm focus:outline-none focus:border-[#6B1C23]" placeholder="35000" />
                   </div>
                 </div>
 
                 <div>
-                  <label className="text-sm font-medium text-[#1A1A1A] block mb-1.5">Property Address</label>
+                  <label className="text-sm font-medium text-[#1A1A1A] block mb-1.5">{t("appLabelPropertyAddress")}</label>
                   <input {...step2Form.register("propertyAddress")} className="w-full border border-[#E8E0D8] rounded-md px-3 py-2.5 text-sm focus:outline-none focus:border-[#6B1C23]" placeholder="123 Main St" />
                 </div>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                   <div>
-                    <label className="text-sm font-medium text-[#1A1A1A] block mb-1.5">City</label>
+                    <label className="text-sm font-medium text-[#1A1A1A] block mb-1.5">{t("appLabelCity")}</label>
                     <input {...step2Form.register("propertyCity")} className="w-full border border-[#E8E0D8] rounded-md px-3 py-2.5 text-sm focus:outline-none focus:border-[#6B1C23]" />
                   </div>
                   <div>
-                    <label className="text-sm font-medium text-[#1A1A1A] block mb-1.5">State</label>
+                    <label className="text-sm font-medium text-[#1A1A1A] block mb-1.5">{t("appLabelState")}</label>
                     <input {...step2Form.register("propertyState")} className="w-full border border-[#E8E0D8] rounded-md px-3 py-2.5 text-sm focus:outline-none focus:border-[#6B1C23]" placeholder="FL" />
                   </div>
                   <div>
-                    <label className="text-sm font-medium text-[#1A1A1A] block mb-1.5">ZIP</label>
+                    <label className="text-sm font-medium text-[#1A1A1A] block mb-1.5">{t("appLabelZip")}</label>
                     <input {...step2Form.register("propertyZip")} className="w-full border border-[#E8E0D8] rounded-md px-3 py-2.5 text-sm focus:outline-none focus:border-[#6B1C23]" />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="text-sm font-medium text-[#1A1A1A] block mb-1.5">Property Type</label>
+                    <label className="text-sm font-medium text-[#1A1A1A] block mb-1.5">{t("appLabelPropertyType")}</label>
                     <select {...step2Form.register("propertyType")} className="w-full border border-[#E8E0D8] rounded-md px-3 py-2.5 text-sm focus:outline-none focus:border-[#6B1C23] bg-white">
-                      <option value="">Select...</option>
-                      <option value="single_family">Single Family</option>
-                      <option value="condo">Condo</option>
-                      <option value="townhouse">Townhouse</option>
-                      <option value="multi_family">Multi-Family</option>
-                      <option value="manufactured">Manufactured</option>
-                      <option value="other">Other</option>
+                      <option value="">{t("appPropTypePlaceholder")}</option>
+                      <option value="single_family">{t("appPropTypeSingleFamily")}</option>
+                      <option value="condo">{t("appPropTypeCondo")}</option>
+                      <option value="townhouse">{t("appPropTypeTownhouse")}</option>
+                      <option value="multi_family">{t("appPropTypeMultiFamily")}</option>
+                      <option value="manufactured">{t("appPropTypeManufactured")}</option>
+                      <option value="other">{t("appPropTypeOther")}</option>
                     </select>
                   </div>
                   <div>
-                    <label className="text-sm font-medium text-[#1A1A1A] block mb-1.5">Property Usage</label>
+                    <label className="text-sm font-medium text-[#1A1A1A] block mb-1.5">{t("appLabelPropertyUsage")}</label>
                     <select {...step2Form.register("propertyUsage")} className="w-full border border-[#E8E0D8] rounded-md px-3 py-2.5 text-sm focus:outline-none focus:border-[#6B1C23] bg-white">
-                      <option value="">Select...</option>
-                      <option value="primary_residence">Primary Residence</option>
-                      <option value="secondary_home">Secondary Home</option>
-                      <option value="investment_property">Investment Property</option>
+                      <option value="">{t("appUsagePlaceholder")}</option>
+                      <option value="primary_residence">{t("appUsagePrimary")}</option>
+                      <option value="secondary_home">{t("appUsageSecondary")}</option>
+                      <option value="investment_property">{t("appUsageInvestment")}</option>
                     </select>
                   </div>
                 </div>
@@ -322,10 +323,10 @@ export function ApplicationForm() {
 
               <div className="mt-8 flex justify-between">
                 <button type="button" onClick={() => setCurrentStep(0)} className="flex items-center gap-2 border border-[#E8E0D8] text-[#1A1A1A] px-5 py-3 rounded-md text-sm font-medium transition-colors hover:border-[#6B1C23]">
-                  <ArrowLeft className="w-4 h-4" /> Back
+                  <ArrowLeft className="w-4 h-4" /> {t("appCtaBack")}
                 </button>
                 <button type="submit" className="flex items-center gap-2 bg-[#6B1C23] hover:bg-[#4A1218] text-white px-7 py-3 rounded-md text-sm font-semibold transition-colors">
-                  Next <ArrowRight className="w-4 h-4" />
+                  {t("appCtaNext")} <ArrowRight className="w-4 h-4" />
                 </button>
               </div>
             </form>
@@ -335,17 +336,17 @@ export function ApplicationForm() {
           {currentStep === 2 && (
             <form onSubmit={step3Form.handleSubmit(handleStep3)}>
               <h2 className="text-2xl font-bold text-[#1A1A1A] mb-6 font-[family-name:var(--font-cormorant)]">
-                Employment & Income
+                {t("appStep3Title")}
               </h2>
               <div className="space-y-5">
                 <div>
-                  <label className="text-sm font-medium text-[#1A1A1A] block mb-2">Employment Status *</label>
+                  <label className="text-sm font-medium text-[#1A1A1A] block mb-2">{t("appLabelEmploymentStatus")} *</label>
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                     {[
-                      { value: "employed", label: "Employed" },
-                      { value: "self_employed", label: "Self-Employed" },
-                      { value: "retired", label: "Retired" },
-                      { value: "other", label: "Other" },
+                      { value: "employed", label: t("appEmpEmployed") },
+                      { value: "self_employed", label: t("appEmpSelfEmployed") },
+                      { value: "retired", label: t("appEmpRetired") },
+                      { value: "other", label: t("appEmpOther") },
                     ].map((opt) => (
                       <label key={opt.value} className="cursor-pointer">
                         <input {...step3Form.register("employmentStatus")} type="radio" value={opt.value} className="sr-only" />
@@ -359,30 +360,30 @@ export function ApplicationForm() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="text-sm font-medium text-[#1A1A1A] block mb-1.5">Employer / Company Name</label>
+                    <label className="text-sm font-medium text-[#1A1A1A] block mb-1.5">{t("appLabelEmployer")}</label>
                     <input {...step3Form.register("employerName")} className="w-full border border-[#E8E0D8] rounded-md px-3 py-2.5 text-sm focus:outline-none focus:border-[#6B1C23]" />
                   </div>
                   <div>
-                    <label className="text-sm font-medium text-[#1A1A1A] block mb-1.5">Job Title</label>
+                    <label className="text-sm font-medium text-[#1A1A1A] block mb-1.5">{t("appLabelJobTitle")}</label>
                     <input {...step3Form.register("jobTitle")} className="w-full border border-[#E8E0D8] rounded-md px-3 py-2.5 text-sm focus:outline-none focus:border-[#6B1C23]" />
                   </div>
                   <div>
-                    <label className="text-sm font-medium text-[#1A1A1A] block mb-1.5">Years at Current Job</label>
+                    <label className="text-sm font-medium text-[#1A1A1A] block mb-1.5">{t("appLabelYearsEmployed")}</label>
                     <input {...step3Form.register("yearsEmployed")} type="number" step={0.5} className="w-full border border-[#E8E0D8] rounded-md px-3 py-2.5 text-sm focus:outline-none focus:border-[#6B1C23]" />
                   </div>
                   <div>
-                    <label className="text-sm font-medium text-[#1A1A1A] block mb-1.5">Gross Monthly Income ($) *</label>
+                    <label className="text-sm font-medium text-[#1A1A1A] block mb-1.5">{t("appLabelMonthlyIncome")} *</label>
                     <input {...step3Form.register("grossMonthlyIncome")} type="number" className="w-full border border-[#E8E0D8] rounded-md px-3 py-2.5 text-sm focus:outline-none focus:border-[#6B1C23]" placeholder="7500" />
-                    {step3Form.formState.errors.grossMonthlyIncome && <p className="text-red-500 text-xs mt-1">{step3Form.formState.errors.grossMonthlyIncome.message}</p>}
+                    {step3Form.formState.errors.grossMonthlyIncome && <p className="text-red-500 text-xs mt-1">{t("errorRequired")}</p>}
                   </div>
                   <div>
-                    <label className="text-sm font-medium text-[#1A1A1A] block mb-1.5">Other Monthly Income ($)</label>
+                    <label className="text-sm font-medium text-[#1A1A1A] block mb-1.5">{t("appLabelOtherIncome")}</label>
                     <input {...step3Form.register("otherIncome")} type="number" className="w-full border border-[#E8E0D8] rounded-md px-3 py-2.5 text-sm focus:outline-none focus:border-[#6B1C23]" placeholder="0" />
                   </div>
                   <div>
-                    <label className="text-sm font-medium text-[#1A1A1A] block mb-1.5">Estimated Credit Score</label>
+                    <label className="text-sm font-medium text-[#1A1A1A] block mb-1.5">{t("appLabelCreditScore")}</label>
                     <select {...step3Form.register("estimatedCreditScore")} className="w-full border border-[#E8E0D8] rounded-md px-3 py-2.5 text-sm focus:outline-none focus:border-[#6B1C23] bg-white">
-                      <option value="">Select range...</option>
+                      <option value="">{t("appCreditPlaceholder")}</option>
                       {creditScoreOptions.map((opt) => (
                         <option key={opt.value} value={opt.value}>{opt.label}</option>
                       ))}
@@ -393,10 +394,10 @@ export function ApplicationForm() {
 
               <div className="mt-8 flex justify-between">
                 <button type="button" onClick={() => setCurrentStep(1)} className="flex items-center gap-2 border border-[#E8E0D8] text-[#1A1A1A] px-5 py-3 rounded-md text-sm font-medium transition-colors hover:border-[#6B1C23]">
-                  <ArrowLeft className="w-4 h-4" /> Back
+                  <ArrowLeft className="w-4 h-4" /> {t("appCtaBack")}
                 </button>
                 <button type="submit" className="flex items-center gap-2 bg-[#6B1C23] hover:bg-[#4A1218] text-white px-7 py-3 rounded-md text-sm font-semibold transition-colors">
-                  Next <ArrowRight className="w-4 h-4" />
+                  {t("appCtaNext")} <ArrowRight className="w-4 h-4" />
                 </button>
               </div>
             </form>
@@ -406,19 +407,18 @@ export function ApplicationForm() {
           {currentStep === 3 && (
             <form onSubmit={consentForm.handleSubmit(handleFinalSubmit)}>
               <h2 className="text-2xl font-bold text-[#1A1A1A] mb-6 font-[family-name:var(--font-cormorant)]">
-                Review & Submit
+                {t("appStep4Title")}
               </h2>
 
-              {/* Summary */}
               <div className="bg-[#F8F6F3] rounded-xl p-5 mb-6 space-y-2 text-sm">
-                <h3 className="font-semibold text-[#1A1A1A] mb-3">Application Summary</h3>
+                <h3 className="font-semibold text-[#1A1A1A] mb-3">{t("appReviewSummary")}</h3>
                 <div className="grid grid-cols-2 gap-x-6 gap-y-1">
-                  <div><span className="text-[#6B6056]">Name:</span> <span className="font-medium">{formData.firstName} {formData.lastName}</span></div>
-                  <div><span className="text-[#6B6056]">Email:</span> <span className="font-medium">{formData.email}</span></div>
-                  <div><span className="text-[#6B6056]">Phone:</span> <span className="font-medium">{formData.phone}</span></div>
-                  <div><span className="text-[#6B6056]">Loan Type:</span> <span className="font-medium capitalize">{formData.loanType?.replace("_", " ")}</span></div>
-                  {formData.purchasePrice && <div><span className="text-[#6B6056]">Purchase Price:</span> <span className="font-medium">${Number(formData.purchasePrice).toLocaleString()}</span></div>}
-                  {formData.grossMonthlyIncome && <div><span className="text-[#6B6056]">Monthly Income:</span> <span className="font-medium">${Number(formData.grossMonthlyIncome).toLocaleString()}</span></div>}
+                  <div><span className="text-[#6B6056]">{t("appReviewName")}:</span> <span className="font-medium">{formData.firstName} {formData.lastName}</span></div>
+                  <div><span className="text-[#6B6056]">{t("appReviewEmail")}:</span> <span className="font-medium">{formData.email}</span></div>
+                  <div><span className="text-[#6B6056]">{t("appReviewPhone")}:</span> <span className="font-medium">{formData.phone}</span></div>
+                  <div><span className="text-[#6B6056]">{t("appReviewLoanType")}:</span> <span className="font-medium capitalize">{formData.loanType?.replace("_", " ")}</span></div>
+                  {formData.purchasePrice && <div><span className="text-[#6B6056]">{t("appReviewPurchasePrice")}:</span> <span className="font-medium">${Number(formData.purchasePrice).toLocaleString()}</span></div>}
+                  {formData.grossMonthlyIncome && <div><span className="text-[#6B6056]">{t("appReviewIncome")}:</span> <span className="font-medium">${Number(formData.grossMonthlyIncome).toLocaleString()}</span></div>}
                 </div>
               </div>
 
@@ -426,33 +426,29 @@ export function ApplicationForm() {
                 <div className="flex items-start gap-3">
                   <input {...consentForm.register("emailConsent")} type="checkbox" id="emailConsent" className="accent-[#6B1C23] w-4 h-4 mt-0.5" />
                   <label htmlFor="emailConsent" className="text-sm text-[#6B6056]">
-                    I consent to receive email communications about my application.
+                    {t("appConsentEmail")}
                   </label>
                 </div>
                 <div className="flex items-start gap-3">
                   <input {...consentForm.register("smsConsent")} type="checkbox" id="smsConsent" className="accent-[#6B1C23] w-4 h-4 mt-0.5" />
                   <label htmlFor="smsConsent" className="text-sm text-[#6B6056]">
-                    I consent to receive SMS text messages about my application. Msg & data rates may apply.
+                    {t("appConsentSms")}
                   </label>
                 </div>
                 <div className="flex items-start gap-3">
                   <input {...consentForm.register("agreeToTerms")} type="checkbox" id="agreeToTerms" className="accent-[#6B1C23] w-4 h-4 mt-0.5" />
                   <label htmlFor="agreeToTerms" className="text-sm text-[#6B6056]">
-                    I agree to the{" "}
-                    <a href="/terms" className="text-[#6B1C23] underline" target="_blank">Terms of Use</a>
-                    {" "}and{" "}
-                    <a href="/privacy-policy" className="text-[#6B1C23] underline" target="_blank">Privacy Policy</a>.
-                    I understand this is not a commitment to lend. *
+                    {t("appConsentTermsBody")}
                   </label>
                 </div>
                 {consentForm.formState.errors.agreeToTerms && (
-                  <p className="text-red-500 text-xs">{consentForm.formState.errors.agreeToTerms.message}</p>
+                  <p className="text-red-500 text-xs">{t("appConsentTermsRequired")}</p>
                 )}
               </div>
 
               <div className="mt-6 flex justify-between">
                 <button type="button" onClick={() => setCurrentStep(2)} className="flex items-center gap-2 border border-[#E8E0D8] text-[#1A1A1A] px-5 py-3 rounded-md text-sm font-medium transition-colors hover:border-[#6B1C23]">
-                  <ArrowLeft className="w-4 h-4" /> Back
+                  <ArrowLeft className="w-4 h-4" /> {t("appCtaBack")}
                 </button>
                 <button
                   type="submit"
@@ -460,9 +456,9 @@ export function ApplicationForm() {
                   className="flex items-center gap-2 bg-[#6B1C23] hover:bg-[#4A1218] disabled:opacity-60 text-white px-7 py-3 rounded-md text-sm font-semibold transition-colors"
                 >
                   {submitting ? (
-                    <><Loader2 className="w-4 h-4 animate-spin" /> Submitting...</>
+                    <><Loader2 className="w-4 h-4 animate-spin" /> {t("appCtaSubmitting")}</>
                   ) : (
-                    <>Submit Application <ArrowRight className="w-4 h-4" /></>
+                    <>{t("appCtaSubmit")} <ArrowRight className="w-4 h-4" /></>
                   )}
                 </button>
               </div>

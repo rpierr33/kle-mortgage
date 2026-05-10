@@ -69,5 +69,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
+  // Programmatic City × Program matrix (9 neighborhoods × 7 programs = 63 pages)
+  const matrixPrograms = ["fha", "va", "usda", "conventional", "jumbo", "refinance", "first-time-buyer"];
+  for (const n of NEIGHBORHOODS) {
+    for (const program of matrixPrograms) {
+      for (const locale of routing.locales) {
+        const path = `/neighborhoods/${n.slug}/${program}`;
+        entries.push({
+          url: localePath(locale, path),
+          lastModified: now,
+          changeFrequency: "weekly",
+          priority: 0.6,
+          alternates: {
+            languages: Object.fromEntries(
+              routing.locales.map((alt) => [alt, localePath(alt, path)]),
+            ),
+          },
+        });
+      }
+    }
+  }
+
   return entries;
 }
