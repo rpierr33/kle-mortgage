@@ -359,6 +359,142 @@
       "carly-cadet": "Buying a first home should feel exciting, not stressful. I bring the energy and the market knowledge so my clients always know what's next."
     }
   },
+  "ApplyPage": {
+    "kicker": "Start Today",
+    "headlineLead": "Apply for a",
+    "headlineAccent": "Home Loan",
+    "intro": "Complete our simple application in about 10 minutes. No credit pull required for pre-qualification.",
+    "trustNoCredit": "No credit pull to start",
+    "trust10Min": "10-minute application",
+    "trust24Hr": "Pre-approval in 24hrs",
+    "joinFamiliesValue": "500+ Families",
+    "joinFamiliesLabel": "got pre-approved with KLE",
+    "testimonialQuote": "Pre-approval in under 24 hours. Closed in 28 days.",
+    "testimonialAuthor": "Maria & Carlos G.",
+    "testimonialRole": "First-Time Homebuyers · Miami",
+    "trust1": "No credit pull to start",
+    "trust2": "Pre-approval in 24 hours",
+    "trust3": "No obligation, ever"
+  },
+  "ContactPage": {
+    "kicker": "Get In Touch",
+    "headlineLead": "Talk to a",
+    "headlineAccent": "Loan Officer",
+    "intro": "Mortgage questions don't wait. Reach a licensed KLE loan officer by phone, email, or the form below — typical response within one business hour.",
+    "officeLabel": "Office",
+    "officeValue": "909 N Miami Beach Blvd, Suite 301A · North Miami Beach, FL 33162",
+    "phoneLabel": "Phone",
+    "emailLabel": "Email",
+    "hoursLabel": "Hours",
+    "hoursValue": "Mon–Fri 9:00 AM – 5:00 PM ET (extended weekend availability for active clients)"
+  },
+  "CalculatorPage": {
+    "kicker": "Mortgage Calculator",
+    "headlineLead": "Estimate Your",
+    "headlineAccent": "Monthly Payment",
+    "intro": "Enter your purchase price, down payment, rate, and term — see your principal-and-interest payment instantly. For a precise quote with taxes, insurance, and PMI, talk to a KLE loan officer."
+  },
+  "Forms": {
+    "contactTitle": "Send Us a Message",
+    "labelFirstName": "First Name",
+    "labelLastName": "Last Name",
+    "labelEmail": "Email",
+    "labelPhone": "Phone",
+    "labelInterest": "I'm interested in...",
+    "interestOptionPlaceholder": "Select an option",
+    "interestBuying": "Buying a Home",
+    "interestRefinancing": "Refinancing",
+    "interestFirstTime": "First-Time Buyer Programs",
+    "interestVa": "VA Loan",
+    "interestOther": "General Question",
+    "labelMessage": "Message",
+    "placeholderMessage": "Tell us about your situation or question...",
+    "smsConsent": "I consent to receive SMS messages about my inquiry. Msg & data rates may apply.",
+    "ctaSend": "Send Message",
+    "ctaSending": "Sending...",
+    "successTitle": "Message Sent!",
+    "successBody": "We'll be in touch within 24 hours. Thank you for reaching out to KLE Mortgage.",
+    "errorRequired": "Required",
+    "errorEmail": "Valid email required",
+    "errorMessageMin": "Please provide more detail (at least 10 characters)",
+    "errorGeneric": "Something went wrong."
+  },
+  "Faq": {
+    "pageHeading": "Mortgage Questions, Answered",
+    "pageIntro": "Straight answers from our licensed loan officers — credit score requirements, down payment minimums, FHA vs Conventional, Hometown Heroes eligibility, and what to expect at closing. Still have a question? Call (305) 705-2030.",
+    "ctaPhone": "Call (305) 705-2030",
+    "ctaContact": "Send a Message",
+    "categoryGettingStarted": "Getting Started",
+    "categoryLoanTypes": "Loan Types & Programs",
+    "categoryCosts": "Costs & Fees",
+    "categoryProcess": "The Mortgage Process",
+    "items": {
+      "preQualVsPreApproval": {
+        "q": "What's the difference between pre-qualification and pre-approval?",
+        "a": "Pre-qualification is an informal estimate of how much you might borrow based on self-reported information — no credit pull, no documentation review. Pre-approval involves a full credit check, income and asset documentation, and produces a verified loan amount. Sellers in Florida's competitive markets typically require pre-approval, not pre-qualification, before considering an offer."
+      },
+      "downPayment": {
+        "q": "How much do I need for a down payment in Florida?",
+        "a": "It depends on the loan program. FHA requires 3.5% (with credit 580+); Conventional starts at 3% for first-time buyers with strong credit; VA and USDA are 0% down for eligible borrowers. The Florida Hometown Heroes program can stack up to $35,000 in down payment + closing cost assistance for qualifying professionals (teachers, nurses, firefighters, law enforcement, healthcare workers, and others)."
+      },
+      "creditScore": {
+        "q": "What credit score do I need to buy a home?",
+        "a": "Minimum scores vary by program: FHA 580, Conventional 620, VA 580, USDA 640, Jumbo typically 700+. Higher scores qualify for lower interest rates. KLE Mortgage works with multiple wholesale lenders, so we can find a fit for credit scores from 580 upward — and often help borrowers improve a score before locking a rate."
+      },
+      "timeline": {
+        "q": "How long does the mortgage process take?",
+        "a": "On average, 30–45 days from application to closing for a purchase, faster for refinances. KLE typically clears to close in 28 days or less when documents are submitted promptly. The biggest delays are usually appraisal scheduling and condo HOA reviews."
+      },
+      "fhaVsConventional": {
+        "q": "What's the difference between FHA and Conventional loans?",
+        "a": "FHA loans are insured by the Federal Housing Administration — they have easier qualification (3.5% down, 580 credit) but require Mortgage Insurance Premium (MIP) for the life of the loan in most cases. Conventional loans require better credit (620+) but Private Mortgage Insurance (PMI) can be removed once you reach 20% equity. For first-time buyers with credit 580–680, FHA is often more affordable; for credit 700+, Conventional usually wins long-term."
+      },
+      "vaEligibility": {
+        "q": "Who qualifies for a VA loan?",
+        "a": "Veterans, active-duty service members, National Guard / Reserve members meeting minimum service requirements, and eligible surviving spouses. You'll need a Certificate of Eligibility (COE) — KLE can pull this from the VA portal during pre-approval. No down payment, no PMI, and the funding fee can typically be financed into the loan."
+      },
+      "usdaIncomeLimits": {
+        "q": "What are the income limits for a USDA loan?",
+        "a": "USDA limits household income to 115% of the area median income. In most Florida counties this is well into the $100,000s for a family of four. The property must also be in a USDA-eligible rural or suburban area — parts of western Pembroke Pines, Davie, and Homestead qualify. KLE can check both income and address eligibility during a quick pre-approval call."
+      },
+      "refinance": {
+        "q": "When should I consider refinancing my mortgage?",
+        "a": "Consider refinancing if (1) rates have dropped 0.5%+ since you bought, (2) your credit has improved significantly, (3) you want to switch from ARM to fixed, (4) you want to shorten your term to save on interest, or (5) you want to access home equity through a cash-out refinance. FHA and VA streamline refinances skip the appraisal in many cases."
+      },
+      "closingCosts": {
+        "q": "What are closing costs and how much should I budget?",
+        "a": "Closing costs are fees paid at closing, typically 2–5% of the loan amount. They include lender fees (origination, processing), title insurance, appraisal ($500–$700), recording fees, attorney fees (Florida is an attorney-state), and prepaid items (insurance, escrow taxes). KLE provides a written Loan Estimate within 3 business days of your full application — no surprises."
+      },
+      "pmi": {
+        "q": "What is PMI and how do I avoid or remove it?",
+        "a": "Private Mortgage Insurance protects the lender if you default. It's required on Conventional loans with less than 20% down, typically costing 0.5–1.5% of the loan annually. You can request PMI removal once you reach 20% equity (LTV 80%) and it auto-cancels at 78% LTV by federal law. VA loans never have PMI; FHA loans have MIP that usually stays for the loan's life unless refinanced."
+      },
+      "applicationFees": {
+        "q": "Are there any fees to apply or get pre-approved?",
+        "a": "No. KLE Mortgage charges nothing to apply, get pre-qualified, or pre-approved. The first out-of-pocket cost is the appraisal fee (~$500) once you're under contract on a specific property. We're transparent about every fee upfront on the Loan Estimate."
+      },
+      "rollClosingCostsIntoLoan": {
+        "q": "Can closing costs be rolled into the loan?",
+        "a": "In many cases, yes. VA and USDA loans allow certain closing costs to be financed. FHA permits seller concessions up to 6% of the purchase price. The Florida Hometown Heroes program covers up to $35,000 of closing costs + down payment for eligible borrowers. KLE structures the offer to minimize cash-to-close whenever possible."
+      },
+      "documents": {
+        "q": "What documents do I need to apply?",
+        "a": "Typically: last 2 years of W-2s or federal tax returns, last 30 days of pay stubs, last 2 months of bank/asset statements, government photo ID, and a list of any monthly debts. Self-employed borrowers need 2 years of business tax returns and YTD profit-and-loss. Bank statement loans (no tax returns) are available through KLE for self-employed borrowers who don't fit traditional income documentation."
+      },
+      "dti": {
+        "q": "What is debt-to-income ratio (DTI) and what's the limit?",
+        "a": "DTI = total monthly debt payments (including the new mortgage) divided by gross monthly income. Most programs allow up to 43–50% DTI: FHA accepts up to 56.99% with strong compensating factors; Conventional Fannie Mae goes up to 50% with the right profile; VA has no fixed cap (uses residual income). Lower DTI = better rate."
+      },
+      "closingDay": {
+        "q": "What happens at closing?",
+        "a": "You'll review and sign final loan documents (the Closing Disclosure was already sent 3 business days prior, so no surprises). You'll bring a cashier's check or wire for closing costs and your down payment. The closing attorney records the deed with the county. You receive your keys. The signing itself takes 30–60 minutes; KLE prepares you fully in advance so it's a formality, not a stress event."
+      },
+      "selfEmployed": {
+        "q": "Can I qualify for a mortgage if I'm self-employed?",
+        "a": "Yes — KLE works with self-employed borrowers regularly. Standard programs need 2 years of tax returns. If your tax returns understate your real income (common for self-employed who write off heavily), KLE offers Bank Statement loans (12 or 24 months of business deposits qualify you, no tax returns needed) and Profit & Loss programs through our wholesale Non-QM partners."
+      }
+    }
+  },
   "Mission": {
     "kicker": "Our Mission",
     "headlineLead": "Making Homeownership",

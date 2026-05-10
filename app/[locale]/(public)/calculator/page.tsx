@@ -18,21 +18,26 @@ export async function generateMetadata({
   });
 }
 
-export default function CalculatorPage() {
+export default async function CalculatorPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "CalculatorPage" });
   return (
     <>
       {/* Hero */}
       <section className="pt-28 pb-12 bg-[#6B1C23]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="inline-block text-[#C9A345] text-sm font-semibold uppercase tracking-widest mb-3">
-            Free Tool
+            {t("kicker")}
           </span>
           <h1 className="text-5xl font-bold text-white mb-4 font-[family-name:var(--font-cormorant)]">
-            Mortgage Calculator
+            {t("headlineLead")} <span className="italic text-[#C9A345]">{t("headlineAccent")}</span>
           </h1>
-          <p className="text-xl text-white/80 max-w-xl mx-auto">
-            Estimate your monthly payment with a full breakdown including
-            taxes, insurance, and PMI.
+          <p className="text-xl text-white/80 max-w-2xl mx-auto">
+            {t("intro")}
           </p>
         </div>
       </section>

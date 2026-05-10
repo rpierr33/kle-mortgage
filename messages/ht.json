@@ -359,6 +359,142 @@
       "carly-cadet": "Achte premye kay ou ta dwe santi w eksite, pa estrès. Mwen pote enèji ak konesans mache pou kliyan mwen yo toujou konnen ki sa ki pwochen etap la."
     }
   },
+  "ApplyPage": {
+    "kicker": "Kòmanse Jodi a",
+    "headlineLead": "Aplike pou yon",
+    "headlineAccent": "Prè Kay",
+    "intro": "Konplete aplikasyon senp nou an nan apeprè 10 minit. Pa gen verifikasyon kredi ki nesesè pou pre-kalifikasyon.",
+    "trustNoCredit": "Pa gen verifikasyon kredi pou kòmanse",
+    "trust10Min": "Aplikasyon 10-minit",
+    "trust24Hr": "Pre-apwobasyon nan 24 èdtan",
+    "joinFamiliesValue": "Plis pase 500 fanmi",
+    "joinFamiliesLabel": "te jwenn pre-apwobasyon ak KLE",
+    "testimonialQuote": "Pre-apwobasyon nan mwens pase 24 èdtan. Fèmen nan 28 jou.",
+    "testimonialAuthor": "Maria ak Carlos G.",
+    "testimonialRole": "Premye Achtè · Miami",
+    "trust1": "Pa gen verifikasyon kredi pou kòmanse",
+    "trust2": "Pre-apwobasyon nan 24 èdtan",
+    "trust3": "San okenn obligasyon"
+  },
+  "ContactPage": {
+    "kicker": "Kontakte Nou",
+    "headlineLead": "Pale ak yon",
+    "headlineAccent": "Ofisye Prè",
+    "intro": "Kesyon ipotèk pa tann. Jwenn yon ofisye prè lisansye KLE pa telefòn, imèl, oswa fòm anba a — repons tipik nan yon èdtan ouvrab.",
+    "officeLabel": "Biwo",
+    "officeValue": "909 N Miami Beach Blvd, Suite 301A · North Miami Beach, FL 33162",
+    "phoneLabel": "Telefòn",
+    "emailLabel": "Imèl",
+    "hoursLabel": "Lè",
+    "hoursValue": "Lin–Van 9:00 AM – 5:00 PM ET (disponibilite long pou kliyan aktif yo nan wikenn)"
+  },
+  "CalculatorPage": {
+    "kicker": "Kalkilatè Ipotèk",
+    "headlineLead": "Estime",
+    "headlineAccent": "Peman Mansyèl Ou",
+    "intro": "Antre pri acha ou, depo, tarif, ak dire — wè peman kapital-ak-enterè ou enstantaneman. Pou yon kotasyon presi ak taks, asirans, ak PMI, pale ak yon ofisye prè KLE."
+  },
+  "Forms": {
+    "contactTitle": "Voye nou yon mesaj",
+    "labelFirstName": "Prenon",
+    "labelLastName": "Siyati",
+    "labelEmail": "Imèl",
+    "labelPhone": "Telefòn",
+    "labelInterest": "Mwen enterese nan...",
+    "interestOptionPlaceholder": "Chwazi yon opsyon",
+    "interestBuying": "Achte yon kay",
+    "interestRefinancing": "Refinansman",
+    "interestFirstTime": "Pwogram premye achtè",
+    "interestVa": "Prè VA",
+    "interestOther": "Kesyon jeneral",
+    "labelMessage": "Mesaj",
+    "placeholderMessage": "Pale nou de sitiyasyon ou oswa kesyon ou...",
+    "smsConsent": "Mwen konsanti pou resevwa SMS sou demand mwen. Frè mesaj ak done ka aplike.",
+    "ctaSend": "Voye Mesaj",
+    "ctaSending": "Voye...",
+    "successTitle": "Mesaj Voye!",
+    "successBody": "Nou pral kontakte ou nan 24 èdtan. Mèsi paske ou kontakte KLE Mortgage.",
+    "errorRequired": "Obligatwa",
+    "errorEmail": "Imèl valab obligatwa",
+    "errorMessageMin": "Tanpri bay plis detay (omwen 10 karaktè)",
+    "errorGeneric": "Yon bagay pa mache."
+  },
+  "Faq": {
+    "pageHeading": "Kesyon Ipotèk, Repons Klè",
+    "pageIntro": "Repons dirèk soti nan ofisye prè lisansye nou yo — egzijans nòt kredi, depo minimòm, FHA kont konvansyonèl, kalifikasyon Hometown Heroes, ak sa pou tann nan fèmti. Toujou gen yon kesyon? Rele (305) 705-2030.",
+    "ctaPhone": "Rele (305) 705-2030",
+    "ctaContact": "Voye yon mesaj",
+    "categoryGettingStarted": "Pou Kòmanse",
+    "categoryLoanTypes": "Tip Prè ak Pwogram",
+    "categoryCosts": "Pri ak Frè",
+    "categoryProcess": "Pwosesis Ipotèk la",
+    "items": {
+      "preQualVsPreApproval": {
+        "q": "Ki diferans ant pre-kalifikasyon ak pre-apwobasyon?",
+        "a": "Pre-kalifikasyon se yon estimasyon enfòmèl konbyen ou ka prete — pa gen verifikasyon kredi, pa gen revizyon dokiman. Pre-apwobasyon enkli yon verifikasyon konplè kredi, dokimantasyon revni ak byen, epi pwodwi yon kantite prè verifye. Vandè nan mache konpetitif Florid yo egzije jeneralman pre-apwobasyon, pa pre-kalifikasyon, anvan yo konsidere yon òf."
+      },
+      "downPayment": {
+        "q": "Konbyen depo mwen bezwen nan Florid?",
+        "a": "Sa depann de pwogram lan. FHA mande 3,5% (ak kredi 580+); konvansyonèl kòmanse a 3% pou premye achtè ki gen bon kredi; VA ak USDA se 0% depo pou emprenter ki kalifye. Pwogram Hometown Heroes nan Florid ka anpile jiska $35,000 èd pou depo + frè fèmti pou pwofesyonèl ki kalifye (anseyan, enfimyè, ponpye, ofisye lalwa, travayè sante, ak lòt yo)."
+      },
+      "creditScore": {
+        "q": "Ki nòt kredi mwen bezwen pou achte yon kay?",
+        "a": "Minimòm yo varye pa pwogram: FHA 580, konvansyonèl 620, VA 580, USDA 640, Jumbo jeneralman 700+. Nòt ki pi wo kalifye pou pi bon tarif. KLE Mortgage travay avèk plizyè prètè an gwo, kidonk nou jwenn yon solisyon pou nòt depi 580 ale wo — epi nou souvan ede emprenter amelyore nòt yo anvan yo bloke yon tarif."
+      },
+      "timeline": {
+        "q": "Konbyen tan pwosesis ipotèk la pran?",
+        "a": "An mwayèn, 30 a 45 jou soti nan aplikasyon rive nan fèmti pou yon acha, pi rapid pou refinansman. KLE jeneralman fèmen nan 28 jou oswa mwens lè dokiman yo soumèt rapidman. Pi gwo reta yo se evalyasyon ak revizyon kondominyòm."
+      },
+      "fhaVsConventional": {
+        "q": "Ki diferans ant prè FHA ak konvansyonèl?",
+        "a": "Prè FHA gen asirans Federal Housing Administration — kalifikasyon pi fasil (3,5% depo, kredi 580) men yo egzije Premye Asirans Ipotèk (MIP) pou tout lavi prè a nan pifò ka. Prè konvansyonèl egzije pi bon kredi (620+) men Asirans Ipotèk Prive (PMI) ka retire lè ou rive 20% ekite. Pou premye achtè ak kredi 580–680, FHA souvan pi abòdab; pou 700+, konvansyonèl jeneralman genyen alontèm."
+      },
+      "vaEligibility": {
+        "q": "Ki moun ki kalifye pou yon prè VA?",
+        "a": "Veteran, militè aktif, manm Gad Nasyonal / Rezèv ki respekte egzijans minimòm, ak konjwen siviv kalifye. W ap bezwen yon Sètifika Eligibilité (COE) — KLE ka jwenn li nan pòtal VA pandan pre-apwobasyon. Pa gen depo, pa gen PMI, epi frè finansman ka jeneralman finanse nan prè a."
+      },
+      "usdaIncomeLimits": {
+        "q": "Ki limit revni pou yon prè USDA?",
+        "a": "USDA limite revni kay la a 115% revni medyàn zòn nan. Nan pifò konte Florid, sa byen nan sis chif pou yon fanmi kat moun. Pwopriyete a dwe tou nan yon zòn USDA-eligible — pati nan lwès Pembroke Pines, Davie, ak Homestead kalifye. KLE ka verifye eligibilité revni ak adrès pandan yon apèl rapid."
+      },
+      "refinance": {
+        "q": "Ki lè mwen ta dwe konsidere refinanse ipotèk mwen?",
+        "a": "Konsidere refinansman si (1) tarif yo te bese 0,5%+ depi w te achte, (2) kredi w amelyore, (3) ou vle chanje soti nan ARM ak fiks, (4) ou vle kout dire ou pou ekonomize sou enterè, oswa (5) jwenn ekite atravè cash-out. Refinansman FHA ak VA Streamline sote evalyasyon nan plizyè ka."
+      },
+      "closingCosts": {
+        "q": "Ki sa ki frè fèmti yo epi konbyen mwen ta dwe bidjete?",
+        "a": "Frè fèmti yo peye nan fèmti, jeneralman 2–5% nan kantite prè a. Yo enkli frè prètè, asirans tit, evalyasyon ($500–$700), frè anrejistreman, frè avoka (Florid se yon eta-avoka), ak atik prepeye (asirans, taks escro). KLE bay yon Loan Estimate ekri nan 3 jou ouvrab — pa gen sipriz."
+      },
+      "pmi": {
+        "q": "Ki sa PMI ye epi kijan pou evite oswa retire l?",
+        "a": "Asirans Ipotèk Prive pwoteje prètè a si w fè defo. Li obligatwa sou prè konvansyonèl avèk mwens pase 20% depo, ki tipikman koute 0,5–1,5% prè a chak ane. Ou ka mande retire a 20% ekite (LTV 80%) epi li otomatikman anile a 78% LTV pa lwa federal. Prè VA pa janm gen PMI; FHA gen MIP ki jeneralman rete pou tout lavi prè a sòf si refinanse."
+      },
+      "applicationFees": {
+        "q": "Èske gen frè pou aplike oswa pou pre-apwouve?",
+        "a": "Non. KLE Mortgage pa fakture anyen pou aplike, pre-kalifye, oswa pre-apwouve. Premye depans poch ou se evalyasyon (~$500) yon fwa ou anba kontra sou yon pwopriyete espesifik. Nou transparant sou chak frè davans sou Loan Estimate la."
+      },
+      "rollClosingCostsIntoLoan": {
+        "q": "Èske frè fèmti ka enkli nan prè a?",
+        "a": "Nan plizyè ka, wi. Prè VA ak USDA pèmèt finanse sèten frè fèmti. FHA pèmèt konsesyon vandè jiska 6% pri acha a. Pwogram Florida Hometown Heroes kouvri jiska $35,000 frè fèmti + depo pou emprenter kalifye. KLE estriktire òf la pou minimize cash-a-fèmti chak fwa li posib."
+      },
+      "documents": {
+        "q": "Ki dokiman mwen bezwen pou aplike?",
+        "a": "Tipikman: 2 ane W-2 oswa deklarasyon federal, 30 jou fich peman, 2 mwa relve bank, kat idantite ak foto, ak lis dèt mansyèl. Emprenter ki travay pou tèt yo bezwen 2 ane deklarasyon biznis ak P&L YTD. Prè ak relve bank (san deklarasyon taks) disponib atravè KLE pou emprenter otonòm ki pa kòresponn ak dokimantasyon tradisyonèl."
+      },
+      "dti": {
+        "q": "Ki sa rapò dèt-revni (DTI) ye epi ki limit la?",
+        "a": "DTI = total peman dèt mansyèl (ki gen ladann nouvo ipotèk la) divize pa revni mansyèl brit. Pifò pwogram aksepte jiska 43–50% DTI: FHA aksepte jiska 56,99% ak fasilite konpansatwa; Conventional Fannie Mae monte jiska 50% ak bon pwofil; VA pa gen plafon fiks (itilize revni rezidyèl). DTI ki pi ba = pi bon tarif."
+      },
+      "closingDay": {
+        "q": "Ki sa k pase nan fèmti?",
+        "a": "Ou ap revize epi siyen dokiman final yo (Closing Disclosure te voye 3 jou ouvrab anvan, kidonk pa gen sipriz). Ou ap pote yon chèk bank oswa transfè pou frè fèmti ak depo ou. Avoka fèmti enrejistre kontra a nan konte a. Ou resevwa kle ou. Siyen an pran 30–60 minit; KLE prepare ou konplètman davans."
+      },
+      "selfEmployed": {
+        "q": "Èske mwen ka kalifye pou yon ipotèk si mwen travay pou tèt mwen?",
+        "a": "Wi — KLE travay regilyèman avèk emprenter ki travay pou tèt yo. Pwogram estanda yo bezwen 2 ane deklarasyon taks. Si deklarasyon taks ou yo souzèstime revni reyèl ou (komen pou otonòm ki dediksyon anpil), KLE ofri prè Relve Bank (12 oswa 24 mwa depo biznis kalifye, san deklarasyon taks) ak pwogram Pwofi ak Pèt nan men patnè Non-QM nou yo."
+      }
+    }
+  },
   "Mission": {
     "kicker": "Misyon Nou",
     "headlineLead": "Fè Pwopriyete Kay",

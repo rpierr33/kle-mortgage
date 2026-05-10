@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ContactForm } from "@/components/public/ContactForm";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -14,6 +15,7 @@ const stagger = {
 };
 
 export default function ContactPage() {
+  const t = useTranslations("ContactPage");
   return (
     <>
       {/* Hero — maroon with gold accent */}
@@ -31,7 +33,7 @@ export default function ContactPage() {
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-8 h-0.5 bg-gradient-to-r from-[#C9A345] to-[#E8C97A] rounded-full" />
                 <span className="text-[#C9A345] text-xs font-semibold uppercase tracking-[0.15em]">
-                  Get in Touch
+                  {t("kicker")}
                 </span>
               </div>
             </motion.div>
@@ -40,12 +42,11 @@ export default function ContactPage() {
               className="font-[family-name:var(--font-cormorant)] font-semibold text-white leading-[1.1] mb-6"
               style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)" }}
             >
-              Let&apos;s Talk About{" "}
-              <span className="text-[#C9A345] italic">Your Next Home</span>
+              {t("headlineLead")}{" "}
+              <span className="text-[#C9A345] italic">{t("headlineAccent")}</span>
             </motion.h1>
             <motion.p variants={fadeUp} className="text-lg text-white/75 leading-relaxed">
-              Whether you have a question, want a rate quote, or are ready to
-              start your application — we&apos;re here for you.
+              {t("intro")}
             </motion.p>
           </motion.div>
         </div>

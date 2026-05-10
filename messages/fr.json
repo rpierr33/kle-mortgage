@@ -359,6 +359,142 @@
       "carly-cadet": "Acheter une première maison devrait être excitant, pas stressant. J'apporte l'énergie et la connaissance du marché pour que mes clients sachent toujours quelle est la prochaine étape."
     }
   },
+  "ApplyPage": {
+    "kicker": "Commencez aujourd'hui",
+    "headlineLead": "Demandez un",
+    "headlineAccent": "prêt immobilier",
+    "intro": "Complétez notre demande simple en environ 10 minutes. Pas de vérification de crédit requise pour la pré-qualification.",
+    "trustNoCredit": "Pas de vérification de crédit pour commencer",
+    "trust10Min": "Demande de 10 minutes",
+    "trust24Hr": "Pré-approbation en 24 h",
+    "joinFamiliesValue": "Plus de 500 familles",
+    "joinFamiliesLabel": "ont été pré-approuvées avec KLE",
+    "testimonialQuote": "Pré-approbation en moins de 24 heures. Fermé en 28 jours.",
+    "testimonialAuthor": "Maria et Carlos G.",
+    "testimonialRole": "Premiers acheteurs · Miami",
+    "trust1": "Pas de vérification de crédit pour commencer",
+    "trust2": "Pré-approbation en 24 heures",
+    "trust3": "Sans aucune obligation"
+  },
+  "ContactPage": {
+    "kicker": "Contactez-nous",
+    "headlineLead": "Parlez à un",
+    "headlineAccent": "agent de prêt",
+    "intro": "Les questions hypothécaires n'attendent pas. Joignez un agent de prêt licencié de KLE par téléphone, email ou le formulaire ci-dessous — réponse typique dans l'heure ouvrable.",
+    "officeLabel": "Bureau",
+    "officeValue": "909 N Miami Beach Blvd, Suite 301A · North Miami Beach, FL 33162",
+    "phoneLabel": "Téléphone",
+    "emailLabel": "Email",
+    "hoursLabel": "Heures",
+    "hoursValue": "Lun–Ven 9 h 00 – 17 h 00 HE (disponibilité étendue le week-end pour les clients actifs)"
+  },
+  "CalculatorPage": {
+    "kicker": "Calculatrice hypothécaire",
+    "headlineLead": "Estimez votre",
+    "headlineAccent": "paiement mensuel",
+    "intro": "Entrez votre prix d'achat, votre apport, votre taux et votre durée — voyez instantanément votre paiement capital-et-intérêts. Pour un devis précis avec taxes, assurance et PMI, parlez à un agent de prêt KLE."
+  },
+  "Forms": {
+    "contactTitle": "Envoyez-nous un message",
+    "labelFirstName": "Prénom",
+    "labelLastName": "Nom",
+    "labelEmail": "Email",
+    "labelPhone": "Téléphone",
+    "labelInterest": "Je suis intéressé par...",
+    "interestOptionPlaceholder": "Sélectionner une option",
+    "interestBuying": "Acheter une maison",
+    "interestRefinancing": "Refinancement",
+    "interestFirstTime": "Programmes premier acheteur",
+    "interestVa": "Prêt VA",
+    "interestOther": "Question générale",
+    "labelMessage": "Message",
+    "placeholderMessage": "Parlez-nous de votre situation ou de votre question...",
+    "smsConsent": "Je consens à recevoir des SMS concernant ma demande. Frais de message et de données peuvent s'appliquer.",
+    "ctaSend": "Envoyer le message",
+    "ctaSending": "Envoi...",
+    "successTitle": "Message envoyé !",
+    "successBody": "Nous vous contacterons dans les 24 heures. Merci d'avoir contacté KLE Mortgage.",
+    "errorRequired": "Requis",
+    "errorEmail": "Email valide requis",
+    "errorMessageMin": "Veuillez fournir plus de détails (au moins 10 caractères)",
+    "errorGeneric": "Une erreur s'est produite."
+  },
+  "Faq": {
+    "pageHeading": "Questions hypothécaires, réponses claires",
+    "pageIntro": "Réponses directes de nos agents de prêt licenciés — exigences de score de crédit, apport minimum, FHA vs conventionnel, éligibilité Hometown Heroes, et à quoi s'attendre à la clôture. Une autre question ? Appelez le (305) 705-2030.",
+    "ctaPhone": "Appeler (305) 705-2030",
+    "ctaContact": "Envoyer un message",
+    "categoryGettingStarted": "Pour commencer",
+    "categoryLoanTypes": "Types et programmes de prêts",
+    "categoryCosts": "Coûts et frais",
+    "categoryProcess": "Le processus hypothécaire",
+    "items": {
+      "preQualVsPreApproval": {
+        "q": "Quelle est la différence entre la pré-qualification et la pré-approbation ?",
+        "a": "La pré-qualification est une estimation informelle de combien vous pourriez emprunter — pas de vérification de crédit, pas de revue de documents. La pré-approbation comprend une vérification complète du crédit, la documentation des revenus et des actifs, et produit un montant de prêt vérifié. Les vendeurs sur les marchés compétitifs de Floride exigent généralement une pré-approbation, pas une pré-qualification, avant de considérer une offre."
+      },
+      "downPayment": {
+        "q": "Quel apport ai-je besoin en Floride ?",
+        "a": "Cela dépend du programme. FHA exige 3,5 % (avec crédit 580+) ; conventionnel commence à 3 % pour les premiers acheteurs avec un bon crédit ; VA et USDA sont à 0 % d'apport pour les emprunteurs éligibles. Le programme Florida Hometown Heroes peut empiler jusqu'à 35 000 $ d'aide à l'apport et aux frais de clôture pour les professionnels qualifiants (enseignants, infirmiers, pompiers, forces de l'ordre, travailleurs de la santé, et autres)."
+      },
+      "creditScore": {
+        "q": "Quel score de crédit ai-je besoin pour acheter une maison ?",
+        "a": "Les minimums varient par programme : FHA 580, conventionnel 620, VA 580, USDA 640, Jumbo généralement 700+. Des scores plus élevés qualifient pour de meilleurs taux. KLE Mortgage travaille avec plusieurs prêteurs en gros, donc nous trouvons une solution pour les scores à partir de 580 — et aidons souvent les emprunteurs à améliorer leur score avant de bloquer un taux."
+      },
+      "timeline": {
+        "q": "Combien de temps prend le processus hypothécaire ?",
+        "a": "En moyenne, 30 à 45 jours de la demande à la clôture pour un achat, plus rapide pour les refinancements. KLE clôture généralement en 28 jours ou moins lorsque les documents sont soumis rapidement. Les principaux retards sont l'évaluation et les revues de copropriété."
+      },
+      "fhaVsConventional": {
+        "q": "Quelle est la différence entre les prêts FHA et conventionnels ?",
+        "a": "Les prêts FHA sont assurés par la Federal Housing Administration — qualification plus facile (3,5 % d'apport, crédit 580) mais exigent une prime d'assurance hypothécaire (MIP) à vie dans la plupart des cas. Les prêts conventionnels exigent un meilleur crédit (620+) mais l'assurance hypothécaire privée (PMI) peut être supprimée à 20 % d'équité. Pour les premiers acheteurs avec crédit 580–680, FHA est souvent plus abordable ; pour 700+, conventionnel gagne généralement à long terme."
+      },
+      "vaEligibility": {
+        "q": "Qui se qualifie pour un prêt VA ?",
+        "a": "Vétérans, militaires actifs, membres de la Garde nationale / Réserve respectant les exigences minimales, et conjoints survivants éligibles. Vous aurez besoin d'un Certificat d'éligibilité (COE) — KLE peut l'obtenir du portail VA pendant la pré-approbation. Pas d'apport, pas de PMI, et les frais de financement peuvent généralement être financés dans le prêt."
+      },
+      "usdaIncomeLimits": {
+        "q": "Quelles sont les limites de revenu pour un prêt USDA ?",
+        "a": "USDA limite le revenu du ménage à 115 % du revenu médian de la zone. Dans la plupart des comtés de Floride, c'est bien dans les six chiffres pour une famille de quatre. La propriété doit également être dans une zone éligible USDA — des parties de l'ouest de Pembroke Pines, Davie et Homestead se qualifient. KLE peut vérifier l'éligibilité de revenu et d'adresse lors d'un appel rapide."
+      },
+      "refinance": {
+        "q": "Quand devrais-je envisager de refinancer mon hypothèque ?",
+        "a": "Envisagez le refinancement si (1) les taux ont baissé de 0,5 %+ depuis votre achat, (2) votre crédit s'est amélioré, (3) vous voulez passer d'un ARM à un taux fixe, (4) vous voulez raccourcir votre durée pour économiser sur les intérêts, ou (5) accéder à l'équité par cash-out. Les refinancements FHA et VA Streamline sautent l'évaluation dans plusieurs cas."
+      },
+      "closingCosts": {
+        "q": "Que sont les frais de clôture et combien dois-je budgéter ?",
+        "a": "Les frais de clôture sont payés à la clôture, généralement 2 à 5 % du montant du prêt. Ils incluent les frais de prêteur, l'assurance titre, l'évaluation (500–700 $), les frais d'enregistrement, les honoraires d'avocat (la Floride exige un avocat), et les éléments prépayés (assurance, taxes). KLE fournit une Loan Estimate écrite dans les 3 jours ouvrables — sans surprises."
+      },
+      "pmi": {
+        "q": "Qu'est-ce que la PMI et comment l'éviter ou la supprimer ?",
+        "a": "L'assurance hypothécaire privée protège le prêteur en cas de défaut. Elle est requise sur les prêts conventionnels avec moins de 20 % d'apport, coûtant typiquement 0,5 à 1,5 % du prêt par an. Vous pouvez demander la suppression à 20 % d'équité (LTV 80 %) et elle s'annule automatiquement à 78 % LTV par loi fédérale. Les prêts VA n'ont jamais de PMI ; les FHA ont une MIP qui reste généralement à vie sauf refinancement."
+      },
+      "applicationFees": {
+        "q": "Y a-t-il des frais pour faire une demande ou se faire pré-approuver ?",
+        "a": "Non. KLE Mortgage ne facture rien pour faire une demande, se pré-qualifier ou se faire pré-approuver. Le premier coût de votre poche est l'évaluation (~500 $) une fois sous contrat sur une propriété spécifique. Nous sommes transparents sur chaque frais en amont sur la Loan Estimate."
+      },
+      "rollClosingCostsIntoLoan": {
+        "q": "Les frais de clôture peuvent-ils être ajoutés au prêt ?",
+        "a": "Dans plusieurs cas, oui. Les prêts VA et USDA permettent de financer certains frais. FHA permet des concessions du vendeur jusqu'à 6 % du prix d'achat. Le programme Florida Hometown Heroes couvre jusqu'à 35 000 $ de frais de clôture + apport pour les emprunteurs éligibles. KLE structure l'offre pour minimiser le cash-à-la-clôture chaque fois que possible."
+      },
+      "documents": {
+        "q": "Quels documents ai-je besoin pour faire une demande ?",
+        "a": "Typiquement : 2 années de W-2 ou déclarations fédérales, 30 jours de fiches de paie, 2 mois de relevés bancaires, pièce d'identité avec photo, et liste des dettes mensuelles. Les emprunteurs autonomes ont besoin de 2 années de déclarations d'entreprise et P&L YTD. Les prêts par relevés bancaires (sans déclarations fiscales) sont disponibles via KLE pour les autonomes qui ne correspondent pas à la documentation traditionnelle."
+      },
+      "dti": {
+        "q": "Qu'est-ce que le ratio dette-revenu (DTI) et quelle est la limite ?",
+        "a": "DTI = total des paiements mensuels de dettes (incluant la nouvelle hypothèque) divisé par le revenu mensuel brut. La plupart des programmes acceptent jusqu'à 43–50 % DTI : FHA accepte jusqu'à 56,99 % avec des facteurs compensatoires forts ; Conventionnel Fannie Mae va jusqu'à 50 % avec le bon profil ; VA n'a pas de plafond fixe (utilise le revenu résiduel). DTI plus bas = meilleur taux."
+      },
+      "closingDay": {
+        "q": "Que se passe-t-il à la clôture ?",
+        "a": "Vous reviewez et signez les documents finaux du prêt (la Closing Disclosure a été envoyée 3 jours ouvrables avant, donc pas de surprises). Vous apportez un chèque de banque ou un virement pour les frais de clôture et l'apport. L'avocat de clôture enregistre l'acte au comté. Vous recevez vos clés. La signature elle-même prend 30–60 minutes ; KLE vous prépare entièrement en amont."
+      },
+      "selfEmployed": {
+        "q": "Puis-je me qualifier si je suis travailleur autonome ?",
+        "a": "Oui — KLE travaille régulièrement avec des emprunteurs autonomes. Les programmes standard exigent 2 années de déclarations fiscales. Si vos déclarations sous-estiment votre revenu réel (commun chez les autonomes qui déduisent fortement), KLE offre des prêts par Relevés Bancaires (12 ou 24 mois de dépôts) et des programmes Profits et Pertes via nos partenaires Non-QM."
+      }
+    }
+  },
   "Mission": {
     "kicker": "Notre mission",
     "headlineLead": "Rendre la propriété",
