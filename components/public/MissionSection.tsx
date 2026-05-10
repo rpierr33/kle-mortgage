@@ -2,42 +2,32 @@
 
 import { Heart, Target, Lightbulb } from "lucide-react";
 import { motion } from "framer-motion";
-
-const values = [
-  {
-    icon: Heart,
-    title: "Family First",
-    description: "Every decision we make is guided by what's best for the families we serve. We're not just closing loans — we're building futures.",
-  },
-  {
-    icon: Target,
-    title: "Transparency",
-    description: "No hidden fees. No confusing jargon. We explain every number, every term, and every option so you can make informed decisions with confidence.",
-  },
-  {
-    icon: Lightbulb,
-    title: "Education",
-    description: "We believe informed buyers make better decisions. Our team takes time to educate every client, from first-time buyers to seasoned investors.",
-  },
-];
-
-const stats = [
-  { value: "500+", label: "Families Served" },
-  { value: "$150M+", label: "Loans Funded" },
-  { value: "15+", label: "Years Experience" },
-  { value: "4.9", label: "Average Rating" },
-  { value: "28", label: "Avg Days to Close" },
-  { value: "3", label: "States Licensed" },
-];
+import { useTranslations } from "next-intl";
 
 export function MissionSection() {
+  const t = useTranslations("Mission");
+
+  const values = [
+    { icon: Heart, title: t("value1Title"), description: t("value1Body") },
+    { icon: Target, title: t("value2Title"), description: t("value2Body") },
+    { icon: Lightbulb, title: t("value3Title"), description: t("value3Body") },
+  ];
+
+  const stats = [
+    { value: t("stat1Value"), label: t("stat1Label") },
+    { value: t("stat2Value"), label: t("stat2Label") },
+    { value: t("stat3Value"), label: t("stat3Label") },
+    { value: t("stat4Value"), label: t("stat4Label") },
+    { value: t("stat5Value"), label: t("stat5Label") },
+    { value: t("stat6Value"), label: t("stat6Label") },
+  ];
+
   return (
     <section className="py-28 bg-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-[#FDF9F5] via-white to-white pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center mb-24">
-          {/* Left: Mission copy */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -46,28 +36,21 @@ export function MissionSection() {
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="w-8 h-0.5 bg-gradient-to-r from-[#C9A345] to-[#E8C97A] rounded-full" />
-              <span className="text-[#C9A345] text-xs font-semibold uppercase tracking-[0.15em]">Our Mission</span>
+              <span className="text-[#C9A345] text-xs font-semibold uppercase tracking-[0.15em]">{t("kicker")}</span>
             </div>
             <h2 className="font-[family-name:var(--font-cormorant)] text-4xl sm:text-5xl font-semibold text-[#1A1A1A] leading-tight mb-6">
-              Making Homeownership
+              {t("headlineLead")}
               <br />
-              <span className="text-[#6B1C23] italic">Accessible to All</span>
+              <span className="text-[#6B1C23] italic">{t("headlineAccent")}</span>
             </h2>
             <p className="text-[#6B6056] leading-relaxed mb-5 text-base">
-              KLE Mortgage Financing was founded by Leopold Evariste with
-              a vision to bridge the homeownership gap in underserved
-              communities. We saw families who had the income to afford a home
-              but lacked the guidance to navigate the mortgage process.
+              {t("para1")}
             </p>
             <p className="text-[#6B6056] leading-relaxed text-base">
-              Today, we serve clients across Florida,
-              offering the same white-glove service regardless of loan amount.
-              Whether you&apos;re buying a $150,000 starter home or a $1.5M estate,
-              you deserve expert guidance.
+              {t("para2")}
             </p>
           </motion.div>
 
-          {/* Right: Stats panel */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -78,7 +61,7 @@ export function MissionSection() {
             <div className="flex items-center gap-2 mb-6">
               <div className="w-5 h-0.5 bg-[#C9A345] rounded-full" />
               <h3 className="font-[family-name:var(--font-cormorant)] text-xl font-bold text-[#1A1A1A]">
-                By the Numbers
+                {t("byTheNumbers")}
               </h3>
             </div>
             <div className="grid grid-cols-2 gap-4">
@@ -113,11 +96,11 @@ export function MissionSection() {
           >
             <div className="flex items-center justify-center gap-3 mb-3">
               <div className="w-8 h-0.5 bg-gradient-to-r from-transparent to-[#C9A345] rounded-full" />
-              <span className="text-[#C9A345] text-xs font-semibold uppercase tracking-[0.15em]">What Drives Us</span>
+              <span className="text-[#C9A345] text-xs font-semibold uppercase tracking-[0.15em]">{t("valuesKicker")}</span>
               <div className="w-8 h-0.5 bg-gradient-to-l from-transparent to-[#C9A345] rounded-full" />
             </div>
             <h2 className="font-[family-name:var(--font-cormorant)] text-3xl sm:text-4xl font-bold text-[#1A1A1A]">
-              Our Core Values
+              {t("valuesHeadline")}
             </h2>
           </motion.div>
 
@@ -155,20 +138,20 @@ export function MissionSection() {
           <div className="absolute top-0 right-0 w-64 h-64 bg-[#C9A345]/[0.04] rounded-full -translate-y-1/2 translate-x-1/4 blur-2xl" />
 
           <h3 className="font-[family-name:var(--font-cormorant)] text-xl font-bold mb-5 relative z-10">
-            Licensing & Compliance
+            {t("complianceHeadline")}
           </h3>
           <div className="relative z-10 grid grid-cols-1 sm:grid-cols-3 gap-6">
             <div>
-              <p className="text-[#C9A345] font-semibold text-xs mb-1.5 uppercase tracking-wider">NMLS Company</p>
-              <p className="text-white/70 text-sm">KLE Mortgage Financing, LLC — NMLS #2380070</p>
+              <p className="text-[#C9A345] font-semibold text-xs mb-1.5 uppercase tracking-wider">{t("complianceNmlsLabel")}</p>
+              <p className="text-white/70 text-sm">{t("complianceNmlsValue")}</p>
             </div>
             <div>
-              <p className="text-[#C9A345] font-semibold text-xs mb-1.5 uppercase tracking-wider">Licensed In</p>
-              <p className="text-white/70 text-sm">Florida (FL)</p>
+              <p className="text-[#C9A345] font-semibold text-xs mb-1.5 uppercase tracking-wider">{t("complianceLicensedLabel")}</p>
+              <p className="text-white/70 text-sm">{t("complianceLicensedValue")}</p>
             </div>
             <div>
-              <p className="text-[#C9A345] font-semibold text-xs mb-1.5 uppercase tracking-wider">Equal Housing</p>
-              <p className="text-white/70 text-sm">Equal Housing Lender. We comply with all fair lending laws.</p>
+              <p className="text-[#C9A345] font-semibold text-xs mb-1.5 uppercase tracking-wider">{t("complianceEqualHousingLabel")}</p>
+              <p className="text-white/70 text-sm">{t("complianceEqualHousingValue")}</p>
             </div>
           </div>
         </motion.div>

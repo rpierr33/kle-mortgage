@@ -6,6 +6,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { CheckCircle2, ArrowRight, ArrowLeft, Loader2 } from "lucide-react";
 import { toast } from "sonner";
+import { useLocale } from "next-intl";
+import { captureUtm, HONEYPOT_STYLE } from "@/lib/utm";
 
 const step1Schema = z.object({
   firstName: z.string().min(2, "First name required"),
@@ -75,6 +77,8 @@ export function ApplicationForm() {
   const [formData, setFormData] = useState<Partial<Step1Data & Step2Data & Step3Data & ConsentData>>({});
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [honeypot, setHoneypot] = useState("");
+  const locale = useLocale() as "en" | "fr" | "ht";
 
   const step1Form = useForm<Step1Data>({ resolver: zodResolver(step1Schema), defaultValues: formData });
   const step2Form = useForm<Step2Data>({ resolver: zodResolver(step2Schema), defaultValues: { loanType: "conventional", isRefinance: false, ...formData } });
@@ -98,7 +102,8 @@ export function ApplicationForm() {
 
   const handleFinalSubmit = async (data: ConsentData) => {
     setSubmitting(true);
-    const payload = { ...formData, ...data };
+    const utm = captureUtm();
+    const payload = { ...formData, ...data, locale, utm, website: honeypot };
 
     try {
       const res = await fetch("/api/applications", {
@@ -181,6 +186,17 @@ export function ApplicationForm() {
         </div>
 
         <div className="bg-white rounded-2xl border border-[#E8E0D8] p-8">
+          {/* Honeypot — bots fill this, humans don't see it */}
+          <input
+            type="text"
+            value={honeypot}
+            onChange={(e) => setHoneypot(e.target.value)}
+            tabIndex={-1}
+            autoComplete="off"
+            aria-hidden="true"
+            name="website"
+            style={HONEYPOT_STYLE}
+          />
           {/* Step 1: Personal Info */}
           {currentStep === 0 && (
             <form onSubmit={step1Form.handleSubmit(handleStep1)}>

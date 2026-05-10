@@ -1,0 +1,397 @@
+{
+  "Nav": {
+    "loanPrograms": "Pwogram Prè",
+    "loanConventional": "Prè Konvansyonèl",
+    "loanFha": "Prè FHA",
+    "loanVa": "Prè VA",
+    "loanUsda": "Prè USDA",
+    "loanJumbo": "Prè Jumbo",
+    "loanRefinance": "Refinansman",
+    "loanFirstTime": "Premye Achtè",
+    "calculator": "Kalkilatè",
+    "about": "Sou Nou",
+    "resources": "Resous",
+    "contact": "Kontakte",
+    "applyNow": "Aplike Kounye a",
+    "toggleNavigation": "Ouvri meni"
+  },
+  "LanguageSwitcher": {
+    "label": "Lang",
+    "en": "English",
+    "fr": "Français",
+    "ht": "Kreyòl"
+  },
+  "Footer": {
+    "tagline": "Nou ede fanmi yo reyalize rèv pou yo gen pwòp kay yo grasa konsèy ekspè ak solisyon ipotèk pèsonalize.",
+    "loanProgramsHeader": "Pwogram Prè",
+    "loanConventional": "Prè Konvansyonèl",
+    "loanFha": "Prè FHA",
+    "loanVa": "Prè VA",
+    "loanUsda": "Prè USDA",
+    "loanJumbo": "Prè Jumbo",
+    "loanRefinance": "Refinansman",
+    "loanFirstTime": "Premye Achtè",
+    "companyHeader": "Konpayi",
+    "linkAbout": "Sou Nou",
+    "linkTeam": "Ekip Nou",
+    "linkTestimonials": "Temwayaj",
+    "linkResources": "Resous",
+    "linkFaq": "Kesyon yo Poze",
+    "linkContact": "Kontakte Nou",
+    "linkApply": "Aplike Kounye a",
+    "contactHeader": "Kontakte Nou",
+    "addressLine1": "909 N Miami Beach Blvd, Suite 301A",
+    "addressLine2": "North Miami Beach, FL 33162",
+    "startApplication": "Kòmanse Aplikasyon",
+    "rightsReserved": "Tout dwa rezève.",
+    "nmlsLabel": "NMLS #2380070",
+    "equalHousing": "Prètè ki respekte egalite lojman. Lisansye nan Florid. Sa a pa yon angajman pou prete.",
+    "privacyPolicy": "Politik Konfidansyalite",
+    "termsOfUse": "Kondisyon Itilizasyon",
+    "faq": "Kesyon yo Poze",
+    "sisterSiteLabel": "Ou ap achte oswa vann yon kay?",
+    "sisterSiteCta": "Vizite Leo Realty"
+  },
+  "Common": {
+    "phone": "+1 (305) 705-2030",
+    "applyNow": "Aplike Kounye a",
+    "getStarted": "Kòmanse",
+    "learnMore": "Aprann Plis"
+  },
+  "FloatingBar": {
+    "call": "Rele",
+    "callAria": "Rele KLE Mortgage",
+    "preApprove": "Pre-Apwouve",
+    "preApproveAria": "Jwenn pre-apwobasyon",
+    "calculate": "Kalkile",
+    "calculateAria": "Kalkilatè ipotèk"
+  },
+  "Metadata": {
+    "homeTitle": "KLE Mortgage Financing, LLC | Prè Kay Senp",
+    "homeDescription": "Koutye ipotèk lisansye nan Florid (NMLS #2380070) k ap ede fanmi yo avèk prè FHA, VA, USDA, konvansyonèl, Jumbo ak Hometown Heroes. Pre-apwobasyon nan kèk minit.",
+    "aboutTitle": "Sou KLE Mortgage — Koutye Lisansye nan Florid (NMLS #2380070)",
+    "aboutDescription": "Rankontre ekip KLE Mortgage Financing, LLC. Koutye ipotèk endepandan nan Florid depi 1992, dedye pou jwenn bon pwogram pou chak fanmi.",
+    "applyTitle": "Aplike pou yon Ipotèk — Pre-Apwobasyon nan Kèk Minit | KLE Mortgage",
+    "applyDescription": "Kòmanse aplikasyon ipotèk ou avèk KLE Mortgage. Verifikasyon kredi lejè, san obligasyon. Jwenn pre-apwobasyon FHA, VA, USDA, konvansyonèl, oswa Jumbo nan Florid.",
+    "calculatorTitle": "Kalkilatè Ipotèk | KLE Mortgage",
+    "calculatorDescription": "Estime peman ipotèk mansyèl ou, ki gen ladan kapital ak enterè. Ajiste pri, depo, tarif ak dire pou prè FHA, VA, USDA, konvansyonèl, oswa Jumbo.",
+    "contactTitle": "Kontakte KLE Mortgage — Koutye Ipotèk Florid",
+    "contactDescription": "Kontakte KLE Mortgage Financing nan North Miami Beach, FL. Rele (305) 705-2030 oswa imèl Info@klemortgage.com. Ofisye prè bilingue (anglè / franse / kreyòl ayisyen).",
+    "faqTitle": "Kesyon Souvan Sou Ipotèk — KLE Mortgage",
+    "faqDescription": "Repons sou kesyon ipotèk ki pi souvan: egzijans nòt kredi, depo minimòm, FHA vs konvansyonèl, kalifikasyon Hometown Heroes, ak dire pre-apwobasyon.",
+    "loanProgramsTitle": "Pwogram Prè — FHA · VA · USDA · Konvansyonèl · Jumbo | KLE Mortgage",
+    "loanProgramsDescription": "Eksplore pwogram ipotèk KLE Mortgage Financing: FHA, VA, USDA, konvansyonèl, Jumbo, refinansman, Hometown Heroes, premye achtè. Lisansye nan Florid (NMLS #2380070).",
+    "resourcesTitle": "Resous ak Gid Ipotèk | KLE Mortgage",
+    "resourcesDescription": "Gid edikatif sou prè FHA, avantaj VA, Hometown Heroes, refinansman, ak pwosesis acha kay — ekri pa pwofesyonèl ipotèk lisansye nan Florid.",
+    "testimonialsTitle": "Temwayaj Kliyan — KLE Mortgage",
+    "testimonialsDescription": "Vrè istwa fanmi nan Florid ki te fèmen kay yo avèk KLE Mortgage Financing. Siksè FHA, VA, USDA, konvansyonèl ak premye achtè.",
+    "privacyTitle": "Politik Konfidansyalite — KLE Mortgage",
+    "privacyDescription": "Kijan KLE Mortgage Financing, LLC kolekte, itilize, ak pwoteje enfòmasyon pèsonèl pou aplikasyon ipotèk ak pre-kalifikasyon.",
+    "termsTitle": "Kondisyon Itilizasyon — KLE Mortgage",
+    "termsDescription": "Kondisyon ki gouvène itilizasyon sit KLE Mortgage Financing. Sit sa a pa yon angajman pou prete; tout prè sijè a apwobasyon kredi."
+  },
+  "LoanProgramsMeta": {
+    "conventional": {
+      "title": "Prè Konvansyonèl — 3% Depo pou Achtè Kalifye | KLE Mortgage",
+      "description": "Ipotèk konvansyonèl avèk osi piti ke 3% depo pou premye achtè nan Florid. Tarif konpetitif, san asirans ipotèk inisyal pou bon pwofil kredi."
+    },
+    "fha": {
+      "title": "Prè FHA nan Florid — 3,5% Depo, Kredi depi 580 | KLE Mortgage",
+      "description": "Prè FHA pou achtè nan Florid — 3,5% depo minimòm avèk nòt kredi depi 580. Idéal pou premye achtè. KLE Mortgage NMLS #2380070."
+    },
+    "va": {
+      "title": "Prè VA Florid — 0% Depo pou Veteran | KLE Mortgage",
+      "description": "Prè VA pou veteran, militè aktif, ak konjwen siviv kalifye nan Florid. 0% depo, san PMI, tarif konpetitif. Refinansman Streamline IRRRL disponib."
+    },
+    "usda": {
+      "title": "Prè USDA Florid — 100% Finansman nan Zòn Kalifye | KLE Mortgage",
+      "description": "Prè USDA Rural Development pou pwopriyete kalifye nan Florid. 0% depo, MI ba, limit revni aplike. Itil nan zòn riral Broward ak Palm Beach."
+    },
+    "jumbo": {
+      "title": "Prè Jumbo Florid — Pi Wo pase $766,550 | KLE Mortgage",
+      "description": "Ipotèk Jumbo pou pwopriyete nan Florid pi wo pase limit konfòm. 10% depo, tarif konpetitif pou bon pwofil kredi. Kantite ki ka rive plizyè milyon."
+    },
+    "refinance": {
+      "title": "Refinansman Ipotèk Florid — Bese Tarif Ou oswa Jwenn Ekite | KLE Mortgage",
+      "description": "Refinanse ipotèk Florid ou pou bese tarif, kout dire, oswa jwenn ekite. Opsyon tarif-ak-dire, FHA Streamline, VA IRRRL, ak cash-out disponib."
+    },
+    "first-time-buyer": {
+      "title": "Prè Premye Achtè Kay Florid | KLE Mortgage",
+      "description": "Pwogram premye achtè nan Florid — konbine FHA, konvansyonèl 3% depo, Hometown Heroes, ak èd Florida Bond. Rive jiska $35,000 èd depo."
+    }
+  },
+  "Hero": {
+    "badge": "Koutye Ipotèk Lisansye — NMLS #2380070",
+    "headlineLead": "Prè Kay Senp,",
+    "headlineAccent": "Rèv Reyalize.",
+    "subheadline": "Wout ou pou vin pwopriyetè kòmanse isit la.",
+    "ctaPrimary": "Pre-Apwobasyon nan kèk minit",
+    "ctaSecondary": "Kalkile Peman",
+    "starsRating": "5/5 zetwal —",
+    "testimonialQuote": "KLE te fè achte premye kay nou san estrès",
+    "testimonialAuthor": "— Maria G.",
+    "badgeNmls": "NMLS #2380070",
+    "badgeEqualHousing": "Egalite Lojman",
+    "badgeBbb": "Akredite BBB",
+    "badgeFlorida": "Lisansye nan Florid",
+    "statFamiliesValue": "500+",
+    "statFamiliesLabel": "Fanmi Sèvi",
+    "statLoansValue": "$150M+",
+    "statLoansLabel": "Prè Finanse",
+    "statRatingValue": "4,9/5",
+    "statRatingLabel": "Nòt Kliyan",
+    "statYearsValue": "15+",
+    "statYearsLabel": "Ane Eksperyans"
+  },
+  "RateBanner": {
+    "rateText": "Tarif jodi a kòmanse a 6,25%*",
+    "rateContinuation": "Jwenn tarif pèsonalize ou nan kèk minit.",
+    "ctaGetMyRate": "Jwenn Tarif Mwen",
+    "disclaimer": "*Tarif montre pou rezon ilistratif. Tarif reyèl la depann de kredi, kantite prè a, ak pwopriyete a. Sijè a chanjman san avi."
+  },
+  "LoanPrograms": {
+    "kicker": "Pwogram Prè",
+    "headlineLead": "Jwenn Bon Prè",
+    "headlineAccent": "pou Ou",
+    "intro": "Yon gam konplè pwodwi ipotèk pou matche ak sitiyasyon, objektif, ak orè ou.",
+    "viewAll": "Wè Tout Pwogram yo",
+    "downSuffix": "depo",
+    "ariaLearnAbout": "Aprann sou {name}",
+    "programs": {
+      "conventional": {
+        "name": "Prè Konvansyonèl",
+        "tagline": "Finansman fleksib pou achtè ki kalifye"
+      },
+      "fha": {
+        "name": "Prè FHA",
+        "tagline": "Depo ba, egzijans fleksib"
+      },
+      "va": {
+        "name": "Prè VA",
+        "tagline": "Avantaj pou moun ki te sèvi"
+      },
+      "usda": {
+        "name": "Prè USDA",
+        "tagline": "Pwopriyete riral abòdab"
+      },
+      "jumbo": {
+        "name": "Prè Jumbo",
+        "tagline": "Finansman pou pwopriyete ki gen valè wo"
+      },
+      "refinance": {
+        "name": "Refinansman",
+        "tagline": "Bese tarif ou oswa jwenn ekite"
+      },
+      "first-time-buyer": {
+        "name": "Premye Achtè",
+        "tagline": "Konsèy nan chak etap"
+      }
+    }
+  },
+  "WhyKLE": {
+    "kicker": "Poukisa KLE",
+    "headlineLead": "Diferans",
+    "headlineAccent": "KLE",
+    "intro": "Nou pa sèlman yon prètè — nou se patnè ou nan youn nan desizyon ki pi enpòtan nan lavi ou.",
+    "promiseKicker": "Pwomès Nou",
+    "promiseHeadline": "Nou mete fanmi ou an premye.",
+    "promiseBody": "Nan KLE Mortgage Financing, nou kwè pwopriyete kay chanje lavi. Se poutèt sa nou travay san rete pou jwenn solisyon ki adapte ak bidjè, orè, ak objektif ou.",
+    "promisePoint1": "Pa gen frè kache ni sipriz nan fèmti",
+    "promisePoint2": "Lisansye nan Florid",
+    "promisePoint3": "Egalite Lojman — nou sèvi tout moun",
+    "promisePoint4": "Disponib wikenn pou konvenyans ou",
+    "callCardLead": "Rele nou jodi a",
+    "callCardHours": "Lin–Sam 8AM–7PM ET",
+    "benefit1Title": "Pre-Apwobasyon Rapid",
+    "benefit1Body": "Jwenn pre-apwobasyon nan jis 24 èdtan. Nou aji vit pou ou pa pèdi kay rèv ou.",
+    "benefit2Title": "Sèvis Pèsonalize",
+    "benefit2Body": "Yon ofisye prè dedye akonpaye ou depi nan aplikasyon rive nan fèmti — pa gen sant rele, pa gen tounen ozalanti.",
+    "benefit3Title": "Tarif Konpetitif",
+    "benefit3Body": "Nou konpare plizyè prètè pou jwenn pi bon tarif pou sitiyasyon ou, ekonomize ou dè milye dola.",
+    "benefit4Title": "Konsèy Ekspè",
+    "benefit4Body": "Plis pase 15 ane ekspètiz ipotèk. Nou eksplike chak etap klèman pou ou toujou konnen kote ou ye.",
+    "ctaLearn": "Aprann Sou Nou",
+    "ctaContact": "Kontakte Nou"
+  },
+  "Affordability": {
+    "kicker": "Kapasite",
+    "headline": "Konbyen Ou Ka Peye?",
+    "intro": "Antre revni anyèl ou ak tarif jodi a — jwenn yon imaj enstantane sou kapasite ou pou achte yon kay.",
+    "labelIncome": "Revni Anyèl Kay",
+    "labelRate": "Tarif Jodi a",
+    "labelMaxPrice": "Pri Maksimòm",
+    "maxPriceHint": "maksimòm estime",
+    "labelDownPayment": "Depo (10%)",
+    "downPaymentHint": "minimòm rekòmande",
+    "labelMonthly": "Peman Mansyèl Estime",
+    "monthlyHint": "kapital ak enterè",
+    "disclaimer": "* Estimasyon baze sou rapò dèt/revni 28%, 10% depo, fiks 30 ane. Taks, asirans, ak HOA pa enkli. Pou yon kotasyon presi, pale ak yon ofisye prè.",
+    "ctaApply": "Pre-Apwouve"
+  },
+  "Calculator": {
+    "kicker": "Kalkilatè Peman",
+    "headline": "Estime Peman Ou",
+    "intro": "Ajiste glisyèr yo pou wè peman mansyèl estime ou enstantaneman.",
+    "labelPurchase": "Pri Acha",
+    "labelDownPayment": "Depo",
+    "labelInterest": "Tarif Enterè",
+    "labelTerm": "Dire Prè",
+    "termSuffix": "ane",
+    "resultHeader": "Peman Mansyèl Estime",
+    "perMonth": "/mwa",
+    "labelLoanAmount": "Kantite Prè",
+    "labelTermShort": "Dire",
+    "labelRateShort": "Tarif",
+    "labelDownShort": "Depo",
+    "yearsSuffix": "ane",
+    "disclaimer": "* Estimasyon eksklu taks pwopriyete, asirans pwopriyetè, ak PMI.",
+    "ctaApply": "Pre-Apwouve",
+    "ctaFull": "Kalkilatè Konplè"
+  },
+  "Testimonials": {
+    "kicker": "Istwa Kliyan",
+    "headlineLead": "Vrè Fanmi.",
+    "headlineAccent": "Vrè Rezilta.",
+    "prevAria": "Temwayaj anvan",
+    "nextAria": "Temwayaj swivan",
+    "dotAria": "Ale nan temwayaj {num}",
+    "ctaMore": "Li Plis Istwa →",
+    "loanTypeLabels": {
+      "conventional": "Konvansyonèl",
+      "fha": "Prè FHA",
+      "va": "Prè VA",
+      "usda": "Prè USDA",
+      "jumbo": "Prè Jumbo",
+      "refinance": "Refinansman",
+      "first_time_buyer": "Premye Achtè",
+      "other": "Prè Kay"
+    },
+    "fallback": {
+      "1": "KLE te fè premye acha kay nou san estrès. Ofisye prè nou an te eksplike tout bagay klèman epi nou te fèmen nan 28 jou. Mwen rekòmande anpil!",
+      "2": "Kòm yon veteran, mwen te rekonesan pou ekspètiz prè VA nan KLE. Yo te konnen egzakteman sa mwen te gen dwa epi yo te mete m nan kay mwen san okenn depo.",
+      "3": "Mwen te refinanse kay mwen atravè KLE epi mwen te ekonomize $420/mwa. Pwosesis la te fluid epi ofisye prè mwen te toujou disponib pou reponn kesyon mwen yo.",
+      "4": "Nou te eseye de lòt prètè anvan KLE — pèsòn pa t kapab fini deal nou. KLE te jwenn yon pwogram ki te mache pafètman pou sitiyasyon nou.",
+      "5": "Kòm yon manman selibatè, mwen pa t janm panse pwopriyete kay te posib. KLE te ede m kalifye pou yon pwogram premye achtè epi tout ekip la te selebre avèk mwen nan fèmti!",
+      "6": "Nou te itilize USDA epi nou te antre nan kay rèv nou nan yon bon distri lekòl pou 0% depo. KLE te akonpaye nou nan chak etap. Mwen pa ka di ase bon bagay."
+    }
+  },
+  "Team": {
+    "kicker": "Ekip Nou",
+    "headlineLead": "Rankontre",
+    "headlineAccent": "Ofisye Prè Ou yo",
+    "intro": "Pwofesyonèl ki gen eksperyans, ki lisansye, dedye pou jwenn bon prè pou sitiyasyon inik ou.",
+    "founderBadge": "Fondatè",
+    "ctaFullTeam": "Rankontre Tout Ekip la →",
+    "members": {
+      "leopold-evariste": {
+        "title": "PDG ak Fondatè",
+        "bio": "Te fonde Leo Realty Capital Investments an 1992. Pote plis pase 32 ane ekspètiz mache Florid Sid nan prè ipotèk ak finansman envestisman.",
+        "specialty1": "Pwopriyete Envestisman",
+        "specialty2": "Komèsyal",
+        "specialty3": "Liks"
+      },
+      "joanne-evariste": {
+        "title": "Direktris Biwo",
+        "bio": "Kolòn vètebral operasyon yo, pou asire chak tranzaksyon ipotèk fèt san pwoblèm depi nan aplikasyon rive nan fèmti.",
+        "specialty1": "Operasyon",
+        "specialty2": "Relasyon Kliyan",
+        "specialty3": "Kowòdinasyon Tranzaksyon"
+      },
+      "jean-samuel-luxama": {
+        "title": "Ajan Imobilye ak Kreyatè Prè",
+        "bio": "Ajan Imobilye ak Kreyatè Prè ki gen doub lisans, ki bay sèvis fluid depi nan rechèch pwopriyete rive nan fèmti.",
+        "specialty1": "Prè FHA",
+        "specialty2": "Premye Achtè",
+        "specialty3": "Hometown Heroes"
+      },
+      "olivier-desire": {
+        "title": "Kreyatè Prè",
+        "bio": "Espesyalize nan finansman pwopriyete envestisman ak senaryo ipotèk konplèks tankou pwogram DSCR ak USDA.",
+        "specialty1": "Prè DSCR",
+        "specialty2": "Prè USDA",
+        "specialty3": "Pwopriyete Envestisman"
+      },
+      "daniel-calixte": {
+        "title": "Kreyatè Prè",
+        "bio": "Ekspètiz pwofon nan pwogram prè VA ak FHA, dedye pou fè ipotèk san estrès pou chak kliyan.",
+        "specialty1": "Prè VA",
+        "specialty2": "Prè FHA",
+        "specialty3": "Refinansman"
+      },
+      "carly-cadet": {
+        "title": "Asosye Ajan Imobilye",
+        "bio": "Enèji ak konesans mache pou chak relasyon kliyan, espesyalize nan kay rezidansyèl ak kondo.",
+        "specialty1": "Kay Rezidansyèl",
+        "specialty2": "Kondominyòm",
+        "specialty3": "Lokasyon"
+      }
+    }
+  },
+  "CTA": {
+    "kicker": "Fè Premye Etap la",
+    "headlineLead": "Pare pou Jwenn",
+    "headlineAccent": "Bon Prè Ou?",
+    "intro": "Kit ou ap achte premye kay ou, monte vèsyon, oswa refinanse, ekip nou pare pou gide ou. Jwenn pre-apwobasyon pran mwens pase 10 minit.",
+    "ctaApply": "Aplike Kounye a — Gratis",
+    "ctaCall": "Rele +1 (305) 705-2030",
+    "footnote": "Pa gen obligasyon. Pa gen verifikasyon kredi pou pre-kalifikasyon."
+  },
+  "AboutHero": {
+    "kicker": "Istwa Nou",
+    "headlineLead": "Bati sou Konfyans.",
+    "headlineAccent": "Mache pa Objektif.",
+    "intro": "KLE Mortgage Financing te fonde avèk yon sèl kwayans: chak fanmi nan Florid merite yon chans jis pou yo vin pwopriyetè kay. Nou pote ekspètiz, transparans, ak vrè atansyon nan chak prè nou fèmen.",
+    "trustLicensedLabel": "Lisansye ak Regile",
+    "trustLicensedSub": "NMLS #2380070",
+    "trustExperienceLabel": "Plis pase 15 ane Eksperyans",
+    "trustExperienceSub": "Ekip ekspè",
+    "trustFamiliesLabel": "Plis pase 500 Fanmi Sèvi",
+    "trustFamiliesSub": "Epi sa kontinye",
+    "prevAria": "Manm anvan",
+    "nextAria": "Manm swivan",
+    "viewAria": "Wè {name}",
+    "quotes": {
+      "leopold-evariste": "Chak fanmi nan Florid merite yon chans jis pou yo vin pwopriyetè. Se poutèt sa mwen te fonde KLE — pou rann pwosesis ipotèk la transparan ak imen.",
+      "joanne-evariste": "Dèyè chak fèmti ki byen pase, gen yon ekip ki swen detay yo. Mwen asire pa gen okenn dokiman, dat limit, oswa kesyon emprenter ki tonbe nan vid.",
+      "jean-samuel-luxama": "Mwen mache avèk kliyan mwen yo soti nan jwenn kay rive nan pran prè a. Yon sèl relasyon, depi nan kòmansman rive nan fen — menm moun depi ofè rive fèmti.",
+      "olivier-desire": "Prè konplèks pa fè m pè. DSCR pou envestisè, USDA pou bon katye — mwen jwenn chemen an pou emprenter lòt yo abandone.",
+      "daniel-calixte": "Mwen kwè nan edikasyon kliyan yo. Lè ou konprann opsyon VA oswa FHA ou yo, ou pran pi bon desizyon epi evite erè ki koute chè.",
+      "carly-cadet": "Achte premye kay ou ta dwe santi w eksite, pa estrès. Mwen pote enèji ak konesans mache pou kliyan mwen yo toujou konnen ki sa ki pwochen etap la."
+    }
+  },
+  "Mission": {
+    "kicker": "Misyon Nou",
+    "headlineLead": "Fè Pwopriyete Kay",
+    "headlineAccent": "Aksesib pou Tout Moun",
+    "para1": "KLE Mortgage Financing te fonde pa Leopold Evariste avèk yon vizyon pou bouche gap pwopriyete kay nan kominote ki pa byen sèvi nan Florid. Nou wè fanmi ki te gen revni pou yo achte yon kay men ki te manke konsèy pou navige pwogram FHA, VA, USDA, ak konvansyonèl.",
+    "para2": "Jodi a, nou sèvi kliyan atravè Florid — soti nan premye achtè ki itilize pwogram Hometown Heroes rive nan envestisè ki bati pòtfèy avèk prè DSCR. Menm sèvis premye klas kit ou ap fèmen yon kay $150,000 oswa yon Jumbo $1.5M.",
+    "byTheNumbers": "Nan Chif",
+    "stat1Value": "500+",
+    "stat1Label": "Fanmi Sèvi",
+    "stat2Value": "$150M+",
+    "stat2Label": "Prè Finanse",
+    "stat3Value": "15+",
+    "stat3Label": "Ane Eksperyans",
+    "stat4Value": "4,9",
+    "stat4Label": "Nòt Mwayèn",
+    "stat5Value": "28",
+    "stat5Label": "Jou Mwayèn pou Fèmen",
+    "stat6Value": "FL",
+    "stat6Label": "Eta Lisansye",
+    "valuesKicker": "Sa Ki Mache Nou",
+    "valuesHeadline": "Valè Fondamantal Nou",
+    "value1Title": "Fanmi an Premye",
+    "value1Body": "Chak desizyon nou pran gide pa sa ki pi bon pou fanmi nou sèvi. Nou pa sèlman fèmen ipotèk — nou ede moun bati richès alontèm atravè pwopriyete kay.",
+    "value2Title": "Transparans",
+    "value2Body": "Pa gen frè kache. Pa gen jagon ipotèk. Nou eksplike chak tarif, chak divilgasyon, ak chak opsyon pou ou ka pran desizyon enfòme sou yon angajman 30 ane.",
+    "value3Title": "Edikasyon",
+    "value3Body": "Emprenter ki enfòme pran pi bon desizyon. Kit se pwogram premye achtè oswa finansman envestisman DSCR, nou pran tan pou anseye sa chak opsyon vle di vrèman.",
+    "complianceHeadline": "Lisans ak Konfòmite",
+    "complianceNmlsLabel": "Konpayi NMLS",
+    "complianceNmlsValue": "KLE Mortgage Financing, LLC — NMLS #2380070",
+    "complianceLicensedLabel": "Lisansye nan",
+    "complianceLicensedValue": "Florid (FL)",
+    "complianceEqualHousingLabel": "Egalite Lojman",
+    "complianceEqualHousingValue": "Prètè ki respekte egalite lojman. Nou konfòm ak tout lwa prè ekitab."
+  }
+}

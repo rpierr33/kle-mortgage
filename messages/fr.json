@@ -1,0 +1,397 @@
+{
+  "Nav": {
+    "loanPrograms": "Programmes de prêt",
+    "loanConventional": "Prêts conventionnels",
+    "loanFha": "Prêts FHA",
+    "loanVa": "Prêts VA",
+    "loanUsda": "Prêts USDA",
+    "loanJumbo": "Prêts Jumbo",
+    "loanRefinance": "Refinancement",
+    "loanFirstTime": "Premier acheteur",
+    "calculator": "Calculatrice",
+    "about": "À propos",
+    "resources": "Ressources",
+    "contact": "Contact",
+    "applyNow": "Faire une demande",
+    "toggleNavigation": "Ouvrir le menu"
+  },
+  "LanguageSwitcher": {
+    "label": "Langue",
+    "en": "English",
+    "fr": "Français",
+    "ht": "Kreyòl"
+  },
+  "Footer": {
+    "tagline": "Nous aidons les familles à réaliser leur rêve de devenir propriétaires grâce à un accompagnement expert et des solutions hypothécaires personnalisées.",
+    "loanProgramsHeader": "Programmes de prêt",
+    "loanConventional": "Prêts conventionnels",
+    "loanFha": "Prêts FHA",
+    "loanVa": "Prêts VA",
+    "loanUsda": "Prêts USDA",
+    "loanJumbo": "Prêts Jumbo",
+    "loanRefinance": "Refinancement",
+    "loanFirstTime": "Premier acheteur",
+    "companyHeader": "Entreprise",
+    "linkAbout": "À propos",
+    "linkTeam": "Notre équipe",
+    "linkTestimonials": "Témoignages",
+    "linkResources": "Ressources",
+    "linkFaq": "FAQ",
+    "linkContact": "Nous contacter",
+    "linkApply": "Faire une demande",
+    "contactHeader": "Nous contacter",
+    "addressLine1": "909 N Miami Beach Blvd, Suite 301A",
+    "addressLine2": "North Miami Beach, FL 33162",
+    "startApplication": "Commencer ma demande",
+    "rightsReserved": "Tous droits réservés.",
+    "nmlsLabel": "NMLS #2380070",
+    "equalHousing": "Prêteur respectant l'égalité d'accès au logement. Licencié en Floride. Ceci n'est pas un engagement de prêt.",
+    "privacyPolicy": "Politique de confidentialité",
+    "termsOfUse": "Conditions d'utilisation",
+    "faq": "FAQ",
+    "sisterSiteLabel": "Vous achetez ou vendez une maison ?",
+    "sisterSiteCta": "Visitez Leo Realty"
+  },
+  "Common": {
+    "phone": "+1 (305) 705-2030",
+    "applyNow": "Faire une demande",
+    "getStarted": "Commencer",
+    "learnMore": "En savoir plus"
+  },
+  "FloatingBar": {
+    "call": "Appeler",
+    "callAria": "Appeler KLE Mortgage",
+    "preApprove": "Pré-approbation",
+    "preApproveAria": "Obtenir une pré-approbation",
+    "calculate": "Calculer",
+    "calculateAria": "Calculatrice hypothécaire"
+  },
+  "Metadata": {
+    "homeTitle": "KLE Mortgage Financing, LLC | Prêts immobiliers simplifiés",
+    "homeDescription": "Courtier hypothécaire licencié en Floride (NMLS #2380070) aidant les familles avec des prêts FHA, VA, USDA, conventionnels, Jumbo et Hometown Heroes. Pré-approbation en quelques minutes.",
+    "aboutTitle": "À propos de KLE Mortgage — Courtier licencié en Floride (NMLS #2380070)",
+    "aboutDescription": "Rencontrez l'équipe de KLE Mortgage Financing, LLC. Courtier hypothécaire indépendant en Floride depuis 1992, dédié à trouver le bon programme pour chaque famille.",
+    "applyTitle": "Faire une demande hypothécaire — Pré-approbation en quelques minutes | KLE Mortgage",
+    "applyDescription": "Commencez votre demande de prêt hypothécaire avec KLE Mortgage. Vérification de crédit légère, sans obligation. Pré-approbation FHA, VA, USDA, conventionnel ou Jumbo en Floride.",
+    "calculatorTitle": "Calculatrice hypothécaire | KLE Mortgage",
+    "calculatorDescription": "Estimez votre paiement hypothécaire mensuel, y compris capital et intérêts. Ajustez le prix, l'apport, le taux et la durée pour FHA, VA, USDA, conventionnel ou Jumbo.",
+    "contactTitle": "Contacter KLE Mortgage — Courtier hypothécaire en Floride",
+    "contactDescription": "Joignez KLE Mortgage Financing à North Miami Beach, FL. Appelez (305) 705-2030 ou écrivez à Info@klemortgage.com. Agents bilingues (anglais / français / créole haïtien).",
+    "faqTitle": "FAQ hypothécaire — KLE Mortgage",
+    "faqDescription": "Réponses aux questions hypothécaires les plus courantes : exigences de crédit, apport minimum, FHA vs conventionnel, éligibilité Hometown Heroes, délais de pré-approbation.",
+    "loanProgramsTitle": "Programmes de prêt — FHA · VA · USDA · Conventionnel · Jumbo | KLE Mortgage",
+    "loanProgramsDescription": "Explorez les programmes hypothécaires de KLE Mortgage Financing : FHA, VA, USDA, conventionnel, Jumbo, refinancement, Hometown Heroes, premier acheteur. Licencié en Floride (NMLS #2380070).",
+    "resourcesTitle": "Ressources et guides hypothécaires | KLE Mortgage",
+    "resourcesDescription": "Guides éducatifs sur les prêts FHA, les avantages VA, Hometown Heroes, le refinancement et le processus d'achat — rédigés par des professionnels hypothécaires licenciés en Floride.",
+    "testimonialsTitle": "Témoignages clients — KLE Mortgage",
+    "testimonialsDescription": "Histoires authentiques de familles floridiennes qui ont fermé leur maison avec KLE Mortgage Financing. Réussites FHA, VA, USDA, conventionnelles et premier acheteur.",
+    "privacyTitle": "Politique de confidentialité — KLE Mortgage",
+    "privacyDescription": "Comment KLE Mortgage Financing, LLC collecte, utilise et protège les informations personnelles pour les demandes hypothécaires et pré-qualifications.",
+    "termsTitle": "Conditions d'utilisation — KLE Mortgage",
+    "termsDescription": "Conditions régissant l'utilisation du site KLE Mortgage Financing. Ce site n'est pas un engagement de prêt ; tous les prêts sont soumis à approbation de crédit."
+  },
+  "LoanProgramsMeta": {
+    "conventional": {
+      "title": "Prêts conventionnels — 3 % d'apport pour acheteurs qualifiés | KLE Mortgage",
+      "description": "Hypothèques conventionnelles avec aussi peu que 3 % d'apport pour les premiers acheteurs en Floride. Taux compétitifs, sans assurance hypothécaire initiale pour les bons profils de crédit."
+    },
+    "fha": {
+      "title": "Prêts FHA en Floride — 3,5 % d'apport, crédit dès 580 | KLE Mortgage",
+      "description": "Prêts FHA pour acheteurs floridiens — 3,5 % d'apport minimum avec score de crédit dès 580. Idéal pour les premiers acheteurs. KLE Mortgage NMLS #2380070."
+    },
+    "va": {
+      "title": "Prêts VA Floride — 0 % d'apport pour vétérans | KLE Mortgage",
+      "description": "Prêts VA pour vétérans, militaires actifs et conjoints survivants éligibles en Floride. 0 % d'apport, sans PMI, taux compétitifs. Refinancement Streamline IRRRL disponible."
+    },
+    "usda": {
+      "title": "Prêts USDA Floride — 100 % de financement dans zones éligibles | KLE Mortgage",
+      "description": "Prêts USDA Rural Development pour propriétés éligibles en Floride. 0 % d'apport, MI bas, limites de revenu applicables. Utiles dans les zones suburbaines de Broward et Palm Beach."
+    },
+    "jumbo": {
+      "title": "Prêts Jumbo Floride — Au-dessus de 766 550 $ | KLE Mortgage",
+      "description": "Hypothèques Jumbo pour propriétés floridiennes au-dessus de la limite conforme. 10 % d'apport, taux compétitifs pour les bons profils de crédit. Montants pouvant atteindre plusieurs millions."
+    },
+    "refinance": {
+      "title": "Refinancement hypothécaire Floride — Réduisez votre taux ou retirez de l'équité | KLE Mortgage",
+      "description": "Refinancez votre hypothèque en Floride pour baisser votre taux, raccourcir votre durée ou retirer de l'équité. Options taux-et-durée, FHA Streamline, VA IRRRL et cash-out disponibles."
+    },
+    "first-time-buyer": {
+      "title": "Prêts pour premiers acheteurs Floride | KLE Mortgage",
+      "description": "Programmes premiers acheteurs en Floride — combinez FHA, conventionnel 3 % d'apport, Hometown Heroes et l'aide Florida Bond. Jusqu'à 35 000 $ d'aide à l'apport."
+    }
+  },
+  "Hero": {
+    "badge": "Courtier hypothécaire licencié — NMLS #2380070",
+    "headlineLead": "Prêts immobiliers simplifiés,",
+    "headlineAccent": "Rêves réalisés.",
+    "subheadline": "Votre chemin vers la propriété commence ici.",
+    "ctaPrimary": "Pré-approbation en quelques minutes",
+    "ctaSecondary": "Calculer le paiement",
+    "starsRating": "5/5 étoiles —",
+    "testimonialQuote": "KLE a rendu l'achat de notre première maison sans stress",
+    "testimonialAuthor": "— Maria G.",
+    "badgeNmls": "NMLS #2380070",
+    "badgeEqualHousing": "Égalité d'accès au logement",
+    "badgeBbb": "Accrédité BBB",
+    "badgeFlorida": "Licencié en Floride",
+    "statFamiliesValue": "500+",
+    "statFamiliesLabel": "Familles servies",
+    "statLoansValue": "150 M$+",
+    "statLoansLabel": "Prêts financés",
+    "statRatingValue": "4,9/5",
+    "statRatingLabel": "Note clients",
+    "statYearsValue": "15+",
+    "statYearsLabel": "Ans d'expérience"
+  },
+  "RateBanner": {
+    "rateText": "Taux d'aujourd'hui à partir de 6,25 %*",
+    "rateContinuation": "Obtenez votre taux personnalisé en quelques minutes.",
+    "ctaGetMyRate": "Obtenir mon taux",
+    "disclaimer": "*Taux indiqué à titre illustratif. Le taux réel dépend du crédit, du montant du prêt et du bien. Sujet à changement sans préavis."
+  },
+  "LoanPrograms": {
+    "kicker": "Programmes de prêt",
+    "headlineLead": "Trouvez le bon prêt",
+    "headlineAccent": "pour vous",
+    "intro": "Une gamme complète de produits hypothécaires adaptés à votre situation, vos objectifs et votre échéancier.",
+    "viewAll": "Voir tous les programmes",
+    "downSuffix": "d'apport",
+    "ariaLearnAbout": "En savoir plus sur {name}",
+    "programs": {
+      "conventional": {
+        "name": "Prêts conventionnels",
+        "tagline": "Financement flexible pour acheteurs qualifiés"
+      },
+      "fha": {
+        "name": "Prêts FHA",
+        "tagline": "Faible apport, exigences flexibles"
+      },
+      "va": {
+        "name": "Prêts VA",
+        "tagline": "Avantage mérité pour les vétérans"
+      },
+      "usda": {
+        "name": "Prêts USDA",
+        "tagline": "Propriété rurale rendue abordable"
+      },
+      "jumbo": {
+        "name": "Prêts Jumbo",
+        "tagline": "Financement pour les propriétés haut de gamme"
+      },
+      "refinance": {
+        "name": "Refinancement",
+        "tagline": "Réduisez votre taux ou accédez à votre équité"
+      },
+      "first-time-buyer": {
+        "name": "Premier acheteur",
+        "tagline": "Accompagnement à chaque étape"
+      }
+    }
+  },
+  "WhyKLE": {
+    "kicker": "Pourquoi KLE",
+    "headlineLead": "La différence",
+    "headlineAccent": "KLE",
+    "intro": "Nous ne sommes pas qu'un prêteur — nous sommes votre partenaire dans l'une des décisions les plus importantes de votre vie.",
+    "promiseKicker": "Notre engagement",
+    "promiseHeadline": "Votre famille passe en premier.",
+    "promiseBody": "Chez KLE Mortgage Financing, nous croyons que la propriété change des vies. C'est pourquoi nous travaillons sans relâche pour trouver des solutions adaptées à votre budget, votre échéancier et vos objectifs.",
+    "promisePoint1": "Aucuns frais cachés ni surprises à la clôture",
+    "promisePoint2": "Licencié en Floride",
+    "promisePoint3": "Égalité d'accès au logement — nous servons tout le monde",
+    "promisePoint4": "Disponible les week-ends pour votre commodité",
+    "callCardLead": "Appelez-nous aujourd'hui",
+    "callCardHours": "Lun–Sam 8 h–19 h HE",
+    "benefit1Title": "Pré-approbation rapide",
+    "benefit1Body": "Pré-approbation en aussi peu que 24 heures. Nous agissons vite pour ne pas manquer la maison de vos rêves.",
+    "benefit2Title": "Service personnalisé",
+    "benefit2Body": "Un agent de prêt dédié vous accompagne de la demande à la clôture — pas de centre d'appels, pas de détour.",
+    "benefit3Title": "Taux compétitifs",
+    "benefit3Body": "Nous comparons plusieurs prêteurs pour obtenir le meilleur taux pour votre situation, vous économisant des milliers de dollars.",
+    "benefit4Title": "Conseils d'experts",
+    "benefit4Body": "Plus de 15 ans d'expertise hypothécaire. Nous expliquons chaque étape clairement pour que vous sachiez toujours où vous en êtes.",
+    "ctaLearn": "En savoir plus",
+    "ctaContact": "Nous contacter"
+  },
+  "Affordability": {
+    "kicker": "Capacité d'emprunt",
+    "headline": "Combien pouvez-vous vous permettre ?",
+    "intro": "Entrez votre revenu annuel et le taux du jour — obtenez un aperçu instantané de votre pouvoir d'achat immobilier.",
+    "labelIncome": "Revenu annuel du ménage",
+    "labelRate": "Taux d'aujourd'hui",
+    "labelMaxPrice": "Prix maximum",
+    "maxPriceHint": "maximum estimé",
+    "labelDownPayment": "Apport (10 %)",
+    "downPaymentHint": "minimum recommandé",
+    "labelMonthly": "Paiement mensuel estimé",
+    "monthlyHint": "capital et intérêts",
+    "disclaimer": "* Estimations basées sur un ratio dette/revenu de 28 %, 10 % d'apport, taux fixe sur 30 ans. Taxes, assurance et frais de copropriété non inclus. Pour un devis précis, parlez à un agent de prêt.",
+    "ctaApply": "Pré-approbation"
+  },
+  "Calculator": {
+    "kicker": "Calculatrice de paiement",
+    "headline": "Estimez votre paiement",
+    "intro": "Ajustez les curseurs pour voir votre paiement mensuel estimé instantanément.",
+    "labelPurchase": "Prix d'achat",
+    "labelDownPayment": "Apport",
+    "labelInterest": "Taux d'intérêt",
+    "labelTerm": "Durée du prêt",
+    "termSuffix": "ans",
+    "resultHeader": "Paiement mensuel estimé",
+    "perMonth": "/mois",
+    "labelLoanAmount": "Montant du prêt",
+    "labelTermShort": "Durée",
+    "labelRateShort": "Taux",
+    "labelDownShort": "Apport",
+    "yearsSuffix": "ans",
+    "disclaimer": "* L'estimation exclut les taxes foncières, l'assurance habitation et la PMI.",
+    "ctaApply": "Pré-approbation",
+    "ctaFull": "Calculatrice complète"
+  },
+  "Testimonials": {
+    "kicker": "Histoires de clients",
+    "headlineLead": "Vraies familles.",
+    "headlineAccent": "Vrais résultats.",
+    "prevAria": "Témoignage précédent",
+    "nextAria": "Témoignage suivant",
+    "dotAria": "Aller au témoignage {num}",
+    "ctaMore": "Lire plus d'histoires →",
+    "loanTypeLabels": {
+      "conventional": "Conventionnel",
+      "fha": "Prêt FHA",
+      "va": "Prêt VA",
+      "usda": "Prêt USDA",
+      "jumbo": "Prêt Jumbo",
+      "refinance": "Refinancement",
+      "first_time_buyer": "Premier acheteur",
+      "other": "Prêt immobilier"
+    },
+    "fallback": {
+      "1": "KLE a rendu notre premier achat de maison sans stress. Notre agent de prêt a tout expliqué clairement et nous avons clôturé en 28 jours. Hautement recommandé !",
+      "2": "En tant que vétéran, j'étais reconnaissant pour l'expertise des prêts VA chez KLE. Ils savaient exactement à quoi j'avais droit et m'ont fait acheter ma maison sans aucun apport.",
+      "3": "J'ai refinancé ma maison via KLE et économisé 420 $/mois. Le processus a été fluide et mon agent de prêt était toujours disponible pour répondre à mes questions.",
+      "4": "Nous avons essayé deux autres prêteurs avant KLE — personne n'arrivait à conclure notre dossier. KLE a trouvé un programme parfait pour notre situation.",
+      "5": "En tant que mère célibataire, je n'aurais jamais pensé que la propriété était possible. KLE m'a aidée à me qualifier pour un programme premier acheteur et toute l'équipe a célébré avec moi à la clôture !",
+      "6": "Nous avons utilisé USDA et avons obtenu la maison de nos rêves dans un excellent quartier scolaire avec 0 % d'apport. KLE nous a guidés à chaque étape. Je ne peux pas en dire assez de bien."
+    }
+  },
+  "Team": {
+    "kicker": "Notre équipe",
+    "headlineLead": "Rencontrez vos",
+    "headlineAccent": "agents de prêt",
+    "intro": "Professionnels expérimentés et licenciés, dédiés à trouver le bon prêt pour votre situation unique.",
+    "founderBadge": "Fondateur",
+    "ctaFullTeam": "Voir toute l'équipe →",
+    "members": {
+      "leopold-evariste": {
+        "title": "PDG et fondateur",
+        "bio": "A fondé Leo Realty Capital Investments en 1992. Apporte plus de 32 ans d'expertise du marché de la Floride du Sud au prêt hypothécaire et au financement d'investissement.",
+        "specialty1": "Propriétés d'investissement",
+        "specialty2": "Commercial",
+        "specialty3": "Luxe"
+      },
+      "joanne-evariste": {
+        "title": "Directrice de bureau",
+        "bio": "L'épine dorsale des opérations, garantissant que chaque transaction hypothécaire se déroule sans heurts, de la demande à la clôture.",
+        "specialty1": "Opérations",
+        "specialty2": "Relations clients",
+        "specialty3": "Coordination des transactions"
+      },
+      "jean-samuel-luxama": {
+        "title": "Agent immobilier et créateur de prêt",
+        "bio": "Agent immobilier et créateur de prêt à double licence, offrant un service fluide de la recherche de propriété à la clôture.",
+        "specialty1": "Prêts FHA",
+        "specialty2": "Premiers acheteurs",
+        "specialty3": "Hometown Heroes"
+      },
+      "olivier-desire": {
+        "title": "Créateur de prêt",
+        "bio": "Spécialisé dans le financement de propriétés d'investissement et les scénarios hypothécaires complexes, y compris les programmes DSCR et USDA.",
+        "specialty1": "Prêts DSCR",
+        "specialty2": "Prêts USDA",
+        "specialty3": "Propriétés d'investissement"
+      },
+      "daniel-calixte": {
+        "title": "Créateur de prêt",
+        "bio": "Expertise approfondie des programmes de prêt VA et FHA, dévoué à rendre les prêts hypothécaires sans stress pour chaque client.",
+        "specialty1": "Prêts VA",
+        "specialty2": "Prêts FHA",
+        "specialty3": "Refinancement"
+      },
+      "carly-cadet": {
+        "title": "Agent immobilier associé",
+        "bio": "Énergie et connaissance du marché pour chaque relation client, spécialisée dans les maisons résidentielles et les condos.",
+        "specialty1": "Maisons résidentielles",
+        "specialty2": "Condominiums",
+        "specialty3": "Locations"
+      }
+    }
+  },
+  "CTA": {
+    "kicker": "Faites le premier pas",
+    "headlineLead": "Prêt à trouver votre",
+    "headlineAccent": "prêt idéal ?",
+    "intro": "Que vous achetiez votre première maison, que vous changiez de propriété ou que vous refinanciez, notre équipe est prête à vous guider. Obtenir une pré-approbation prend moins de 10 minutes.",
+    "ctaApply": "Faire une demande — c'est gratuit",
+    "ctaCall": "Appeler +1 (305) 705-2030",
+    "footnote": "Sans obligation. Aucune vérification de crédit requise pour la pré-qualification."
+  },
+  "AboutHero": {
+    "kicker": "Notre histoire",
+    "headlineLead": "Bâti sur la confiance.",
+    "headlineAccent": "Animés par l'engagement.",
+    "intro": "KLE Mortgage Financing a été fondé avec une seule conviction : chaque famille floridienne mérite une chance équitable de devenir propriétaire. Nous apportons expertise, transparence et attention véritable à chaque prêt que nous fermons.",
+    "trustLicensedLabel": "Licencié et régulé",
+    "trustLicensedSub": "NMLS #2380070",
+    "trustExperienceLabel": "Plus de 15 ans d'expérience",
+    "trustExperienceSub": "Équipe d'experts",
+    "trustFamiliesLabel": "Plus de 500 familles servies",
+    "trustFamiliesSub": "Et ça continue",
+    "prevAria": "Membre précédent",
+    "nextAria": "Membre suivant",
+    "viewAria": "Voir {name}",
+    "quotes": {
+      "leopold-evariste": "Chaque famille floridienne mérite une chance équitable de devenir propriétaire. C'est pour cela que j'ai fondé KLE — pour rendre le processus hypothécaire transparent et humain.",
+      "joanne-evariste": "Derrière chaque clôture réussie, il y a une équipe attentive aux détails. Je m'assure qu'aucun document, échéance ou question d'emprunteur ne tombe dans l'oubli.",
+      "jean-samuel-luxama": "J'accompagne mes clients de la recherche de la maison à la sécurisation du prêt. Une seule relation, du début à la fin — même personne de l'offre à la clôture.",
+      "olivier-desire": "Les prêts complexes ne me font pas peur. DSCR pour investisseurs, USDA pour les bons quartiers — je trouve la voie pour les emprunteurs que les autres laissent tomber.",
+      "daniel-calixte": "Je crois en l'éducation des clients. Quand vous comprenez vos options VA ou FHA, vous prenez de meilleures décisions et évitez des erreurs coûteuses.",
+      "carly-cadet": "Acheter une première maison devrait être excitant, pas stressant. J'apporte l'énergie et la connaissance du marché pour que mes clients sachent toujours quelle est la prochaine étape."
+    }
+  },
+  "Mission": {
+    "kicker": "Notre mission",
+    "headlineLead": "Rendre la propriété",
+    "headlineAccent": "accessible à tous",
+    "para1": "KLE Mortgage Financing a été fondé par Leopold Evariste avec la vision de combler l'écart de propriété immobilière dans les communautés mal desservies de Floride. Nous voyions des familles qui avaient les revenus pour acheter une maison mais manquaient de conseils pour naviguer les programmes FHA, VA, USDA et conventionnels.",
+    "para2": "Aujourd'hui, nous servons des clients à travers la Floride — des premiers acheteurs utilisant le programme Hometown Heroes aux investisseurs construisant des portefeuilles avec des prêts DSCR. Même service haut de gamme que vous fermiez une maison de départ à 150 000 $ ou un Jumbo de 1,5 M$.",
+    "byTheNumbers": "En chiffres",
+    "stat1Value": "500+",
+    "stat1Label": "Familles servies",
+    "stat2Value": "150 M$+",
+    "stat2Label": "Prêts financés",
+    "stat3Value": "15+",
+    "stat3Label": "Ans d'expérience",
+    "stat4Value": "4,9",
+    "stat4Label": "Note moyenne",
+    "stat5Value": "28",
+    "stat5Label": "Jours moyens à la clôture",
+    "stat6Value": "FL",
+    "stat6Label": "État licencié",
+    "valuesKicker": "Ce qui nous anime",
+    "valuesHeadline": "Nos valeurs fondamentales",
+    "value1Title": "La famille d'abord",
+    "value1Body": "Chaque décision est guidée par ce qui est mieux pour les familles que nous servons. Nous ne fermons pas seulement des hypothèques — nous aidons les gens à bâtir une richesse à long terme par la propriété.",
+    "value2Title": "Transparence",
+    "value2Body": "Aucuns frais cachés. Aucun jargon hypothécaire. Nous expliquons chaque taux, chaque divulgation et chaque option pour que vous puissiez prendre des décisions informées sur un engagement de 30 ans.",
+    "value3Title": "Éducation",
+    "value3Body": "Les emprunteurs informés prennent de meilleures décisions. Qu'il s'agisse de programmes premiers acheteurs ou de financement d'investissement DSCR, nous prenons le temps d'enseigner ce que chaque option signifie réellement.",
+    "complianceHeadline": "Licences et conformité",
+    "complianceNmlsLabel": "Société NMLS",
+    "complianceNmlsValue": "KLE Mortgage Financing, LLC — NMLS #2380070",
+    "complianceLicensedLabel": "Licencié en",
+    "complianceLicensedValue": "Floride (FL)",
+    "complianceEqualHousingLabel": "Égalité d'accès au logement",
+    "complianceEqualHousingValue": "Prêteur respectant l'égalité d'accès au logement. Nous nous conformons à toutes les lois sur le prêt équitable."
+  }
+}

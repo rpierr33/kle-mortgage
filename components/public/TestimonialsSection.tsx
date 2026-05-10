@@ -4,7 +4,8 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 import type { testimonials } from "@/lib/db/schema";
-import Link from "next/link";
+import { useLocale, useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 type Testimonial = typeof testimonials.$inferSelect;
 
@@ -53,17 +54,6 @@ const fallbackTestimonials = [
   },
 ];
 
-const loanTypeLabels: Record<string, string> = {
-  conventional: "Conventional",
-  fha: "FHA Loan",
-  va: "VA Loan",
-  usda: "USDA Loan",
-  jumbo: "Jumbo Loan",
-  refinance: "Refinance",
-  first_time_buyer: "First-Time Buyer",
-  other: "Home Loan",
-};
-
 function getInitials(name: string) {
   return name.split(" ").map((n) => n[0]).join("").slice(0, 2).toUpperCase();
 }
@@ -73,7 +63,14 @@ interface Props {
 }
 
 export function TestimonialsSection({ testimonials: data }: Props) {
-  const displayData = data.length > 0 ? data : fallbackTestimonials;
+  const t = useTranslations("Testimonials");
+  const tLabels = useTranslations("Testimonials.loanTypeLabels");
+  const tFallback = useTranslations("Testimonials.fallback");
+  const locale = useLocale();
+  // Recipe invariant: on non-English locales, prefer the catalog over DB
+  // (DB content is English-only). Fallback fixtures are also keyed in catalog.
+  const useCatalogContent = locale !== "en";
+  const displayData = useCatalogContent || data.length === 0 ? fallbackTestimonials : data;
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState(1);
 
@@ -86,6 +83,18 @@ export function TestimonialsSection({ testimonials: data }: Props) {
   const next = () => go(current === displayData.length - 1 ? 0 : current + 1);
 
   const item = displayData[current];
+
+  // On non-English locales, use translated fallback reviewText (keyed by id 1-6).
+  // On English with DB data, use the DB row's reviewText as authored.
+  const localizedReviewText = useCatalogContent || data.length === 0
+    ? (() => {
+        try {
+          return tFallback(String(item.id) as Parameters<typeof tFallback>[0]);
+        } catch {
+          return item.reviewText;
+        }
+      })()
+    : item.reviewText;
 
   const variants = {
     enter: (dir: number) => ({
@@ -104,16 +113,21 @@ export function TestimonialsSection({ testimonials: data }: Props) {
     }),
   };
 
+  const loanTypeLabel = (type: string) => {
+    try {
+      return tLabels(type as Parameters<typeof tLabels>[0]);
+    } catch {
+      return type;
+    }
+  };
+
   return (
     <section className="py-28 bg-[#0F0A0B] relative overflow-hidden">
-      {/* Warm background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#1C1014] via-[#0F0A0B] to-[#0D0608]" />
 
-      {/* Single subtle gold orb — top right only */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-[#C9A345]/4 rounded-full blur-3xl -translate-y-1/3 translate-x-1/3 pointer-events-none" />
 
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -124,19 +138,17 @@ export function TestimonialsSection({ testimonials: data }: Props) {
           <div className="flex items-center justify-center gap-3 mb-4">
             <div className="w-8 h-0.5 bg-gradient-to-r from-transparent to-[#C9A345] rounded-full" />
             <span className="text-[#C9A345] text-xs font-semibold uppercase tracking-[0.15em]">
-              Client Stories
+              {t("kicker")}
             </span>
             <div className="w-8 h-0.5 bg-gradient-to-l from-transparent to-[#C9A345] rounded-full" />
           </div>
           <h2 className="font-[family-name:var(--font-cormorant)] text-5xl sm:text-6xl font-medium text-white leading-[1.05]">
-            Real Families.{" "}
-            <span className="text-[#C9A345] italic">Real Results.</span>
+            {t("headlineLead")}{" "}
+            <span className="text-[#C9A345] italic">{t("headlineAccent")}</span>
           </h2>
         </motion.div>
 
-        {/* Single large quote */}
         <div className="relative min-h-[320px] sm:min-h-[260px] flex flex-col items-center justify-center">
-          {/* Large decorative open-quote */}
           <div
             className="absolute -top-6 left-0 sm:left-8 font-[family-name:var(--font-cormorant)] text-[10rem] leading-none text-[#C9A345]/10 select-none pointer-events-none"
             aria-hidden="true"
@@ -154,19 +166,16 @@ export function TestimonialsSection({ testimonials: data }: Props) {
               exit="exit"
               className="w-full text-center px-4 sm:px-12"
             >
-              {/* Stars */}
               <div className="flex justify-center gap-1 mb-8">
                 {Array.from({ length: item.rating }).map((_, i) => (
                   <Star key={i} className="w-4 h-4 fill-[#C9A345] text-[#C9A345]" />
                 ))}
               </div>
 
-              {/* Quote */}
               <blockquote className="font-[family-name:var(--font-cormorant)] text-2xl sm:text-3xl lg:text-4xl font-medium italic text-white leading-[1.3] mb-10">
-                &ldquo;{item.reviewText}&rdquo;
+                &ldquo;{localizedReviewText}&rdquo;
               </blockquote>
 
-              {/* Author */}
               <div className="flex flex-col items-center gap-2">
                 <div className="flex items-center gap-3">
                   <div className="w-9 h-9 rounded-full bg-[#6B1C23] flex items-center justify-center flex-shrink-0">
@@ -182,30 +191,28 @@ export function TestimonialsSection({ testimonials: data }: Props) {
                   </div>
                 </div>
                 <span className="text-xs bg-[#6B1C23]/25 border border-[#6B1C23]/30 text-[#E8A0A8] px-3 py-1 rounded-full font-medium mt-1">
-                  {loanTypeLabels[item.loanType] || item.loanType}
+                  {loanTypeLabel(item.loanType)}
                 </span>
               </div>
             </motion.div>
           </AnimatePresence>
         </div>
 
-        {/* Navigation row */}
         <div className="flex items-center justify-center gap-6 mt-12">
           <button
             onClick={prev}
-            aria-label="Previous testimonial"
+            aria-label={t("prevAria")}
             className="w-11 h-11 rounded-full border border-white/15 hover:border-[#C9A345]/50 text-white/40 hover:text-[#C9A345] flex items-center justify-center transition-all duration-200 hover:bg-[#C9A345]/5"
           >
             <ChevronLeft className="w-5 h-5" />
           </button>
 
-          {/* Dot indicators */}
           <div className="flex gap-2.5">
             {displayData.map((_, idx) => (
               <button
                 key={idx}
                 onClick={() => go(idx)}
-                aria-label={`Go to testimonial ${idx + 1}`}
+                aria-label={t("dotAria", { num: idx + 1 })}
                 className={`rounded-full transition-all duration-300 ${
                   idx === current
                     ? "w-6 h-1.5 bg-[#C9A345]"
@@ -217,14 +224,13 @@ export function TestimonialsSection({ testimonials: data }: Props) {
 
           <button
             onClick={next}
-            aria-label="Next testimonial"
+            aria-label={t("nextAria")}
             className="w-11 h-11 rounded-full border border-white/15 hover:border-[#C9A345]/50 text-white/40 hover:text-[#C9A345] flex items-center justify-center transition-all duration-200 hover:bg-[#C9A345]/5"
           >
             <ChevronRight className="w-5 h-5" />
           </button>
         </div>
 
-        {/* CTA */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -236,7 +242,7 @@ export function TestimonialsSection({ testimonials: data }: Props) {
             href="/testimonials"
             className="inline-flex items-center gap-2 text-[#C9A345] font-semibold text-sm hover:text-[#E8C97A] transition-colors"
           >
-            Read More Stories →
+            {t("ctaMore")}
           </Link>
         </motion.div>
       </div>

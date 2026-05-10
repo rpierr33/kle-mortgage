@@ -1,29 +1,30 @@
 "use client";
 
-import Link from "next/link";
 import { ArrowRight, Shield, Award, Users, ChevronDown, Star, CheckCircle2 } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-
-const stats = [
-  { value: "500+", label: "Families Served" },
-  { value: "$150M+", label: "Loans Funded" },
-  { value: "4.9/5", label: "Client Rating" },
-  { value: "15+", label: "Years Experience" },
-];
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 export function HeroSection() {
   const ref = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
   const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "18%"]);
   const textY = useTransform(scrollYProgress, [0, 1], ["0%", "8%"]);
+  const t = useTranslations("Hero");
+
+  const stats = [
+    { value: t("statFamiliesValue"), label: t("statFamiliesLabel") },
+    { value: t("statLoansValue"), label: t("statLoansLabel") },
+    { value: t("statRatingValue"), label: t("statRatingLabel") },
+    { value: t("statYearsValue"), label: t("statYearsLabel") },
+  ];
 
   return (
     <section
       ref={ref}
       className="relative min-h-screen flex items-center overflow-hidden"
     >
-      {/* Parallax background */}
       <motion.div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-110"
         style={{
@@ -32,14 +33,11 @@ export function HeroSection() {
         }}
       />
 
-      {/* Layered overlays for depth */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#0D0608]/95 via-[#1A1A1A]/75 to-[#6B1C23]/35" />
       <div className="absolute inset-0 bg-gradient-to-t from-[#0D0608]/60 via-transparent to-transparent" />
 
-      {/* Gold texture vignette — left column accent */}
       <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-transparent via-[#C9A345]/60 to-transparent" />
 
-      {/* Bottom fade to page */}
       <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-[#F8F6F3] to-transparent" />
 
       <motion.div
@@ -47,7 +45,6 @@ export function HeroSection() {
         className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28 pt-40"
       >
         <div className="max-w-3xl">
-          {/* NMLS badge */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
@@ -55,10 +52,9 @@ export function HeroSection() {
             className="inline-flex items-center gap-2.5 bg-white/8 backdrop-blur-md border border-white/15 text-white/90 text-xs font-medium px-4 py-2 rounded-full mb-8 tracking-wide"
           >
             <Shield className="w-3.5 h-3.5 text-[#C9A345]" />
-            Licensed Mortgage Broker — NMLS #2380070
+            {t("badge")}
           </motion.div>
 
-          {/* Gold accent line */}
           <motion.div
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
@@ -67,7 +63,6 @@ export function HeroSection() {
             className="w-12 h-0.5 bg-gradient-to-r from-[#C9A345] to-[#E8C97A] mb-6 rounded-full"
           />
 
-          {/* Headline — refined, not oversized */}
           <motion.h1
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
@@ -75,21 +70,19 @@ export function HeroSection() {
             className="font-[family-name:var(--font-cormorant)] font-medium text-white leading-[1.1] mb-8"
             style={{ fontSize: "clamp(2.5rem, 5vw, 4.5rem)" }}
           >
-            Mortgages Made Easy,{" "}
-            <span className="text-[#C9A345]">Dreams Made Real.</span>
+            {t("headlineLead")}{" "}
+            <span className="text-[#C9A345]">{t("headlineAccent")}</span>
           </motion.h1>
 
-          {/* Subheading */}
           <motion.p
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
             className="text-base sm:text-lg text-white/75 leading-relaxed mb-10 max-w-lg font-[family-name:var(--font-sans)]"
           >
-            Your path to homeownership starts here.
+            {t("subheadline")}
           </motion.p>
 
-          {/* CTAs */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
@@ -100,18 +93,17 @@ export function HeroSection() {
               href="/apply"
               className="group inline-flex items-center justify-center gap-2.5 bg-[#6B1C23] hover:bg-[#8A2530] text-white px-8 py-4 rounded-lg text-sm font-semibold transition-all duration-300 shadow-[0_0_40px_rgba(107,28,35,0.5)] hover:shadow-[0_0_60px_rgba(107,28,35,0.7)] hover:scale-[1.02]"
             >
-              Get Pre-Approved in Minutes
+              {t("ctaPrimary")}
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
             </Link>
             <Link
               href="/calculator"
               className="inline-flex items-center justify-center gap-2 bg-white/8 hover:bg-white/15 border border-white/20 hover:border-white/35 text-white px-8 py-4 rounded-lg text-sm font-semibold transition-all duration-300 backdrop-blur-sm"
             >
-              Calculate Payment
+              {t("ctaSecondary")}
             </Link>
           </motion.div>
 
-          {/* Social proof — one-liner below CTAs */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -124,13 +116,12 @@ export function HeroSection() {
               ))}
             </div>
             <span className="text-white/50 text-xs">
-              5/5 stars —{" "}
-              <span className="text-white/70 italic">&ldquo;KLE made buying our first home stress-free&rdquo;</span>
-              {" "}— Maria G.
+              {t("starsRating")}{" "}
+              <span className="text-white/70 italic">&ldquo;{t("testimonialQuote")}&rdquo;</span>{" "}
+              {t("testimonialAuthor")}
             </span>
           </motion.div>
 
-          {/* Trust badges — enhanced, more prominent */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -139,24 +130,23 @@ export function HeroSection() {
           >
             <div className="flex items-center gap-2 bg-white/8 border border-white/12 rounded-full px-3.5 py-1.5 text-white/70 text-xs font-medium">
               <Shield className="w-3.5 h-3.5 text-[#C9A345]" />
-              NMLS #2380070
+              {t("badgeNmls")}
             </div>
             <div className="flex items-center gap-2 bg-white/8 border border-white/12 rounded-full px-3.5 py-1.5 text-white/70 text-xs font-medium">
               <Award className="w-3.5 h-3.5 text-[#C9A345]" />
-              Equal Housing Lender
+              {t("badgeEqualHousing")}
             </div>
             <div className="flex items-center gap-2 bg-white/8 border border-white/12 rounded-full px-3.5 py-1.5 text-white/70 text-xs font-medium">
               <CheckCircle2 className="w-3.5 h-3.5 text-[#C9A345]" />
-              BBB Accredited
+              {t("badgeBbb")}
             </div>
             <div className="flex items-center gap-2 bg-white/8 border border-white/12 rounded-full px-3.5 py-1.5 text-white/70 text-xs font-medium">
               <Users className="w-3.5 h-3.5 text-[#C9A345]" />
-              Licensed in Florida
+              {t("badgeFlorida")}
             </div>
           </motion.div>
         </div>
 
-        {/* Stats bar */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -183,7 +173,6 @@ export function HeroSection() {
         </motion.div>
       </motion.div>
 
-      {/* Scroll hint */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

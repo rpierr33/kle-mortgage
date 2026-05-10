@@ -1,0 +1,397 @@
+{
+  "Nav": {
+    "loanPrograms": "Loan Programs",
+    "loanConventional": "Conventional Loans",
+    "loanFha": "FHA Loans",
+    "loanVa": "VA Loans",
+    "loanUsda": "USDA Loans",
+    "loanJumbo": "Jumbo Loans",
+    "loanRefinance": "Refinancing",
+    "loanFirstTime": "First-Time Buyer",
+    "calculator": "Calculator",
+    "about": "About",
+    "resources": "Resources",
+    "contact": "Contact",
+    "applyNow": "Apply Now",
+    "toggleNavigation": "Toggle menu"
+  },
+  "LanguageSwitcher": {
+    "label": "Language",
+    "en": "English",
+    "fr": "Français",
+    "ht": "Kreyòl"
+  },
+  "Footer": {
+    "tagline": "Helping families achieve the dream of homeownership with expert guidance and personalized mortgage solutions.",
+    "loanProgramsHeader": "Loan Programs",
+    "loanConventional": "Conventional Loans",
+    "loanFha": "FHA Loans",
+    "loanVa": "VA Loans",
+    "loanUsda": "USDA Loans",
+    "loanJumbo": "Jumbo Loans",
+    "loanRefinance": "Refinancing",
+    "loanFirstTime": "First-Time Buyer",
+    "companyHeader": "Company",
+    "linkAbout": "About Us",
+    "linkTeam": "Our Team",
+    "linkTestimonials": "Testimonials",
+    "linkResources": "Resources",
+    "linkFaq": "FAQ",
+    "linkContact": "Contact Us",
+    "linkApply": "Apply Now",
+    "contactHeader": "Contact Us",
+    "addressLine1": "909 N Miami Beach Blvd, Suite 301A",
+    "addressLine2": "North Miami Beach, FL 33162",
+    "startApplication": "Start Application",
+    "rightsReserved": "All rights reserved.",
+    "nmlsLabel": "NMLS #2380070",
+    "equalHousing": "Equal Housing Lender. Licensed in Florida. This is not a commitment to lend.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfUse": "Terms of Use",
+    "faq": "FAQ",
+    "sisterSiteLabel": "Buying or selling a home?",
+    "sisterSiteCta": "Visit Leo Realty"
+  },
+  "Common": {
+    "phone": "+1 (305) 705-2030",
+    "applyNow": "Apply Now",
+    "getStarted": "Get Started",
+    "learnMore": "Learn More"
+  },
+  "FloatingBar": {
+    "call": "Call",
+    "callAria": "Call KLE Mortgage",
+    "preApprove": "Pre-Approve",
+    "preApproveAria": "Get pre-approved",
+    "calculate": "Calculate",
+    "calculateAria": "Mortgage calculator"
+  },
+  "Metadata": {
+    "homeTitle": "KLE Mortgage Financing, LLC | Home Loans Made Simple",
+    "homeDescription": "Florida-licensed mortgage broker (NMLS #2380070) helping families with FHA, VA, USDA, Conventional, Jumbo, and Hometown Heroes loans. Get pre-approved in minutes.",
+    "aboutTitle": "About KLE Mortgage — Florida Licensed Broker (NMLS #2380070)",
+    "aboutDescription": "Meet the team at KLE Mortgage Financing, LLC. Independent Florida mortgage broker since 1992, dedicated to finding the right loan program for every family.",
+    "applyTitle": "Apply for a Mortgage — Pre-Approval in Minutes | KLE Mortgage",
+    "applyDescription": "Start your mortgage application with KLE Mortgage. Soft credit pull, no obligation. Get pre-approved for FHA, VA, USDA, Conventional, or Jumbo loans in Florida.",
+    "calculatorTitle": "Mortgage Calculator | KLE Mortgage",
+    "calculatorDescription": "Estimate your monthly mortgage payment, including principal and interest. Adjust price, down payment, rate, and term for FHA, VA, USDA, Conventional, or Jumbo loans.",
+    "contactTitle": "Contact KLE Mortgage — Florida Mortgage Broker",
+    "contactDescription": "Reach KLE Mortgage Financing in North Miami Beach, FL. Call (305) 705-2030 or email Info@klemortgage.com. Bilingual loan officers (English / French / Haitian Creole).",
+    "faqTitle": "Mortgage FAQ — KLE Mortgage",
+    "faqDescription": "Answers to the most common mortgage questions: credit score requirements, down payment minimums, FHA vs Conventional, Hometown Heroes eligibility, and pre-approval timelines.",
+    "loanProgramsTitle": "Loan Programs — FHA · VA · USDA · Conventional · Jumbo | KLE Mortgage",
+    "loanProgramsDescription": "Explore mortgage programs from KLE Mortgage Financing: FHA, VA, USDA, Conventional, Jumbo, Refinance, Hometown Heroes, First-Time Buyer. Florida-licensed (NMLS #2380070).",
+    "resourcesTitle": "Mortgage Resources & Guides | KLE Mortgage",
+    "resourcesDescription": "Educational guides on FHA loans, VA benefits, Hometown Heroes, refinancing, and the homebuying process — written by Florida-licensed mortgage professionals.",
+    "testimonialsTitle": "Client Testimonials — KLE Mortgage",
+    "testimonialsDescription": "Real stories from Florida families who closed on their homes with KLE Mortgage Financing. FHA, VA, USDA, conventional, and first-time buyer success stories.",
+    "privacyTitle": "Privacy Policy — KLE Mortgage",
+    "privacyDescription": "How KLE Mortgage Financing, LLC collects, uses, and protects personal information for mortgage applications and pre-qualifications.",
+    "termsTitle": "Terms of Use — KLE Mortgage",
+    "termsDescription": "Terms governing use of the KLE Mortgage Financing website. This site is not a commitment to lend; all loans subject to credit approval."
+  },
+  "LoanProgramsMeta": {
+    "conventional": {
+      "title": "Conventional Loans — 3% Down for Qualified Buyers | KLE Mortgage",
+      "description": "Conventional mortgages with as little as 3% down for first-time Florida homebuyers. Competitive rates, no upfront mortgage insurance for strong credit profiles."
+    },
+    "fha": {
+      "title": "FHA Loans in Florida — 3.5% Down, Credit From 580 | KLE Mortgage",
+      "description": "FHA loans for Florida homebuyers — 3.5% minimum down with credit scores from 580. Great for first-time buyers. KLE Mortgage NMLS #2380070."
+    },
+    "va": {
+      "title": "VA Loans Florida — 0% Down for Veterans | KLE Mortgage",
+      "description": "VA loans for veterans, active-duty, and eligible surviving spouses in Florida. 0% down, no PMI, competitive rates. Streamline IRRRL refinance available."
+    },
+    "usda": {
+      "title": "USDA Loans Florida — 100% Financing in Eligible Areas | KLE Mortgage",
+      "description": "USDA Rural Development loans for eligible Florida properties. 0% down, low MI, income limits apply. Useful in suburban Broward and Palm Beach areas."
+    },
+    "jumbo": {
+      "title": "Jumbo Loans Florida — Above $766,550 | KLE Mortgage",
+      "description": "Jumbo mortgages for Florida properties above the conforming limit. 10% down, competitive rates for strong credit profiles. Up to multi-million loan amounts."
+    },
+    "refinance": {
+      "title": "Mortgage Refinance Florida — Lower Your Rate or Cash Out | KLE Mortgage",
+      "description": "Refinance your Florida mortgage to lower your rate, shorten your term, or cash out equity. Rate-and-term, FHA Streamline, VA IRRRL, and cash-out options available."
+    },
+    "first-time-buyer": {
+      "title": "First-Time Homebuyer Loans Florida | KLE Mortgage",
+      "description": "First-time buyer programs in Florida — combine FHA, Conventional 3% down, Hometown Heroes, and Florida Bond assistance. Up to $35,000 in down payment help."
+    }
+  },
+  "Hero": {
+    "badge": "Licensed Mortgage Broker — NMLS #2380070",
+    "headlineLead": "Mortgages Made Easy,",
+    "headlineAccent": "Dreams Made Real.",
+    "subheadline": "Your path to homeownership starts here.",
+    "ctaPrimary": "Get Pre-Approved in Minutes",
+    "ctaSecondary": "Calculate Payment",
+    "starsRating": "5/5 stars —",
+    "testimonialQuote": "KLE made buying our first home stress-free",
+    "testimonialAuthor": "— Maria G.",
+    "badgeNmls": "NMLS #2380070",
+    "badgeEqualHousing": "Equal Housing Lender",
+    "badgeBbb": "BBB Accredited",
+    "badgeFlorida": "Licensed in Florida",
+    "statFamiliesValue": "500+",
+    "statFamiliesLabel": "Families Served",
+    "statLoansValue": "$150M+",
+    "statLoansLabel": "Loans Funded",
+    "statRatingValue": "4.9/5",
+    "statRatingLabel": "Client Rating",
+    "statYearsValue": "15+",
+    "statYearsLabel": "Years Experience"
+  },
+  "RateBanner": {
+    "rateText": "Today's rates starting at 6.25%*",
+    "rateContinuation": "Get your personalized rate in minutes.",
+    "ctaGetMyRate": "Get My Rate",
+    "disclaimer": "*Rate shown for illustrative purposes. Actual rate depends on credit, loan amount, and property. Subject to change without notice."
+  },
+  "LoanPrograms": {
+    "kicker": "Loan Programs",
+    "headlineLead": "Find the Right Loan",
+    "headlineAccent": "for You",
+    "intro": "A full suite of mortgage products to match your situation, goals, and timeline.",
+    "viewAll": "View All Programs",
+    "downSuffix": "down",
+    "ariaLearnAbout": "Learn about {name}",
+    "programs": {
+      "conventional": {
+        "name": "Conventional Loans",
+        "tagline": "Flexible financing for qualified buyers"
+      },
+      "fha": {
+        "name": "FHA Loans",
+        "tagline": "Low down payment, flexible requirements"
+      },
+      "va": {
+        "name": "VA Loans",
+        "tagline": "Earned benefit for those who served"
+      },
+      "usda": {
+        "name": "USDA Loans",
+        "tagline": "Rural homeownership made affordable"
+      },
+      "jumbo": {
+        "name": "Jumbo Loans",
+        "tagline": "Financing for higher-value properties"
+      },
+      "refinance": {
+        "name": "Refinancing",
+        "tagline": "Lower your rate or access equity"
+      },
+      "first-time-buyer": {
+        "name": "First-Time Buyer",
+        "tagline": "Guidance every step of the way"
+      }
+    }
+  },
+  "WhyKLE": {
+    "kicker": "Why KLE",
+    "headlineLead": "The KLE",
+    "headlineAccent": "Difference",
+    "intro": "We're not just a lender — we're your partner in one of the most important decisions of your life.",
+    "promiseKicker": "Our Promise",
+    "promiseHeadline": "We put your family first.",
+    "promiseBody": "At KLE Mortgage Financing, we believe homeownership changes lives. That's why we work tirelessly to find solutions that fit your budget, timeline, and goals.",
+    "promisePoint1": "No hidden fees or surprises at closing",
+    "promisePoint2": "Licensed in Florida",
+    "promisePoint3": "Equal Housing Lender — we serve everyone",
+    "promisePoint4": "Available weekends for your convenience",
+    "callCardLead": "Call us today",
+    "callCardHours": "Mon–Sat 8AM–7PM ET",
+    "benefit1Title": "Fast Pre-Approval",
+    "benefit1Body": "Get pre-approved in as little as 24 hours. We move quickly so you don't miss your dream home.",
+    "benefit2Title": "Personalized Service",
+    "benefit2Body": "A dedicated loan officer guides you from application to closing — no call centers, no runaround.",
+    "benefit3Title": "Competitive Rates",
+    "benefit3Body": "We shop multiple lenders to secure the best rate for your situation, saving you thousands.",
+    "benefit4Title": "Expert Guidance",
+    "benefit4Body": "15+ years of mortgage expertise. We explain every step in plain language so you always know where you stand.",
+    "ctaLearn": "Learn About Us",
+    "ctaContact": "Contact Us"
+  },
+  "Affordability": {
+    "kicker": "Affordability",
+    "headline": "How Much Can You Afford?",
+    "intro": "Enter your annual income and today's rate — get an instant picture of your home-buying power.",
+    "labelIncome": "Annual Household Income",
+    "labelRate": "Today's Rate",
+    "labelMaxPrice": "Max Home Price",
+    "maxPriceHint": "estimated maximum",
+    "labelDownPayment": "Down Payment (10%)",
+    "downPaymentHint": "recommended minimum",
+    "labelMonthly": "Est. Monthly Payment",
+    "monthlyHint": "principal & interest",
+    "disclaimer": "* Estimates based on 28% debt-to-income ratio, 10% down, 30-year fixed. Taxes, insurance, and HOA not included. For a precise quote, talk to a loan officer.",
+    "ctaApply": "Get Pre-Approved"
+  },
+  "Calculator": {
+    "kicker": "Payment Calculator",
+    "headline": "Estimate Your Payment",
+    "intro": "Adjust the sliders to see your estimated monthly payment instantly.",
+    "labelPurchase": "Purchase Price",
+    "labelDownPayment": "Down Payment",
+    "labelInterest": "Interest Rate",
+    "labelTerm": "Loan Term",
+    "termSuffix": "yr",
+    "resultHeader": "Estimated Monthly Payment",
+    "perMonth": "/mo",
+    "labelLoanAmount": "Loan Amount",
+    "labelTermShort": "Term",
+    "labelRateShort": "Rate",
+    "labelDownShort": "Down",
+    "yearsSuffix": "years",
+    "disclaimer": "* Estimate excludes property taxes, homeowners insurance, and PMI.",
+    "ctaApply": "Get Pre-Approved",
+    "ctaFull": "Full Calculator"
+  },
+  "Testimonials": {
+    "kicker": "Client Stories",
+    "headlineLead": "Real Families.",
+    "headlineAccent": "Real Results.",
+    "prevAria": "Previous testimonial",
+    "nextAria": "Next testimonial",
+    "dotAria": "Go to testimonial {num}",
+    "ctaMore": "Read More Stories →",
+    "loanTypeLabels": {
+      "conventional": "Conventional",
+      "fha": "FHA Loan",
+      "va": "VA Loan",
+      "usda": "USDA Loan",
+      "jumbo": "Jumbo Loan",
+      "refinance": "Refinance",
+      "first_time_buyer": "First-Time Buyer",
+      "other": "Home Loan"
+    },
+    "fallback": {
+      "1": "KLE made our first home purchase stress-free. Our loan officer explained everything clearly and we closed in 28 days. Highly recommend!",
+      "2": "As a veteran, I was grateful for the VA loan expertise at KLE. They knew exactly what I was entitled to and got me into my home with zero down.",
+      "3": "I refinanced my home through KLE and saved $420/month. The process was seamless and my loan officer was always available to answer my questions.",
+      "4": "We tried two other lenders before KLE — nobody could get our deal done. KLE found a program that worked perfectly for our situation.",
+      "5": "As a single mom, I never thought homeownership was possible. KLE helped me qualify for a first-time buyer program and the whole team celebrated with me at closing!",
+      "6": "We used USDA and got into our dream home in a great school district for 0% down. KLE walked us through every step. Cannot say enough good things."
+    }
+  },
+  "Team": {
+    "kicker": "Our Team",
+    "headlineLead": "Meet Your",
+    "headlineAccent": "Loan Officers",
+    "intro": "Experienced, licensed professionals dedicated to finding the right loan for your unique situation.",
+    "founderBadge": "Founder",
+    "ctaFullTeam": "Meet the Full Team →",
+    "members": {
+      "leopold-evariste": {
+        "title": "CEO & Founder",
+        "bio": "Founded Leo Realty Capital Investments in 1992. Brings 32+ years of South Florida market expertise to mortgage lending and investment financing.",
+        "specialty1": "Investment Properties",
+        "specialty2": "Commercial",
+        "specialty3": "Luxury"
+      },
+      "joanne-evariste": {
+        "title": "Office Manager",
+        "bio": "The backbone of operations, ensuring every mortgage transaction runs smoothly from application to clear-to-close.",
+        "specialty1": "Operations",
+        "specialty2": "Client Relations",
+        "specialty3": "Transaction Coordination"
+      },
+      "jean-samuel-luxama": {
+        "title": "Realtor & Loan Originator",
+        "bio": "Dual-licensed Realtor and Loan Originator providing seamless service from property search to closing.",
+        "specialty1": "FHA Loans",
+        "specialty2": "First-Time Buyers",
+        "specialty3": "Hometown Heroes"
+      },
+      "olivier-desire": {
+        "title": "Loan Originator",
+        "bio": "Specializes in investment property financing and complex mortgage scenarios including DSCR and USDA programs.",
+        "specialty1": "DSCR Loans",
+        "specialty2": "USDA Loans",
+        "specialty3": "Investment Properties"
+      },
+      "daniel-calixte": {
+        "title": "Loan Originator",
+        "bio": "Deep expertise in VA and FHA loan programs, dedicated to making mortgages stress-free for every client.",
+        "specialty1": "VA Loans",
+        "specialty2": "FHA Loans",
+        "specialty3": "Refinancing"
+      },
+      "carly-cadet": {
+        "title": "Realtor Associate",
+        "bio": "Energy and market knowledge for every client relationship, specializing in residential homes and condos.",
+        "specialty1": "Residential Homes",
+        "specialty2": "Condominiums",
+        "specialty3": "Rentals"
+      }
+    }
+  },
+  "CTA": {
+    "kicker": "Take the First Step",
+    "headlineLead": "Ready to Find Your",
+    "headlineAccent": "Perfect Loan?",
+    "intro": "Whether you're buying your first home, upgrading, or refinancing, our team is ready to guide you. Getting pre-approved takes less than 10 minutes.",
+    "ctaApply": "Apply Now — It's Free",
+    "ctaCall": "Call +1 (305) 705-2030",
+    "footnote": "No obligation. No credit pull required for pre-qualification."
+  },
+  "AboutHero": {
+    "kicker": "Our Story",
+    "headlineLead": "Built on Trust.",
+    "headlineAccent": "Driven by Purpose.",
+    "intro": "KLE Mortgage Financing was founded with one belief: every Florida family deserves a fair shot at homeownership. We bring expertise, transparency, and genuine care to every loan we close.",
+    "trustLicensedLabel": "Licensed & Regulated",
+    "trustLicensedSub": "NMLS #2380070",
+    "trustExperienceLabel": "15+ Years Experience",
+    "trustExperienceSub": "Expert team",
+    "trustFamiliesLabel": "500+ Families Served",
+    "trustFamiliesSub": "And counting",
+    "prevAria": "Previous team member",
+    "nextAria": "Next team member",
+    "viewAria": "View {name}",
+    "quotes": {
+      "leopold-evariste": "Every Florida family deserves a fair shot at homeownership. That's why I founded KLE — to make the mortgage process transparent and human.",
+      "joanne-evariste": "Behind every smooth closing is a team that cares about the details. I make sure no document, deadline, or borrower question falls through the cracks.",
+      "jean-samuel-luxama": "I walk with my clients from finding the home to securing the loan. One relationship, start to finish — same person from offer to closing.",
+      "olivier-desire": "Complex loans don't scare me. DSCR for investors, USDA for the right neighborhoods — I find the right path for borrowers others give up on.",
+      "daniel-calixte": "I believe in educating my clients. When you understand your VA or FHA options, you make better decisions and avoid costly mistakes.",
+      "carly-cadet": "Buying a first home should feel exciting, not stressful. I bring the energy and the market knowledge so my clients always know what's next."
+    }
+  },
+  "Mission": {
+    "kicker": "Our Mission",
+    "headlineLead": "Making Homeownership",
+    "headlineAccent": "Accessible to All",
+    "para1": "KLE Mortgage Financing was founded by Leopold Evariste with a vision to bridge the homeownership gap in underserved Florida communities. We saw families who had the income to afford a home but lacked the guidance to navigate FHA, VA, USDA, and conventional mortgage programs.",
+    "para2": "Today, we serve clients across Florida — from first-time buyers using the Hometown Heroes program to investors building portfolios with DSCR loans. Same white-glove service whether you're closing a $150,000 starter home or a $1.5M jumbo.",
+    "byTheNumbers": "By the Numbers",
+    "stat1Value": "500+",
+    "stat1Label": "Families Served",
+    "stat2Value": "$150M+",
+    "stat2Label": "Loans Funded",
+    "stat3Value": "15+",
+    "stat3Label": "Years Experience",
+    "stat4Value": "4.9",
+    "stat4Label": "Average Rating",
+    "stat5Value": "28",
+    "stat5Label": "Avg Days to Close",
+    "stat6Value": "FL",
+    "stat6Label": "Licensed State",
+    "valuesKicker": "What Drives Us",
+    "valuesHeadline": "Our Core Values",
+    "value1Title": "Family First",
+    "value1Body": "Every decision we make is guided by what's best for the families we serve. We're not just closing mortgages — we're helping people build long-term wealth through homeownership.",
+    "value2Title": "Transparency",
+    "value2Body": "No hidden fees. No mortgage jargon. We explain every rate, every disclosure, and every option so you can make informed decisions about a 30-year commitment.",
+    "value3Title": "Education",
+    "value3Body": "Informed borrowers make better decisions. Whether it's first-time-buyer programs or DSCR investment financing, we take the time to teach what each option really means.",
+    "complianceHeadline": "Licensing & Compliance",
+    "complianceNmlsLabel": "NMLS Company",
+    "complianceNmlsValue": "KLE Mortgage Financing, LLC — NMLS #2380070",
+    "complianceLicensedLabel": "Licensed In",
+    "complianceLicensedValue": "Florida (FL)",
+    "complianceEqualHousingLabel": "Equal Housing",
+    "complianceEqualHousingValue": "Equal Housing Lender. We comply with all fair lending laws."
+  }
+}

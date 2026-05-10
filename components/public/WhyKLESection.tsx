@@ -2,47 +2,33 @@
 
 import { motion } from "framer-motion";
 import { Clock, HeartHandshake, TrendingDown, BookOpen, CheckCircle2, Phone } from "lucide-react";
-import Link from "next/link";
-
-const benefits = [
-  {
-    icon: Clock,
-    title: "Fast Pre-Approval",
-    description: "Get pre-approved in as little as 24 hours. We move quickly so you don't miss your dream home.",
-  },
-  {
-    icon: HeartHandshake,
-    title: "Personalized Service",
-    description: "A dedicated loan officer guides you from application to closing — no call centers, no runaround.",
-  },
-  {
-    icon: TrendingDown,
-    title: "Competitive Rates",
-    description: "We shop multiple lenders to secure the best rate for your situation, saving you thousands.",
-  },
-  {
-    icon: BookOpen,
-    title: "Expert Guidance",
-    description: "15+ years of mortgage expertise. We explain every step in plain language so you always know where you stand.",
-  },
-];
-
-const checkpoints = [
-  "No hidden fees or surprises at closing",
-  "Licensed in Florida",
-  "Equal Housing Lender — we serve everyone",
-  "Available weekends for your convenience",
-];
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 export function WhyKLESection() {
+  const t = useTranslations("WhyKLE");
+  const tc = useTranslations("Common");
+
+  const benefits = [
+    { icon: Clock, title: t("benefit1Title"), description: t("benefit1Body") },
+    { icon: HeartHandshake, title: t("benefit2Title"), description: t("benefit2Body") },
+    { icon: TrendingDown, title: t("benefit3Title"), description: t("benefit3Body") },
+    { icon: BookOpen, title: t("benefit4Title"), description: t("benefit4Body") },
+  ];
+
+  const checkpoints = [
+    t("promisePoint1"),
+    t("promisePoint2"),
+    t("promisePoint3"),
+    t("promisePoint4"),
+  ];
+
   return (
     <section className="py-28 bg-white relative overflow-hidden">
-      {/* Subtle right-side warmth */}
       <div className="absolute right-0 top-0 w-1/3 h-full bg-gradient-to-l from-[#FDF9F5] to-transparent pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-          {/* Left: Visual card stack */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -50,12 +36,9 @@ export function WhyKLESection() {
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             className="relative pb-10 pr-10"
           >
-            {/* Main Promise card */}
             <div className="relative bg-gradient-to-br from-[#6B1C23] via-[#7A1E26] to-[#4A1218] rounded-3xl p-9 text-white overflow-hidden shadow-[0_24px_80px_rgba(107,28,35,0.35)]">
-              {/* Gold top-left accent */}
               <div className="absolute top-0 left-0 w-24 h-0.5 bg-gradient-to-r from-[#C9A345] to-transparent" />
 
-              {/* Decorative orbs */}
               <div className="absolute top-0 right-0 w-56 h-56 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-sm" />
               <div className="absolute bottom-0 left-0 w-40 h-40 bg-[#C9A345]/15 rounded-full translate-y-1/2 -translate-x-1/4 blur-md" />
 
@@ -63,16 +46,14 @@ export function WhyKLESection() {
                 <div className="flex items-center gap-2 mb-5">
                   <div className="w-5 h-0.5 bg-[#C9A345] rounded-full" />
                   <p className="text-[#C9A345] text-xs font-semibold uppercase tracking-[0.15em]">
-                    Our Promise
+                    {t("promiseKicker")}
                   </p>
                 </div>
                 <h3 className="font-[family-name:var(--font-cormorant)] text-4xl font-semibold italic leading-tight mb-4">
-                  We put your family first.
+                  {t("promiseHeadline")}
                 </h3>
                 <p className="text-white/70 text-sm leading-relaxed mb-7">
-                  At KLE Mortgage Financing, we believe homeownership changes
-                  lives. That&apos;s why we work tirelessly to find solutions that
-                  fit your budget, timeline, and goals.
+                  {t("promiseBody")}
                 </p>
                 <ul className="space-y-3">
                   {checkpoints.map((point) => (
@@ -85,7 +66,6 @@ export function WhyKLESection() {
               </div>
             </div>
 
-            {/* Floating call card */}
             <motion.div
               initial={{ opacity: 0, scale: 0.92 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -98,32 +78,30 @@ export function WhyKLESection() {
                   <Phone className="w-4 h-4 text-[#6B1C23]" />
                 </div>
                 <div>
-                  <p className="text-xs text-[#6B6056]">Call us today</p>
+                  <p className="text-xs text-[#6B6056]">{t("callCardLead")}</p>
                   <p className="text-sm font-bold text-[#1A1A1A] font-[family-name:var(--font-cormorant)]">
-                    +1 (305) 705-2030
+                    {tc("phone")}
                   </p>
                 </div>
               </div>
               <div className="mt-2 pt-2 border-t border-[#F0EBE3]">
-                <p className="text-xs text-[#6B6056]">Mon–Sat 8AM–7PM ET</p>
+                <p className="text-xs text-[#6B6056]">{t("callCardHours")}</p>
               </div>
             </motion.div>
           </motion.div>
 
-          {/* Right: Benefits */}
           <div>
             <div className="flex items-center gap-3 mb-4">
               <div className="w-8 h-0.5 bg-gradient-to-r from-[#C9A345] to-[#E8C97A] rounded-full" />
-              <span className="text-[#C9A345] text-xs font-semibold uppercase tracking-[0.15em]">Why KLE</span>
+              <span className="text-[#C9A345] text-xs font-semibold uppercase tracking-[0.15em]">{t("kicker")}</span>
             </div>
             <h2 className="font-[family-name:var(--font-cormorant)] text-4xl sm:text-5xl lg:text-[3.25rem] font-bold text-[#1A1A1A] leading-tight mb-5">
-              The KLE
+              {t("headlineLead")}
               <br />
-              <span className="text-[#6B1C23] italic">Difference</span>
+              <span className="text-[#6B1C23] italic">{t("headlineAccent")}</span>
             </h2>
             <p className="text-[#6B6056] text-base leading-relaxed mb-12 max-w-md">
-              We&apos;re not just a lender — we&apos;re your partner in one of the most
-              important decisions of your life.
+              {t("intro")}
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-7">
@@ -157,13 +135,13 @@ export function WhyKLESection() {
                 href="/about"
                 className="inline-flex items-center gap-2 bg-[#6B1C23] hover:bg-[#8A2530] text-white px-6 py-3 rounded-lg text-sm font-semibold transition-all duration-200 shadow-[0_2px_12px_rgba(107,28,35,0.3)] hover:shadow-[0_4px_20px_rgba(107,28,35,0.4)]"
               >
-                Learn About Us
+                {t("ctaLearn")}
               </Link>
               <Link
                 href="/contact"
                 className="inline-flex items-center gap-2 border border-[#6B1C23]/30 text-[#6B1C23] hover:border-[#6B1C23] hover:bg-[#F8F6F3] px-6 py-3 rounded-lg text-sm font-semibold transition-all duration-200"
               >
-                Contact Us
+                {t("ctaContact")}
               </Link>
             </div>
           </div>

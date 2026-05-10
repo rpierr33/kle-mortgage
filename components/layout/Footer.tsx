@@ -1,9 +1,32 @@
-import Link from "next/link";
 import Image from "next/image";
 import { Phone, Mail, MapPin } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
+  const t = useTranslations("Footer");
+  const tc = useTranslations("Common");
+
+  const loanLinks = [
+    { label: t("loanConventional"), href: "/loan-programs/conventional" },
+    { label: t("loanFha"), href: "/loan-programs/fha" },
+    { label: t("loanVa"), href: "/loan-programs/va" },
+    { label: t("loanUsda"), href: "/loan-programs/usda" },
+    { label: t("loanJumbo"), href: "/loan-programs/jumbo" },
+    { label: t("loanRefinance"), href: "/loan-programs/refinance" },
+    { label: t("loanFirstTime"), href: "/loan-programs/first-time-buyer" },
+  ];
+
+  const companyLinks = [
+    { label: t("linkAbout"), href: "/about" },
+    { label: t("linkTeam"), href: "/about#team" },
+    { label: t("linkTestimonials"), href: "/testimonials" },
+    { label: t("linkResources"), href: "/resources" },
+    { label: t("linkFaq"), href: "/faq" },
+    { label: t("linkContact"), href: "/contact" },
+    { label: t("linkApply"), href: "/apply" },
+  ];
 
   return (
     <footer className="bg-[#0D0608] text-white relative overflow-hidden">
@@ -38,8 +61,7 @@ export function Footer() {
             <div className="w-8 h-0.5 bg-gradient-to-r from-[#C9A345] to-[#E8C97A] rounded-full mb-4" />
 
             <p className="text-sm text-[#A89588] leading-relaxed mb-6">
-              Helping families achieve the dream of homeownership with expert
-              guidance and personalized mortgage solutions.
+              {t("tagline")}
             </p>
             <div className="flex gap-2.5">
               <a
@@ -64,19 +86,11 @@ export function Footer() {
             <div className="flex items-center gap-2 mb-5">
               <div className="w-3 h-0.5 bg-[#C9A345] rounded-full" />
               <h3 className="font-semibold text-white text-xs uppercase tracking-[0.12em]">
-                Loan Programs
+                {t("loanProgramsHeader")}
               </h3>
             </div>
             <ul className="space-y-2.5">
-              {[
-                { label: "Conventional Loans", href: "/loan-programs/conventional" },
-                { label: "FHA Loans", href: "/loan-programs/fha" },
-                { label: "VA Loans", href: "/loan-programs/va" },
-                { label: "USDA Loans", href: "/loan-programs/usda" },
-                { label: "Jumbo Loans", href: "/loan-programs/jumbo" },
-                { label: "Refinancing", href: "/loan-programs/refinance" },
-                { label: "First-Time Buyer", href: "/loan-programs/first-time-buyer" },
-              ].map((link) => (
+              {loanLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
@@ -94,19 +108,11 @@ export function Footer() {
             <div className="flex items-center gap-2 mb-5">
               <div className="w-3 h-0.5 bg-[#C9A345] rounded-full" />
               <h3 className="font-semibold text-white text-xs uppercase tracking-[0.12em]">
-                Company
+                {t("companyHeader")}
               </h3>
             </div>
             <ul className="space-y-2.5">
-              {[
-                { label: "About Us", href: "/about" },
-                { label: "Our Team", href: "/about#team" },
-                { label: "Testimonials", href: "/testimonials" },
-                { label: "Resources", href: "/resources" },
-                { label: "FAQ", href: "/faq" },
-                { label: "Contact Us", href: "/contact" },
-                { label: "Apply Now", href: "/apply" },
-              ].map((link) => (
+              {companyLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
@@ -124,7 +130,7 @@ export function Footer() {
             <div className="flex items-center gap-2 mb-5">
               <div className="w-3 h-0.5 bg-[#C9A345] rounded-full" />
               <h3 className="font-semibold text-white text-xs uppercase tracking-[0.12em]">
-                Contact Us
+                {t("contactHeader")}
               </h3>
             </div>
             <ul className="space-y-3.5">
@@ -134,7 +140,7 @@ export function Footer() {
                   className="flex items-center gap-2.5 text-sm text-[#A89588] hover:text-[#C9A345] transition-colors"
                 >
                   <Phone className="w-4 h-4 text-[#C9A345] flex-shrink-0" />
-                  +1 (305) 705-2030
+                  {tc("phone")}
                 </a>
               </li>
               <li>
@@ -150,9 +156,9 @@ export function Footer() {
                 <div className="flex items-start gap-2.5 text-sm text-[#A89588]">
                   <MapPin className="w-4 h-4 text-[#C9A345] flex-shrink-0 mt-0.5" />
                   <span className="leading-relaxed">
-                    909 N Miami Beach Blvd, Suite 301A
+                    {t("addressLine1")}
                     <br />
-                    North Miami Beach, FL 33162
+                    {t("addressLine2")}
                   </span>
                 </div>
               </li>
@@ -163,9 +169,26 @@ export function Footer() {
                 href="/apply"
                 className="inline-block bg-[#6B1C23] hover:bg-[#8A2530] text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 shadow-[0_2px_12px_rgba(107,28,35,0.4)]"
               >
-                Start Application
+                {t("startApplication")}
               </Link>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Sister site cross-link */}
+      <div className="relative border-t border-white/[0.06] bg-white/[0.02]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 text-sm">
+            <span className="text-[#A89588]">{t("sisterSiteLabel")}</span>
+            <a
+              href="https://leorealtycapitalinvestments.com"
+              target="_blank"
+              rel="noopener"
+              className="inline-flex items-center gap-2 text-[#C9A345] hover:text-[#E8C97A] font-semibold transition-colors"
+            >
+              {t("sisterSiteCta")} →
+            </a>
           </div>
         </div>
       </div>
@@ -176,21 +199,21 @@ export function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-[#6B6056]">
             <div className="text-center md:text-left">
               <p>
-                &copy; {currentYear} KLE Mortgage Financing, LLC. All rights reserved. NMLS #2380070
+                &copy; {currentYear} KLE Mortgage Financing, LLC. {t("rightsReserved")} {t("nmlsLabel")}
               </p>
               <p className="mt-1 text-[#504040]">
-                Equal Housing Lender. Licensed in Florida. This is not a commitment to lend.
+                {t("equalHousing")}
               </p>
             </div>
             <div className="flex items-center gap-5">
               <Link href="/privacy-policy" className="hover:text-[#A89588] transition-colors">
-                Privacy Policy
+                {t("privacyPolicy")}
               </Link>
               <Link href="/terms" className="hover:text-[#A89588] transition-colors">
-                Terms of Use
+                {t("termsOfUse")}
               </Link>
               <Link href="/faq" className="hover:text-[#A89588] transition-colors">
-                FAQ
+                {t("faq")}
               </Link>
             </div>
           </div>

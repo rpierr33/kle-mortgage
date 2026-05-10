@@ -1,35 +1,39 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
 import Image from "next/image";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils/cn";
 import { motion, AnimatePresence } from "framer-motion";
-
-const navLinks = [
-  {
-    label: "Loan Programs",
-    href: "/loan-programs",
-    children: [
-      { label: "Conventional Loans", href: "/loan-programs/conventional" },
-      { label: "FHA Loans", href: "/loan-programs/fha" },
-      { label: "VA Loans", href: "/loan-programs/va" },
-      { label: "USDA Loans", href: "/loan-programs/usda" },
-      { label: "Jumbo Loans", href: "/loan-programs/jumbo" },
-      { label: "Refinancing", href: "/loan-programs/refinance" },
-    ],
-  },
-  { label: "Calculator", href: "/calculator" },
-  { label: "About", href: "/about" },
-  { label: "Resources", href: "/resources" },
-  { label: "Contact", href: "/contact" },
-];
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const t = useTranslations("Nav");
+
+  const navLinks = [
+    {
+      label: t("loanPrograms"),
+      href: "/loan-programs",
+      key: "loanPrograms",
+      children: [
+        { label: t("loanConventional"), href: "/loan-programs/conventional" },
+        { label: t("loanFha"), href: "/loan-programs/fha" },
+        { label: t("loanVa"), href: "/loan-programs/va" },
+        { label: t("loanUsda"), href: "/loan-programs/usda" },
+        { label: t("loanJumbo"), href: "/loan-programs/jumbo" },
+        { label: t("loanRefinance"), href: "/loan-programs/refinance" },
+      ],
+    },
+    { label: t("calculator"), href: "/calculator", key: "calculator" },
+    { label: t("about"), href: "/about", key: "about" },
+    { label: t("resources"), href: "/resources", key: "resources" },
+    { label: t("contact"), href: "/contact", key: "contact" },
+  ];
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 30);
@@ -77,9 +81,9 @@ export function Navbar() {
           <div className="hidden lg:flex items-center gap-0.5">
             {navLinks.map((link) => (
               <div
-                key={link.label}
+                key={link.key}
                 className="relative"
-                onMouseEnter={() => link.children && setOpenDropdown(link.label)}
+                onMouseEnter={() => link.children && setOpenDropdown(link.key)}
                 onMouseLeave={() => setOpenDropdown(null)}
               >
                 <Link
@@ -96,14 +100,14 @@ export function Navbar() {
                     <ChevronDown
                       className={cn(
                         "w-3 h-3 transition-transform duration-200",
-                        openDropdown === link.label ? "rotate-180" : ""
+                        openDropdown === link.key ? "rotate-180" : ""
                       )}
                     />
                   )}
                 </Link>
 
                 <AnimatePresence>
-                  {link.children && openDropdown === link.label && (
+                  {link.children && openDropdown === link.key && (
                     <motion.div
                       initial={{ opacity: 0, y: 6, scale: 0.97 }}
                       animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -129,8 +133,8 @@ export function Navbar() {
             ))}
           </div>
 
-          {/* CTA + Phone */}
-          <div className="hidden lg:flex items-center gap-4">
+          {/* CTA + Phone + Lang */}
+          <div className="hidden lg:flex items-center gap-3">
             <a
               href="tel:+13057052030"
               className={cn(
@@ -141,11 +145,12 @@ export function Navbar() {
               <Phone className="w-3.5 h-3.5" />
               (305) 705-2030
             </a>
+            <LanguageSwitcher scrolled={scrolled} />
             <Link
               href="/apply"
               className="bg-[#6B1C23] hover:bg-[#8A2530] text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 shadow-[0_2px_12px_rgba(107,28,35,0.35)] hover:shadow-[0_4px_20px_rgba(107,28,35,0.45)] hover:scale-[1.02]"
             >
-              Apply Now
+              {t("applyNow")}
             </Link>
           </div>
 
@@ -158,7 +163,7 @@ export function Navbar() {
                 ? "text-[#1A1A1A] hover:bg-[#F0EBE3]"
                 : "text-white hover:bg-white/10"
             )}
-            aria-label="Toggle menu"
+            aria-label={t("toggleNavigation")}
           >
             <AnimatePresence mode="wait" initial={false}>
               {mobileOpen ? (
@@ -202,7 +207,7 @@ export function Navbar() {
             <div className="px-4 py-4 space-y-1">
               {navLinks.map((link, idx) => (
                 <motion.div
-                  key={link.label}
+                  key={link.key}
                   initial={{ opacity: 0, x: -16 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: idx * 0.05, duration: 0.2 }}
@@ -231,19 +236,22 @@ export function Navbar() {
                 </motion.div>
               ))}
               <div className="pt-3 pb-2 border-t border-[#E8E0D8] flex flex-col gap-2">
-                <a
-                  href="tel:+13057052030"
-                  className="flex items-center gap-2 px-3 py-2.5 text-sm font-medium text-[#6B1C23]"
-                >
-                  <Phone className="w-4 h-4" />
-                  +1 (305) 705-2030
-                </a>
+                <div className="flex items-center justify-between px-1">
+                  <a
+                    href="tel:+13057052030"
+                    className="flex items-center gap-2 px-3 py-2.5 text-sm font-medium text-[#6B1C23]"
+                  >
+                    <Phone className="w-4 h-4" />
+                    +1 (305) 705-2030
+                  </a>
+                  <LanguageSwitcher scrolled />
+                </div>
                 <Link
                   href="/apply"
                   onClick={() => setMobileOpen(false)}
                   className="bg-[#6B1C23] text-white px-5 py-3 rounded-lg text-sm font-semibold text-center shadow-[0_2px_12px_rgba(107,28,35,0.3)]"
                 >
-                  Apply Now
+                  {t("applyNow")}
                 </Link>
               </div>
             </div>

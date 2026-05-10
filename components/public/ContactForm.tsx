@@ -6,6 +6,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { CheckCircle2, Loader2 } from "lucide-react";
 import { toast } from "sonner";
+import { useLocale } from "next-intl";
+import { captureUtm, HONEYPOT_STYLE } from "@/lib/utm";
 
 const schema = z.object({
   firstName: z.string().min(2, "Required"),
@@ -15,12 +17,15 @@ const schema = z.object({
   interest: z.string().optional(),
   message: z.string().min(10, "Please provide more detail (at least 10 characters)"),
   smsConsent: z.boolean(),
+  // Honeypot — must remain empty
+  website: z.string().optional(),
 });
 
 type FormData = z.infer<typeof schema>;
 
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
+  const locale = useLocale() as "en" | "fr" | "ht";
   const {
     register,
     handleSubmit,
@@ -29,10 +34,17 @@ export function ContactForm() {
 
   const onSubmit = async (data: FormData) => {
     try {
+      const utm = captureUtm();
       const res = await fetch("/api/leads", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...data, sourceType: "contact_form", sourcePage: "/contact" }),
+        body: JSON.stringify({
+          ...data,
+          sourceType: "contact_form",
+          sourcePage: "/contact",
+          locale,
+          utm,
+        }),
       });
       if (!res.ok) {
         const err = await res.json().catch(() => ({}));
@@ -62,6 +74,15 @@ export function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="bg-white rounded-xl border border-[#E8E0D8] p-8">
+      {/* Honeypot — bots fill this, humans don't see it */}
+      <input
+        {...register("website")}
+        type="text"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        style={HONEYPOT_STYLE}
+      />
       <h2 className="text-2xl font-bold text-[#1A1A1A] mb-6 font-[family-name:var(--font-cormorant)]">
         Send Us a Message
       </h2>
