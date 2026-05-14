@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 import { HeroSection } from "@/components/public/HeroSection";
 import { LoanProgramsSection } from "@/components/public/LoanProgramsSection";
 import { WhyKLESection } from "@/components/public/WhyKLESection";
@@ -10,6 +12,21 @@ import { AffordabilityCalculator } from "@/components/home/AffordabilityCalculat
 import { db } from "@/lib/db";
 import { testimonials, loanOfficers, loanPrograms } from "@/lib/db/schema";
 import { eq, asc } from "drizzle-orm";
+import { siteMetadata } from "@/lib/seo";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "Metadata" });
+  return siteMetadata({
+    path: "/",
+    title: t("homeTitle"),
+    description: t("homeDescription"),
+  });
+}
 
 export default async function HomePage() {
   // Fetch data from DB — if DB is not configured, pass empty arrays.

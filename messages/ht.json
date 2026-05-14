@@ -88,7 +88,9 @@
     "privacyTitle": "Politik Konfidansyalite — KLE Mortgage",
     "privacyDescription": "Kijan KLE Mortgage Financing, LLC kolekte, itilize, ak pwoteje enfòmasyon pèsonèl pou aplikasyon ipotèk ak pre-kalifikasyon.",
     "termsTitle": "Kondisyon Itilizasyon — KLE Mortgage",
-    "termsDescription": "Kondisyon ki gouvène itilizasyon sit KLE Mortgage Financing. Sit sa a pa yon angajman pou prete; tout prè sijè a apwobasyon kredi."
+    "termsDescription": "Kondisyon ki gouvène itilizasyon sit KLE Mortgage Financing. Sit sa a pa yon angajman pou prete; tout prè sijè a apwobasyon kredi.",
+    "neighborhoodTitleTemplate": "Prè Ipotèk nan {name}, FL — FHA · VA · Hometown Heroes | KLE Mortgage",
+    "neighborhoodDescriptionTemplate": "Prè ipotèk FHA, VA, USDA, konvansyonèl, ak Hometown Heroes nan {name}, Florid. KLE Mortgage Financing, LLC — koutye ipotèk lisansye nan Florid (NMLS #2380070). Pre-apwobasyon nan kèk minit."
   },
   "LoanProgramsMeta": {
     "conventional": {

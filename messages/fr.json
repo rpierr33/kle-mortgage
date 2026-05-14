@@ -88,7 +88,9 @@
     "privacyTitle": "Politique de confidentialité — KLE Mortgage",
     "privacyDescription": "Comment KLE Mortgage Financing, LLC collecte, utilise et protège les informations personnelles pour les demandes hypothécaires et pré-qualifications.",
     "termsTitle": "Conditions d'utilisation — KLE Mortgage",
-    "termsDescription": "Conditions régissant l'utilisation du site KLE Mortgage Financing. Ce site n'est pas un engagement de prêt ; tous les prêts sont soumis à approbation de crédit."
+    "termsDescription": "Conditions régissant l'utilisation du site KLE Mortgage Financing. Ce site n'est pas un engagement de prêt ; tous les prêts sont soumis à approbation de crédit.",
+    "neighborhoodTitleTemplate": "Prêts hypothécaires à {name}, FL — FHA · VA · Hometown Heroes | KLE Mortgage",
+    "neighborhoodDescriptionTemplate": "Prêts hypothécaires FHA, VA, USDA, conventionnels et Hometown Heroes à {name}, Floride. KLE Mortgage Financing, LLC — courtier hypothécaire licencié en Floride (NMLS #2380070). Pré-approbation en quelques minutes."
   },
   "LoanProgramsMeta": {
     "conventional": {

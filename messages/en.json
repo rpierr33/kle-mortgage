@@ -88,7 +88,9 @@
     "privacyTitle": "Privacy Policy — KLE Mortgage",
     "privacyDescription": "How KLE Mortgage Financing, LLC collects, uses, and protects personal information for mortgage applications and pre-qualifications.",
     "termsTitle": "Terms of Use — KLE Mortgage",
-    "termsDescription": "Terms governing use of the KLE Mortgage Financing website. This site is not a commitment to lend; all loans subject to credit approval."
+    "termsDescription": "Terms governing use of the KLE Mortgage Financing website. This site is not a commitment to lend; all loans subject to credit approval.",
+    "neighborhoodTitleTemplate": "Mortgage Loans in {name}, FL — FHA · VA · Hometown Heroes | KLE Mortgage",
+    "neighborhoodDescriptionTemplate": "FHA, VA, USDA, Conventional, and Hometown Heroes mortgage loans in {name}, Florida. KLE Mortgage Financing, LLC — Florida-licensed mortgage broker (NMLS #2380070). Pre-approval in minutes."
   },
   "LoanProgramsMeta": {
     "conventional": {

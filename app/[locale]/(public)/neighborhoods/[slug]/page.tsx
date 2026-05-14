@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { getTranslations } from "next-intl/server";
 import { ArrowRight, MapPin, DollarSign, TrendingUp, Award } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { NEIGHBORHOODS, getNeighborhoodBySlug } from "@/lib/neighborhoods";
@@ -12,13 +13,14 @@ export function generateStaticParams() {
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params;
+  const { locale, slug } = await params;
   const n = getNeighborhoodBySlug(slug);
   if (!n) return { title: "Neighborhood Not Found" };
+  const t = await getTranslations({ locale, namespace: "Metadata" });
   return siteMetadata({
     path: `/neighborhoods/${n.slug}`,
-    title: `Mortgage Loans in ${n.name}, FL — FHA · VA · Hometown Heroes | KLE Mortgage`,
-    description: `${n.description.slice(0, 150).trim()}...`,
+    title: t("neighborhoodTitleTemplate", { name: n.name }),
+    description: t("neighborhoodDescriptionTemplate", { name: n.name }),
   });
 }
 
