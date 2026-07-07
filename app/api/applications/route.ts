@@ -11,6 +11,19 @@ const RATE_LIMIT_PER_EMAIL_WINDOW_SEC = 60;
 const RATE_LIMIT_GLOBAL_WINDOW_SEC = 60;
 const RATE_LIMIT_GLOBAL_MAX = 30;
 
+/**
+ * Coerce an optional numeric form field to a value Postgres `numeric` accepts.
+ * The form sends unfilled number inputs as "" (empty string); inserting "" into
+ * a numeric column throws (invalid input syntax) → the 500 that surfaced as
+ * "failed to submit application". Empty / blank / non-numeric → null.
+ */
+function numOrNull(v?: string | null): string | null {
+  if (v == null) return null;
+  const t = String(v).trim();
+  if (t === "" || Number.isNaN(Number(t))) return null;
+  return t;
+}
+
 const utmSchema = z
   .object({
     source: z.string().max(120).optional(),
@@ -144,8 +157,8 @@ export async function POST(req: NextRequest) {
         dateOfBirth: d.dateOfBirth,
         loanType: d.loanType,
         isRefinance: d.isRefinance ?? false,
-        purchasePrice: d.purchasePrice ?? null,
-        downPayment: d.downPayment ?? null,
+        purchasePrice: numOrNull(d.purchasePrice),
+        downPayment: numOrNull(d.downPayment),
         propertyAddress: d.propertyAddress,
         propertyCity: d.propertyCity,
         propertyState: d.propertyState,
@@ -155,9 +168,9 @@ export async function POST(req: NextRequest) {
         employmentStatus: d.employmentStatus ?? null,
         employerName: d.employerName,
         jobTitle: d.jobTitle,
-        yearsEmployed: d.yearsEmployed ?? null,
-        grossMonthlyIncome: d.grossMonthlyIncome ?? null,
-        otherIncome: d.otherIncome ?? null,
+        yearsEmployed: numOrNull(d.yearsEmployed),
+        grossMonthlyIncome: numOrNull(d.grossMonthlyIncome),
+        otherIncome: numOrNull(d.otherIncome),
         estimatedCreditScore: d.estimatedCreditScore,
         smsConsent: d.smsConsent ?? false,
         emailConsent: d.emailConsent ?? false,
