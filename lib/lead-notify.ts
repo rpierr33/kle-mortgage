@@ -3,7 +3,7 @@
 // MUST be invoked via `after()` from "next/server" — never awaited in the
 // response path. See feedback_serverless_no_await_side_effects.md.
 
-type Locale = "en" | "fr" | "ht";
+type Locale = "en" | "fr" | "ht" | "es";
 
 type LeadForEmail = {
   id: number;
@@ -126,6 +126,12 @@ const AUTORESPONDER_COPY: Record<Locale, { subject: string; greeting: (n: string
     greeting: (n) => `Bonjou ${n},`,
     body: "Mèsi paske w kontakte KLE Mortgage Financing, LLC. Yon ofisye prè lisansye pral reponn ou nan yon èdtan ouvrab. Si sa w bezwen an ijan, rele nou dirèkteman nan (305) 705-2030.",
     signoff: "— Ekip KLE Mortgage",
+  },
+  es: {
+    subject: "Recibimos su consulta — KLE Mortgage",
+    greeting: (n) => `Hola ${n}:`,
+    body: "Gracias por contactar a KLE Mortgage Financing, LLC. Un originador de préstamos con licencia le responderá dentro de una hora hábil. Si su necesidad es urgente, llámenos directamente al (305) 705-2030.",
+    signoff: "— El equipo de KLE Mortgage",
   },
 };
 

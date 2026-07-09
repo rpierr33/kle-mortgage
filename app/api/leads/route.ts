@@ -38,7 +38,7 @@ const insertSchema = z.object({
     .default("contact_form"),
   smsConsent: z.boolean().optional().default(false),
   emailConsent: z.boolean().optional().default(false),
-  locale: z.enum(["en", "fr", "ht"]).default("en"),
+  locale: z.enum(["en", "fr", "ht", "es"]).default("en"),
   utm: utmSchema.optional(),
   // Honeypot — real users never fill this; bots always do.
   website: z.string().max(500).optional(),

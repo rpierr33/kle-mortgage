@@ -76,7 +76,7 @@ export default function LanguageSwitcher({
                   : "text-[#1A1A1A] hover:text-[#6B1C23] hover:bg-[#F8F6F3]"
               )}
             >
-              {t(loc as "en" | "fr" | "ht")}
+              {t(loc as "en" | "fr" | "ht" | "es")}
             </button>
           ))}
         </div>

@@ -19,7 +19,8 @@
     "label": "Language",
     "en": "English",
     "fr": "Français",
-    "ht": "Kreyòl"
+    "ht": "Kreyòl",
+    "es": "Español"
   },
   "Footer": {
     "tagline": "Helping families achieve the dream of homeownership with expert guidance and personalized mortgage solutions.",
@@ -76,7 +77,7 @@
     "calculatorTitle": "Mortgage Calculator | KLE Mortgage",
     "calculatorDescription": "Estimate your monthly mortgage payment, including principal and interest. Adjust price, down payment, rate, and term for FHA, VA, USDA, Conventional, or Jumbo loans.",
     "contactTitle": "Contact KLE Mortgage — Florida Mortgage Broker",
-    "contactDescription": "Reach KLE Mortgage Financing in North Miami Beach, FL. Call (305) 705-2030 or email Info@klemortgage.com. Bilingual loan officers (English / French / Haitian Creole).",
+    "contactDescription": "Reach KLE Mortgage Financing in North Miami Beach, FL. Call (305) 705-2030 or email Info@klemortgage.com. Multilingual loan officers (English / Spanish / French / Haitian Creole).",
     "faqTitle": "Mortgage FAQ — KLE Mortgage",
     "faqDescription": "Answers to the most common mortgage questions: credit score requirements, down payment minimums, FHA vs Conventional, Hometown Heroes eligibility, and pre-approval timelines.",
     "loanProgramsTitle": "Loan Programs — FHA · VA · USDA · Conventional · Jumbo | KLE Mortgage",
@@ -287,7 +288,7 @@
     "members": {
       "leopold-evariste": {
         "title": "CEO & Founder",
-        "bio": "Founded Leo Realty Capital Investments in 1992. Brings 32+ years of South Florida market expertise to mortgage lending and investment financing.",
+        "bio": "Founded Leo Realty Capital Investments in 1992. Brings 36+ years of South Florida market expertise to mortgage lending and investment financing.",
         "specialty1": "Investment Properties",
         "specialty2": "Commercial",
         "specialty3": "Luxury"

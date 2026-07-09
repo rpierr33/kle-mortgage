@@ -53,7 +53,7 @@ type ConsentData = z.infer<typeof consentSchema>;
 
 export function ApplicationForm() {
   const t = useTranslations("Forms");
-  const locale = useLocale() as "en" | "fr" | "ht";
+  const locale = useLocale() as "en" | "fr" | "ht" | "es";
   const [currentStep, setCurrentStep] = useState(0);
   const [formData, setFormData] = useState<Partial<Step1Data & Step2Data & Step3Data & ConsentData>>({});
   const [submitted, setSubmitted] = useState(false);

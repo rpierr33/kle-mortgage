@@ -19,7 +19,8 @@
     "label": "Langue",
     "en": "English",
     "fr": "Français",
-    "ht": "Kreyòl"
+    "ht": "Kreyòl",
+    "es": "Español"
   },
   "Footer": {
     "tagline": "Nous aidons les familles à réaliser leur rêve de devenir propriétaires grâce à un accompagnement expert et des solutions hypothécaires personnalisées.",
@@ -76,7 +77,7 @@
     "calculatorTitle": "Calculatrice hypothécaire | KLE Mortgage",
     "calculatorDescription": "Estimez votre paiement hypothécaire mensuel, y compris capital et intérêts. Ajustez le prix, l'apport, le taux et la durée pour FHA, VA, USDA, conventionnel ou Jumbo.",
     "contactTitle": "Contacter KLE Mortgage — Courtier hypothécaire en Floride",
-    "contactDescription": "Joignez KLE Mortgage Financing à North Miami Beach, FL. Appelez (305) 705-2030 ou écrivez à Info@klemortgage.com. Agents bilingues (anglais / français / créole haïtien).",
+    "contactDescription": "Joignez KLE Mortgage Financing à North Miami Beach, FL. Appelez (305) 705-2030 ou écrivez à Info@klemortgage.com. Agents multilingues (anglais / espagnol / français / créole haïtien).",
     "faqTitle": "FAQ hypothécaire — KLE Mortgage",
     "faqDescription": "Réponses aux questions hypothécaires les plus courantes : exigences de crédit, apport minimum, FHA vs conventionnel, éligibilité Hometown Heroes, délais de pré-approbation.",
     "loanProgramsTitle": "Programmes de prêt — FHA · VA · USDA · Conventionnel · Jumbo | KLE Mortgage",
@@ -287,7 +288,7 @@
     "members": {
       "leopold-evariste": {
         "title": "PDG et fondateur",
-        "bio": "A fondé Leo Realty Capital Investments en 1992. Apporte plus de 32 ans d'expertise du marché de la Floride du Sud au prêt hypothécaire et au financement d'investissement.",
+        "bio": "A fondé Leo Realty Capital Investments en 1992. Apporte plus de 36 ans d'expertise du marché de la Floride du Sud au prêt hypothécaire et au financement d'investissement.",
         "specialty1": "Propriétés d'investissement",
         "specialty2": "Commercial",
         "specialty3": "Luxe"

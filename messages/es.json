@@ -1,0 +1,862 @@
+{
+  "Nav": {
+    "loanPrograms": "Programas de Préstamos",
+    "loanConventional": "Préstamos Convencionales",
+    "loanFha": "Préstamos FHA",
+    "loanVa": "Préstamos VA",
+    "loanUsda": "Préstamos USDA",
+    "loanJumbo": "Préstamos Jumbo",
+    "loanRefinance": "Refinanciamiento",
+    "loanFirstTime": "Comprador por Primera Vez",
+    "calculator": "Calculadora",
+    "about": "Nosotros",
+    "resources": "Recursos",
+    "contact": "Contacto",
+    "applyNow": "Solicite Ahora",
+    "toggleNavigation": "Abrir o cerrar menú"
+  },
+  "LanguageSwitcher": {
+    "label": "Idioma",
+    "en": "English",
+    "fr": "Français",
+    "ht": "Kreyòl",
+    "es": "Español"
+  },
+  "Footer": {
+    "tagline": "Ayudamos a las familias a lograr el sueño de la vivienda propia con orientación experta y soluciones hipotecarias personalizadas.",
+    "loanProgramsHeader": "Programas de Préstamos",
+    "loanConventional": "Préstamos Convencionales",
+    "loanFha": "Préstamos FHA",
+    "loanVa": "Préstamos VA",
+    "loanUsda": "Préstamos USDA",
+    "loanJumbo": "Préstamos Jumbo",
+    "loanRefinance": "Refinanciamiento",
+    "loanFirstTime": "Comprador por Primera Vez",
+    "companyHeader": "Empresa",
+    "linkAbout": "Sobre Nosotros",
+    "linkTeam": "Nuestro Equipo",
+    "linkTestimonials": "Testimonios",
+    "linkResources": "Recursos",
+    "linkFaq": "Preguntas Frecuentes",
+    "linkContact": "Contáctenos",
+    "linkApply": "Solicite Ahora",
+    "contactHeader": "Contáctenos",
+    "addressLine1": "909 N Miami Beach Blvd, Suite 301A",
+    "addressLine2": "North Miami Beach, FL 33162",
+    "startApplication": "Iniciar Solicitud",
+    "rightsReserved": "Todos los derechos reservados.",
+    "nmlsLabel": "NMLS #2380070",
+    "equalHousing": "Prestamista de Igualdad de Oportunidades de Vivienda. Con licencia en Florida. Esto no es un compromiso de préstamo.",
+    "privacyPolicy": "Política de Privacidad",
+    "termsOfUse": "Términos de Uso",
+    "faq": "Preguntas Frecuentes",
+    "sisterSiteLabel": "¿Está comprando o vendiendo una vivienda?",
+    "sisterSiteCta": "Visite Leo Realty"
+  },
+  "Common": {
+    "phone": "+1 (305) 705-2030",
+    "applyNow": "Solicite Ahora",
+    "getStarted": "Comenzar",
+    "learnMore": "Más Información"
+  },
+  "FloatingBar": {
+    "call": "Llamar",
+    "callAria": "Llamar a KLE Mortgage",
+    "preApprove": "Pre-Aprobación",
+    "preApproveAria": "Obtenga su pre-aprobación",
+    "calculate": "Calcular",
+    "calculateAria": "Calculadora hipotecaria"
+  },
+  "Metadata": {
+    "homeTitle": "KLE Mortgage Financing, LLC | Préstamos Hipotecarios Sin Complicaciones",
+    "homeDescription": "Corredor hipotecario con licencia de Florida (NMLS #2380070) que ayuda a las familias con préstamos FHA, VA, USDA, Convencionales, Jumbo y Hometown Heroes. Obtenga su pre-aprobación en minutos.",
+    "aboutTitle": "Sobre KLE Mortgage — Corredor con Licencia de Florida (NMLS #2380070)",
+    "aboutDescription": "Conozca al equipo de KLE Mortgage Financing, LLC. Corredor hipotecario independiente de Florida desde 1992, dedicado a encontrar el programa de préstamo adecuado para cada familia.",
+    "applyTitle": "Solicite una Hipoteca — Pre-Aprobación en Minutos | KLE Mortgage",
+    "applyDescription": "Comience su solicitud hipotecaria con KLE Mortgage. Consulta de crédito suave, sin compromiso. Obtenga su pre-aprobación para préstamos FHA, VA, USDA, Convencionales o Jumbo en Florida.",
+    "calculatorTitle": "Calculadora Hipotecaria | KLE Mortgage",
+    "calculatorDescription": "Estime su pago hipotecario mensual, incluidos capital e intereses. Ajuste el precio, el pago inicial, la tasa y el plazo para préstamos FHA, VA, USDA, Convencionales o Jumbo.",
+    "contactTitle": "Contacte a KLE Mortgage — Corredor Hipotecario de Florida",
+    "contactDescription": "Comuníquese con KLE Mortgage Financing en North Miami Beach, FL. Llame al (305) 705-2030 o escriba a Info@klemortgage.com. Oficiales de préstamos multilingües (inglés / español / francés / criollo haitiano).",
+    "faqTitle": "Preguntas Frecuentes sobre Hipotecas — KLE Mortgage",
+    "faqDescription": "Respuestas a las preguntas hipotecarias más comunes: requisitos de puntaje de crédito, mínimos de pago inicial, FHA vs Convencional, elegibilidad para Hometown Heroes y plazos de pre-aprobación.",
+    "loanProgramsTitle": "Programas de Préstamos — FHA · VA · USDA · Convencional · Jumbo | KLE Mortgage",
+    "loanProgramsDescription": "Explore los programas hipotecarios de KLE Mortgage Financing: FHA, VA, USDA, Convencional, Jumbo, Refinanciamiento, Hometown Heroes, Comprador por Primera Vez. Con licencia de Florida (NMLS #2380070).",
+    "resourcesTitle": "Recursos y Guías Hipotecarias | KLE Mortgage",
+    "resourcesDescription": "Guías educativas sobre préstamos FHA, beneficios VA, Hometown Heroes, refinanciamiento y el proceso de compra de vivienda — escritas por profesionales hipotecarios con licencia de Florida.",
+    "testimonialsTitle": "Testimonios de Clientes — KLE Mortgage",
+    "testimonialsDescription": "Historias reales de familias de Florida que cerraron la compra de su vivienda con KLE Mortgage Financing. Historias de éxito con FHA, VA, USDA, préstamos convencionales y compradores por primera vez.",
+    "privacyTitle": "Política de Privacidad — KLE Mortgage",
+    "privacyDescription": "Cómo KLE Mortgage Financing, LLC recopila, usa y protege la información personal para solicitudes hipotecarias y pre-calificaciones.",
+    "termsTitle": "Términos de Uso — KLE Mortgage",
+    "termsDescription": "Términos que rigen el uso del sitio web de KLE Mortgage Financing. Este sitio no es un compromiso de préstamo; todos los préstamos están sujetos a aprobación de crédito.",
+    "neighborhoodTitleTemplate": "Préstamos Hipotecarios en {name}, FL — FHA · VA · Hometown Heroes | KLE Mortgage",
+    "neighborhoodDescriptionTemplate": "Préstamos hipotecarios FHA, VA, USDA, Convencionales y Hometown Heroes en {name}, Florida. KLE Mortgage Financing, LLC — corredor hipotecario con licencia de Florida (NMLS #2380070). Pre-aprobación en minutos."
+  },
+  "LoanProgramsMeta": {
+    "conventional": {
+      "title": "Préstamos Convencionales — 3% de Pago Inicial para Compradores Calificados | KLE Mortgage",
+      "description": "Hipotecas convencionales con tan solo 3% de pago inicial para compradores de vivienda por primera vez en Florida. Tasas competitivas, sin seguro hipotecario inicial para perfiles de crédito sólidos."
+    },
+    "fha": {
+      "title": "Préstamos FHA en Florida — 3.5% de Pago Inicial, Crédito Desde 580 | KLE Mortgage",
+      "description": "Préstamos FHA para compradores de vivienda en Florida — 3.5% de pago inicial mínimo con puntajes de crédito desde 580. Ideal para compradores por primera vez. KLE Mortgage NMLS #2380070."
+    },
+    "va": {
+      "title": "Préstamos VA en Florida — 0% de Pago Inicial para Veteranos | KLE Mortgage",
+      "description": "Préstamos VA para veteranos, militares en servicio activo y cónyuges sobrevivientes elegibles en Florida. 0% de pago inicial, sin PMI, tasas competitivas. Refinanciamiento Streamline IRRRL disponible."
+    },
+    "usda": {
+      "title": "Préstamos USDA en Florida — 100% de Financiamiento en Áreas Elegibles | KLE Mortgage",
+      "description": "Préstamos USDA de Desarrollo Rural para propiedades elegibles en Florida. 0% de pago inicial, seguro hipotecario bajo, aplican límites de ingresos. Útil en zonas suburbanas de Broward y Palm Beach."
+    },
+    "jumbo": {
+      "title": "Préstamos Jumbo en Florida — Montos Superiores a $766,550 | KLE Mortgage",
+      "description": "Hipotecas Jumbo para propiedades de Florida por encima del límite conforme. 10% de pago inicial, tasas competitivas para perfiles de crédito sólidos. Montos de préstamo de hasta varios millones."
+    },
+    "refinance": {
+      "title": "Refinanciamiento Hipotecario en Florida — Baje su Tasa o Retire Efectivo | KLE Mortgage",
+      "description": "Refinancie su hipoteca de Florida para bajar su tasa, acortar su plazo o retirar efectivo de su valor líquido. Opciones de tasa y plazo, FHA Streamline, VA IRRRL y retiro de efectivo disponibles."
+    },
+    "first-time-buyer": {
+      "title": "Préstamos para Compradores de Vivienda por Primera Vez en Florida | KLE Mortgage",
+      "description": "Programas para compradores por primera vez en Florida — combine FHA, Convencional con 3% de pago inicial, Hometown Heroes y la asistencia Florida Bond. Hasta $35,000 de ayuda para el pago inicial."
+    }
+  },
+  "Hero": {
+    "badge": "Corredor Hipotecario con Licencia — NMLS #2380070",
+    "headlineLead": "Hipotecas Sin Complicaciones,",
+    "headlineAccent": "Sueños Hechos Realidad.",
+    "subheadline": "Su camino hacia la vivienda propia comienza aquí.",
+    "ctaPrimary": "Obtenga su Pre-Aprobación en Minutos",
+    "ctaSecondary": "Calcular Pago",
+    "starsRating": "5/5 estrellas —",
+    "testimonialQuote": "KLE hizo que la compra de nuestra primera casa fuera libre de estrés",
+    "testimonialAuthor": "— Maria G.",
+    "badgeNmls": "NMLS #2380070",
+    "badgeEqualHousing": "Prestamista de Igualdad de Oportunidades de Vivienda",
+    "badgeBbb": "Acreditado por BBB",
+    "badgeFlorida": "Con Licencia en Florida",
+    "statFamiliesValue": "500+",
+    "statFamiliesLabel": "Familias Atendidas",
+    "statLoansValue": "$150M+",
+    "statLoansLabel": "Préstamos Financiados",
+    "statRatingValue": "4.9/5",
+    "statRatingLabel": "Calificación de Clientes",
+    "statYearsValue": "15+",
+    "statYearsLabel": "Años de Experiencia"
+  },
+  "RateBanner": {
+    "rateText": "Tasas de hoy desde 6.25%*",
+    "rateContinuation": "Obtenga su tasa personalizada en minutos.",
+    "ctaGetMyRate": "Obtener Mi Tasa",
+    "disclaimer": "*Tasa mostrada con fines ilustrativos. La tasa real depende del crédito, el monto del préstamo y la propiedad. Sujeta a cambios sin previo aviso."
+  },
+  "LoanPrograms": {
+    "kicker": "Programas de Préstamos",
+    "headlineLead": "Encuentre el Préstamo Adecuado",
+    "headlineAccent": "para Usted",
+    "intro": "Una gama completa de productos hipotecarios para adaptarse a su situación, sus metas y sus plazos.",
+    "viewAll": "Ver Todos los Programas",
+    "downSuffix": "de pago inicial",
+    "ariaLearnAbout": "Más información sobre {name}",
+    "programs": {
+      "conventional": {
+        "name": "Préstamos Convencionales",
+        "tagline": "Financiamiento flexible para compradores calificados"
+      },
+      "fha": {
+        "name": "Préstamos FHA",
+        "tagline": "Pago inicial bajo, requisitos flexibles"
+      },
+      "va": {
+        "name": "Préstamos VA",
+        "tagline": "Un beneficio ganado por quienes sirvieron"
+      },
+      "usda": {
+        "name": "Préstamos USDA",
+        "tagline": "Vivienda propia asequible en zonas rurales"
+      },
+      "jumbo": {
+        "name": "Préstamos Jumbo",
+        "tagline": "Financiamiento para propiedades de mayor valor"
+      },
+      "refinance": {
+        "name": "Refinanciamiento",
+        "tagline": "Baje su tasa o acceda a su valor líquido"
+      },
+      "first-time-buyer": {
+        "name": "Comprador por Primera Vez",
+        "tagline": "Orientación en cada paso del camino"
+      }
+    }
+  },
+  "WhyKLE": {
+    "kicker": "Por Qué KLE",
+    "headlineLead": "La Diferencia",
+    "headlineAccent": "KLE",
+    "intro": "No somos solo un prestamista — somos su aliado en una de las decisiones más importantes de su vida.",
+    "promiseKicker": "Nuestra Promesa",
+    "promiseHeadline": "Ponemos a su familia primero.",
+    "promiseBody": "En KLE Mortgage Financing, creemos que la vivienda propia cambia vidas. Por eso trabajamos incansablemente para encontrar soluciones que se ajusten a su presupuesto, sus plazos y sus metas.",
+    "promisePoint1": "Sin cargos ocultos ni sorpresas al cierre",
+    "promisePoint2": "Con licencia en Florida",
+    "promisePoint3": "Prestamista de Igualdad de Oportunidades de Vivienda — servimos a todos",
+    "promisePoint4": "Disponibles los fines de semana para su conveniencia",
+    "callCardLead": "Llámenos hoy",
+    "callCardHours": "Lun–Sáb 8AM–7PM ET",
+    "benefit1Title": "Pre-Aprobación Rápida",
+    "benefit1Body": "Obtenga su pre-aprobación en tan solo 24 horas. Actuamos con rapidez para que no pierda la casa de sus sueños.",
+    "benefit2Title": "Servicio Personalizado",
+    "benefit2Body": "Un oficial de préstamos dedicado lo guía desde la solicitud hasta el cierre — sin centros de llamadas ni vueltas innecesarias.",
+    "benefit3Title": "Tasas Competitivas",
+    "benefit3Body": "Comparamos múltiples prestamistas para asegurar la mejor tasa para su situación, ahorrándole miles de dólares.",
+    "benefit4Title": "Orientación Experta",
+    "benefit4Body": "Más de 15 años de experiencia hipotecaria. Le explicamos cada paso en lenguaje sencillo para que siempre sepa en qué punto se encuentra.",
+    "ctaLearn": "Conózcanos",
+    "ctaContact": "Contáctenos"
+  },
+  "Affordability": {
+    "kicker": "Capacidad de Compra",
+    "headline": "¿Cuánto Puede Pagar?",
+    "intro": "Ingrese su ingreso anual y la tasa de hoy — obtenga al instante una imagen de su poder de compra de vivienda.",
+    "labelIncome": "Ingreso Anual del Hogar",
+    "labelRate": "Tasa de Hoy",
+    "labelMaxPrice": "Precio Máximo de Vivienda",
+    "maxPriceHint": "máximo estimado",
+    "labelDownPayment": "Pago Inicial (10%)",
+    "downPaymentHint": "mínimo recomendado",
+    "labelMonthly": "Pago Mensual Est.",
+    "monthlyHint": "capital e intereses",
+    "disclaimer": "* Estimaciones basadas en una relación deuda-ingreso del 28%, 10% de pago inicial y tasa fija a 30 años. No incluye impuestos, seguro ni HOA. Para una cotización precisa, hable con un oficial de préstamos.",
+    "ctaApply": "Obtenga su Pre-Aprobación"
+  },
+  "Calculator": {
+    "kicker": "Calculadora de Pagos",
+    "headline": "Estime su Pago",
+    "intro": "Ajuste los controles y vea su pago mensual estimado al instante.",
+    "labelPurchase": "Precio de Compra",
+    "labelDownPayment": "Pago Inicial",
+    "labelInterest": "Tasa de Interés",
+    "labelTerm": "Plazo del Préstamo",
+    "termSuffix": "años",
+    "resultHeader": "Pago Mensual Estimado",
+    "perMonth": "/mes",
+    "labelLoanAmount": "Monto del Préstamo",
+    "labelTermShort": "Plazo",
+    "labelRateShort": "Tasa",
+    "labelDownShort": "Inicial",
+    "yearsSuffix": "años",
+    "disclaimer": "* La estimación no incluye impuestos sobre la propiedad, seguro de vivienda ni PMI.",
+    "ctaApply": "Obtenga su Pre-Aprobación",
+    "ctaFull": "Calculadora Completa"
+  },
+  "Testimonials": {
+    "kicker": "Historias de Clientes",
+    "headlineLead": "Familias Reales.",
+    "headlineAccent": "Resultados Reales.",
+    "prevAria": "Testimonio anterior",
+    "nextAria": "Siguiente testimonio",
+    "dotAria": "Ir al testimonio {num}",
+    "ctaMore": "Lea Más Historias →",
+    "loanTypeLabels": {
+      "conventional": "Convencional",
+      "fha": "Préstamo FHA",
+      "va": "Préstamo VA",
+      "usda": "Préstamo USDA",
+      "jumbo": "Préstamo Jumbo",
+      "refinance": "Refinanciamiento",
+      "first_time_buyer": "Comprador por Primera Vez",
+      "other": "Préstamo Hipotecario"
+    },
+    "fallback": {
+      "1": "KLE hizo que la compra de nuestra primera casa fuera libre de estrés. Nuestro oficial de préstamos nos explicó todo con claridad y cerramos en 28 días. ¡Muy recomendados!",
+      "2": "Como veterano, agradecí la experiencia en préstamos VA de KLE. Sabían exactamente a qué beneficios tenía derecho y me ayudaron a comprar mi casa sin pago inicial.",
+      "3": "Refinancié mi casa con KLE y ahorro $420 al mes. El proceso fue impecable y mi oficial de préstamos siempre estuvo disponible para responder mis preguntas.",
+      "4": "Probamos con otros dos prestamistas antes de KLE — nadie podía concretar nuestra operación. KLE encontró un programa que funcionó perfectamente para nuestra situación.",
+      "5": "Como madre soltera, nunca pensé que la casa propia fuera posible. KLE me ayudó a calificar para un programa de comprador por primera vez ¡y todo el equipo celebró conmigo el día del cierre!",
+      "6": "Usamos USDA y compramos la casa de nuestros sueños en un excelente distrito escolar con 0% de pago inicial. KLE nos acompañó en cada paso. No tenemos más que palabras de agradecimiento."
+    }
+  },
+  "Team": {
+    "kicker": "Nuestro Equipo",
+    "headlineLead": "Conozca a sus",
+    "headlineAccent": "Oficiales de Préstamos",
+    "intro": "Profesionales con licencia y experiencia, dedicados a encontrar el préstamo adecuado para su situación única.",
+    "founderBadge": "Fundador",
+    "ctaFullTeam": "Conozca al Equipo Completo →",
+    "members": {
+      "leopold-evariste": {
+        "title": "CEO y Fundador",
+        "bio": "Fundó Leo Realty Capital Investments en 1992. Aporta más de 36 años de experiencia en el mercado del sur de Florida al financiamiento hipotecario y de inversión.",
+        "specialty1": "Propiedades de Inversión",
+        "specialty2": "Comercial",
+        "specialty3": "Lujo"
+      },
+      "joanne-evariste": {
+        "title": "Gerente de Oficina",
+        "bio": "El pilar de las operaciones, asegurando que cada transacción hipotecaria avance sin contratiempos desde la solicitud hasta la autorización de cierre.",
+        "specialty1": "Operaciones",
+        "specialty2": "Relaciones con Clientes",
+        "specialty3": "Coordinación de Transacciones"
+      },
+      "jean-samuel-luxama": {
+        "title": "Realtor y Originador de Préstamos",
+        "bio": "Realtor y Originador de Préstamos con doble licencia, que brinda un servicio integral desde la búsqueda de la propiedad hasta el cierre.",
+        "specialty1": "Préstamos FHA",
+        "specialty2": "Compradores por Primera Vez",
+        "specialty3": "Hometown Heroes"
+      },
+      "olivier-desire": {
+        "title": "Originador de Préstamos",
+        "bio": "Se especializa en financiamiento de propiedades de inversión y escenarios hipotecarios complejos, incluidos los programas DSCR y USDA.",
+        "specialty1": "Préstamos DSCR",
+        "specialty2": "Préstamos USDA",
+        "specialty3": "Propiedades de Inversión"
+      },
+      "daniel-calixte": {
+        "title": "Originador de Préstamos",
+        "bio": "Amplia experiencia en los programas de préstamos VA y FHA, dedicado a hacer que las hipotecas sean libres de estrés para cada cliente.",
+        "specialty1": "Préstamos VA",
+        "specialty2": "Préstamos FHA",
+        "specialty3": "Refinanciamiento"
+      },
+      "carly-cadet": {
+        "title": "Realtor Asociada",
+        "bio": "Energía y conocimiento del mercado en cada relación con el cliente, especializada en viviendas residenciales y condominios.",
+        "specialty1": "Viviendas Residenciales",
+        "specialty2": "Condominios",
+        "specialty3": "Alquileres"
+      }
+    }
+  },
+  "CTA": {
+    "kicker": "Dé el Primer Paso",
+    "headlineLead": "¿Listo para Encontrar su",
+    "headlineAccent": "Préstamo Ideal?",
+    "intro": "Ya sea que esté comprando su primera casa, mudándose a una mejor o refinanciando, nuestro equipo está listo para guiarlo. Obtener la pre-aprobación toma menos de 10 minutos.",
+    "ctaApply": "Solicite Ahora — Es Gratis",
+    "ctaCall": "Llame al +1 (305) 705-2030",
+    "footnote": "Sin compromiso. No se requiere consulta de crédito para la pre-calificación."
+  },
+  "AboutHero": {
+    "kicker": "Nuestra Historia",
+    "headlineLead": "Construidos sobre la Confianza.",
+    "headlineAccent": "Impulsados por un Propósito.",
+    "intro": "KLE Mortgage Financing fue fundada con una convicción: cada familia de Florida merece una oportunidad justa de tener casa propia. Aportamos experiencia, transparencia y un cuidado genuino a cada préstamo que cerramos.",
+    "trustLicensedLabel": "Con Licencia y Regulados",
+    "trustLicensedSub": "NMLS #2380070",
+    "trustExperienceLabel": "Más de 15 Años de Experiencia",
+    "trustExperienceSub": "Equipo experto",
+    "trustFamiliesLabel": "Más de 500 Familias Atendidas",
+    "trustFamiliesSub": "Y contando",
+    "prevAria": "Miembro anterior del equipo",
+    "nextAria": "Siguiente miembro del equipo",
+    "viewAria": "Ver a {name}",
+    "quotes": {
+      "leopold-evariste": "Cada familia de Florida merece una oportunidad justa de tener casa propia. Por eso fundé KLE — para hacer el proceso hipotecario transparente y humano.",
+      "joanne-evariste": "Detrás de cada cierre sin contratiempos hay un equipo que cuida los detalles. Me aseguro de que ningún documento, plazo o pregunta del cliente quede sin atender.",
+      "jean-samuel-luxama": "Acompaño a mis clientes desde encontrar la casa hasta asegurar el préstamo. Una sola relación, de principio a fin — la misma persona desde la oferta hasta el cierre.",
+      "olivier-desire": "Los préstamos complejos no me asustan. DSCR para inversionistas, USDA para los vecindarios adecuados — encuentro el camino correcto para los prestatarios que otros abandonan.",
+      "daniel-calixte": "Creo en educar a mis clientes. Cuando usted entiende sus opciones VA o FHA, toma mejores decisiones y evita errores costosos.",
+      "carly-cadet": "Comprar la primera casa debería ser emocionante, no estresante. Aporto la energía y el conocimiento del mercado para que mis clientes siempre sepan qué sigue."
+    }
+  },
+  "LoanProgramsIndex": {
+    "kicker": "Nuestros Programas",
+    "headlineLead": "Programas de",
+    "headlineAccent": "Préstamos",
+    "intro": "Sea cual sea su situación, KLE Mortgage tiene un programa de préstamo con licencia de Florida diseñado para usted. Compare FHA, VA, USDA, Convencional, Jumbo, Hometown Heroes y programas especializados, uno al lado del otro.",
+    "minDownLabel": "Pago Inicial Mín.",
+    "minCreditLabel": "Crédito Mín.",
+    "ctaViewDetails": "Ver Detalles",
+    "programs": {
+      "conventional": {
+        "name": "Préstamos Convencionales",
+        "tagline": "El tipo de préstamo más popular para compradores calificados",
+        "description": "Las hipotecas convencionales no están respaldadas por el gobierno. Ofrecen tasas de interés competitivas y términos flexibles para compradores con buen crédito e ingresos estables.",
+        "f1": "Tasas de interés competitivas",
+        "f2": "Pago inicial mínimo del 3%",
+        "f3": "Sin seguro hipotecario inicial",
+        "f4": "Límites de préstamo conforme hasta $766,550 (2026)",
+        "f5": "Plazos fijos de 15, 20 y 30 años"
+      },
+      "fha": {
+        "name": "Préstamos FHA",
+        "tagline": "Financiamiento flexible con puntajes de crédito desde 580",
+        "description": "Los préstamos FHA están asegurados por la Administración Federal de Vivienda, lo que facilita calificar con puntajes de crédito más bajos y pagos iniciales más pequeños.",
+        "f1": "3.5% de pago inicial con FICO 580+",
+        "f2": "Puntajes de crédito desde 580",
+        "f3": "Se aceptan fondos de regalo para el pago inicial",
+        "f4": "Se permiten relaciones deuda-ingreso más altas",
+        "f5": "Ideal para compradores por primera vez en Florida"
+      },
+      "va": {
+        "name": "Préstamos VA",
+        "tagline": "Un beneficio bien ganado por quienes sirvieron",
+        "description": "Los préstamos VA están disponibles para veteranos, militares en servicio activo y cónyuges sobrevivientes elegibles — sin pago inicial y sin PMI mensual.",
+        "f1": "0% de pago inicial",
+        "f2": "Sin seguro hipotecario privado",
+        "f3": "Tasas de interés competitivas",
+        "f4": "Sin penalidades por pago anticipado",
+        "f5": "Beneficio de por vida — reutilizable"
+      },
+      "usda": {
+        "name": "Préstamos USDA",
+        "tagline": "100% de financiamiento en áreas elegibles de Florida",
+        "description": "Los préstamos USDA están respaldados por el Departamento de Agricultura de EE. UU. para compradores elegibles en zonas rurales y suburbanas de Florida que cumplen los requisitos de ingresos y ubicación de la propiedad.",
+        "f1": "0% de pago inicial",
+        "f2": "Seguro hipotecario mensual bajo",
+        "f3": "Pautas de crédito flexibles",
+        "f4": "Zonas suburbanas elegibles de Florida",
+        "f5": "Límites de ingresos al 115% de la mediana del área"
+      },
+      "jumbo": {
+        "name": "Préstamos Jumbo",
+        "tagline": "Financiamiento premium por encima de $766,550 (2026)",
+        "description": "Los préstamos Jumbo superan los límites de préstamo conforme — ideales para compradores en Coral Gables, Miami Beach, Brickell y propiedades de alto valor en Florida.",
+        "f1": "Montos de préstamo superiores a $766,550",
+        "f2": "Tasas competitivas con FICO 700+",
+        "f3": "Opciones fijas de 15 y 30 años",
+        "f4": "Programas ARM disponibles",
+        "f5": "Montos de préstamo multimillonarios"
+      },
+      "refinance": {
+        "name": "Refinanciamiento",
+        "tagline": "Baje su tasa, acceda a su valor líquido o cambie sus términos",
+        "description": "Refinanciar su hipoteca actual puede reducir su pago mensual, bajar su tasa de interés, acortar su plazo o darle acceso al valor líquido de su vivienda.",
+        "f1": "Refinanciamiento de tasa y plazo",
+        "f2": "Refinanciamiento con retiro de efectivo",
+        "f3": "FHA Streamline + VA IRRRL",
+        "f4": "Consolidación de deudas",
+        "f5": "Fondos para mejoras del hogar"
+      },
+      "first-time-buyer": {
+        "name": "Comprador por Primera Vez",
+        "tagline": "Programas especiales para nuevos compradores de vivienda en Florida",
+        "description": "Los programas para compradores de vivienda por primera vez combinan préstamos con pago inicial bajo con la asistencia de Florida para el pago inicial, educación y orientación dedicada.",
+        "f1": "Programas de asistencia para el pago inicial",
+        "f2": "Ayuda disponible para los costos de cierre",
+        "f3": "Combinación con Florida Hometown Heroes",
+        "f4": "Varios tipos de préstamo combinables",
+        "f5": "Incentivos especiales de tasa"
+      },
+      "non-qm": {
+        "name": "Préstamos Non-QM",
+        "tagline": "Suscripción flexible para ingresos complejos",
+        "description": "Las hipotecas no calificadas (Non-QM) están diseñadas para prestatarios que no encajan en la documentación tradicional — trabajadores independientes, inversionistas o personas con ingresos particulares.",
+        "f1": "Calificación con estados de cuenta bancarios",
+        "f2": "Sin declaraciones de impuestos para trabajadores independientes",
+        "f3": "Programas de agotamiento de activos",
+        "f4": "Préstamos por flujo de caja para inversionistas (DSCR)",
+        "f5": "Límites de préstamo más altos disponibles"
+      },
+      "interest-rate-buydown": {
+        "name": "Reducción de Tasa de Interés (Buydown)",
+        "tagline": "Baje su tasa desde el inicio para ahorrar a largo plazo",
+        "description": "Una reducción de tasa (buydown) le permite pagar puntos de descuento al cierre para asegurar una tasa de interés permanentemente más baja, reduciendo su pago mensual.",
+        "f1": "Reducción permanente o temporal",
+        "f2": "Programas de reducción 2-1 y 3-2-1",
+        "f3": "Reducciones pagadas por el vendedor disponibles",
+        "f4": "Ahorros mensuales significativos",
+        "f5": "Ideal en entornos de tasas altas"
+      },
+      "203k": {
+        "name": "Préstamo de Rehabilitación FHA 203(k)",
+        "tagline": "Compre y renueve con un solo préstamo",
+        "description": "El préstamo FHA 203(k) le permite comprar una vivienda en Florida y financiar el costo de las reparaciones en una sola hipoteca — perfecto para casas que necesitan remodelación.",
+        "f1": "Financie la compra + la renovación",
+        "f2": "203(k) Estándar y Limitado",
+        "f3": "Se requieren contratistas aprobados por HUD",
+        "f4": "Mínimo $5,000 en renovaciones",
+        "f5": "Solo propiedades ocupadas por el propietario"
+      },
+      "heloc": {
+        "name": "HELOC",
+        "tagline": "Acceso flexible al valor líquido de su vivienda",
+        "description": "Una línea de crédito con garantía hipotecaria (HELOC) le brinda una línea de crédito rotativa respaldada por el valor líquido de su vivienda — para renovaciones, educación o gastos mayores.",
+        "f1": "Período de disposición y luego fase de pago",
+        "f2": "Pagos de solo interés durante la disposición",
+        "f3": "Tasa variable vinculada a la tasa prime",
+        "f4": "Crédito rotativo — reutilícelo a medida que paga",
+        "f5": "Intereses deducibles de impuestos (consulte a su CPA)"
+      },
+      "interest-only": {
+        "name": "Préstamos de Solo Interés",
+        "tagline": "Pagos más bajos durante el período inicial",
+        "description": "Las hipotecas de solo interés le permiten pagar únicamente intereses durante un período determinado, manteniendo pagos más bajos en los primeros años — ideal para ciertas estrategias de inversión.",
+        "f1": "Pagos mensuales iniciales más bajos",
+        "f2": "Períodos IO de 5, 7 o 10 años",
+        "f3": "Popular entre inversionistas de altos ingresos",
+        "f4": "Disponible en montos Jumbo",
+        "f5": "Transición a capital e intereses después del período IO"
+      },
+      "fixed-rate": {
+        "name": "Hipoteca de Tasa Fija",
+        "tagline": "Estabilidad y previsibilidad a largo plazo",
+        "description": "Una hipoteca de tasa fija asegura su tasa de interés durante toda la vida del préstamo, brindándole pagos mensuales constantes sin importar los cambios del mercado.",
+        "f1": "La tasa nunca cambia durante la vida del préstamo",
+        "f2": "Opciones de 15, 20 y 30 años",
+        "f3": "Ideal para propietarios a largo plazo",
+        "f4": "Protección contra aumentos de tasa",
+        "f5": "Fácil de presupuestar y planificar"
+      },
+      "arm": {
+        "name": "Hipoteca de Tasa Ajustable (ARM)",
+        "tagline": "Tasa inicial más baja con ajustes periódicos",
+        "description": "Las hipotecas ARM ofrecen una tasa fija más baja durante un período inicial y luego se ajustan según un índice del mercado. Una opción inteligente si planea vender o refinanciar antes del ajuste.",
+        "f1": "Opciones ARM 5/1, 7/1 y 10/1",
+        "f2": "Tasa inicial más baja que la fija",
+        "f3": "Topes de tasa que protegen contra cambios extremos",
+        "f4": "Buena opción para propiedad a corto plazo",
+        "f5": "Puede ahorrar miles en los primeros años"
+      },
+      "construction": {
+        "name": "Préstamos de Construcción",
+        "tagline": "Financie su casa hecha a la medida en Florida",
+        "description": "Los préstamos de construcción brindan financiamiento para construir una casa nueva desde cero. Los fondos se desembolsan según los hitos de la construcción y luego se convierten en una hipoteca permanente.",
+        "f1": "De construcción a permanente en un solo cierre",
+        "f2": "Solo interés durante la fase de construcción",
+        "f3": "Desembolsos liberados según los hitos del proyecto",
+        "f4": "Se requiere un constructor con licencia",
+        "f5": "Disponible para residencias principales y casas vacacionales"
+      },
+      "reverse-mortgage": {
+        "name": "Hipoteca Inversa",
+        "tagline": "Convierta su valor líquido en ingresos libres de impuestos",
+        "description": "Una hipoteca inversa (HECM) permite a los propietarios de Florida de 62 años o más convertir el valor líquido de su vivienda en fondos libres de impuestos sin dejar su hogar — sin pagos hipotecarios mensuales.",
+        "f1": "Sin pagos hipotecarios mensuales",
+        "f2": "Disponible para propietarios de 62+",
+        "f3": "Programa HECM asegurado por la FHA",
+        "f4": "Permanezca en su hogar todo el tiempo que desee",
+        "f5": "Fondos libres de impuestos (consulte a su CPA)"
+      }
+    }
+  },
+  "LoanProgramDetail": {
+    "breadcrumb": "Programas de Préstamos",
+    "kicker": "Programa de Préstamo",
+    "whatIsHeading": "Sobre este programa",
+    "featuresHeading": "Características Principales",
+    "atAGlanceHeading": "De un Vistazo",
+    "minDownLabel": "Pago Inicial Mín.",
+    "minCreditLabel": "Puntaje de Crédito Mín.",
+    "maxLoanLabel": "Límite del Préstamo",
+    "contactUs": "Contáctenos",
+    "applyHeading": "¿Listo para Solicitar?",
+    "applyBody": "Obtenga su pre-aprobación en tan solo 24 horas. Sin compromiso.",
+    "applyCta": "Iniciar Solicitud",
+    "callCta": "Llame al +1 (305) 705-2030",
+    "otherProgramsHeading": "Otros Programas"
+  },
+  "CityProgram": {
+    "titleTemplate": "{program} en {city}, FL | KLE Mortgage",
+    "heroTemplate": "Préstamos {program} en {city}, Florida",
+    "introTemplate": "KLE Mortgage Financing ayuda a compradores y propietarios del área de {city}, Florida a aprovechar los préstamos {program}. A continuación: cómo funciona el programa, quién califica y qué suelen experimentar los clientes de KLE en {city}.",
+    "marketContextHeading": "Contexto del mercado hipotecario de {city}",
+    "programOverviewHeading": "Programa {program} de un vistazo",
+    "eligibilityHeading": "Puntos clave de elegibilidad",
+    "ctaHeading": "Pre-apruébese para {program} en {city}",
+    "ctaBody": "Cuéntenos sobre su situación. Un oficial de préstamos de KLE verificará la elegibilidad de {program} para direcciones en {city}, cotizará precios en toda nuestra red de prestamistas mayoristas y le responderá dentro de una hora hábil.",
+    "ctaPrimary": "Iniciar Pre-Aprobación",
+    "ctaCalc": "Estimar Pago",
+    "relatedHeading": "Páginas relacionadas de ciudad + programa"
+  },
+  "Legal": {
+    "lastUpdated": "Última actualización:",
+    "lastUpdatedDate": "9 de mayo de 2026",
+    "translationDisclaimer": "Las traducciones se ofrecen para su conveniencia informativa. La versión en inglés de estos términos es la versión con validez legal.",
+    "privacyHeading": "Política de Privacidad",
+    "privacyIntro": "KLE Mortgage Financing, LLC (\"KLE\", \"nosotros\", \"nos\", \"nuestro\") se compromete a proteger su privacidad. Esta Política de Privacidad explica cómo recopilamos, usamos, divulgamos y protegemos su información cuando visita nuestro sitio web o utiliza nuestros servicios.",
+    "privacyInfoHeading": "Información que Recopilamos",
+    "privacyInfoIntro": "Recopilamos la información que usted nos proporciona directamente, incluyendo:",
+    "privacyInfo1": "Información de identificación personal (nombre, correo electrónico, teléfono, dirección)",
+    "privacyInfo2": "Información financiera necesaria para procesar su solicitud de préstamo",
+    "privacyInfo3": "Información de empleo e ingresos",
+    "privacyInfo4": "Información de la propiedad",
+    "privacyUseHeading": "Cómo Usamos su Información",
+    "privacyUseIntro": "Usamos la información que recopilamos para:",
+    "privacyUse1": "Procesar su solicitud hipotecaria",
+    "privacyUse2": "Comunicarnos con usted sobre su préstamo",
+    "privacyUse3": "Cumplir con los requisitos legales y regulatorios",
+    "privacyUse4": "Mejorar nuestros servicios",
+    "privacySharingHeading": "Divulgación de Información",
+    "privacySharing": "No vendemos su información personal. Podemos compartir su información con agencias de crédito, tasadores, compañías de título y otras partes necesarias para completar su transacción hipotecaria, según lo permita la ley.",
+    "privacyContactHeading": "Contáctenos",
+    "privacyContact": "Si tiene preguntas sobre esta Política de Privacidad, contáctenos en:",
+    "termsHeading": "Términos de Uso",
+    "termsIntro": "Al acceder o utilizar el sitio web de KLE Mortgage Financing, usted acepta estos Términos de Uso. Léalos con atención.",
+    "termsCommitmentHeading": "No es un Compromiso de Préstamo",
+    "termsCommitment": "Nada en este sitio web constituye un compromiso de préstamo. Todas las solicitudes de préstamo están sujetas a aprobación de crédito, tasación de la propiedad y verificación de la información. Las tasas y los programas están sujetos a cambios sin previo aviso.",
+    "termsCalcHeading": "Descargo de Responsabilidad de la Calculadora",
+    "termsCalc": "La calculadora hipotecaria de este sitio web proporciona solo estimaciones. Los pagos reales variarán según los términos específicos de su préstamo, los impuestos, el seguro y otros factores. Consulte a un oficial de préstamos para obtener cifras precisas.",
+    "termsHousingHeading": "Prestamista de Igualdad de Oportunidades de Vivienda",
+    "termsHousing": "KLE Mortgage Financing, LLC es un prestamista que ofrece igualdad de oportunidades. Cumplimos con todas las leyes aplicables de préstamos justos y no discriminamos por motivos de raza, color, origen nacional, religión, sexo, estado familiar o discapacidad.",
+    "termsLicensingHeading": "Licencias",
+    "termsLicensing": "KLE Mortgage Financing, LLC NMLS #2380070. Con licencia para realizar operaciones hipotecarias en Florida. NMLS Consumer Access:",
+    "termsContactHeading": "Contacto",
+    "termsContact": "Preguntas sobre estos términos:"
+  },
+  "ResourcesPage": {
+    "kicker": "Blog y Recursos",
+    "headlineLead": "Consejos Hipotecarios",
+    "headlineAccent": "y Guías",
+    "intro": "Consejos expertos de profesionales hipotecarios con licencia de Florida — FHA, VA, USDA, Hometown Heroes, refinanciamiento y el proceso de compra de vivienda desde la solicitud hasta el cierre.",
+    "comingSoon": "Recursos disponibles próximamente. ¡Vuelva pronto!",
+    "minRead": "min de lectura",
+    "readMore": "Leer Más"
+  },
+  "TestimonialsPage": {
+    "kicker": "Historias Reales",
+    "headlineLead": "Testimonios de",
+    "headlineAccent": "Clientes",
+    "intro": "Historias reales de familias de Florida a las que hemos ayudado a lograr la vivienda propia — historias de éxito con FHA, VA, USDA, préstamos convencionales y compradores por primera vez.",
+    "reviewsLabel": "reseñas",
+    "verifiedLabel": "Verificado"
+  },
+  "ApplyPage": {
+    "kicker": "Comience Hoy",
+    "headlineLead": "Solicite un",
+    "headlineAccent": "Préstamo Hipotecario",
+    "intro": "Complete nuestra sencilla solicitud en unos 10 minutos. No se requiere consulta de crédito para la pre-calificación.",
+    "trustNoCredit": "Sin consulta de crédito para comenzar",
+    "trust10Min": "Solicitud de 10 minutos",
+    "trust24Hr": "Pre-aprobación en 24 hrs",
+    "joinFamiliesValue": "500+ Familias",
+    "joinFamiliesLabel": "obtuvieron su pre-aprobación con KLE",
+    "testimonialQuote": "Pre-aprobación en menos de 24 horas. Cerramos en 28 días.",
+    "testimonialAuthor": "Maria & Carlos G.",
+    "testimonialRole": "Compradores por Primera Vez · Miami",
+    "trust1": "Sin consulta de crédito para comenzar",
+    "trust2": "Pre-aprobación en 24 horas",
+    "trust3": "Sin compromiso, nunca"
+  },
+  "ContactPage": {
+    "kicker": "Póngase en Contacto",
+    "headlineLead": "Hable con un",
+    "headlineAccent": "Oficial de Préstamos",
+    "intro": "Las preguntas hipotecarias no esperan. Comuníquese con un oficial de préstamos con licencia de KLE por teléfono, correo electrónico o el formulario a continuación — respuesta típica dentro de una hora hábil.",
+    "officeLabel": "Oficina",
+    "officeValue": "909 N Miami Beach Blvd, Suite 301A · North Miami Beach, FL 33162",
+    "phoneLabel": "Teléfono",
+    "emailLabel": "Correo Electrónico",
+    "hoursLabel": "Horario",
+    "hoursValue": "Lun–Vie 9:00 AM – 5:00 PM ET (disponibilidad extendida los fines de semana para clientes activos)"
+  },
+  "CalculatorPage": {
+    "kicker": "Calculadora Hipotecaria",
+    "headlineLead": "Estime su",
+    "headlineAccent": "Pago Mensual",
+    "intro": "Ingrese su precio de compra, pago inicial, tasa y plazo — vea su pago de capital e intereses al instante. Para una cotización precisa con impuestos, seguro y PMI, hable con un oficial de préstamos de KLE."
+  },
+  "Forms": {
+    "contactTitle": "Envíenos un Mensaje",
+    "labelFirstName": "Nombre",
+    "labelLastName": "Apellido",
+    "labelEmail": "Correo Electrónico",
+    "labelPhone": "Teléfono",
+    "labelInterest": "Me interesa...",
+    "interestOptionPlaceholder": "Seleccione una opción",
+    "interestBuying": "Comprar una Vivienda",
+    "interestRefinancing": "Refinanciamiento",
+    "interestFirstTime": "Programas para Compradores por Primera Vez",
+    "interestVa": "Préstamo VA",
+    "interestOther": "Pregunta General",
+    "labelMessage": "Mensaje",
+    "placeholderMessage": "Cuéntenos sobre su situación o pregunta...",
+    "smsConsent": "Doy mi consentimiento para recibir mensajes SMS sobre mi consulta. Pueden aplicar tarifas de mensajes y datos.",
+    "ctaSend": "Enviar Mensaje",
+    "ctaSending": "Enviando...",
+    "successTitle": "¡Mensaje Enviado!",
+    "successBody": "Nos comunicaremos con usted dentro de 24 horas. Gracias por contactar a KLE Mortgage.",
+    "errorRequired": "Obligatorio",
+    "errorEmail": "Se requiere un correo electrónico válido",
+    "errorMessageMin": "Por favor, brinde más detalles (al menos 10 caracteres)",
+    "errorGeneric": "Algo salió mal.",
+    "appStep1Title": "Información Personal",
+    "appStep2Title": "Detalles de la Propiedad y el Préstamo",
+    "appStep3Title": "Empleo e Ingresos",
+    "appStep4Title": "Revisar y Enviar",
+    "appStepNamePersonal": "Info Personal",
+    "appStepNameProperty": "Propiedad y Préstamo",
+    "appStepNameEmployment": "Empleo e Ingresos",
+    "appStepNameSubmit": "Enviar",
+    "appLabelDob": "Fecha de Nacimiento",
+    "appLabelLoanType": "Tipo de Préstamo",
+    "appLoanConventional": "Convencional",
+    "appLoanFha": "FHA",
+    "appLoanVa": "VA",
+    "appLoanUsda": "USDA",
+    "appLoanJumbo": "Jumbo",
+    "appLoanRefinance": "Refinanciamiento",
+    "appLoanFirstTime": "Comprador por Primera Vez",
+    "appLoanOther": "No Estoy Seguro",
+    "appLabelIsRefinance": "Es un refinanciamiento (ya soy propietario de esta propiedad)",
+    "appLabelPurchasePrice": "Precio de Compra / Valor de la Vivienda",
+    "appLabelDownPayment": "Pago Inicial ($)",
+    "appLabelPropertyAddress": "Dirección de la Propiedad",
+    "appLabelCity": "Ciudad",
+    "appLabelState": "Estado",
+    "appLabelZip": "Código Postal",
+    "appLabelPropertyType": "Tipo de Propiedad",
+    "appPropTypePlaceholder": "Seleccione...",
+    "appPropTypeSingleFamily": "Unifamiliar",
+    "appPropTypeCondo": "Condominio",
+    "appPropTypeTownhouse": "Casa Adosada",
+    "appPropTypeMultiFamily": "Multifamiliar",
+    "appPropTypeManufactured": "Casa Prefabricada",
+    "appPropTypeOther": "Otro",
+    "appLabelPropertyUsage": "Uso de la Propiedad",
+    "appUsagePlaceholder": "Seleccione...",
+    "appUsagePrimary": "Residencia Principal",
+    "appUsageSecondary": "Segunda Vivienda",
+    "appUsageInvestment": "Propiedad de Inversión",
+    "appLabelEmploymentStatus": "Situación Laboral",
+    "appEmpEmployed": "Empleado",
+    "appEmpSelfEmployed": "Trabajador Independiente",
+    "appEmpRetired": "Jubilado",
+    "appEmpOther": "Otro",
+    "appLabelEmployer": "Empleador / Nombre de la Empresa",
+    "appLabelJobTitle": "Cargo",
+    "appLabelYearsEmployed": "Años en el Empleo Actual",
+    "appLabelMonthlyIncome": "Ingreso Mensual Bruto ($)",
+    "appLabelOtherIncome": "Otros Ingresos Mensuales ($)",
+    "appLabelCreditScore": "Puntaje de Crédito Estimado",
+    "appCreditPlaceholder": "Seleccione un rango...",
+    "appCreditExcellent": "Excelente (740+)",
+    "appCreditGood": "Bueno (680–739)",
+    "appCreditFair": "Regular (620–679)",
+    "appCreditPoor": "Menos de 620",
+    "appCreditUnknown": "No lo sé",
+    "appReviewSummary": "Resumen de la Solicitud",
+    "appReviewName": "Nombre",
+    "appReviewEmail": "Correo Electrónico",
+    "appReviewPhone": "Teléfono",
+    "appReviewLoanType": "Tipo de Préstamo",
+    "appReviewPurchasePrice": "Precio de Compra",
+    "appReviewIncome": "Ingreso Mensual",
+    "appConsentEmail": "Doy mi consentimiento para recibir comunicaciones por correo electrónico sobre mi solicitud.",
+    "appConsentSms": "Doy mi consentimiento para recibir mensajes de texto SMS sobre mi solicitud. Pueden aplicar tarifas de mensajes y datos.",
+    "appConsentTermsBody": "Acepto los Términos de Uso y la Política de Privacidad. Entiendo que esto no es un compromiso de préstamo.",
+    "appConsentTermsRequired": "Debe aceptar los términos",
+    "appCtaNext": "Siguiente",
+    "appCtaBack": "Atrás",
+    "appCtaSubmit": "Enviar Solicitud",
+    "appCtaSubmitting": "Enviando...",
+    "appSuccessTitle": "¡Solicitud Enviada!",
+    "appSuccessBodyTemplate": "¡Gracias, {firstName}! Hemos recibido su solicitud y un oficial de préstamos se comunicará con usted dentro de 24 horas.",
+    "appSuccessEmailHint": "Revise su correo electrónico en {email} para ver la confirmación.",
+    "appSuccessBackHome": "Volver al Inicio"
+  },
+  "Faq": {
+    "pageHeading": "Preguntas Hipotecarias, Respondidas",
+    "pageIntro": "Respuestas directas de nuestros oficiales de préstamos con licencia — requisitos de puntaje de crédito, mínimos de pago inicial, FHA vs Convencional, elegibilidad para Hometown Heroes y qué esperar en el cierre. ¿Todavía tiene una pregunta? Llame al (305) 705-2030.",
+    "ctaPhone": "Llame al (305) 705-2030",
+    "ctaContact": "Enviar un Mensaje",
+    "categoryGettingStarted": "Primeros Pasos",
+    "categoryLoanTypes": "Tipos de Préstamos y Programas",
+    "categoryCosts": "Costos y Cargos",
+    "categoryProcess": "El Proceso Hipotecario",
+    "items": {
+      "preQualVsPreApproval": {
+        "q": "¿Cuál es la diferencia entre la pre-calificación y la pre-aprobación?",
+        "a": "La pre-calificación es una estimación informal de cuánto podría pedir prestado, basada en información autodeclarada — sin consulta de crédito ni revisión de documentos. La pre-aprobación implica una verificación completa de crédito y documentación de ingresos y activos, y produce un monto de préstamo verificado. En los mercados competitivos de Florida, los vendedores generalmente exigen una pre-aprobación, no una pre-calificación, antes de considerar una oferta."
+      },
+      "downPayment": {
+        "q": "¿Cuánto necesito para el pago inicial en Florida?",
+        "a": "Depende del programa de préstamo. FHA requiere 3.5% (con crédito 580+); el Convencional comienza en 3% para compradores por primera vez con buen crédito; VA y USDA son 0% de pago inicial para prestatarios elegibles. El programa Florida Hometown Heroes puede sumar hasta $35,000 en asistencia para el pago inicial + costos de cierre para profesionales que califican (maestros, enfermeros, bomberos, agentes del orden público, trabajadores de la salud y otros)."
+      },
+      "creditScore": {
+        "q": "¿Qué puntaje de crédito necesito para comprar una casa?",
+        "a": "Los puntajes mínimos varían según el programa: FHA 580, Convencional 620, VA 580, USDA 640, Jumbo típicamente 700+. Los puntajes más altos califican para tasas de interés más bajas. KLE Mortgage trabaja con múltiples prestamistas mayoristas, por lo que podemos encontrar una opción para puntajes de crédito desde 580 en adelante — y con frecuencia ayudamos a los prestatarios a mejorar su puntaje antes de fijar una tasa."
+      },
+      "timeline": {
+        "q": "¿Cuánto tarda el proceso hipotecario?",
+        "a": "En promedio, de 30 a 45 días desde la solicitud hasta el cierre en una compra, y menos para los refinanciamientos. KLE normalmente obtiene la autorización de cierre en 28 días o menos cuando los documentos se entregan con prontitud. Las mayores demoras suelen ser la programación de la tasación y las revisiones de la HOA en condominios."
+      },
+      "fhaVsConventional": {
+        "q": "¿Cuál es la diferencia entre los préstamos FHA y Convencionales?",
+        "a": "Los préstamos FHA están asegurados por la Administración Federal de Vivienda — su calificación es más fácil (3.5% de pago inicial, crédito 580) pero requieren la Prima de Seguro Hipotecario (MIP) durante la vida del préstamo en la mayoría de los casos. Los préstamos Convencionales requieren mejor crédito (620+) pero el Seguro Hipotecario Privado (PMI) puede eliminarse una vez que alcanza el 20% de valor líquido. Para compradores por primera vez con crédito 580–680, FHA suele ser más asequible; con crédito 700+, el Convencional generalmente gana a largo plazo."
+      },
+      "vaEligibility": {
+        "q": "¿Quién califica para un préstamo VA?",
+        "a": "Veteranos, militares en servicio activo, miembros de la Guardia Nacional / Reserva que cumplen los requisitos mínimos de servicio y cónyuges sobrevivientes elegibles. Necesitará un Certificado de Elegibilidad (COE) — KLE puede obtenerlo del portal del VA durante la pre-aprobación. Sin pago inicial, sin PMI, y la cuota de financiamiento normalmente puede financiarse dentro del préstamo."
+      },
+      "usdaIncomeLimits": {
+        "q": "¿Cuáles son los límites de ingresos para un préstamo USDA?",
+        "a": "USDA limita el ingreso del hogar al 115% del ingreso medio del área. En la mayoría de los condados de Florida, esto supera ampliamente los $100,000 para una familia de cuatro. La propiedad también debe estar en un área rural o suburbana elegible para USDA — partes del oeste de Pembroke Pines, Davie y Homestead califican. KLE puede verificar la elegibilidad de ingresos y de dirección durante una breve llamada de pre-aprobación."
+      },
+      "refinance": {
+        "q": "¿Cuándo debería considerar refinanciar mi hipoteca?",
+        "a": "Considere refinanciar si (1) las tasas han bajado 0.5% o más desde que compró, (2) su crédito ha mejorado significativamente, (3) quiere cambiar de ARM a tasa fija, (4) quiere acortar su plazo para ahorrar en intereses, o (5) quiere acceder al valor líquido de su vivienda mediante un refinanciamiento con retiro de efectivo. Los refinanciamientos streamline de FHA y VA omiten la tasación en muchos casos."
+      },
+      "closingCosts": {
+        "q": "¿Qué son los costos de cierre y cuánto debo presupuestar?",
+        "a": "Los costos de cierre son cargos que se pagan al cierre, típicamente del 2 al 5% del monto del préstamo. Incluyen cargos del prestamista (originación, procesamiento), seguro de título, tasación ($500–$700), tarifas de registro, honorarios de abogado (Florida es un estado donde el cierre lo realiza un abogado) y partidas prepagadas (seguro, impuestos en la cuenta de depósito en garantía). KLE entrega una Estimación de Préstamo por escrito dentro de los 3 días hábiles posteriores a su solicitud completa — sin sorpresas."
+      },
+      "pmi": {
+        "q": "¿Qué es el PMI y cómo lo evito o lo elimino?",
+        "a": "El Seguro Hipotecario Privado protege al prestamista si usted incumple el pago. Se requiere en préstamos Convencionales con menos del 20% de pago inicial, con un costo típico del 0.5 al 1.5% del préstamo al año. Puede solicitar la eliminación del PMI al alcanzar el 20% de valor líquido (LTV del 80%) y se cancela automáticamente al 78% de LTV por ley federal. Los préstamos VA nunca tienen PMI; los préstamos FHA tienen MIP, que normalmente permanece durante la vida del préstamo a menos que se refinancie."
+      },
+      "applicationFees": {
+        "q": "¿Hay algún cargo por solicitar u obtener la pre-aprobación?",
+        "a": "No. KLE Mortgage no cobra nada por solicitar, pre-calificarse ni pre-aprobarse. El primer costo de su bolsillo es la tarifa de tasación (~$500) una vez que está bajo contrato en una propiedad específica. Somos transparentes con cada cargo desde el principio en la Estimación de Préstamo."
+      },
+      "rollClosingCostsIntoLoan": {
+        "q": "¿Se pueden incluir los costos de cierre en el préstamo?",
+        "a": "En muchos casos, sí. Los préstamos VA y USDA permiten financiar ciertos costos de cierre. FHA permite concesiones del vendedor de hasta el 6% del precio de compra. El programa Florida Hometown Heroes cubre hasta $35,000 en costos de cierre + pago inicial para prestatarios elegibles. KLE estructura la oferta para minimizar el efectivo necesario al cierre siempre que sea posible."
+      },
+      "documents": {
+        "q": "¿Qué documentos necesito para solicitar?",
+        "a": "Típicamente: los últimos 2 años de formularios W-2 o declaraciones de impuestos federales, los últimos 30 días de talones de pago, los últimos 2 meses de estados de cuenta bancarios/de activos, una identificación oficial con foto y una lista de sus deudas mensuales. Los trabajadores independientes necesitan 2 años de declaraciones de impuestos del negocio y un estado de pérdidas y ganancias del año en curso. Los préstamos con estados de cuenta bancarios (sin declaraciones de impuestos) están disponibles a través de KLE para trabajadores independientes que no encajan en la documentación de ingresos tradicional."
+      },
+      "dti": {
+        "q": "¿Qué es la relación deuda-ingreso (DTI) y cuál es el límite?",
+        "a": "DTI = el total de pagos mensuales de deudas (incluida la nueva hipoteca) dividido por el ingreso mensual bruto. La mayoría de los programas permiten hasta un 43–50% de DTI: FHA acepta hasta 56.99% con factores compensatorios sólidos; el Convencional de Fannie Mae llega hasta el 50% con el perfil adecuado; VA no tiene tope fijo (usa el ingreso residual). Menor DTI = mejor tasa."
+      },
+      "closingDay": {
+        "q": "¿Qué sucede en el cierre?",
+        "a": "Revisará y firmará los documentos finales del préstamo (la Divulgación de Cierre ya se envió 3 días hábiles antes, así que no hay sorpresas). Llevará un cheque de caja o una transferencia bancaria para los costos de cierre y su pago inicial. El abogado de cierre registra la escritura en el condado. Usted recibe sus llaves. La firma en sí toma de 30 a 60 minutos; KLE lo prepara completamente por adelantado para que sea una formalidad, no un evento estresante."
+      },
+      "selfEmployed": {
+        "q": "¿Puedo calificar para una hipoteca si soy trabajador independiente?",
+        "a": "Sí — KLE trabaja regularmente con prestatarios independientes. Los programas estándar requieren 2 años de declaraciones de impuestos. Si sus declaraciones subestiman su ingreso real (algo común entre independientes que deducen mucho), KLE ofrece préstamos con Estados de Cuenta Bancarios (califica con 12 o 24 meses de depósitos del negocio, sin declaraciones de impuestos) y programas de Pérdidas y Ganancias a través de nuestros socios mayoristas Non-QM."
+      }
+    }
+  },
+  "Mission": {
+    "kicker": "Nuestra Misión",
+    "headlineLead": "Haciendo la Vivienda Propia",
+    "headlineAccent": "Accesible para Todos",
+    "para1": "KLE Mortgage Financing fue fundada por Leopold Evariste con la visión de cerrar la brecha de acceso a la vivienda propia en las comunidades desatendidas de Florida. Vimos familias que tenían el ingreso para pagar una casa, pero carecían de la orientación para navegar los programas hipotecarios FHA, VA, USDA y convencionales.",
+    "para2": "Hoy servimos a clientes en toda Florida — desde compradores por primera vez que usan el programa Hometown Heroes hasta inversionistas que construyen portafolios con préstamos DSCR. El mismo servicio de primera clase, ya sea que esté cerrando una primera casa de $150,000 o un jumbo de $1.5M.",
+    "byTheNumbers": "En Cifras",
+    "stat1Value": "500+",
+    "stat1Label": "Familias Atendidas",
+    "stat2Value": "$150M+",
+    "stat2Label": "Préstamos Financiados",
+    "stat3Value": "15+",
+    "stat3Label": "Años de Experiencia",
+    "stat4Value": "4.9",
+    "stat4Label": "Calificación Promedio",
+    "stat5Value": "28",
+    "stat5Label": "Días Promedio para Cerrar",
+    "stat6Value": "FL",
+    "stat6Label": "Estado con Licencia",
+    "valuesKicker": "Lo Que Nos Impulsa",
+    "valuesHeadline": "Nuestros Valores Fundamentales",
+    "value1Title": "La Familia Primero",
+    "value1Body": "Cada decisión que tomamos se guía por lo que es mejor para las familias que servimos. No solo cerramos hipotecas — ayudamos a las personas a construir patrimonio a largo plazo a través de la vivienda propia.",
+    "value2Title": "Transparencia",
+    "value2Body": "Sin cargos ocultos. Sin jerga hipotecaria. Le explicamos cada tasa, cada divulgación y cada opción para que pueda tomar decisiones informadas sobre un compromiso a 30 años.",
+    "value3Title": "Educación",
+    "value3Body": "Los prestatarios informados toman mejores decisiones. Ya sea con programas para compradores por primera vez o financiamiento de inversión DSCR, nos tomamos el tiempo de enseñar lo que cada opción realmente significa.",
+    "complianceHeadline": "Licencias y Cumplimiento",
+    "complianceNmlsLabel": "Compañía NMLS",
+    "complianceNmlsValue": "KLE Mortgage Financing, LLC — NMLS #2380070",
+    "complianceLicensedLabel": "Con Licencia en",
+    "complianceLicensedValue": "Florida (FL)",
+    "complianceEqualHousingLabel": "Igualdad de Vivienda",
+    "complianceEqualHousingValue": "Prestamista de Igualdad de Oportunidades de Vivienda. Cumplimos con todas las leyes de préstamos justos."
+  }
+}

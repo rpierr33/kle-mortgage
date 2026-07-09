@@ -19,7 +19,8 @@
     "label": "Lang",
     "en": "English",
     "fr": "Français",
-    "ht": "Kreyòl"
+    "ht": "Kreyòl",
+    "es": "Español"
   },
   "Footer": {
     "tagline": "Nou ede fanmi yo reyalize rèv pou yo gen pwòp kay yo grasa konsèy ekspè ak solisyon ipotèk pèsonalize.",
@@ -76,7 +77,7 @@
     "calculatorTitle": "Kalkilatè Ipotèk | KLE Mortgage",
     "calculatorDescription": "Estime peman ipotèk mansyèl ou, ki gen ladan kapital ak enterè. Ajiste pri, depo, tarif ak dire pou prè FHA, VA, USDA, konvansyonèl, oswa Jumbo.",
     "contactTitle": "Kontakte KLE Mortgage — Koutye Ipotèk Florid",
-    "contactDescription": "Kontakte KLE Mortgage Financing nan North Miami Beach, FL. Rele (305) 705-2030 oswa imèl Info@klemortgage.com. Ofisye prè bilingue (anglè / franse / kreyòl ayisyen).",
+    "contactDescription": "Kontakte KLE Mortgage Financing nan North Miami Beach, FL. Rele (305) 705-2030 oswa imèl Info@klemortgage.com. Ofisye prè miltileng (anglè / panyòl / franse / kreyòl ayisyen).",
     "faqTitle": "Kesyon Souvan Sou Ipotèk — KLE Mortgage",
     "faqDescription": "Repons sou kesyon ipotèk ki pi souvan: egzijans nòt kredi, depo minimòm, FHA vs konvansyonèl, kalifikasyon Hometown Heroes, ak dire pre-apwobasyon.",
     "loanProgramsTitle": "Pwogram Prè — FHA · VA · USDA · Konvansyonèl · Jumbo | KLE Mortgage",
@@ -287,7 +288,7 @@
     "members": {
       "leopold-evariste": {
         "title": "PDG ak Fondatè",
-        "bio": "Te fonde Leo Realty Capital Investments an 1992. Pote plis pase 32 ane ekspètiz mache Florid Sid nan prè ipotèk ak finansman envestisman.",
+        "bio": "Te fonde Leo Realty Capital Investments an 1992. Pote plis pase 36 ane ekspètiz mache Florid Sid nan prè ipotèk ak finansman envestisman.",
         "specialty1": "Pwopriyete Envestisman",
         "specialty2": "Komèsyal",
         "specialty3": "Liks"

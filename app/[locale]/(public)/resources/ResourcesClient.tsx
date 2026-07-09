@@ -26,7 +26,7 @@ const cardVariant = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] } },
 };
 
-const LOCALE_BCP47: Record<string, string> = { en: "en-US", fr: "fr-FR", ht: "fr-FR" };
+const LOCALE_BCP47: Record<string, string> = { en: "en-US", fr: "fr-FR", ht: "fr-FR", es: "es-US" };
 
 function formatDate(date: Date | null, locale: string): string {
   if (!date) return "";

@@ -4,7 +4,7 @@ import type { loanOfficers } from "@/lib/db/schema";
 type LoanOfficer = typeof loanOfficers.$inferSelect;
 
 const realTeam = [
-  { name: "Leopold Evariste", title: "CEO & Founder", photo: "/team-leopold.jpg", specialties: ["Leadership", "Investment Properties", "Commercial"], yearsExperience: 32 },
+  { name: "Leopold Evariste", title: "CEO & Founder", photo: "/team-leopold.jpg", specialties: ["Leadership", "Investment Properties", "Commercial"], yearsExperience: 36 },
   { name: "Joanne Evariste", title: "Office Manager", photo: "/team-joanne.jpg", specialties: ["Operations", "Client Relations"], yearsExperience: 15 },
   { name: "Jean Samuel Luxama", title: "Realtor & Loan Originator", photo: "/team-jean-samuel.jpg", specialties: ["FHA Loans", "First-Time Buyers", "Hometown Heroes"], yearsExperience: 8 },
   { name: "Olivier Desire", title: "Loan Originator", photo: "/team-olivier.jpg", specialties: ["DSCR Loans", "USDA Loans", "Investment Properties"], yearsExperience: 10 },

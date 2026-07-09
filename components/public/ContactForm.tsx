@@ -24,7 +24,7 @@ type FormData = z.infer<typeof schema>;
 
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
-  const locale = useLocale() as "en" | "fr" | "ht";
+  const locale = useLocale() as "en" | "fr" | "ht" | "es";
   const t = useTranslations("Forms");
   const {
     register,
