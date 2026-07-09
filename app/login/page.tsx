@@ -48,7 +48,7 @@ export default function LoginPage() {
         {/* Logo */}
         <div className="text-center mb-8">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-white/10 rounded-xl mb-4">
-            <Image src="/kle-logo.png" alt="KLE Mortgage" width={44} height={44} className="object-contain" />
+            <Image src="/kle-logo-v2.png" alt="KLE Mortgage" width={44} height={44} className="object-contain brightness-0 invert" />
           </div>
           <h1 className="text-2xl font-bold text-white font-[family-name:var(--font-playfair)]">
             KLE Mortgage Admin

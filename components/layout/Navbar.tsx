@@ -56,11 +56,15 @@ export function Navbar() {
           <Link href="/" className="flex items-center gap-3 flex-shrink-0 group">
             <div className="relative">
               <Image
-                src="/kle-logo-full.png"
+                src="/kle-logo-full-v2.png"
                 alt="KLE Mortgage Financing"
                 width={160}
                 height={64}
-                className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                className={cn(
+                  "h-12 w-auto object-contain transition-all duration-300 group-hover:scale-105",
+                  // over the dark hero the maroon/black art is invisible — render it white
+                  !scrolled && "brightness-0 invert"
+                )}
               />
             </div>
             <div className="hidden sm:block">

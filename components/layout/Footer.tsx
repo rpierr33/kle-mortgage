@@ -43,11 +43,11 @@ export function Footer() {
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-3 mb-5 group">
               <Image
-                src="/kle-logo-full.png"
+                src="/kle-logo-full-v2.png"
                 alt="KLE Mortgage Financing"
                 width={160}
                 height={64}
-                className="object-contain transition-transform duration-300 group-hover:scale-105"
+                className="object-contain brightness-0 invert transition-transform duration-300 group-hover:scale-105"
               />
               <div>
                 <p className="font-bold text-white font-[family-name:var(--font-playfair)] text-base">

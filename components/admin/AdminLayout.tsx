@@ -28,7 +28,7 @@ export function AdminLayout({ children }: { children: React.ReactNode }) {
     <div className="flex flex-col h-full">
       {/* Logo */}
       <div className={cn("flex items-center gap-3 p-5 border-b border-[#3A2428]", collapsed && "justify-center px-3")}>
-        <Image src="/kle-logo.png" alt="KLE" width={36} height={36} className="object-contain flex-shrink-0" />
+        <Image src="/kle-logo-v2.png" alt="KLE" width={36} height={36} className="object-contain brightness-0 invert flex-shrink-0" />
         {!collapsed && (
           <div className="overflow-hidden">
             <p className="font-bold text-white text-sm font-[family-name:var(--font-playfair)] whitespace-nowrap">KLE Mortgage</p>
@@ -124,7 +124,7 @@ export function AdminLayout({ children }: { children: React.ReactNode }) {
           <button onClick={() => setMobileOpen(true)} className="p-1.5 rounded-md hover:bg-[#F0EBE3]">
             <Menu className="w-5 h-5 text-[#1A1A1A]" />
           </button>
-          <Image src="/kle-logo.png" alt="KLE" width={28} height={28} className="object-contain" />
+          <Image src="/kle-logo-v2.png" alt="KLE" width={28} height={28} className="object-contain" />
           <span className="font-bold text-sm text-[#1A1A1A] font-[family-name:var(--font-playfair)]">KLE Admin</span>
         </div>
 

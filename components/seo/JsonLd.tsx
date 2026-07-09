@@ -22,7 +22,7 @@ const ORG_SCHEMA = {
   legalName: NAP.legalName,
   alternateName: NAP.alternateName,
   url: SITE_URL,
-  logo: `${SITE_URL}/kle-logo-full.png`,
+  logo: `${SITE_URL}/kle-logo-full-v2.png`,
   image: `${SITE_URL}/opengraph-image`,
   telephone: NAP.telephone,
   email: NAP.email,
